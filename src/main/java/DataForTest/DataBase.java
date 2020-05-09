@@ -156,15 +156,25 @@ public class DataBase {
         /**Teams**/
         teams = new ArrayList<>();
         Team a = new Team("barca");
+        a.createPage("1931","Spain");
         Team b = new Team("real");
+        b.createPage("1932","Spain");
         Team c = new Team("man u");
+        c.createPage("1913","UK");
         Team d = new Team("man city");
+        d.createPage("1927","UK");
         Team e = new Team("liverpool");
+        e.createPage("1901","UK");
         Team f = new Team("chelsea");
+        f.createPage("1901","UK");
         Team g = new Team("roma");
+        g.createPage("1889","Italy");
         Team h = new Team("juve");
+       h.createPage("1910","Italy");
         Team i = new Team("milan");
+        i.createPage("1910","Italy");
         Team j = new Team("inter");
+        j.createPage("1907","Italy");
 
         /**Statistics**/
         statisticsA = new Statistics(scorePolicy);

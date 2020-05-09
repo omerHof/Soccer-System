@@ -4,12 +4,9 @@ import Games.Game;
 import Users.Coach;
 import Users.Manager;
 import Users.Player;
-import Users.TeamOwner;
+import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Observable;
+import java.util.*;
 
 public class TeamPage extends Observable {
     private String name;
@@ -137,4 +134,18 @@ public class TeamPage extends Observable {
         this.nation = nation;
     }
 
+    public Pair<String, Set<String>[]> getAllDetails() {
+        String details =
+                name + "," +
+                        "Stadium: " + stadium + "," +
+                        "History: " + history +  "," +
+                        "Nation:" + nation;
+
+        Set<String>[] people = new Set[3];
+        people[0] = players.keySet();
+        people[1] = coaches.keySet();
+        people[2] = managers.keySet();
+
+        return new Pair<>(details ,people);
+    }
 }

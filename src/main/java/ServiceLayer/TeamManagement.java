@@ -1,12 +1,15 @@
 package ServiceLayer;
 
+import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 import Teams.TeamPage;
-import Users.Manager;
-import Users.TeamOwner;
-import Users.User;
+import Users.*;
+import javafx.util.Pair;
+
+import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * This class represents a bridge for handling the team creation and functionality between the domain layer and the GUI layer
@@ -89,4 +92,14 @@ public class TeamManagement {
         return ((TeamOwner) currentUser).closeTeam();
     }
 
+    public ArrayList<String> getAllTeams() {
+        return DB.getInstance().getFullTeamsNames();
+    }
+
+    public Pair<String, Set<String>[]> getTeamPageDetails(String team_name) {
+        Team team = DB.getInstance().getTeam(team_name);
+        TeamPage teamPage = team.getPage();
+
+        return teamPage.getAllDetails();
+    }
 }

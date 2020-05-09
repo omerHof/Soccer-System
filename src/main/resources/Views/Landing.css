@@ -1,0 +1,24 @@
+.d:hover{
+    -fx-border-color: #bbe0e0;
+    -fx-border-wodth: 0px 0px 3px 0px;
+}
+
+.img{
+    -fx-max-width:100%;
+    -fx-max-height: 100%;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: #008CBA;
+    transition-duration: 0.4s
+}
+.button:hover {
+    background-color:  #008CBA;
+    color: white;
+}
+
+#borderPane{
+    -fx-background-image: url("SoccerWallpaper.jpg");
+    -fx-background-repeat: stretch;
+}

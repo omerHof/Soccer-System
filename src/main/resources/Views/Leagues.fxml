@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.Blend?>
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.LeaguesController">
+    <children>
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+        <JFXButton layoutX="387.0" layoutY="244.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text="THIS IS LEAGUE" />
+    </children>
+</AnchorPane>

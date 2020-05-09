@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.TeamsController">
+    <children>
+
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+        <TextField fx:id="choosenNation" layoutX="420.0" layoutY="163.0" prefWidth="150.0" />
+        <TextField fx:id="choosenHistory" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
+
+        <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="team nation">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+
+            </Label>
+        </children></Pane>
+        <Pane layoutX="195.0" layoutY="213.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+            <children>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="team history">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+
+                </Label>
+            </children></Pane>
+        <JFXButton fx:id="submit" layoutX="195.0" layoutY="284.0" onAction="#createTeamPage" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </JFXButton>
+        <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE TEAM PAGE" textAlignment="CENTER" wrappingWidth="339.79999999999984">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+
+
+    </children>
+</AnchorPane>

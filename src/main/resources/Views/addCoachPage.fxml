@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.CoachesController">
+    <children>
+
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+        <JFXButton fx:id="submit" layoutX="195.0" layoutY="352.0" onAction="#openCoachPage" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </JFXButton>
+        <TextField fx:id="choosenHeight" layoutX="420.0" layoutY="163.0" prefWidth="150.0" />
+        <TextField fx:id="choosenWeight" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
+        <TextField fx:id="choosenNumber" layoutX="420.0" layoutY="303.0" prefWidth="150.0" />
+
+
+        <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="height">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+
+            </Label>
+        </children></Pane>
+        <Pane layoutX="195.0" layoutY="213.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+            <children>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="weight">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+
+                </Label>
+            </children></Pane>
+
+        <Pane layoutX="195.0" layoutY="278.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+            <children>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="shirt number">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+
+                </Label>
+            </children></Pane>
+        <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE COACH PAGE" textAlignment="CENTER" wrappingWidth="339.79999999999984">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+
+
+    </children>
+</AnchorPane>

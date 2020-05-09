@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.HomePageController">
+
+    <children>
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+      <TableView fx:id="tab1" layoutX="14.0" layoutY="184.0" prefHeight="126.0" prefWidth="900.0" style="-fx-background-color: transparent; visible: false;">
+
+      </TableView>
+      <Label fx:id="leagueText1" layoutX="14.0" layoutY="136.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+
+         </font>
+      </Label>
+      <TableView fx:id="tab2" layoutX="14.0" layoutY="370.0" prefHeight="134.0" prefWidth="900.0" style="-fx-background-color: transparent; visible: false;" />
+      <Label fx:id="leagueText2" layoutX="14.0" layoutY="319.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="189.0" layoutY="107.0" prefHeight="54.0" prefWidth="550.0" style="-fx-text-fill: #000000 " text="WELCOME TO SOCCER SYSTEM" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

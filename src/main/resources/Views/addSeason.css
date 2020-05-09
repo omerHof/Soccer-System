@@ -1,0 +1,33 @@
+.d:hover{
+    -fx-border-color: #bbe0e0;
+    -fx-border-wodth: 0px 0px 3px 0px;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: #008CBA;
+    transition-duration: 0.4;
+    -fx-font-size: 24;
+
+}
+.button:hover {
+    background-color:  #008CBA;
+    color: white;
+}
+JFXTextField{
+    -fx-background-color: green;
+}
+
+
+TableView{
+    -fx-background-color: transparent;
+}
+
+TableView.table-row-cell:selected .text {
+    -fx-fill: blue ;
+}
+
+TableView.table-row-cell{
+    -fx-border-color:#d3d3d3;
+}
+

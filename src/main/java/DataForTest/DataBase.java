@@ -156,15 +156,25 @@ public class DataBase {
         /**Teams**/
         teams = new ArrayList<>();
         Team a = new Team("barca");
+        a.createPage("1931","Spain");
         Team b = new Team("real");
+        b.createPage("1932","Spain");
         Team c = new Team("man u");
+        c.createPage("1913","UK");
         Team d = new Team("man city");
+        d.createPage("1927","UK");
         Team e = new Team("liverpool");
+        e.createPage("1901","UK");
         Team f = new Team("chelsea");
+        f.createPage("1901","UK");
         Team g = new Team("roma");
+        g.createPage("1889","Italy");
         Team h = new Team("juve");
+       h.createPage("1910","Italy");
         Team i = new Team("milan");
+        i.createPage("1910","Italy");
         Team j = new Team("inter");
+        j.createPage("1907","Italy");
 
         /**Statistics**/
         statisticsA = new Statistics(scorePolicy);
@@ -415,15 +425,36 @@ public class DataBase {
         hh.createPersonalPage(170, 78,11 , "Betar Yerushlaim");
 
         klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
-        aaa = new Coach("klin", "1212", "nir klinger", "dsdasd", "head coach");
-        bbb = new Coach("kli", "1212", "nir klinger", "dsdasd", "head coach");
-        ccc = new Coach("kl", "1212", "nir klinger", "dsdasd", "head coach");
-        ddd = new Coach("k", "1212", "nir klinger", "dsdasd", "head coach");
-        eee = new Coach("klingg", "1212", "nir klinger", "dsdasd", "head coach");
-        fff = new Coach("klinggg", "1212", "nir klinger", "dsdasd", "head coach");
-        ggg = new Coach("klinggggg", "1212", "nir klinger", "dsdasd", "head coach");
+        klinger.createCoachPersonalPage( LocalDate.of(1972,12, 3), "Macbi Tel Aviv");
+        aaa = new Coach("klin", "1212", "Avraham Grant", "dsdasd", "head coach");
+        aaa.createCoachPersonalPage(LocalDate.of(1959,7, 3), "Chelsea");
+        bbb = new Coach("kli", "1212", "Itzhak Shum", "dsdasd", "head coach");
+        bbb.createCoachPersonalPage(LocalDate.of(1965,7, 3), "Macabi Heifa");
+        ccc = new Coach("kl", "1212", "Alex Pergenson", "dsdasd", "head coach");
+        ccc.createCoachPersonalPage(LocalDate.of(1946,7, 3), "Manchester United");
+        ddd = new Coach("k", "1212", "Quique Setién", "dsdasd", "head coach");
+        ddd.createCoachPersonalPage(LocalDate.of(1974,7, 3), "Barcelona");
+        eee = new Coach("klingg", "1212", "Josep Guardiola", "dsdasd", "head coach");
+        eee.createCoachPersonalPage(LocalDate.of(1979,7, 3), "Liverpool");
+        fff = new Coach("klinggg", "1212", "Roni Levy", "dsdasd", "head coach");
+        fff.createCoachPersonalPage(LocalDate.of(1976,7, 3), "Betar Yerushalim");
+        ggg = new Coach("klinggggg", "1212", "Frank Lampard", "dsdasd", "head coach");
+        ggg.createCoachPersonalPage(LocalDate.of(1972,5, 3), "Celsea");
         hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
-        iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
+        hhh.createCoachPersonalPage( LocalDate.of(1972,12, 3), "Macbi Tel Aviv");
+        iii = new Coach("klinssssg", "1212", "Marko Balbul", "dsdasd", "head coach");
+        iii.createCoachPersonalPage( LocalDate.of(1982,12, 3), "Macbi Heifa");
+
+/*        klinger = new Coach("kling", "1212", "Nir Klinger", "dsdasd", "head coach");
+        aaa = new Coach("klin", "1212", "Avraham Grant", "dsdasd", "head coach");
+        bbb = new Coach("kli", "1212", "Itzhak Shum", "dsdasd", "head coach");
+        ccc = new Coach("kl", "1212", "Alex Pergenson", "dsdasd", "head coach");
+        ddd = new Coach("k", "1212", "Quique Setién", "dsdasd", "head coach");
+        eee = new Coach("klingg", "1212", "Josep Guardiola", "dsdasd", "head coach");
+        fff = new Coach("klinggg", "1212", "Roni Levy", "dsdasd", "head coach");
+        ggg = new Coach("klinggggg", "1212", "Frank Lampard", "dsdasd", "head coach");
+        hhh = new Coach("klnnning", "1212", "Andreas Herzog", "dsdasd", "head coach");
+        iii = new Coach("klinssssg", "1212", "Marko Balbul", "dsdasd", "head coach");*/
 
         /**fan**/
 

@@ -1,15 +1,24 @@
 package UILayer.Controllers;
 
+import DataForTest.DataBase;
 import ServiceLayer.TeamManagement;
 import UILayer.Main;
-import com.jfoenix.controls.JFXTextField;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.util.Callback;
+import javafx.util.Pair;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class TeamsController extends Controller {
 
@@ -18,6 +27,13 @@ public class TeamsController extends Controller {
     String budget;
     boolean openTeam=false;
 
+    @FXML
+    TableView<SimpleStringProperty> teams_table = new TableView<>();
+
+    @FXML
+    TextFlow team_page = new TextFlow();
+    @FXML
+    TextFlow team_page2 = new TextFlow();
 
     @FXML
     private TextField choosenTeamName;
@@ -35,9 +51,88 @@ public class TeamsController extends Controller {
             e.consume();
             closeProgram();
         });
+        showTeams();
     }
 
+    private void showTeams() {
+        DataBase db = new DataBase();
+        ArrayList<String> teams_name = teamManagement.getAllTeams();
+        ArrayList<SimpleStringProperty> properties_teams_name = new ArrayList<>();
+        for(String team_name: teams_name){
+            properties_teams_name.add(new SimpleStringProperty(null,team_name, team_name));
+        }
 
+        ObservableList<SimpleStringProperty> teams_name_data = FXCollections.observableArrayList(properties_teams_name);
+        TableColumn nameCol = new TableColumn("Teams");
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        TableColumn buttonCol = new TableColumn("Pages");
+        buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
+
+        Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory
+                = //
+                new Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>>() {
+                    @Override
+                    public TableCell call( TableColumn<SimpleStringProperty, String> param) {
+                        TableCell<SimpleStringProperty, String> cell = new TableCell<SimpleStringProperty, String>() {
+                            Button btn = new Button("Show Team's Page");
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setGraphic(null);
+                                    setText(null);
+                                } else {
+                                    btn.setOnAction(event -> {
+                                        SimpleStringProperty simple = getTableView().getItems().get(getIndex());
+                                        showTeamPage(simple.getName());
+                                    });
+                                    setGraphic(btn);
+                                    setText(null);
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+
+        buttonCol.setCellFactory(cellFactory);
+
+        teams_table.setItems(teams_name_data);
+        teams_table.getColumns().addAll(nameCol, buttonCol);
+
+
+    }
+
+    private void showTeamPage(String team_name) {
+
+        Pair<String, Set<String>[]> detailsAsPair = teamManagement.getTeamPageDetails(team_name);
+        String[] details = detailsAsPair.getKey().split(",");
+        team_page.getChildren().clear();
+        team_page.getChildren().add(new Text(team_name + "'s Page:" + "\n"));
+        for(String detail: details){
+            team_page.getChildren().add(new Text(detail + "\n"));
+        }
+
+        team_page2.getChildren().clear();
+        team_page2.getChildren().add(new Text("Players: "));
+        for(String player: detailsAsPair.getValue()[0]){
+            team_page2.getChildren().add(new Text(player + ", "));
+        }
+        team_page2.getChildren().add(new Text("\n"));
+
+        team_page2.getChildren().add(new Text("Coaches: "));
+        for(String coach: detailsAsPair.getValue()[1]){
+            team_page2.getChildren().add(new Text(coach + ", "));
+        }
+        team_page2.getChildren().add(new Text("\n"));
+
+        team_page2.getChildren().add(new Text("Manager: "));
+        for(String manager: detailsAsPair.getValue()[2]){
+            team_page2.getChildren().add(new Text(manager + ", "));
+        }
+
+
+    }
 
     public boolean validationBudget(String budget){
 

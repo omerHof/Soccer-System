@@ -130,4 +130,10 @@ public class ServiceController {
         userManagement.logOut();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/displaySpecialPassword")
+    public String displaySpecialPassword(){
+        String type = userManagement.displaySpecialPassword();
+        return type;
+    }
+
 }

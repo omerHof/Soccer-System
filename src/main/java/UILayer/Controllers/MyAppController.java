@@ -26,6 +26,9 @@ public class MyAppController extends Controller {
     private Button addGameEvent;
     @FXML
     private Button openCoachPage;
+    @FXML
+    private Button getManagementPassword;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Stage s = Main.getStage();
@@ -56,6 +59,7 @@ public class MyAppController extends Controller {
             case "AssociationRepresentative":
                 initNewSeasonButton.setVisible(true);
                 addGameEvent.setVisible(true);
+                getManagementPassword.setVisible(true);
                 break;
             case "TeamOwner":
                 createNewTeamButton.setVisible(true);
@@ -74,4 +78,17 @@ public class MyAppController extends Controller {
     }
 
 
+    public void showPassword() {
+        String pass = clientController.displaySpecialPassword();
+        showAlert(Alert.AlertType.INFORMATION, "Form Information", "The current management password is: " + pass);
+
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setHeaderText(null);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.show();
+    }
 }

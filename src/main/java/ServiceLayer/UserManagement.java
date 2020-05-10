@@ -63,6 +63,11 @@ public class UserManagement {
         return MainSystem.getInstance().logOut();
     }
 
+    public String displaySpecialPassword(){
+        String pass = MainSystem.getInstance().getSpecialPassword();
+        return pass;
+    }
+
     public String getUserName(){
         return currentUser.getUserName();
     }

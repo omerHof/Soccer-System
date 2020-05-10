@@ -152,6 +152,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String displaySpecialPassword(){
+                HttpEntity<String> response = template.exchange("http://localhost:8090/displaySpecialPassword?",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+
+                return response.getBody();
+        }
 
 
         public String getPlayerPosition() {

@@ -135,7 +135,7 @@ public class MainSystem {
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
         if(newUser==null){
-            return "null";
+            return "association representative";
         }
 
         db.addUser(newUser);

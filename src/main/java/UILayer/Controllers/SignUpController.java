@@ -172,6 +172,7 @@ public class SignUpController extends Controller {
         userType = "Player";
 
         submit.setDisable(false); //now the user can try pressing the submit button.
+        premiumAlert(); //lets the user know that his registration depends on the representative's approve.
 
     }
 
@@ -189,7 +190,7 @@ public class SignUpController extends Controller {
         userType = "Coach";
 
         submit.setDisable(false); //now the user can try pressing the submit button.
-
+        premiumAlert(); //lets the user know that his registration depends on the representative's approve.
 
     }
 
@@ -208,6 +209,11 @@ public class SignUpController extends Controller {
 
         submit.setDisable(false); //now the user can try pressing the submit button.
 
+        premiumAlert(); //lets the user know that his registration depends on the representative's approve.
+    }
+
+    private void premiumAlert() {
+        showAlert(Alert.AlertType.INFORMATION, "Form Information", "Please notice that your registration is subject to approval of one of our association representatives.");
     }
 
 
@@ -237,25 +243,6 @@ public class SignUpController extends Controller {
 
         submit.setFocusTraversable(false);
 
-
-//        usernameTF.addKeyListener(new KeyAdapter() {
-//
-//            public void keyReleased(KeyEvent e) {
-//                JTextField textField = (JTextField) e.getSource();
-//                String text = textField.getText();
-//
-//                if (text != "")
-//                    submit.setDisable(true);
-//            }
-//
-//            public void keyTyped(KeyEvent e) {
-//            }
-//
-//            public void keyPressed(KeyEvent e) {
-//            }
-//
-//        });
-
         if(fullnameTF.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your name.");
 //            submit.setFocusTraversable(false);
@@ -281,47 +268,9 @@ public class SignUpController extends Controller {
             return;
         }
 
-        //showAlert(Alert.AlertType.CONFIRMATION, "Registration Successful!", "Welcome " + usernameTF.getText());
-
         submit.setFocusTraversable(false);
         checkDetailsCorrect();
     }
-
-      /*  usernameTF.getOnAction() {
-            public void changedUpdate (DocumentEvent e){
-                changed();
-            }
-            public void removeUpdate (DocumentEvent e){
-                changed();
-            }
-            public void insertUpdate (DocumentEvent e){
-                changed();
-            }
-        }
-            public void changed() {
-                if (usernameTF.getText().equals("")){
-                    submit.setDisable(false);
-                }
-                else {
-                    submit.setDisable(true);
-                }
-            }
-        });
-*/
-     /*
-            username = usernameTF.getText();
-        fullname = fullnameTF.getText();
-        password = passwordTF.getText();
-        email = emailTF.getText();*/
-
-       /* while (!detailsFilled) {
-            //if (username != "" && fullname != "" && password != "" && email != "") {
-            if ((!usernameTF.getText().trim().equals("")) && (!fullnameTF.getText().trim().equals("")) && (!passwordTF.getText().trim().equals("")) && (!emailTF.getText().trim().equals(""))) {
-                submit.setDisable(false); //now the user can push this button.
-                detailsFilled = true;
-            }
-        }
-    }*/
 
     @FXML
     public void checkDetailsCorrect() throws IOException {
@@ -333,11 +282,16 @@ public class SignUpController extends Controller {
         password = passwordTF.getText();
         email = emailTF.getText();
 
-
         //checks validation of the basic details entered:
         if (!fullname.matches("^[a-zA-Z ]*$|| ")) { //check full name validation (only letters)
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Your name must contains only characters. Please try again.");
             return;
+        }
+
+        if (!fullname.contains(" ")) { //not full name
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your full name.");
+            return;
+
         }
 
         String regex = "^(.+)@(.+)$";//
@@ -411,9 +365,9 @@ public class SignUpController extends Controller {
             }
             courtRole = playerCourtRoleCB.getValue().toString();
 
-            birthdateDP.setOnAction(event -> { // gets the value of the date picker
+            //birthdateDP.setOnAction(event -> { // gets the value of the date picker
                 birthDate = birthdateDP.getValue();
-            });
+            //});
 
             if(birthDate==null){
                 showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose your birth date in order to submit the form.");
@@ -456,15 +410,14 @@ public class SignUpController extends Controller {
         }
 
 
-
         if(userCreatedMessage.equals("exist")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "The username you choose is already exist. Please choose a new one.");
             submit.setFocusTraversable(false);
             return;
         }
 
-        else if(userCreatedMessage.equals("null")){
-            showAlert(Alert.AlertType.ERROR, "Form Error!", "Something went wrong, please check the details you entered.");
+        else if(userCreatedMessage.equals("association representative")){
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "The association representative didn't approve your register request. Please try again later.");
             submit.setFocusTraversable(false);
             return;
         }
@@ -473,19 +426,12 @@ public class SignUpController extends Controller {
             super.userType = this.userType; //updates attributes of the main controller
             super.userName = this.username;
 
-
-            if (generatorType.equals("PremiumUserGenerator")){
-                showAlert(Alert.AlertType.INFORMATION, "Form Information", "You're all good! Please notice that your registration is subject to approval of one of our association representatives.");
-            }
-
-            else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Confirmation Dialog");
                 alert.setHeaderText("Welcome aboard !");
                 alert.setContentText("Your user was added successfully to the system.");
                 alert.showAndWait();
 
-            }
 //            showAlert(Alert.AlertType.CONFIRMATION, "Form Information", "Welcome aboard ! Your user was added successfully to the system.");
 
             usernameTF.clear();
@@ -531,6 +477,8 @@ public class SignUpController extends Controller {
 
         try {
             allExtraFieldsOff();
+            premiumAlert(); //lets the user know that his registration depends on the representative's approve.
+
         }
         catch (IOException i){
 
@@ -543,7 +491,7 @@ public class SignUpController extends Controller {
 
         userType = "Manager";
         managerBTN.setUnderline(true);
-
+        premiumAlert(); //lets the user know that his registration depends on the representative's approve.
 
         try {
             allExtraFieldsOff();

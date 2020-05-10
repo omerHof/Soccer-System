@@ -3,6 +3,7 @@ package UILayer.Controllers;
 import ServiceLayer.UserManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -21,6 +22,8 @@ public class MyAppController extends Controller {
     private Button openTeamPage;
     @FXML
     private Button openPlayerPage;
+    @FXML
+    private Button addGameEvent;
     @FXML
     private Button openCoachPage;
     @Override
@@ -52,6 +55,7 @@ public class MyAppController extends Controller {
                 break;
             case "AssociationRepresentative":
                 initNewSeasonButton.setVisible(true);
+                addGameEvent.setVisible(true);
                 break;
             case "TeamOwner":
                 createNewTeamButton.setVisible(true);
@@ -68,5 +72,6 @@ public class MyAppController extends Controller {
                 break;
         }
     }
+
 
 }

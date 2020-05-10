@@ -1,8 +1,11 @@
 package UILayer.Controllers;
 
 import DataForTest.DataBase;
+import Games.Game;
 import UILayer.ClientController;
 import UILayer.Main;
+import Users.AssociationRepresentative;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -230,8 +233,40 @@ public class Controller implements Initializable {
     }
 
 
+    public void addGameEvent() throws IOException {
+
+        // currUser !!1! ?????
+        AssociationRepresentative asso = new AssociationRepresentative("", "", "" , ""); // /////////// ?????????? //////////
+        Game toAdd = asso.findActiveGame();
+
+        if (toAdd != null ){
+            showAlert(Alert.AlertType.ERROR, "Illegal action!", "None of your games is active at the moment. Please try again later.");
+        }
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addGameEvent.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        SeasonController sc = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.show();
     }
 }

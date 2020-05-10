@@ -1,5 +1,6 @@
 package UILayer.Controllers;
 
+import ServiceLayer.UserManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
@@ -10,6 +11,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LandingController extends Controller {
+
+    private UserManagement userManagement;
 
     @FXML
     JFXButton notification;
@@ -38,6 +41,7 @@ public class LandingController extends Controller {
             e.consume();
             closeProgram();
         });
+        userManagement = new UserManagement();
         showUserButton();
     }
 
@@ -70,6 +74,7 @@ public class LandingController extends Controller {
             myAppsBtn.setVisible(false);
 
             super.userName = null;
+            userManagement.logOut();
         }
     }
 }

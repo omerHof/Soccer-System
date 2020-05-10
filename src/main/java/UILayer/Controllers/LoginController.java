@@ -80,11 +80,17 @@ public class LoginController extends Controller {
             return;
         }
         else{
-            showAlert(Alert.AlertType.INFORMATION, "Form Information", "Now you logged in. Enjoy our system :)"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
-            super.userName = username;
-            userType = userManagement.getUserType(username);
-            super.userType = userType;
-            goToLanding();
+            String ans = clientController.logIn(username,password);
+            if (ans.equals("null")|| ans.equals("name")){
+                showAlert(Alert.AlertType.INFORMATION, "Form Information", "its seems that youre not in the system yet, please sign in first"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
+            }else{
+                showAlert(Alert.AlertType.INFORMATION, "Form Information", "Now you logged in. Enjoy our system :)"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
+                super.userName = username;
+                userType = userManagement.getUserType(username);
+                super.userType = userType;
+                homePage();
+            }
+
         }
 
     }

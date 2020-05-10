@@ -4,6 +4,7 @@ import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import SystemLogic.Search;
 import Teams.Team;
+import javafx.scene.transform.ShearBuilder;
 
 import java.util.*;
 
@@ -73,14 +74,14 @@ public abstract class User {
         return true;
     }
 
-    public String[] watchDetails(){
+    public ArrayList<String> watchDetails(){
         //MainSystem.LOG.info(getUserFullName()+" watch his details");
-        String[] details = new String[4];
-        details[0]=userFullName;
-        details[1]=userName;
-        details[2]= password;
-        details[3]=userEmail;
-        return details;
+        ArrayList<String> userDetails = new ArrayList<>();
+        userDetails.add(userFullName);
+        userDetails.add(password);
+        userDetails.add(userName);
+        userDetails.add(userEmail);
+        return userDetails;
     }
 
     /** ---------------- GETTERS AND SETTERS ---------------- **/

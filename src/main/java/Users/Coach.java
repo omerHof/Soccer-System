@@ -27,6 +27,7 @@ public class Coach extends User implements Assent {
         salary=0;
         currentTeam=null;
         page = null;
+        DB1 = DB.getInstance();
 
     }
 

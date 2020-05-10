@@ -29,6 +29,12 @@ public class ServiceController {
         return systemManagement.getLeagueNames();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getUserDetails")
+    public ArrayList<String> getUserDetails(){
+        ArrayList<String> user = userManagement.watchDetails();
+        return userManagement.watchDetails();
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getFullTeamsNames")
     public ArrayList<String> getFullTeamsNames(){
         return systemManagement.getFullTeamsNames();
@@ -49,10 +55,61 @@ public class ServiceController {
         return systemManagement.getAllSeasonYears(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/setUserEmail")
+    public void setUserEmail(@RequestParam String param){
+        userManagement.setUserEmail(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/setUserFullName")
+    public void setUserFullName(@RequestParam String param){
+        userManagement.setUserFullName(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/setCoachRole")
+    public void setCoachRole(@RequestParam String param){
+        userManagement.setCoachTeamRole(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/setPlayerPosition")
+    public void setPlayerPosition(@RequestParam String param){
+        userManagement.setCourtRole(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/setRefereeQualification")
+    public void setRefereeQualification(@RequestParam String param){
+        userManagement.setRefereeQualifications(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPosition")
+    public String getPlayerPosition(){
+        return userManagement.getCourtRole();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getCoachRole")
+    public String getCoachRole(){
+        return userManagement.getCoachTeamRole();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getRefereeQualifications")
+    public String getRefereeQualifications(){
+        return userManagement.getRefereeQualifications();
+    }
+
     @RequestMapping(method = RequestMethod.POST,value = "/testPost")
     public String checkPost(@RequestBody String id){
 
         return id;
     }
+
+    @RequestMapping(method = RequestMethod.POST,value = "/logIn")
+    public String logIn(@RequestBody String details){
+        String userDetails[] = details.split(",");
+        String check = userManagement.logIn(userDetails[0],userDetails[1]);
+        return check;
+    }
+
+
+
+
 
 }

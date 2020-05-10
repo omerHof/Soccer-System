@@ -1,8 +1,8 @@
 package UILayer;
 
+import com.jfoenix.controls.JFXTextField;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +82,65 @@ public class ClientController {
                 //assertThat(response.getStatusCode(), is(HttpStatus.CREATED));
 
                 String foo = response2.getBody();
+        }
+
+        public String logIn(String userName, String password)  {
+                HttpEntity<String> request = new HttpEntity<>(userName+ "," + password);
+                ResponseEntity<String> response2 = template.exchange("http://localhost:8090/logIn", HttpMethod.POST, request, String.class);
+
+                //assertThat(response.getStatusCode(), is(HttpStatus.CREATED));
+                return response2.getBody();
+        }
+
+        public List<String> getUserDetails() {
+
+            HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getUserDetails",
+                    HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+            return response.getBody();
+        }
+
+        public void setUserEmail(String userEmail) {
+                HttpEntity response = template.exchange("http://localhost:8090/setUserEmail?param="+userEmail,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public void setUserFullName(String fullName) {
+                HttpEntity response = template.exchange("http://localhost:8090/setUserFullName?param="+fullName,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public void setCoachRole(String coachRole) {
+                HttpEntity response = template.exchange("http://localhost:8090/setCoachRole?param="+coachRole,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public void setPlayerPosition(String playerPosition) {
+                HttpEntity response = template.exchange("http://localhost:8090/setPlayerPosition?param="+playerPosition,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public void setRefereeQualification(String refereeQualification) {
+                HttpEntity response = template.exchange("http://localhost:8090/setRefereeQualification?param="+refereeQualification,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public String getPlayerPosition() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public String getCoachRole() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getCoachRole",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public String getRefereeQualifications() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getRefereeQualifications",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
         }
 /*
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {

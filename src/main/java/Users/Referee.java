@@ -18,6 +18,7 @@ public class Referee extends User implements Observer {
 
     private String qualification;
     protected LinkedList<Game> myGames;
+    private DB db;
 
 
     /**
@@ -36,6 +37,7 @@ public class Referee extends User implements Observer {
         this.userEmail = userEmail;
         this.qualification = qualification;
         myGames = new LinkedList<>();
+        this.db = DB.getInstance();
     }
 
     /**********getters and setters**********/
@@ -51,6 +53,7 @@ public class Referee extends User implements Observer {
     public void setQualification(String qualification) {
         this.qualification = qualification;
         MainSystem.LOG.info(this.userName + ": referee's details were updated.");
+        db.setUser(this);
     }
 
     public void addGame (Game g){ //adds a game to the referee's list of games.
@@ -85,6 +88,7 @@ public class Referee extends User implements Observer {
     public void followThisGame(Game game){
         game.addObserver(this);
         myGames.add(game);
+        db.setUser(this);
     }
 
 

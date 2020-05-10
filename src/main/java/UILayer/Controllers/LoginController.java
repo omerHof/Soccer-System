@@ -13,8 +13,6 @@ import java.util.ResourceBundle;
 
 public class LoginController extends Controller {
 
-    private UserManagement userManagement;
-
     private String username;
     private String password;
 
@@ -39,11 +37,8 @@ public class LoginController extends Controller {
             closeProgram();
         });
 
-        userManagement = new UserManagement();
-        backBTN.setFocusTraversable(false);
         login.setFocusTraversable(false);
-
-
+        backBTN.setFocusTraversable(false);
     }
 
     public void verifyDetails() throws IOException {
@@ -61,7 +56,7 @@ public class LoginController extends Controller {
         username = usernameTF.getText();
         password = passwordTF.getText();
 
-        String loginResult = userManagement.logIn(username, password);
+        String loginResult = clientController.logIn(username,password);
 
         if (loginResult.equals("name")){
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Username doesn't exist. Please try again.");
@@ -80,21 +75,15 @@ public class LoginController extends Controller {
             return;
         }
         else{
-            String ans = clientController.logIn(username,password);
-            if (ans.equals("null")|| ans.equals("name")){
-                showAlert(Alert.AlertType.INFORMATION, "Form Information", "its seems that youre not in the system yet, please sign in first"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
-            }else{
-                showAlert(Alert.AlertType.INFORMATION, "Form Information", "Now you logged in. Enjoy our system :)"); //todo: checkkkkkk !!!!!!!!! ..//////////////////////////////////////////
-                super.userName = username;
-                userType = userManagement.getUserType(username);
-                super.userType = userType;
-                homePage();
-            }
+            showAlert(Alert.AlertType.INFORMATION, "Form Information", "Now you logged in. Enjoy our system :)");
+            super.userName = username;
+
+            userType = clientController.getUserType(username);
+            super.userType = userType;
+            homePage();
 
         }
-
     }
-
 
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);

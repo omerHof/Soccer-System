@@ -4,6 +4,7 @@ import ServiceLayer.LeagueSeasonManagement;
 import ServiceLayer.SystemManagement;
 import ServiceLayer.TeamManagement;
 import ServiceLayer.UserManagement;
+import SystemLogic.MainSystem;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -77,11 +78,13 @@ public class ServiceController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/setRefereeQualification")
     public void setRefereeQualification(@RequestParam String param){
+
         userManagement.setRefereeQualifications(param);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPosition")
-    public String getPlayerPosition(){
+    public String getPlayerPosition()
+    {
         return userManagement.getCourtRole();
     }
 
@@ -108,6 +111,11 @@ public class ServiceController {
         return check;
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getUserType")
+    public String getUserType(@RequestParam String userName){
+        String type = userManagement.getUserType(userName);
+        return type;
+    }
 
 
 

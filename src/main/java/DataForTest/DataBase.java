@@ -609,7 +609,7 @@ public class DataBase {
         TeamOwner to = new TeamOwner("to","to","blabla","test@test");
         Manager m = new Manager("m","m","blabla","test@test");
         AssociationRepresentative ar = new AssociationRepresentative("a", "a", "blabla", "test@test");
-        Administrator ad = new Administrator("a","a","blabla","test@test");
+        Administrator ad = new Administrator("ad","ad","blabla","test@test");
         db.setUser(p);
         db.setUser(cr);
         db.setUser(r);

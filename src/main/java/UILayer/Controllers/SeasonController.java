@@ -86,7 +86,7 @@ public class SeasonController extends Controller {
     @FXML
     private TextField timeTF;
     @FXML
-    private ChoiceBox<String> playerNameCB;
+    private TextField playerNameTF;
     @FXML
     JFXButton submit;
     @FXML
@@ -510,14 +510,14 @@ public class SeasonController extends Controller {
             return;
         }
 
-        boolean isSelected = (playerNameCB.getValue() != null );
-        if(!isSelected) { //the user didn't choose the player's name.
-            showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose the player whose involved in the event.");
+
+        if(playerNameTF.getText().isEmpty()) { //the user didn't enter the player's name.
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "You must enter the player whose involved in the event.");
             submit.setFocusTraversable(false);
             return;
         }
 
-        isSelected = (whichTeamCB.getValue() != null );
+        boolean isSelected = (whichTeamCB.getValue() != null );
         if(!isSelected) { //the user didn't choose which team is involved with this event.
             showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose a team in order to submit the form.");
             submit.setFocusTraversable(false);
@@ -540,7 +540,7 @@ public class SeasonController extends Controller {
 
         submit.setFocusTraversable(false);
 
-        String playerName = playerNameCB.getValue();
+        String playerName = playerNameTF.getText();
         int gameTime = Integer.parseInt(timeTF.getText());
         String type = eventTypeCB.getValue();
         String team = whichTeamCB.getValue();
@@ -564,8 +564,8 @@ public class SeasonController extends Controller {
             goToProfile();
         }
 
-        else { //not suppose to happen
-            showAlert(Alert.AlertType.ERROR, "Form Error!", "Something went wrong. Please try again.");
+        else { //no active game at the moment
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "There is no active game at the moment that you can edit. Please try again later.");
             return;
         }
     }

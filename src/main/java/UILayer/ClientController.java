@@ -1,5 +1,6 @@
 package UILayer;
 
+import SystemLogic.MainSystem;
 import com.jfoenix.controls.JFXTextField;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
@@ -125,6 +126,13 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        ///////////// newwww clientttt
+        public String getUserType(String userName){
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getUserType?param="+userName,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+
+                return response.getBody();
+        }
         public String getPlayerPosition() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -142,6 +150,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
+
+
 /*
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
 

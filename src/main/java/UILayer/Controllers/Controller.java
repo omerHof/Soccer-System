@@ -235,13 +235,13 @@ public class Controller implements Initializable {
 
     public void addGameEvent() throws IOException {
 
-        // currUser !!1! ?????
+        /*// currUser !!1! ?????
         AssociationRepresentative asso = new AssociationRepresentative("", "", "" , ""); // /////////// ?????????? //////////
         Game toAdd = asso.findActiveGame();
 
         if (toAdd != null ){
             showAlert(Alert.AlertType.ERROR, "Illegal action!", "None of your games is active at the moment. Please try again later.");
-        }
+        }*/
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addGameEvent.fxml"));

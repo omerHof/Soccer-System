@@ -112,12 +112,22 @@ public class ServiceController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/getUserType")
-    public String getUserType(@RequestParam String userName){
-        String type = userManagement.getUserType(userName);
+    public String getUserType(@RequestParam String param){
+        String type = userManagement.getUserType(param);
         return type;
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/addGameEvent")
+    public boolean addGameEvent(@RequestParam String param){
+        String gameDetails[] = param.split(",");
+        gameDetails[0] = gameDetails[0].substring(1);
+        boolean ans = leagueSeasonManagement.addGameEvent(gameDetails[0], gameDetails[1], gameDetails[2], gameDetails[3]);
+        return ans;
+    }
 
-
+    @RequestMapping(method = RequestMethod.GET, value = "/logOut")
+    public void logOut(){
+        userManagement.logOut();
+    }
 
 }

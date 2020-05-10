@@ -1,6 +1,8 @@
 package UILayer;
 
+import Games.Event;
 import SystemLogic.MainSystem;
+import Users.AssociationRepresentative;
 import com.jfoenix.controls.JFXTextField;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
@@ -93,6 +95,22 @@ public class ClientController {
                 return response2.getBody();
         }
 
+        public void logOut() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/logOut",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+        }
+
+        public boolean addGameEvent(String type, String time, String playerName, String whichTeam){
+
+                HttpEntity<String> request = new HttpEntity<>(type+ "," + time+ "," + playerName+ "," + whichTeam);
+                HttpEntity<Boolean> response = template.exchange("http://localhost:8090/addGameEvent?param="+request,
+                        HttpMethod.GET, requestEntity, Boolean.class, "42");
+
+                return response.getBody();
+        }
+
+
         public List<String> getUserDetails() {
 
             HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getUserDetails",
@@ -133,6 +151,9 @@ public class ClientController {
 
                 return response.getBody();
         }
+
+
+
         public String getPlayerPosition() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
                         HttpMethod.GET, requestEntity, String.class, "42");

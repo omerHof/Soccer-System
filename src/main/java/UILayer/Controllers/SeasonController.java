@@ -541,7 +541,8 @@ public class SeasonController extends Controller {
         submit.setFocusTraversable(false);
 
         String playerName = playerNameTF.getText();
-        int gameTime = Integer.parseInt(timeTF.getText());
+        String time = timeTF.getText();
+        int gameTime = Integer.parseInt(time);
         String type = eventTypeCB.getValue();
         String team = whichTeamCB.getValue();
 
@@ -552,7 +553,7 @@ public class SeasonController extends Controller {
         }
 
         //everything's good
-        boolean addedSuccessfully = seasonManagement.addGameEvent(type, gameTime, playerName, team);
+        boolean addedSuccessfully = clientController.addGameEvent(type, time, playerName, team);
 
         if (addedSuccessfully) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

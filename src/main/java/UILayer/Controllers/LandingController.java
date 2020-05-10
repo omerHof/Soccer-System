@@ -74,7 +74,7 @@ public class LandingController extends Controller {
             myAppsBtn.setVisible(false);
 
             super.userName = null;
-            userManagement.logOut();
+            clientController.logOut();
         }
     }
 }

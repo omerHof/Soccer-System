@@ -191,7 +191,7 @@ public class MainSystem {
     public boolean logOut(){
         String userName = currentUser.getUserName();
         this.currentUser = null;
-        LOG.info(userName + " was logged in successfully");
+        LOG.info(userName + " was logged out successfully");
         return true;
     }
 

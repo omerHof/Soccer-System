@@ -111,6 +111,20 @@ public class ServiceController {
         return userManagement.getCourtRole();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerTeam")
+    public String getPlayerTeam()
+    {
+        return userManagement.getPlayerTeam();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/createPlayerPersonalPage")
+    public void createPlayerPersonalPage(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        userManagement.createPlayerPersonalPage(Double.parseDouble(userDetails[0]),Integer.parseInt(userDetails[1]),Integer.parseInt(userDetails[2]),userDetails[3]);
+    }
+
+
     @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPageDetails")
     public Pair<String, ArrayList<String>> getPlayerPageDetails(@RequestParam String param){
 

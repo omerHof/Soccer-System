@@ -2,12 +2,9 @@ package UILayer;
 
 import javafx.util.Pair;
 import org.springframework.http.*;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -128,6 +125,13 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public List<String> getFullTeamsNames() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
         public String getPlayerPosition() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -138,6 +142,18 @@ public class ClientController {
                 HttpEntity response = template.exchange("http://localhost:8090/setPlayerPosition?param="+playerPosition,
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
+
+        public String getPlayerTeam() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerTeam",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public void createPlayerPersonalPage(double height, int weight, int shirtNumber, String team) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/createPlayerPersonalPage?param="+ String.valueOf(height)+ ","+String.valueOf(weight)+","+String.valueOf(shirtNumber)+","+team,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
 
         public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name) {
                 ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
@@ -246,6 +262,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
+
+
 }
 
 class AddSeasonParam {

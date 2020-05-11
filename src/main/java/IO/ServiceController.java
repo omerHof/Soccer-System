@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -179,6 +180,12 @@ public class ServiceController {
         return systemManagement.getAllSeasonYears(param);
     }
 
+    @RequestMapping(method = RequestMethod.POST, value = "/addSeasonToLeague")
+    public String logIn(@RequestBody AddSeasonParam param) {
+        String check = leagueSeasonManagement.addSeasonToLeague(param.getLeagueName(),param.getYear(),param.getScorePolicy(),param.getGamePolicy(),param.getTeams(),param.getReferees(),param.getRepresentatives());
+        return check;
+    }
+
     /** ------------ GAMES ------------ **/
     @RequestMapping(method = RequestMethod.GET, value = "/addGameEvent")
     public boolean addGameEvent(@RequestParam String param){
@@ -192,18 +199,52 @@ public class ServiceController {
     public ArrayList<String> closestGames(@RequestParam String param){
         return systemManagement.closestGames(param);
     }
+}
 
+class AddSeasonParam {
+    String leagueName;
+    int year;
+    String scorePolicy;
+    String gamePolicy;
+    List<String> teams;
+    List<String> referees;
+    List<String> representatives;
 
+    public AddSeasonParam(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+        this.leagueName = leagueName;
+        this.year = year;
+        this.scorePolicy = scorePolicy;
+        this.gamePolicy = gamePolicy;
+        this.teams = teams;
+        this.referees = referees;
+        this.representatives = representatives;
+    }
 
+    public String getLeagueName() {
+        return leagueName;
+    }
 
+    public int getYear() {
+        return year;
+    }
 
+    public String getScorePolicy() {
+        return scorePolicy;
+    }
 
+    public String getGamePolicy() {
+        return gamePolicy;
+    }
 
+    public List<String> getTeams() {
+        return teams;
+    }
 
+    public List<String> getReferees() {
+        return referees;
+    }
 
-
-
-
-
-
+    public List<String> getRepresentatives() {
+        return representatives;
+    }
 }

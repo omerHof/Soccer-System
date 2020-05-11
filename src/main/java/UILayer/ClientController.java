@@ -235,9 +235,6 @@ public class ClientController {
 
                 return response.getBody();
         }
-
-
-
 }
 
 class AddSeasonParam {
@@ -259,4 +256,31 @@ class AddSeasonParam {
                 this.representatives = representatives;
         }
 
+        public String getLeagueName() {
+                return leagueName;
+        }
+
+        public int getYear() {
+                return year;
+        }
+
+        public String getScorePolicy() {
+                return scorePolicy;
+        }
+
+        public String getGamePolicy() {
+                return gamePolicy;
+        }
+
+        public List<String> getTeams() {
+                return teams;
+        }
+
+        public List<String> getReferees() {
+                return referees;
+        }
+
+        public List<String> getRepresentatives() {
+                return representatives;
+        }
 }

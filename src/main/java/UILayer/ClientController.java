@@ -1,9 +1,5 @@
 package UILayer;
 
-import Games.Event;
-import SystemLogic.MainSystem;
-import Users.AssociationRepresentative;
-import com.jfoenix.controls.JFXTextField;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -27,85 +23,11 @@ public class ClientController {
 
         }
 
-        /**
-         * example of GET request
-         */
-
-        public ArrayList<String> getLeaguesNames() {
-
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getLeaguesNames",
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-
-        public List<String> getFullTeamsNames() {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-
-        }
-
-        /**
-         * example of GET with parameter
-         * @param type
-         * @return
-         */
-        public List<String> getAllUsersByType(String type) {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getAllUsersByType?param="+type,
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-
-        public int getLeagueTeamNumber(String numOfTeams) {
-                HttpEntity<Integer> response = template.exchange("http://localhost:8090/getLeagueTeamNumber?param="+numOfTeams,
-                        HttpMethod.GET, requestEntity, Integer.class, "42");
-
-                return response.getBody();
-        }
-
-        public ArrayList<Integer> getAllSeasonYears(String leagueName) {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getAllSeasonYears?param="+leagueName,
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-
-        public ArrayList<String> closestGames(String leagueName) {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/closestGames?param="+leagueName,
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-
-        public HashMap<String, String> getAllPlayers() {
-                HttpEntity<HashMap> response = template.exchange("http://localhost:8090/getAllPlayers",
-                        HttpMethod.GET, requestEntity, HashMap.class, "42");
-
-                return response.getBody();
-        }
-
-
-        /**
-         * example of POST request
-         */
-
-        public void setNewSeason() {
-                HttpEntity<String> request = new HttpEntity<>(new String("bar"));
-                ResponseEntity<String> response2 = template
-                        .exchange("http://132.72.65.53/8080/testPost", HttpMethod.POST, request, String.class);
-
-                //assertThat(response.getStatusCode(), is(HttpStatus.CREATED));
-
-                String foo = response2.getBody();
-        }
+        /** ------------ LOGIN ------------ **/
 
         public String logIn(String userName, String password)  {
                 HttpEntity<String> request = new HttpEntity<>(userName+ "," + password);
                 ResponseEntity<String> response2 = template.exchange("http://localhost:8090/logIn", HttpMethod.POST, request, String.class);
-
                 //assertThat(response.getStatusCode(), is(HttpStatus.CREATED));
                 return response2.getBody();
         }
@@ -113,25 +35,29 @@ public class ClientController {
         public void logOut() {
                 HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/logOut",
                         HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
         }
 
-        public boolean addGameEvent(String type, String time, String playerName, String whichTeam){
-
-                HttpEntity<String> request = new HttpEntity<>(type+ "," + time+ "," + playerName+ "," + whichTeam);
-                HttpEntity<Boolean> response = template.exchange("http://localhost:8090/addGameEvent?param="+request,
-                        HttpMethod.GET, requestEntity, Boolean.class, "42");
+        public String displaySpecialPassword(){
+                HttpEntity<String> response = template.exchange("http://localhost:8090/displaySpecialPassword?",
+                        HttpMethod.GET, requestEntity, String.class, "42");
 
                 return response.getBody();
         }
 
+        /** ------------ USERS ------------ **/
+        public List<String> getAllUsersByType(String type) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getAllUsersByType?param="+type,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
 
         public List<String> getUserDetails() {
 
-            HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getUserDetails",
-                    HttpMethod.GET, requestEntity, ArrayList.class, "42");
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getUserDetails",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
 
-            return response.getBody();
+                return response.getBody();
         }
 
         public void setUserEmail(String userEmail) {
@@ -144,21 +70,6 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
-        public void setCoachRole(String coachRole) {
-                HttpEntity response = template.exchange("http://localhost:8090/setCoachRole?param="+coachRole,
-                        HttpMethod.GET, requestEntity, String.class, "42");
-        }
-
-        public void setPlayerPosition(String playerPosition) {
-                HttpEntity response = template.exchange("http://localhost:8090/setPlayerPosition?param="+playerPosition,
-                        HttpMethod.GET, requestEntity, String.class, "42");
-        }
-
-        public void setRefereeQualification(String refereeQualification) {
-                HttpEntity response = template.exchange("http://localhost:8090/setRefereeQualification?param="+refereeQualification,
-                        HttpMethod.GET, requestEntity, String.class, "42");
-        }
-
         ///////////// newwww clientttt
         public String getUserType(String userName){
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getUserType?param="+userName,
@@ -167,17 +78,18 @@ public class ClientController {
                 return response.getBody();
         }
 
-        public String displaySpecialPassword(){
-                HttpEntity<String> response = template.exchange("http://localhost:8090/displaySpecialPassword?",
-                        HttpMethod.GET, requestEntity, String.class, "42");
+        /** ------------ COACHES ------------ **/
 
-                return response.getBody();
+        public void setCoachRole(String coachRole) {
+                HttpEntity response = template.exchange("http://localhost:8090/setCoachRole?param="+coachRole,
+                        HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        public ArrayList<String> getLeaguesNames() {
 
-        public String getPlayerPosition() {
-                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
-                        HttpMethod.GET, requestEntity, String.class, "42");
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getLeaguesNames",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
                 return response.getBody();
         }
 
@@ -187,11 +99,49 @@ public class ClientController {
                 return response.getBody();
         }
 
+        /** ------------ PLAYERS ------------ **/
+
+        public HashMap<String, String> getAllPlayers() {
+                HttpEntity<HashMap> response = template.exchange("http://localhost:8090/getAllPlayers",
+                        HttpMethod.GET, requestEntity, HashMap.class, "42");
+
+                return response.getBody();
+        }
+
+        public List<String> getFullTeamsNames() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
+        public String getPlayerPosition() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public void setPlayerPosition(String playerPosition) {
+                HttpEntity response = template.exchange("http://localhost:8090/setPlayerPosition?param="+playerPosition,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+
+
+        /** ------------ REFEREE ------------ **/
+
+        public void setRefereeQualification(String refereeQualification) {
+                HttpEntity response = template.exchange("http://localhost:8090/setRefereeQualification?param="+refereeQualification,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
         public String getRefereeQualifications() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getRefereeQualifications",
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
+
+        /** ------------ TEAMS ------------ **/
 
         public boolean checkIfTeamNameExist(String text) {
                 HttpEntity<Boolean> response = template.exchange("http://localhost:8090/checkIfTeamNameExist?param="+text,
@@ -205,11 +155,17 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public int getLeagueTeamNumber(String numOfTeams) {
+                HttpEntity<Integer> response = template.exchange("http://localhost:8090/getLeagueTeamNumber?param="+numOfTeams,
+                        HttpMethod.GET, requestEntity, Integer.class, "42");
+
+                return response.getBody();
+        }
 
 
 
 
-
+        /** ------------ LEAGUE ------------ **/
 
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
                 AddSeasonParam param = new AddSeasonParam(leagueName, year, scorePolicy, gamePolicy, teams, referees, representatives);
@@ -218,6 +174,34 @@ public class ClientController {
                         .exchange("http://localhost:8090/addSeasonToLeague", HttpMethod.POST, request, String.class);
                 String foo = response2.getBody();
         }
+
+        /** ------------ SEASON ------------ **/
+
+        public ArrayList<Integer> getAllSeasonYears(String leagueName) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getAllSeasonYears?param="+leagueName,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
+        /** ------------ GAMES ------------ **/
+
+        public boolean addGameEvent(String type, String time, String playerName, String whichTeam){
+
+                HttpEntity<String> request = new HttpEntity<>(type+ "," + time+ "," + playerName+ "," + whichTeam);
+                HttpEntity<Boolean> response = template.exchange("http://localhost:8090/addGameEvent?param="+request,
+                        HttpMethod.GET, requestEntity, Boolean.class, "42");
+
+                return response.getBody();
+        }
+
+        public ArrayList<String> closestGames(String leagueName) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/closestGames?param="+leagueName,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
 
 }
 

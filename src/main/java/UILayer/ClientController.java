@@ -4,6 +4,7 @@ import javafx.util.Pair;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,7 @@ public class ClientController {
 
         }
 
-        /** ------------ LOGIN ------------ **/
+        /** ------------ LOGIN + SIGN UP ------------ **/
 
         public String logIn(String userName, String password)  {
                 HttpEntity<String> request = new HttpEntity<>(userName+ "," + password);
@@ -44,6 +45,15 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
 
                 return response.getBody();
+        }
+
+        public String signUp(String username, String password, String managementPassword, String userType, String fullname, String email, LocalDate birthday, String qualification, String courtRole, String teamRole, String generatorType) {
+                SignUpParam signUpParam = new SignUpParam(username,password,managementPassword,userType,fullname,email,birthday,qualification,courtRole,teamRole,generatorType);
+                HttpEntity<SignUpParam> request = new HttpEntity<>(signUpParam);
+                request.getBody();
+                ResponseEntity<String> response2 = template
+                        .exchange("http://localhost:8090/signUp", HttpMethod.POST, request, String.class);
+                return response2.getBody();
         }
 
         /** ------------ USERS ------------ **/
@@ -79,6 +89,24 @@ public class ClientController {
 
                 return response.getBody();
         }
+
+        public ArrayList<String> getNotifications() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getNotifications",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
+        public void sendNotification(String s, String username) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/sendNotification?param="+s+","+username,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+        public void readNotification(String notification) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/readNotification?param="+notification,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+
 
         /** ------------ COACHES ------------ **/
 
@@ -121,6 +149,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
+
+
 
         /** ------------ PLAYERS ------------ **/
 
@@ -239,6 +269,8 @@ public class ClientController {
                 return response2.getBody();
         }
 
+
+
         /** ------------ SEASON ------------ **/
 
         public ArrayList<Integer> getAllSeasonYears(String leagueName) {
@@ -321,5 +353,77 @@ class AddSeasonParam {
 
         public List<String> getRepresentatives() {
                 return representatives;
+        }
+}
+
+class SignUpParam{
+        String userName;
+        String password;
+        String managementPassword;
+        String userType;
+        String fullname;
+        String email;
+        LocalDate birthDay;
+        String qualification;
+        String courtRole;
+        String teamRole;
+        String generatorType;
+
+        public SignUpParam(String userName, String password, String managementPassword, String userType, String fullname, String email, LocalDate birthDay, String qualification, String courtRole, String teamRole, String generatorType) {
+                this.userName = userName;
+                this.password = password;
+                this.managementPassword = managementPassword;
+                this.userType = userType;
+                this.fullname = fullname;
+                this.email = email;
+                this.birthDay = birthDay;
+                this.qualification = qualification;
+                this.courtRole = courtRole;
+                this.teamRole = teamRole;
+                this.generatorType = generatorType;
+        }
+
+        public String getUserName() {
+                return userName;
+        }
+
+        public String getPassword() {
+                return password;
+        }
+
+        public String getManagementPassword() {
+                return managementPassword;
+        }
+
+        public String getUserType() {
+                return userType;
+        }
+
+        public String getFullname() {
+                return fullname;
+        }
+
+        public String getEmail() {
+                return email;
+        }
+
+        public LocalDate getBirthDay() {
+                return birthDay;
+        }
+
+        public String getQualification() {
+                return qualification;
+        }
+
+        public String getCourtRole() {
+                return courtRole;
+        }
+
+        public String getTeamRole() {
+                return teamRole;
+        }
+
+        public String getGeneratorType() {
+                return generatorType;
         }
 }

@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -21,6 +22,7 @@ public class Controller implements Initializable {
     @FXML
     protected static String userName;
     protected static String userType;
+    protected static ArrayList<String> newNotifications;
     DataBase db = new DataBase();
     protected static ClientController clientController = new ClientController();
 

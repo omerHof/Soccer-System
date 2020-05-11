@@ -79,8 +79,8 @@ public class UserManagement {
     public String getUserFullName() {
         return currentUser.getUserFullName();
     }
-    public ArrayList<Notification> getReceivedNotifications() {
-        return currentUser.getReceivedNotifications();
+    public ArrayList<String> getReceivedNotifications() {
+        return currentUser.getReceivedNotificationsAsString();
     }
 
     public String getUserEmail(){
@@ -93,6 +93,11 @@ public class UserManagement {
 
     public ArrayList<String> watchDetails(){
         return currentUser.watchDetails();
+    }
+
+    public void sendNotification(String message, String receiver) {
+        Notification notification = new Notification(currentUser,message,currentUser);
+        notification.send();
     }
 
 
@@ -279,5 +284,8 @@ public class UserManagement {
     }
 
 
-
+    public void readNotification(String message) {
+        Notification notification = new Notification(currentUser,message,currentUser);
+        notification.read();
+    }
 }

@@ -1,27 +1,41 @@
 package UILayer.Controllers;
 
-import ServiceLayer.UserManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class LandingController extends Controller {
 
-    private UserManagement userManagement;
 
-    @FXML
-    JFXButton notification;
+
+    //ArrayList<MenuItem> menuItems = new ArrayList<>();
+    ObservableList<MenuItem> menuItems = FXCollections.observableArrayList();
+
+
 
     @FXML
     JFXButton profileButton;
 
     @FXML
+
+    MenuButton notificationsList;
+
+    @FXML
     JFXButton logInBTN;
+
+    @FXML
+    FontAwesomeIcon bell;
 
     @FXML
     JFXButton signUpBtn;
@@ -41,7 +55,27 @@ public class LandingController extends Controller {
             e.consume();
             closeProgram();
         });
-        userManagement = new UserManagement();
+        if(userName!=null){
+            newNotifications = clientController.getNotifications();
+            for(String notification:newNotifications){
+                MenuItem item = new MenuItem(notification);
+                item.setOnAction(a->{ //lambda expression
+                    notificationsList.getItems().remove(item);
+                    if(notificationsList.getItems().size()==0){
+                        Color c = Color.web("0xbbe0e0",1.0);
+                        Paint paint = c;
+                        bell.setFill(paint);
+                    }
+                    clientController.readNotification(notification);
+                    newNotifications = clientController.getNotifications();
+                });
+
+                notificationsList.getItems().add(item);
+            }
+
+
+        }
+
         showUserButton();
     }
 
@@ -49,11 +83,17 @@ public class LandingController extends Controller {
         if(super.userName!=null){
             logInBTN.setVisible(false);
             signUpBtn.setVisible(false);
-            notification.setVisible(true);
+            notificationsList.setVisible(true);
             profileButton.setText(userName);
             profileButton.setVisible(true);
             signOut.setVisible(true);
             myAppsBtn.setVisible(true);
+
+            if(newNotifications.size()>0){
+                Color c = Color.RED;
+                Paint paint = c;
+                bell.setFill(paint);
+            }
         }
     }
 
@@ -68,13 +108,25 @@ public class LandingController extends Controller {
 
             logInBTN.setVisible(true);
             signUpBtn.setVisible(true);
-            notification.setVisible(false);
             profileButton.setVisible(false);
             signOut.setVisible(false);
             myAppsBtn.setVisible(false);
-
+            notificationsList.setVisible(false);
             super.userName = null;
             clientController.logOut();
         }
+    }
+
+    public void markAsRead(MouseEvent mouseEvent) {
+        String readNotification = notificationsList.getText();
+        notificationsList.getItems().remove(readNotification);
+        if(notificationsList.getItems().size()==0){
+            Color c = Color.web("0xbbe0e0",1.0);
+            Paint paint = c;
+            bell.setFill(paint);
+        }
+        clientController.readNotification(readNotification);
+        newNotifications = clientController.getNotifications();
+
     }
 }

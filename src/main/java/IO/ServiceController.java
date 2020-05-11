@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 @RestController
 public class ServiceController {
@@ -75,6 +76,11 @@ public class ServiceController {
     }
 
     /** ------------ COACHES ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllCoaches")
+    public HashMap<String, String> getAllCoaches()
+    {
+        return userManagement.getAllCoaches();
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/setCoachRole")
     public void setCoachRole(@RequestParam String param){
@@ -126,9 +132,9 @@ public class ServiceController {
 
     /** ------------ TEAMS ------------ **/
 
-    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
-    public ArrayList<String> closestGames(@RequestParam String param){
-        return systemManagement.closestGames(param);
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllTeams")
+    public ArrayList<String> getAllTeams(){
+        return teamManagement.getAllTeams();
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/checkIfTeamNameExist")
@@ -147,6 +153,12 @@ public class ServiceController {
     @RequestMapping(method = RequestMethod.GET, value = "/getFullTeamsNames")
     public ArrayList<String> getFullTeamsNames(){
         return systemManagement.getFullTeamsNames();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getTeamPageDetails")
+    public  Pair<String, Set<String>[]>  getTeamPageDetails(@RequestParam String param){
+
+        return teamManagement.getTeamPageDetails(param);
     }
 
     /** ------------ LEAGUE ------------ **/
@@ -174,6 +186,11 @@ public class ServiceController {
         gameDetails[0] = gameDetails[0].substring(1);
         boolean ans = leagueSeasonManagement.addGameEvent(gameDetails[0], gameDetails[1], gameDetails[2], gameDetails[3]);
         return ans;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
+    public ArrayList<String> closestGames(@RequestParam String param){
+        return systemManagement.closestGames(param);
     }
 
 

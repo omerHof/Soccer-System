@@ -56,7 +56,7 @@ public class TeamsController extends Controller {
 
     private void showTeams() {
         DataBase db = new DataBase();
-        ArrayList<String> teams_name = teamManagement.getAllTeams();
+        ArrayList<String> teams_name = clientController.getAllTeams();
         ArrayList<SimpleStringProperty> properties_teams_name = new ArrayList<>();
         for(String team_name: teams_name){
             properties_teams_name.add(new SimpleStringProperty(null,team_name, team_name));
@@ -105,7 +105,7 @@ public class TeamsController extends Controller {
 
     private void showTeamPage(String team_name) {
 
-        Pair<String, Set<String>[]> detailsAsPair = teamManagement.getTeamPageDetails(team_name);
+        Pair<String, Set<String>[]> detailsAsPair = clientController.getTeamPageDetails(team_name);
         String[] details = detailsAsPair.getKey().split(",");
         team_page.getChildren().clear();
         team_page.getChildren().add(new Text(team_name + "'s Page:" + "\n"));

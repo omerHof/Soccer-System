@@ -137,7 +137,7 @@ public class TeamPage extends Observable {
     public Pair<String, Set<String>[]> getAllDetails() {
         String details =
                 name + "," +
-                        "Stadium: " + stadium + "," +
+                        "Stadium: " + stadium.getName() + "," +
                         "History: " + history +  "," +
                         "Nation:" + nation;
 

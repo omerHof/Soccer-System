@@ -49,7 +49,8 @@ public class PlayersController extends Controller {
 
     private void showPlayers() {
         DataBase db = new DataBase();
-        HashMap<String, String> players_name = userManagement.getAllPlayers();
+        //HashMap<String, String> players_name = userManagement.getAllPlayers();
+        HashMap<String, String> players_name = clientController.getAllPlayers();
         ArrayList<SimpleStringProperty> properties_players_name = new ArrayList<>();
         for(String user_name: players_name.keySet()){
             String full_name = players_name.get(user_name);
@@ -100,6 +101,12 @@ public class PlayersController extends Controller {
     private void showPlayerPage(String user_name, String full_name) {
 
         Pair<String, ArrayList<String>> detailsAsPair = userManagement.getPlayerPageDetails(user_name);
+        if(detailsAsPair==null){
+            personal_page.getChildren().clear();
+            personal_page.getChildren().add(new Text(full_name + " has no personal page"));
+            return;
+        }
+
         String[] details = detailsAsPair.getKey().split(",");
         personal_page.getChildren().clear();
         personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));
@@ -159,7 +166,6 @@ public class PlayersController extends Controller {
             return false;
         }
         return true;
-
     }
 
 

@@ -7,6 +7,7 @@ import ServiceLayer.UserManagement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @RestController
 public class ServiceController {
@@ -47,6 +48,11 @@ public class ServiceController {
     @RequestMapping(method = RequestMethod.GET, value = "/getAllSeasonYears")
     public ArrayList<Integer> getAllSeasonYears(@RequestParam String param){
         return systemManagement.getAllSeasonYears(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllPlayers")
+    public HashMap<String, String> getAllPlayers(){
+        return userManagement.getAllPlayers();
     }
 
     @RequestMapping(method = RequestMethod.POST,value = "/testPost")

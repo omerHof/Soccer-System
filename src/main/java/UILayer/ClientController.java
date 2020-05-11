@@ -5,6 +5,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -69,6 +70,13 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public HashMap<String, String> getAllPlayers() {
+                HttpEntity<HashMap> response = template.exchange("http://localhost:8090/getAllPlayers",
+                        HttpMethod.GET, requestEntity, HashMap.class, "42");
+
+                return response.getBody();
+        }
+
 
         /**
          * example of POST request
@@ -83,6 +91,8 @@ public class ClientController {
 
                 String foo = response2.getBody();
         }
+
+
 /*
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
 

@@ -180,6 +180,9 @@ public class UserManagement {
     public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name){
         Player player = (Player) DB.getInstance().getUser(user_name);
         PlayerPersonalPage playerPersonalPage = player.getPage();
+        if(playerPersonalPage==null){
+            return null;
+        }
 
         return playerPersonalPage.getAllDetails();
     }

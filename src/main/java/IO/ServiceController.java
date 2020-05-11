@@ -8,10 +8,9 @@ import SystemLogic.MainSystem;
 import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 @RestController
 public class ServiceController {
@@ -91,6 +90,15 @@ public class ServiceController {
     @RequestMapping(method = RequestMethod.GET, value = "/getCoachRole")
     public String getCoachRole(){
         return userManagement.getCoachTeamRole();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/createCoachPersonalPage")
+    public void createCoachPersonalPage(@RequestParam String param){
+        String userDetails[] = param.split(",");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        formatter = formatter.withLocale( Locale.ITALIAN );  // Locale specifies human language for translating, and cultural norms for lowercase/uppercase and abbreviations and such. Example: Locale.US or Locale.CANADA_FRENCH
+        LocalDate date = LocalDate.parse(userDetails[1], formatter);
+        userManagement.createCoachPersonalPage(date,userDetails[0]);
     }
 
     /** ------------ PLAYERS ------------ **/

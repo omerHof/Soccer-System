@@ -116,6 +116,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String createCoachPersonalPage(String coachTeam, String birthDayAsString) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/createCoachPersonalPage?param="+coachTeam+","+birthDayAsString,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
         /** ------------ PLAYERS ------------ **/
 
         public HashMap<String, String> getAllPlayers() {
@@ -202,6 +208,7 @@ public class ClientController {
 
                 return response.getBody();
         }
+        /*
 
         public List<String> getFullTeamsNames() {
                 HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
@@ -209,6 +216,8 @@ public class ClientController {
 
                 return response.getBody();
         }
+        */
+
 
         public Pair<String, Set<String>[]> getTeamPageDetails(String team_name) {
                 ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getTeamPageDetails?param=" +team_name,
@@ -254,6 +263,7 @@ public class ClientController {
 
                 return response.getBody();
         }
+
 
 
 }

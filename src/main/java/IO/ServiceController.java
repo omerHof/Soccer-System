@@ -46,6 +46,11 @@ public class ServiceController {
         return systemManagement.getAllUsersByType(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
+    public ArrayList<String> closestGames(@RequestParam String param){
+        return systemManagement.closestGames(param);
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getLeagueTeamNumber")
     public int getLeagueTeamNumber(@RequestParam String param){
         return systemManagement.getLeagueTeamNumber(param);

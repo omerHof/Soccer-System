@@ -72,6 +72,13 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public ArrayList<String> closestGames(String leagueName) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/closestGames?param="+leagueName,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
+                return response.getBody();
+        }
+
 
         /**
          * example of POST request

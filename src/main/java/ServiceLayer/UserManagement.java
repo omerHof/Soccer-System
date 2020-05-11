@@ -259,5 +259,19 @@ public class UserManagement {
         ((Referee) currentUser).setQualification(qualifications);
     }
 
+    public String getMainRefereeQualifications(){
+        return  ((MainReferee) currentUser).getQualification();
+    }
+
+    public void setMainRefereeQualifications(String qualifications ){
+        ((MainReferee) currentUser).setQualification(qualifications);
+    }
+
+    public String checkFinishedGames(String userName, String userType){
+        MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
+        return user.displayGameEvents();
+
+    }
+
 
 }

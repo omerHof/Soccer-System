@@ -41,8 +41,7 @@ public class SeasonController extends Controller {
     String scoreChosen;
     String gameChosen;
 
-
-
+    String initResult;
 
     @FXML
     private ChoiceBox<String> choiceBox1;
@@ -151,6 +150,8 @@ public class SeasonController extends Controller {
 
         whichTeamCB = new ChoiceBox<>();
         eventTypeCB = new ChoiceBox<>();
+
+        initResult = new String();
     }
 
     public void setInfo() {
@@ -355,9 +356,11 @@ public class SeasonController extends Controller {
             for(String mainReferee:arrayMainRefereesChosen){
                 arrayRefereesChosen.add(mainReferee);
             }
-            //seasonManagement.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
-            clientController.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
 
+            initResult=clientController.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, initResult+"\n", ButtonType.CLOSE);
+            alert.setHeaderText("INIT SEASON");
+            alert.showAndWait();
         }
     }
 

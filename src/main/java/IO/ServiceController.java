@@ -199,6 +199,13 @@ public class ServiceController {
     public ArrayList<String> closestGames(@RequestParam String param){
         return systemManagement.closestGames(param);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/checkFinishedGames")
+    public String checkFinishedGames(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        return userManagement.checkFinishedGames(userDetails[0],userDetails[1]);
+    }
 }
 
 class AddSeasonParam {

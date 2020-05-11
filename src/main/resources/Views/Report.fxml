@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ReportController">
+    <children>
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+      <TextArea fx:id="textArea" layoutX="334.0" layoutY="194.0" prefHeight="274.0" prefWidth="270.0" />
+      <Text layoutX="379.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPORT" textAlignment="CENTER" wrappingWidth="180.64283752441406">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Button fx:id="button" layoutX="680.0" layoutY="300.0" mnemonicParsing="false" onAction="#setChange" prefHeight="47.0" prefWidth="143.0" text="edit report" />
+        
+    </children>
+</AnchorPane>

@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class CoachesController extends Controller {
-    UserManagement userManagement = new UserManagement();
 
     @FXML
     TableView<SimpleStringProperty> coaches_table = new TableView<>();
@@ -44,7 +43,7 @@ public class CoachesController extends Controller {
 
     private void showPlayers() {
         DataBase db = new DataBase();
-        HashMap<String, String> coaches_name = userManagement.getAllCoaches();
+        HashMap<String, String> coaches_name = clientController.getAllCoaches();
         ArrayList<SimpleStringProperty> properties_coaches_name = new ArrayList<>();
         for(String user_name: coaches_name.keySet()){
             String full_name = coaches_name.get(user_name);
@@ -94,7 +93,7 @@ public class CoachesController extends Controller {
 
     private void showCoachPage(String user_name, String full_name) {
 
-        Pair<String, ArrayList<String>> detailsAsPair = userManagement.getCoachPageDetails(user_name);
+        Pair<String, ArrayList<String>> detailsAsPair = clientController.getCoachPageDetails(user_name);
         String[] details = detailsAsPair.getKey().split(",");
         personal_page.getChildren().clear();
         personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));

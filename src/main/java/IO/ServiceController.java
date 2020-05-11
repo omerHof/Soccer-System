@@ -5,10 +5,13 @@ import ServiceLayer.SystemManagement;
 import ServiceLayer.TeamManagement;
 import ServiceLayer.UserManagement;
 import SystemLogic.MainSystem;
+import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 @RestController
 public class ServiceController {
@@ -74,6 +77,11 @@ public class ServiceController {
     }
 
     /** ------------ COACHES ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllCoaches")
+    public HashMap<String, String> getAllCoaches()
+    {
+        return userManagement.getAllCoaches();
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/setCoachRole")
     public void setCoachRole(@RequestParam String param){
@@ -86,6 +94,11 @@ public class ServiceController {
     }
 
     /** ------------ PLAYERS ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllPlayers")
+    public HashMap<String, String> getAllPlayers()
+    {
+        return userManagement.getAllPlayers();
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/setPlayerPosition")
     public void setPlayerPosition(@RequestParam String param){
@@ -112,6 +125,13 @@ public class ServiceController {
     }
 
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPageDetails")
+    public Pair<String, ArrayList<String>> getPlayerPageDetails(@RequestParam String param){
+
+        return userManagement.getPlayerPageDetails(param);
+    }
+
+
     /** ------------ REFEREE ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/setRefereeQualification")
@@ -127,9 +147,9 @@ public class ServiceController {
 
     /** ------------ TEAMS ------------ **/
 
-    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
-    public ArrayList<String> closestGames(@RequestParam String param){
-        return systemManagement.closestGames(param);
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllTeams")
+    public ArrayList<String> getAllTeams(){
+        return teamManagement.getAllTeams();
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/checkIfTeamNameExist")
@@ -150,6 +170,12 @@ public class ServiceController {
         return systemManagement.getFullTeamsNames();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getTeamPageDetails")
+    public  Pair<String, Set<String>[]>  getTeamPageDetails(@RequestParam String param){
+
+        return teamManagement.getTeamPageDetails(param);
+    }
+
     /** ------------ LEAGUE ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/getLeagueTeamNumber")
@@ -168,6 +194,12 @@ public class ServiceController {
         return systemManagement.getAllSeasonYears(param);
     }
 
+    @RequestMapping(method = RequestMethod.POST, value = "/addSeasonToLeague")
+    public String logIn(@RequestBody AddSeasonParam param) {
+        String check = leagueSeasonManagement.addSeasonToLeague(param.getLeagueName(),param.getYear(),param.getScorePolicy(),param.getGamePolicy(),param.getTeams(),param.getReferees(),param.getRepresentatives());
+        return check;
+    }
+
     /** ------------ GAMES ------------ **/
     @RequestMapping(method = RequestMethod.GET, value = "/addGameEvent")
     public boolean addGameEvent(@RequestParam String param){
@@ -177,17 +209,56 @@ public class ServiceController {
         return ans;
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
+    public ArrayList<String> closestGames(@RequestParam String param){
+        return systemManagement.closestGames(param);
+    }
+}
 
+class AddSeasonParam {
+    String leagueName;
+    int year;
+    String scorePolicy;
+    String gamePolicy;
+    List<String> teams;
+    List<String> referees;
+    List<String> representatives;
 
+    public AddSeasonParam(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+        this.leagueName = leagueName;
+        this.year = year;
+        this.scorePolicy = scorePolicy;
+        this.gamePolicy = gamePolicy;
+        this.teams = teams;
+        this.referees = referees;
+        this.representatives = representatives;
+    }
 
+    public String getLeagueName() {
+        return leagueName;
+    }
 
+    public int getYear() {
+        return year;
+    }
 
+    public String getScorePolicy() {
+        return scorePolicy;
+    }
 
+    public String getGamePolicy() {
+        return gamePolicy;
+    }
 
+    public List<String> getTeams() {
+        return teams;
+    }
 
+    public List<String> getReferees() {
+        return referees;
+    }
 
-
-
-
-
+    public List<String> getRepresentatives() {
+        return representatives;
+    }
 }

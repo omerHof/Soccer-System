@@ -2,9 +2,12 @@ package UILayer;
 
 import javafx.util.Pair;
 import org.springframework.http.*;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -202,8 +205,10 @@ public class ClientController {
         /** ------------ LEAGUE ------------ **/
 
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+
                 AddSeasonParam param = new AddSeasonParam(leagueName, year, scorePolicy, gamePolicy, teams, referees, representatives);
                 HttpEntity<AddSeasonParam> request = new HttpEntity<>(param);
+                request.getBody();
                 ResponseEntity<String> response2 = template
                         .exchange("http://localhost:8090/addSeasonToLeague", HttpMethod.POST, request, String.class);
                 String foo = response2.getBody();
@@ -259,4 +264,31 @@ class AddSeasonParam {
                 this.representatives = representatives;
         }
 
+        public String getLeagueName() {
+                return leagueName;
+        }
+
+        public int getYear() {
+                return year;
+        }
+
+        public String getScorePolicy() {
+                return scorePolicy;
+        }
+
+        public String getGamePolicy() {
+                return gamePolicy;
+        }
+
+        public List<String> getTeams() {
+                return teams;
+        }
+
+        public List<String> getReferees() {
+                return referees;
+        }
+
+        public List<String> getRepresentatives() {
+                return representatives;
+        }
 }

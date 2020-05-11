@@ -148,6 +148,9 @@ public class SeasonController extends Controller {
         arrayrepresentativesChosen=new ArrayList<>();
         arrayRefereesChosen=new ArrayList<>();
         arrayMainRefereesChosen=new ArrayList<>();
+
+        whichTeamCB = new ChoiceBox<>();
+        eventTypeCB = new ChoiceBox<>();
     }
 
     public void setInfo() {

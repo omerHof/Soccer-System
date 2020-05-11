@@ -100,7 +100,7 @@ public class PlayersController extends Controller {
 
     private void showPlayerPage(String user_name, String full_name) {
 
-        Pair<String, ArrayList<String>> detailsAsPair = userManagement.getPlayerPageDetails(user_name);
+        Pair<String, ArrayList<String>> detailsAsPair = clientController.getPlayerPageDetails(user_name);
         if(detailsAsPair==null){
             personal_page.getChildren().clear();
             personal_page.getChildren().add(new Text(full_name + " has no personal page"));

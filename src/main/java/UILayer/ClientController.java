@@ -1,5 +1,6 @@
 package UILayer;
 
+import javafx.util.Pair;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -108,13 +109,6 @@ public class ClientController {
                 return response.getBody();
         }
 
-        public List<String> getFullTeamsNames() {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-
         public String getPlayerPosition() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPosition",
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -126,7 +120,12 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name) {
+                HttpEntity<Pair> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
+                        HttpMethod.GET, requestEntity, Pair.class, "42");
 
+                return response.getBody();
+        }
 
         /** ------------ REFEREE ------------ **/
 
@@ -162,7 +161,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public List<String> getFullTeamsNames() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
 
+                return response.getBody();
+        }
 
 
         /** ------------ LEAGUE ------------ **/
@@ -201,6 +205,7 @@ public class ClientController {
 
                 return response.getBody();
         }
+
 
 
 }

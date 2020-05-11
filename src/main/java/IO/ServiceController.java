@@ -5,6 +5,7 @@ import ServiceLayer.SystemManagement;
 import ServiceLayer.TeamManagement;
 import ServiceLayer.UserManagement;
 import SystemLogic.MainSystem;
+import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -86,6 +87,11 @@ public class ServiceController {
     }
 
     /** ------------ PLAYERS ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllPlayers")
+    public HashMap<String, String> getAllPlayers()
+    {
+        return userManagement.getAllPlayers();
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/setPlayerPosition")
     public void setPlayerPosition(@RequestParam String param){
@@ -97,6 +103,13 @@ public class ServiceController {
     {
         return userManagement.getCourtRole();
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPageDetails")
+    public Pair<String, ArrayList<String>> getPlayerPageDetails(@RequestParam String param){
+
+        return userManagement.getPlayerPageDetails(param);
+    }
+
 
     /** ------------ REFEREE ------------ **/
 

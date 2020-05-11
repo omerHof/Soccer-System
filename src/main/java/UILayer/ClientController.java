@@ -240,9 +240,6 @@ public class ClientController {
 
                 return response.getBody();
         }
-
-
-
 }
 
 class AddSeasonParam {

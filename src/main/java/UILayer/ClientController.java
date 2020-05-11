@@ -210,16 +210,34 @@ public class ClientController {
 
 
 
-/*
-        public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
 
-                HttpEntity<String,Integer> request = new HttpEntity<>(leagueName,year);
+        public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+                AddSeasonParam param = new AddSeasonParam(leagueName, year, scorePolicy, gamePolicy, teams, referees, representatives);
+                HttpEntity<AddSeasonParam> request = new HttpEntity<>(param);
                 ResponseEntity<String> response2 = template
                         .exchange("http://localhost:8090/addSeasonToLeague", HttpMethod.POST, request, String.class);
-                //assertThat(response.getStatusCode(), is(HttpStatus.CREATED));
                 String foo = response2.getBody();
-        }*/
+        }
 
+}
 
+class AddSeasonParam {
+        String leagueName;
+        int year;
+        String scorePolicy;
+        String gamePolicy;
+        List<String> teams;
+        List<String> referees;
+        List<String> representatives;
+
+        public AddSeasonParam(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+                this.leagueName = leagueName;
+                this.year = year;
+                this.scorePolicy = scorePolicy;
+                this.gamePolicy = gamePolicy;
+                this.teams = teams;
+                this.referees = referees;
+                this.representatives = representatives;
+        }
 
 }

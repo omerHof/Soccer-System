@@ -352,8 +352,8 @@ public class SeasonController extends Controller {
             for(String mainReferee:arrayMainRefereesChosen){
                 arrayRefereesChosen.add(mainReferee);
             }
-            seasonManagement.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
-            //clientController.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
+            //seasonManagement.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
+            clientController.addSeasonToLeague(leaguesChosen, yearChosen, scoreChosen, gameChosen, arrayTeamsChosen, arrayRefereesChosen, arrayrepresentativesChosen);
 
         }
     }

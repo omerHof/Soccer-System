@@ -12,10 +12,9 @@ import Users.Player;
 import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 @RestController
 public class ServiceController {
@@ -40,8 +39,6 @@ public class ServiceController {
         String check = userManagement.logIn(userDetails[0],userDetails[1]);
         return check;
         }
-
-
 
     @RequestMapping(method = RequestMethod.GET, value = "/logOut")
     public void logOut(){
@@ -99,6 +96,15 @@ public class ServiceController {
         return userManagement.getCoachTeamRole();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/createCoachPersonalPage")
+    public void createCoachPersonalPage(@RequestParam String param){
+        String userDetails[] = param.split(",");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        formatter = formatter.withLocale( Locale.ITALIAN );  // Locale specifies human language for translating, and cultural norms for lowercase/uppercase and abbreviations and such. Example: Locale.US or Locale.CANADA_FRENCH
+        LocalDate date = LocalDate.parse(userDetails[1], formatter);
+        userManagement.createCoachPersonalPage(date,userDetails[0]);
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getCoachPageDetails")
     public String getCoachPageDetails(@RequestParam String param){
 
@@ -122,6 +128,20 @@ public class ServiceController {
     {
         return userManagement.getCourtRole();
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerTeam")
+    public String getPlayerTeam()
+    {
+        return userManagement.getPlayerTeam();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/createPlayerPersonalPage")
+    public void createPlayerPersonalPage(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        userManagement.createPlayerPersonalPage(Double.parseDouble(userDetails[0]),Integer.parseInt(userDetails[1]),Integer.parseInt(userDetails[2]),userDetails[3]);
+    }
+
 
     @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPageDetails")
     public String getPlayerPageDetails(@RequestParam String param){
@@ -236,6 +256,13 @@ public class ServiceController {
     public ArrayList<String> closestGames(@RequestParam String param){
         return systemManagement.closestGames(param);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/checkFinishedGames")
+    public String checkFinishedGames(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        return userManagement.checkFinishedGames(userDetails[0],userDetails[1]);
+    }
 }
 
 class AddSeasonParam {
@@ -283,43 +310,5 @@ class AddSeasonParam {
 
     public List<String> getRepresentatives() {
         return representatives;
-    }
-}
-
-class teamPageParam{
-    private String name;
-    private HashMap<String, Player> players;
-    private HashMap<String, Coach> coaches;
-    private HashMap<String, Manager> managers;
-    private String history;
-    private Stadium stadium;
-    private String nation;
-
-    public String getName() {
-        return name;
-    }
-
-    public HashMap<String, Player> getPlayers() {
-        return players;
-    }
-
-    public HashMap<String, Coach> getCoaches() {
-        return coaches;
-    }
-
-    public HashMap<String, Manager> getManagers() {
-        return managers;
-    }
-
-    public String getHistory() {
-        return history;
-    }
-
-    public Stadium getStadium() {
-        return stadium;
-    }
-
-    public String getNation() {
-        return nation;
     }
 }

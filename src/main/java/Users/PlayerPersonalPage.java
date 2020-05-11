@@ -10,12 +10,12 @@ import java.util.Date;
 
 public class PlayerPersonalPage extends PersonalPage {
 
-    private int height;
+    private double height;
     private int weight;
     private int shirtNumber;
     private String position;
 
-    public PlayerPersonalPage(String name, int age, String position,int height,int weight,int shirtNumber, String team){
+    public PlayerPersonalPage(String name, int age, String position,double height,int weight,int shirtNumber, String team){
         this.name=name;
         this.age=age;
         this.position=position;
@@ -39,7 +39,7 @@ public class PlayerPersonalPage extends PersonalPage {
         "Shirt Number: " + shirtNumber;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 

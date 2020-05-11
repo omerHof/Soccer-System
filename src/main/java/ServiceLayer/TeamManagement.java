@@ -28,8 +28,12 @@ public class TeamManagement {
     public String openTeam(String team_name, double initialBudget){
         findTheUser();
         ((TeamOwner) currentUser).askPermissionToOpenTeam();
-        ((TeamOwner) currentUser).openTeam(team_name,initialBudget);
-        return "team was open successfully";
+        if(((TeamOwner) currentUser).openTeam(team_name,initialBudget)){
+            return "Congratulations " + currentUser.getUserName() + "! the team "+ team_name + " was open successfully, You can now start managing your team" ;
+        } else{
+            return "Sorry, you didn't get approved from the Soccer Association, please try again later";
+        }
+
     }
 
     public String openTeamPage(String team_history,String team_nation){

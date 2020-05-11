@@ -209,9 +209,14 @@ public class UserManagement {
         return playerPersonalPage.getAllDetails();
     }
 
-    public void createPlayerPersonalPage(int height,int weight, int shirtNum,String team){
+    public void createPlayerPersonalPage(double height,int weight, int shirtNum,String team){
         currentUser = MainSystem.getInstance().getCurrentUser();
         ((Player) currentUser).createPersonalPage(height, weight, shirtNum, team);
+    }
+
+    public String getPlayerTeam() {
+        currentUser = MainSystem.getInstance().getCurrentUser();
+        return ((Player) currentUser).getCurrentTeam().getName();
     }
 
     public String getPlayerPageAsString(){
@@ -243,7 +248,7 @@ public class UserManagement {
         ((Player) currentUser).setHeight(height);
     }
 
-    public int getHeight(){
+    public double getHeight(){
         return  ((Player) currentUser).getHeight();
     }
 
@@ -275,6 +280,21 @@ public class UserManagement {
     public void setRefereeQualifications(String qualifications ){
         ((Referee) currentUser).setQualification(qualifications);
     }
+
+    public String getMainRefereeQualifications(){
+        return  ((MainReferee) currentUser).getQualification();
+    }
+
+    public void setMainRefereeQualifications(String qualifications ){
+        ((MainReferee) currentUser).setQualification(qualifications);
+    }
+
+    public String checkFinishedGames(String userName, String userType){
+        MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
+        return user.displayGameEvents();
+
+    }
+
 
 
 

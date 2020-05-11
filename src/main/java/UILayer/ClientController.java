@@ -120,11 +120,24 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String createCoachPersonalPage(String coachTeam, String birthDayAsString) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/createCoachPersonalPage?param="+coachTeam+","+birthDayAsString,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
         /** ------------ PLAYERS ------------ **/
 
         public HashMap<String, String> getAllPlayers() {
                 HttpEntity<HashMap> response = template.exchange("http://localhost:8090/getAllPlayers",
                         HttpMethod.GET, requestEntity, HashMap.class, "42");
+
+                return response.getBody();
+        }
+
+        public List<String> getFullTeamsNames() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
 
                 return response.getBody();
         }
@@ -140,6 +153,22 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        public String getPlayerTeam() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerTeam",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public void createPlayerPersonalPage(double height, int weight, int shirtNumber, String team) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/createPlayerPersonalPage?param="+ String.valueOf(height)+ ","+String.valueOf(weight)+","+String.valueOf(shirtNumber)+","+team,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+
+        public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name) {
+                ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
+                        HttpMethod.GET, requestEntity, Pair.class, "42");
+                //todo: not working!
         public String getPlayerPageDetails(String user_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -193,6 +222,7 @@ public class ClientController {
 
                 return response.getBody();
         }
+        /*
 
         public List<String> getFullTeamsNames() {
                 HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
@@ -200,6 +230,8 @@ public class ClientController {
 
                 return response.getBody();
         }
+        */
+
 
         public String getTeamPageDetails(String team_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getTeamPageDetails?param=" +team_name,
@@ -228,12 +260,14 @@ public class ClientController {
 
         /** ------------ LEAGUE ------------ **/
 
-        public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+        public String addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+
                 AddSeasonParam param = new AddSeasonParam(leagueName, year, scorePolicy, gamePolicy, teams, referees, representatives);
                 HttpEntity<AddSeasonParam> request = new HttpEntity<>(param);
+                request.getBody();
                 ResponseEntity<String> response2 = template
                         .exchange("http://localhost:8090/addSeasonToLeague", HttpMethod.POST, request, String.class);
-                String foo = response2.getBody();
+                return response2.getBody();
         }
 
         /** ------------ SEASON ------------ **/
@@ -262,6 +296,15 @@ public class ClientController {
 
                 return response.getBody();
         }
+
+        public String checkFinishedGames(String userName, String userType) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/checkFinishedGames?param="+userName+ ","+userType,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+
+
 
 
 
@@ -312,43 +355,5 @@ class AddSeasonParam {
 
         public List<String> getRepresentatives() {
                 return representatives;
-        }
-}
-
-class teamPageParam {
-        private String name;
-        private HashMap<String, Player> players;
-        private HashMap<String, Coach> coaches;
-        private HashMap<String, Manager> managers;
-        private String history;
-        private Stadium stadium;
-        private String nation;
-
-        public String getName() {
-                return name;
-        }
-
-        public HashMap<String, Player> getPlayers() {
-                return players;
-        }
-
-        public HashMap<String, Coach> getCoaches() {
-                return coaches;
-        }
-
-        public HashMap<String, Manager> getManagers() {
-                return managers;
-        }
-
-        public String getHistory() {
-                return history;
-        }
-
-        public Stadium getStadium() {
-                return stadium;
-        }
-
-        public String getNation() {
-                return nation;
         }
 }

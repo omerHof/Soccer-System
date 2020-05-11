@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Pair;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -145,7 +146,7 @@ public class TeamsController extends Controller {
 
     }
 
-    public void submitOpenTeam(){
+    public void submitOpenTeam() throws IOException {
         boolean error =false;
         Alert alertError  = new Alert(Alert.AlertType.ERROR);
         String errorMessage="";
@@ -180,10 +181,11 @@ public class TeamsController extends Controller {
             openTeam = true;
             teamName = choosenTeamName.getText();
             String message = clientController.CreateNewTeam(teamName,choosenTeamBudget.getText());
-            //String message = teamManagement.openTeam(choosenTeamName.getText(), Double.parseDouble(choosenTeamBudget.getText()));
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("TEAM CREATION");
             alert.setContentText(message);
             alert.show();
+            homePage();
         }
 
     }

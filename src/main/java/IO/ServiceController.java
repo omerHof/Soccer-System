@@ -25,11 +25,26 @@ public class ServiceController {
         userManagement = new UserManagement();
     }
 
+    /** ------------ LOGIN ------------ **/
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getLeaguesNames")
-    public ArrayList<String> getLeaguesNames(){
-        return systemManagement.getLeagueNames();
+    @RequestMapping(method = RequestMethod.POST,value = "/logIn")
+    public String logIn(@RequestBody String details){
+        String userDetails[] = details.split(",");
+        String check = userManagement.logIn(userDetails[0],userDetails[1]);
+        return check;
+        }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/logOut")
+    public void logOut(){
+        userManagement.logOut();
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/displaySpecialPassword")
+    public String displaySpecialPassword(){
+        String type = userManagement.displaySpecialPassword();
+        return type;
+    }
+    /** ------------ USERS ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/getUserDetails")
     public ArrayList<String> getUserDetails(){
@@ -37,29 +52,9 @@ public class ServiceController {
         return userManagement.watchDetails();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getFullTeamsNames")
-    public ArrayList<String> getFullTeamsNames(){
-        return systemManagement.getFullTeamsNames();
-    }
-
     @RequestMapping(method = RequestMethod.GET, value = "/getAllUsersByType")
     public ArrayList<String> getAllUsersByType(@RequestParam String param){
         return systemManagement.getAllUsersByType(param);
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
-    public ArrayList<String> closestGames(@RequestParam String param){
-        return systemManagement.closestGames(param);
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/getLeagueTeamNumber")
-    public int getLeagueTeamNumber(@RequestParam String param){
-        return systemManagement.getLeagueTeamNumber(param);
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/getAllSeasonYears")
-    public ArrayList<Integer> getAllSeasonYears(@RequestParam String param){
-        return systemManagement.getAllSeasonYears(param);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/setUserEmail")
@@ -72,15 +67,38 @@ public class ServiceController {
         userManagement.setUserFullName(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getUserType")
+    public String getUserType(@RequestParam String param){
+        String type = userManagement.getUserType(param);
+        return type;
+    }
+
+    /** ------------ COACHES ------------ **/
+
     @RequestMapping(method = RequestMethod.GET, value = "/setCoachRole")
     public void setCoachRole(@RequestParam String param){
         userManagement.setCoachTeamRole(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getCoachRole")
+    public String getCoachRole(){
+        return userManagement.getCoachTeamRole();
+    }
+
+    /** ------------ PLAYERS ------------ **/
+
     @RequestMapping(method = RequestMethod.GET, value = "/setPlayerPosition")
     public void setPlayerPosition(@RequestParam String param){
         userManagement.setCourtRole(param);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPosition")
+    public String getPlayerPosition()
+    {
+        return userManagement.getCourtRole();
+    }
+
+    /** ------------ REFEREE ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/setRefereeQualification")
     public void setRefereeQualification(@RequestParam String param){
@@ -88,16 +106,22 @@ public class ServiceController {
         userManagement.setRefereeQualifications(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getRefereeQualifications")
+    public String getRefereeQualifications(){
+        return userManagement.getRefereeQualifications();
+    }
+
+    /** ------------ TEAMS ------------ **/
+
+    @RequestMapping(method = RequestMethod.GET, value = "/closestGames")
+    public ArrayList<String> closestGames(@RequestParam String param){
+        return systemManagement.closestGames(param);
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/checkIfTeamNameExist")
     public Boolean checkIfTeamNameExist(@RequestParam String param){
 
         return teamManagement.checkIfTeamNameExist(param);
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPosition")
-    public String getPlayerPosition()
-    {
-        return userManagement.getCourtRole();
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/CreateNewTeam")
@@ -107,35 +131,30 @@ public class ServiceController {
         return teamManagement.openTeam(userDetails[0],Double.parseDouble(userDetails[1]));
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getCoachRole")
-    public String getCoachRole(){
-        return userManagement.getCoachTeamRole();
+    @RequestMapping(method = RequestMethod.GET, value = "/getFullTeamsNames")
+    public ArrayList<String> getFullTeamsNames(){
+        return systemManagement.getFullTeamsNames();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getRefereeQualifications")
-    public String getRefereeQualifications(){
-        return userManagement.getRefereeQualifications();
+    /** ------------ LEAGUE ------------ **/
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getLeagueTeamNumber")
+    public int getLeagueTeamNumber(@RequestParam String param){
+        return systemManagement.getLeagueTeamNumber(param);
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "/testPost")
-    public String checkPost(@RequestBody String id){
+    @RequestMapping(method = RequestMethod.GET, value = "/getLeaguesNames")
+    public ArrayList<String> getLeaguesNames(){
+        return systemManagement.getLeagueNames();
+    }
+    /** ------------ SEASON ------------ **/
 
-        return id;
+    @RequestMapping(method = RequestMethod.GET, value = "/getAllSeasonYears")
+    public ArrayList<Integer> getAllSeasonYears(@RequestParam String param){
+        return systemManagement.getAllSeasonYears(param);
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "/logIn")
-    public String logIn(@RequestBody String details){
-        String userDetails[] = details.split(",");
-        String check = userManagement.logIn(userDetails[0],userDetails[1]);
-        return check;
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/getUserType")
-    public String getUserType(@RequestParam String param){
-        String type = userManagement.getUserType(param);
-        return type;
-    }
-
+    /** ------------ GAMES ------------ **/
     @RequestMapping(method = RequestMethod.GET, value = "/addGameEvent")
     public boolean addGameEvent(@RequestParam String param){
         String gameDetails[] = param.split(",");
@@ -144,15 +163,17 @@ public class ServiceController {
         return ans;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/logOut")
-    public void logOut(){
-        userManagement.logOut();
-    }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/displaySpecialPassword")
-    public String displaySpecialPassword(){
-        String type = userManagement.displaySpecialPassword();
-        return type;
-    }
+
+
+
+
+
+
+
+
+
+
+
 
 }

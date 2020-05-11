@@ -46,7 +46,7 @@ public class TeamOwner extends User implements Assent {
      * @param team_name
      * @param initialBudget
      */
-    public void openTeam(String team_name, double initialBudget){//after he got permission
+    public boolean openTeam(String team_name, double initialBudget){//after he got permission
         if(permission) {
             if(team==null) {
                 HashMap<String, TeamOwner> me = new HashMap<>();
@@ -58,7 +58,9 @@ public class TeamOwner extends User implements Assent {
             else{
                 team.setStatus(Team.teamStatus.active);
             }
+            return true;
         }
+        return false;
     }
 
     /**

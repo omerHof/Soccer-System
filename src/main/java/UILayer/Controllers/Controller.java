@@ -1,11 +1,8 @@
 package UILayer.Controllers;
 
 import DataForTest.DataBase;
-import Games.Game;
 import UILayer.ClientController;
 import UILayer.Main;
-import Users.AssociationRepresentative;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -192,6 +189,18 @@ public class Controller implements Initializable {
         Scene scene = new Scene(root);
         s.setScene(scene);
         TeamsController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void goToOpenPlayerPage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addPlayerPage.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        OpenPlayerPageController pp = fxmlLoader.getController();
 
         Main.setStage(s);
         s.show();

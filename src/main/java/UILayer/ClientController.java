@@ -126,6 +126,17 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        public String getPlayerTeam() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerTeam",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public void createPlayerPersonalPage(double height, int weight, int shirtNumber, String team) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/createPlayerPersonalPage?param="+ String.valueOf(height)+ ","+String.valueOf(weight)+","+String.valueOf(shirtNumber)+","+team,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
 
 
         /** ------------ REFEREE ------------ **/
@@ -201,6 +212,7 @@ public class ClientController {
 
                 return response.getBody();
         }
+
 
 
 }

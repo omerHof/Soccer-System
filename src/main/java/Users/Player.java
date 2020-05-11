@@ -36,7 +36,7 @@ public class Player extends User implements Assent {
     }
 
 
-    public PlayerPersonalPage createPersonalPage(int height,int weight, int shirtNum, String team) {
+    public PlayerPersonalPage createPersonalPage(double height,int weight, int shirtNum, String team) {
         MainSystem.LOG.info("The player " +getUserFullName()+ " create personal page");
         Team currTeam = DB1.getTeam(team);
         if(currTeam==null){
@@ -121,7 +121,7 @@ public class Player extends User implements Assent {
 
     }
 
-    public int getHeight(){
+    public double getHeight(){
         if(page!=null){
             return page.getHeight();
         }

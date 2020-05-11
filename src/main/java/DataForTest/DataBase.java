@@ -423,6 +423,7 @@ public class DataBase {
         gg.createPersonalPage(172, 77,9 , "Liverpool");
         hh = new Player("ez75", "123", "Shlomi Arbeitman", "eeee", date2, "striker");
         hh.createPersonalPage(170, 78,11 , "Betar Yerushlaim");
+        hh.setCurrentTeam("barch");
 
         klinger = new Coach("kling", "1212", "nir klinger", "dsdasd", "head coach");
         klinger.createCoachPersonalPage( LocalDate.of(1972,12, 3), "Macbi Tel Aviv");

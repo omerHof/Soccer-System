@@ -134,21 +134,67 @@ public class TeamsController extends Controller {
 
     }
 
+    public void submitOpenTeam(){
+        boolean error =false;
+        Alert alertError  = new Alert(Alert.AlertType.ERROR);
+        String errorMessage="";
+
+        if(validationBudget(choosenTeamBudget.getText())==false){
+
+            errorMessage = errorMessage +" budget not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+
+
+
+        }
+        if(validationName(choosenTeamName.getText())==false){
+            errorMessage = errorMessage +" name not valid"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+        }
+        if(teamExist(choosenTeamName.getText())==false){
+            errorMessage = errorMessage +" team name already exist please chose different name"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+        }
+
+        ///need to add check if the name of the team exist!!!
+
+        if(error==true){
+            alertError.show();
+        }
+        else {
+            //create team
+            openTeam = true;
+            teamName = choosenTeamName.getText();
+            String message = clientController.CreateNewTeam(teamName,choosenTeamBudget.getText());
+            //String message = teamManagement.openTeam(choosenTeamName.getText(), Double.parseDouble(choosenTeamBudget.getText()));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText(message);
+            alert.show();
+        }
+
+    }
+
+    private boolean teamExist(String text) {
+        return clientController.checkIfTeamNameExist(text);
+    }
+
     public boolean validationBudget(String budget){
 
         String regex = "[0-9]+";
         if(!budget.matches(regex)){
             return false;
         }
-        Double budgetDuoble = Double.parseDouble(budget);
-        if(budgetDuoble==0||budgetDuoble==null){
+        Double budgetDouble = Double.parseDouble(budget);
+        if(budgetDouble==0||budgetDouble==null|| budgetDouble>1000000){
             return false;
         }
-
         return true;
     }
 
-        public boolean validationName(String name) {
+    public boolean validationName(String name) {
         if (name == null || name.length() == 0) {
             return false;
         }
@@ -183,48 +229,11 @@ public class TeamsController extends Controller {
 
     }
 
-            public void submitOpenTeam(){
-                boolean error =false;
-                Alert alertError  = new Alert(Alert.AlertType.ERROR);
-                String errorMessage="";
 
-                if(validationBudget(choosenTeamBudget.getText())==false){
-
-                    errorMessage = errorMessage +" budget not valid"+ "\n";
-                    alertError.setContentText(errorMessage);
-                    error=true;
-
-
-
-                }
-                if(validationName(choosenTeamName.getText())==false){
-                    errorMessage = errorMessage +" name not valid"+ "\n";
-                    alertError.setContentText(errorMessage);
-                    error=true;
-                }
-
-                ///need to add check if the name of the team exist!!!
-
-                if(error==true){
-                    alertError.show();
-                }
-                else {
-                    //create team
-                    openTeam = true;
-                    teamName = choosenTeamName.getText();
-                    String message = teamManagement.openTeam(choosenTeamName.getText(), Double.parseDouble(choosenTeamBudget.getText()));
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText(message);
-                    alert.show();
-                }
-
-            }
-
-
-            public void createTeamPage(){
-                boolean error =false;
-                Alert alertError  = new Alert(Alert.AlertType.ERROR);
-                String errorMessage="";
+    public void createTeamPage(){
+        boolean error =false;
+        Alert alertError  = new Alert(Alert.AlertType.ERROR);
+        String errorMessage="";
 
         if(validationHistory(choosenHistory.getText())==false){
 

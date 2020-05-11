@@ -82,10 +82,23 @@ public class ServiceController {
         userManagement.setRefereeQualifications(param);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/checkIfTeamNameExist")
+    public Boolean checkIfTeamNameExist(@RequestParam String param){
+
+        return teamManagement.checkIfTeamNameExist(param);
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPosition")
     public String getPlayerPosition()
     {
         return userManagement.getCourtRole();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/CreateNewTeam")
+    public String CreateNewTeam(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        return teamManagement.openTeam(userDetails[0],Double.parseDouble(userDetails[1]));
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/getCoachRole")

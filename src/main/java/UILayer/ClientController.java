@@ -178,6 +178,22 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public boolean checkIfTeamNameExist(String text) {
+                HttpEntity<Boolean> response = template.exchange("http://localhost:8090/checkIfTeamNameExist?param="+text,
+                        HttpMethod.GET, requestEntity, Boolean.class, "42");
+                return response.getBody();
+        }
+
+        public String CreateNewTeam(String teamName, String text) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/CreateNewTeam?param="+teamName+ ","+text,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+
+
+
+
 
 /*
         public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {

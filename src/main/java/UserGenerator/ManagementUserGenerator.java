@@ -31,7 +31,8 @@ public class ManagementUserGenerator implements IUserGenerator {
     public User generate(String userName, String password, String managementPassword, String role, String fullName, String userEmail, LocalDate birthDate, String qualification, String courtRole, String teamRole) {
 
         MainSystem mainSystem = MainSystem.getInstance();
-        boolean approved = managementPassword.equals(mainSystem.getSpecialPassword()); // להשוות מול הסיסמא שיצרו אצל כצי
+        String pass = mainSystem.getSpecialPassword();
+        boolean approved = managementPassword.equals(mainSystem.getSpecialPassword()); //
 
         if (approved) {
             if (role.equals("AssociationRepresentative"))

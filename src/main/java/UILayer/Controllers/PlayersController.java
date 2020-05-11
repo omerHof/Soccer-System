@@ -100,21 +100,25 @@ public class PlayersController extends Controller {
 
     private void showPlayerPage(String user_name, String full_name) {
 
-        Pair<String, ArrayList<String>> detailsAsPair = clientController.getPlayerPageDetails(user_name);
-        if(detailsAsPair==null){
+        //Pair<String, ArrayList<String>> detailsAsPair = clientController.getPlayerPageDetails(user_name);
+        String details = clientController.getPlayerPageDetails(user_name);
+        ArrayList<String> history = clientController.getPageHistory(user_name);
+
+        if(details==null || history==null){
             personal_page.getChildren().clear();
             personal_page.getChildren().add(new Text(full_name + " has no personal page"));
             return;
         }
 
-        String[] details = detailsAsPair.getKey().split(",");
+        String[] split_details = details.split(",");
         personal_page.getChildren().clear();
         personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));
-        for(String detail: details){
+        for(String detail: split_details){
             personal_page.getChildren().add(new Text(detail + "\n"));
         }
+
         personal_page.getChildren().add(new Text("Team History: "));
-        for(String team: detailsAsPair.getValue()){
+        for(String team: history){
             personal_page.getChildren().add(new Text(team + ", "));
         }
 

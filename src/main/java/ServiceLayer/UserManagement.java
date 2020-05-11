@@ -128,9 +128,12 @@ public class UserManagement {
         return DB.getInstance().getAllUserNameByType("Coach");
     }
 
-    public Pair<String, ArrayList<String>> getCoachPageDetails(String user_name) {
+    public String getCoachPageDetails(String user_name) {
         Coach coach = (Coach) DB.getInstance().getUser(user_name);
         CoachPersonalPage coachPersonalPage = coach.getPage();
+        if(coachPersonalPage==null){
+            return null;
+        }
 
         return coachPersonalPage.getAllDetails();
     }
@@ -177,12 +180,26 @@ public class UserManagement {
 
     /** ---------------- PLAYER MANAGEMENT FUNCTIONALITY ---------------- **/
 
+    public ArrayList<String> getPageHistory(String user_name) {
+        User user =  DB.getInstance().getUser(user_name);
+        PersonalPage personalPage;
+        if(user instanceof  Player){
+            personalPage = ((Player)user).getPage();
+        }
+        else{//coach
+            personalPage = ((Coach)user).getPage();
+        }
+        if (personalPage==null){
+            return null;
+        }
+        return personalPage.getTeamHistory();
+    }
 
     public HashMap<String, String> getAllPlayers(){
         return DB.getInstance().getAllUserNameByType("Player");
     }
 
-    public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name){
+    public String getPlayerPageDetails(String user_name){
         Player player = (Player) DB.getInstance().getUser(user_name);
         PlayerPersonalPage playerPersonalPage = player.getPage();
         if(playerPersonalPage==null){
@@ -258,6 +275,7 @@ public class UserManagement {
     public void setRefereeQualifications(String qualifications ){
         ((Referee) currentUser).setQualification(qualifications);
     }
+
 
 
 }

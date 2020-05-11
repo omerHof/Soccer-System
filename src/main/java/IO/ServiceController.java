@@ -5,6 +5,10 @@ import ServiceLayer.SystemManagement;
 import ServiceLayer.TeamManagement;
 import ServiceLayer.UserManagement;
 import SystemLogic.MainSystem;
+import Teams.Stadium;
+import Users.Coach;
+import Users.Manager;
+import Users.Player;
 import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +40,8 @@ public class ServiceController {
         String check = userManagement.logIn(userDetails[0],userDetails[1]);
         return check;
         }
+
+
 
     @RequestMapping(method = RequestMethod.GET, value = "/logOut")
     public void logOut(){
@@ -93,6 +99,12 @@ public class ServiceController {
         return userManagement.getCoachTeamRole();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getCoachPageDetails")
+    public String getCoachPageDetails(@RequestParam String param){
+
+        return userManagement.getCoachPageDetails(param);
+    }
+
     /** ------------ PLAYERS ------------ **/
     @RequestMapping(method = RequestMethod.GET, value = "/getAllPlayers")
     public HashMap<String, String> getAllPlayers()
@@ -112,9 +124,13 @@ public class ServiceController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/getPlayerPageDetails")
-    public Pair<String, ArrayList<String>> getPlayerPageDetails(@RequestParam String param){
+    public String getPlayerPageDetails(@RequestParam String param){
 
         return userManagement.getPlayerPageDetails(param);
+    }
+    @RequestMapping(method = RequestMethod.GET, value = "/getPageHistory")
+    public ArrayList<String> getPageHistory(@RequestParam String param){
+        return userManagement.getPageHistory(param);
     }
 
 
@@ -157,10 +173,29 @@ public class ServiceController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/getTeamPageDetails")
-    public  Pair<String, Set<String>[]>  getTeamPageDetails(@RequestParam String param){
-
+    public  String  getTeamPageDetails(@RequestParam String param){
         return teamManagement.getTeamPageDetails(param);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getTeamPlayers")
+    public  ArrayList<String>  getTeamPlayers(@RequestParam String param){
+        return teamManagement.getTeamPlayers(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getTeamCoaches")
+    public  ArrayList<String>  getTeamCoaches(@RequestParam String param){
+        return teamManagement.getTeamCoaches(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getTeamManagers")
+    public  ArrayList<String>  getTeamManagers(@RequestParam String param){
+        return teamManagement.getTeamManagers(param);
+    }
+
+
+
+
+
 
     /** ------------ LEAGUE ------------ **/
 
@@ -173,6 +208,12 @@ public class ServiceController {
     public ArrayList<String> getLeaguesNames(){
         return systemManagement.getLeagueNames();
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/addSeasonToLeague")
+    public String addSeasonToLeague(@RequestBody AddSeasonParam param) {
+        String check = leagueSeasonManagement.addSeasonToLeague(param.getLeagueName(),param.getYear(),param.getScorePolicy(),param.getGamePolicy(),param.getTeams(),param.getReferees(),param.getRepresentatives());
+        return check;
+    }
     /** ------------ SEASON ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/getAllSeasonYears")
@@ -180,11 +221,7 @@ public class ServiceController {
         return systemManagement.getAllSeasonYears(param);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/addSeasonToLeague")
-    public String logIn(@RequestBody AddSeasonParam param) {
-        String check = leagueSeasonManagement.addSeasonToLeague(param.getLeagueName(),param.getYear(),param.getScorePolicy(),param.getGamePolicy(),param.getTeams(),param.getReferees(),param.getRepresentatives());
-        return check;
-    }
+
 
     /** ------------ GAMES ------------ **/
     @RequestMapping(method = RequestMethod.GET, value = "/addGameEvent")
@@ -246,5 +283,43 @@ class AddSeasonParam {
 
     public List<String> getRepresentatives() {
         return representatives;
+    }
+}
+
+class teamPageParam{
+    private String name;
+    private HashMap<String, Player> players;
+    private HashMap<String, Coach> coaches;
+    private HashMap<String, Manager> managers;
+    private String history;
+    private Stadium stadium;
+    private String nation;
+
+    public String getName() {
+        return name;
+    }
+
+    public HashMap<String, Player> getPlayers() {
+        return players;
+    }
+
+    public HashMap<String, Coach> getCoaches() {
+        return coaches;
+    }
+
+    public HashMap<String, Manager> getManagers() {
+        return managers;
+    }
+
+    public String getHistory() {
+        return history;
+    }
+
+    public Stadium getStadium() {
+        return stadium;
+    }
+
+    public String getNation() {
+        return nation;
     }
 }

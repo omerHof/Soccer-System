@@ -56,7 +56,7 @@ public class TeamsController extends Controller {
 
     private void showTeams() {
         DataBase db = new DataBase();
-        ArrayList<String> teams_name = teamManagement.getAllTeams();
+        ArrayList<String> teams_name = clientController.getAllTeams();
         ArrayList<SimpleStringProperty> properties_teams_name = new ArrayList<>();
         for(String team_name: teams_name){
             properties_teams_name.add(new SimpleStringProperty(null,team_name, team_name));
@@ -105,29 +105,40 @@ public class TeamsController extends Controller {
 
     private void showTeamPage(String team_name) {
 
-        Pair<String, Set<String>[]> detailsAsPair = teamManagement.getTeamPageDetails(team_name);
-        String[] details = detailsAsPair.getKey().split(",");
+       // Pair<String, Set<String>[]> detailsAsPair = clientController.getTeamPageDetails(team_name);
+        String details = clientController.getTeamPageDetails(team_name);
+        String[] split_details = details.split(",");
+        ArrayList<String> players = clientController.getTeamPlayers(team_name);
+        ArrayList<String> coaches = clientController.getTeamCoaches(team_name);
+        ArrayList<String> managers = clientController.getTeamManagers(team_name);
+
+        if(details==null || players==null || coaches==null || managers==null){
+            team_page.getChildren().clear();
+            team_page.getChildren().add(new Text(team_name + " has no page"));
+            return;
+        }
+
         team_page.getChildren().clear();
         team_page.getChildren().add(new Text(team_name + "'s Page:" + "\n"));
-        for(String detail: details){
+        for(String detail: split_details){
             team_page.getChildren().add(new Text(detail + "\n"));
         }
 
         team_page2.getChildren().clear();
         team_page2.getChildren().add(new Text("Players: "));
-        for(String player: detailsAsPair.getValue()[0]){
+        for(String player: players){
             team_page2.getChildren().add(new Text(player + ", "));
         }
         team_page2.getChildren().add(new Text("\n"));
 
         team_page2.getChildren().add(new Text("Coaches: "));
-        for(String coach: detailsAsPair.getValue()[1]){
+        for(String coach: coaches){
             team_page2.getChildren().add(new Text(coach + ", "));
         }
         team_page2.getChildren().add(new Text("\n"));
 
         team_page2.getChildren().add(new Text("Manager: "));
-        for(String manager: detailsAsPair.getValue()[2]){
+        for(String manager: managers){
             team_page2.getChildren().add(new Text(manager + ", "));
         }
 

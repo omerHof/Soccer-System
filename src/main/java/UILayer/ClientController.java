@@ -1,5 +1,9 @@
 package UILayer;
 
+import Teams.Stadium;
+import Users.Coach;
+import Users.Manager;
+import Users.Player;
 import javafx.util.Pair;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
@@ -74,7 +78,7 @@ public class ClientController {
 
         ///////////// newwww clientttt
         public String getUserType(String userName){
-                HttpEntity<String> response = template.exchange("http://localhost:8090/getUserType?param="+userName,
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getUserType?param=" + userName,
                         HttpMethod.GET, requestEntity, String.class, "42");
 
                 return response.getBody();
@@ -109,9 +113,9 @@ public class ClientController {
                 return response.getBody();
         }
 
-        public Pair<String, ArrayList<String>> getCoachPageDetails(String user_name) {
-                HttpEntity<Pair> response = template.exchange("http://localhost:8090/getCoachPageDetails?param=" +user_name,
-                        HttpMethod.GET, requestEntity, Pair.class, "42");
+        public String getCoachPageDetails(String user_name) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getCoachPageDetails?param=" +user_name,
+                        HttpMethod.GET, requestEntity, String.class, "42");
 
                 return response.getBody();
         }
@@ -136,10 +140,16 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
-        public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name) {
-                ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
-                        HttpMethod.GET, requestEntity, Pair.class, "42");
-                //todo: not working!
+        public String getPlayerPageDetails(String user_name) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public ArrayList<String> getPageHistory(String user_name) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getPageHistory?param=" + user_name,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+
                 return response.getBody();
         }
 
@@ -191,10 +201,27 @@ public class ClientController {
                 return response.getBody();
         }
 
-        public Pair<String, Set<String>[]> getTeamPageDetails(String team_name) {
-                ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getTeamPageDetails?param=" +team_name,
-                        HttpMethod.GET, requestEntity, Pair.class, "42");
-                //todo: not working!
+        public String getTeamPageDetails(String team_name) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getTeamPageDetails?param=" +team_name,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public ArrayList<String> getTeamPlayers(String team_name) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getTeamPlayers?param=" +team_name,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+                return response.getBody();
+        }
+
+        public ArrayList<String> getTeamCoaches(String team_name) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getTeamCoaches?param=" +team_name,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
+                return response.getBody();
+        }
+
+        public ArrayList<String> getTeamManagers(String team_name) {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getTeamManagers?param=" +team_name,
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
                 return response.getBody();
         }
 
@@ -235,6 +262,9 @@ public class ClientController {
 
                 return response.getBody();
         }
+
+
+
 }
 
 class AddSeasonParam {
@@ -282,5 +312,43 @@ class AddSeasonParam {
 
         public List<String> getRepresentatives() {
                 return representatives;
+        }
+}
+
+class teamPageParam {
+        private String name;
+        private HashMap<String, Player> players;
+        private HashMap<String, Coach> coaches;
+        private HashMap<String, Manager> managers;
+        private String history;
+        private Stadium stadium;
+        private String nation;
+
+        public String getName() {
+                return name;
+        }
+
+        public HashMap<String, Player> getPlayers() {
+                return players;
+        }
+
+        public HashMap<String, Coach> getCoaches() {
+                return coaches;
+        }
+
+        public HashMap<String, Manager> getManagers() {
+                return managers;
+        }
+
+        public String getHistory() {
+                return history;
+        }
+
+        public Stadium getStadium() {
+                return stadium;
+        }
+
+        public String getNation() {
+                return nation;
         }
 }

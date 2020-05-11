@@ -134,18 +134,7 @@ public class TeamPage extends Observable {
         this.nation = nation;
     }
 
-    public Pair<String, Set<String>[]> getAllDetails() {
-        String details =
-                name + "," +
-                        "Stadium: " + stadium.getName() + "," +
-                        "History: " + history +  "," +
-                        "Nation:" + nation;
-
-        Set<String>[] people = new Set[3];
-        people[0] = players.keySet();
-        people[1] = coaches.keySet();
-        people[2] = managers.keySet();
-
-        return new Pair<>(details ,people);
+    public String getAllDetails() {
+       return name + "," + "Stadium: " + stadium.getName() + "," + "History: " + history +  "," + "Nation:" + nation;
     }
 }

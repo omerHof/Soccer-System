@@ -96,11 +96,56 @@ public class TeamManagement {
         return DB.getInstance().getFullTeamsNames();
     }
 
-    public Pair<String, Set<String>[]> getTeamPageDetails(String team_name) {
+    public String getTeamPageDetails(String team_name) {
         Team team = DB.getInstance().getTeam(team_name);
         TeamPage teamPage = team.getPage();
-
+        if(teamPage==null){
+            return null;
+        }
         return teamPage.getAllDetails();
+    }
+
+    public ArrayList<String> getTeamPlayers(String team_name) {
+        Team team = DB.getInstance().getTeam(team_name);
+        TeamPage teamPage = team.getPage();
+        if(teamPage==null){
+            return null;
+        }
+        ArrayList<String> result = new ArrayList<>();
+        teamPage.getPlayers().keySet();
+        for(String user_name: teamPage.getPlayers().keySet()){
+            result.add(teamPage.getPlayers().get(user_name).getUserFullName());
+        }
+        return result;
+
+    }
+
+    public ArrayList<String> getTeamCoaches(String team_name) {
+        Team team = DB.getInstance().getTeam(team_name);
+        TeamPage teamPage = team.getPage();
+        if(teamPage==null){
+            return null;
+        }
+        ArrayList<String> result = new ArrayList<>();
+        teamPage.getCoaches().keySet();
+        for(String user_name: teamPage.getCoaches().keySet()){
+            result.add(teamPage.getCoaches().get(user_name).getUserFullName());
+        }
+        return result;
+    }
+
+    public ArrayList<String> getTeamManagers(String team_name) {
+        Team team = DB.getInstance().getTeam(team_name);
+        TeamPage teamPage = team.getPage();
+        if(teamPage==null){
+            return null;
+        }
+        ArrayList<String> result = new ArrayList<>();
+        teamPage.getManagers().keySet();
+        for(String user_name: teamPage.getManagers().keySet()){
+            result.add(teamPage.getManagers().get(user_name).getUserFullName());
+        }
+        return result;
     }
 
     public boolean checkIfTeamNameExist(String teamName){
@@ -109,4 +154,6 @@ public class TeamManagement {
         }
         return false;
     }
+
+
 }

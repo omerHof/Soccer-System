@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class HomePageController extends Controller {
 
-    SystemManagement systemManagement;
+    //SystemManagement systemManagement;
     ArrayList<String> leaguesNames;
 
     @FXML
@@ -32,10 +32,9 @@ public class HomePageController extends Controller {
     Label leagueText2 = new Label();
 
     public HomePageController() {
-        systemManagement = new SystemManagement();
+        //systemManagement = new SystemManagement();
         leaguesNames = new ArrayList<>();
-        leaguesNames = systemManagement.getLeagueNames();
-        //leaguesNames = clientController.getLeagueNames();
+        leaguesNames = clientController.getLeaguesNames();
 
     }
 
@@ -59,7 +58,7 @@ public class HomePageController extends Controller {
         int numOfTable=1;
         for (String leagueString : leaguesNames) {
             //leagueText.setText("LEAGUE: " + leagueString);
-            ArrayList<String> games = systemManagement.closestGames(leagueString);
+            ArrayList<String> games = clientController.closestGames(leagueString);
             for (String game : games) {
                 data[i] = new String[]{leagueString, game.split("%")[0], game.split("%")[1], game.split("%")[2],
                         game.split("%")[3], game.split("%")[4], game.split("%")[5], game.split("%")[6]};

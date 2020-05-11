@@ -601,9 +601,22 @@ public class DataBase {
 
 
 
-        Fan forTest = new Fan("p", "p", "blabla", "test@test");
+        Fan forTest = new Fan("f", "f", "blabla", "test@test");
+        Player p = new Player("p","p","blabla","test@test",LocalDate.now(),"striker");
+        Coach cr = new Coach("c","c","blabla","test@test", "main coach");
+        Referee r = new Referee("r","r","blabla","test@test","var referee");
+        MainReferee mr = new MainReferee("mr","mr","blabla","test@test","main referee");
+        TeamOwner to = new TeamOwner("to","to","blabla","test@test");
+        Manager m = new Manager("m","m","blabla","test@test");
         AssociationRepresentative ar = new AssociationRepresentative("a", "a", "blabla", "test@test");
-
+        Administrator ad = new Administrator("ad","ad","blabla","test@test");
+        db.setUser(p);
+        db.setUser(cr);
+        db.setUser(r);
+        db.setUser(mr);
+        db.setUser(to);
+        db.setUser(m);
+        db.setUser(ad);
         db.setUser(forTest);
         db.setUser(ar);
 

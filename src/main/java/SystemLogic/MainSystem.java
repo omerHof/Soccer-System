@@ -135,7 +135,7 @@ public class MainSystem {
         User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
         if(newUser==null){
-            return "null";
+            return "association representative";
         }
 
         db.addUser(newUser);
@@ -191,7 +191,7 @@ public class MainSystem {
     public boolean logOut(){
         String userName = currentUser.getUserName();
         this.currentUser = null;
-        LOG.info(userName + " was logged in successfully");
+        LOG.info(userName + " was logged out successfully");
         return true;
     }
 

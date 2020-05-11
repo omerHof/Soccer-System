@@ -47,9 +47,9 @@ public class LeagueSeasonManagement {
         return ((AssociationRepresentative) currentUser).removeReferee(fullName);
     }
 
-    public boolean addGameEvent(String type, int time, String playerName, String whichTeam){
+    public boolean addGameEvent(String type, String time, String playerName, String whichTeam){
         findTheUser();
-        Event.eventType event =Event.eventType.valueOf(type);
+        Event.eventType event = Event.eventType.valueOf(type);
         return ((AssociationRepresentative) currentUser).addGameEvent(event,time,playerName, whichTeam);
     }
 

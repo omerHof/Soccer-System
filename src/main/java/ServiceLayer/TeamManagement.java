@@ -102,4 +102,11 @@ public class TeamManagement {
 
         return teamPage.getAllDetails();
     }
+
+    public boolean checkIfTeamNameExist(String teamName){
+        if(DB.getInstance().getTeam(teamName)==null){
+            return true;
+        }
+        return false;
+    }
 }

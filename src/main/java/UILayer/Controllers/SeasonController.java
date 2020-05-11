@@ -14,10 +14,13 @@ import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SeasonController extends Controller {
     LeagueSeasonManagement seasonManagement = new LeagueSeasonManagement();
@@ -37,6 +40,8 @@ public class SeasonController extends Controller {
     int yearChosen;
     String scoreChosen;
     String gameChosen;
+
+
 
 
     @FXML
@@ -74,6 +79,19 @@ public class SeasonController extends Controller {
     private JFXTextField assoMessage;
 
 
+    @FXML
+    private ChoiceBox<String> whichTeamCB;
+    @FXML
+    private ChoiceBox<String> eventTypeCB;
+    @FXML
+    private TextField timeTF;
+    @FXML
+    private TextField playerNameTF;
+    @FXML
+    JFXButton submit;
+    @FXML
+    JFXButton backBTN;
+
 
     ObservableList<String> options = FXCollections.observableArrayList();
     ObservableList<String> options2 = FXCollections.observableArrayList();
@@ -90,6 +108,15 @@ public class SeasonController extends Controller {
     ObservableList<String> teams = FXCollections.observableArrayList();
     ObservableList<String> representatives = FXCollections.observableArrayList();
 
+    ObservableList<String> whichTeam = FXCollections.observableArrayList();
+    ObservableList<String> gameEventsType = FXCollections.observableArrayList();
+
+    ObservableList<String> arrayPlayers = FXCollections.observableArrayList();
+
+   List<String> arrayPlayersString;
+
+
+
     public SeasonController() {
 
         arrayLeagues = clientController.getLeaguesNames();
@@ -97,6 +124,17 @@ public class SeasonController extends Controller {
         arrayReferees = clientController.getAllUsersByType("Referee");
         arrayMainReferees = clientController.getAllUsersByType("MainReferee");
         arrayrepresentatives = clientController.getAllUsersByType("AssociationRepresentative");
+
+/*
+
+        //adding all the relevant players' names to the choice box.
+        arrayPlayersString = clientController.getFullTeamsNames(); ///////// ????????????????? WHATTT IS ITTTTTTTTT ???????????????????? ////////////todo: //////////////////////////////
+        for ( String name : arrayPlayersString){
+            arrayPlayers.add(name);
+        }
+        playerNameCB.setItems(arrayPlayers);
+*/
+
 
         setInfo();
 
@@ -138,6 +176,17 @@ public class SeasonController extends Controller {
         options6.add("OneRoundGamePolicy");
         options6.add("TwoRoundsGamePolicy");
         options6.add("RandomTwoRoundsGamePolicy");
+
+        gameEventsType.add("goal");
+        gameEventsType.add("offside");
+        gameEventsType.add("foul");
+        gameEventsType.add("redTicket");
+        gameEventsType.add("yellowTicket");
+        gameEventsType.add("injury");
+        gameEventsType.add("substitution");
+
+        whichTeam.add("home");
+        whichTeam.add("away");
     }
 
     @Override
@@ -147,6 +196,10 @@ public class SeasonController extends Controller {
             e.consume();
             closeProgram();
         });
+
+        whichTeamCB.setItems(whichTeam);
+        eventTypeCB.setItems(gameEventsType);
+
         setOptions();
     }
 
@@ -161,6 +214,8 @@ public class SeasonController extends Controller {
             choiceBox6.setItems(options6);
             choiceBox7.setItems(options7);
             choiceBox8.setItems(options8);
+
+
 
 
         } catch (Exception e) {
@@ -444,5 +499,85 @@ public class SeasonController extends Controller {
         alert.showAndWait();
     }
 
+
+
+    public void checkDetailsFilled() throws IOException {
+
+        submit.setFocusTraversable(false);
+
+        if(timeTF.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter the time of the event.");
+            return;
+        }
+
+
+        if(playerNameTF.getText().isEmpty()) { //the user didn't enter the player's name.
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "You must enter the player whose involved in the event.");
+            submit.setFocusTraversable(false);
+            return;
+        }
+
+        boolean isSelected = (whichTeamCB.getValue() != null );
+        if(!isSelected) { //the user didn't choose which team is involved with this event.
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose a team in order to submit the form.");
+            submit.setFocusTraversable(false);
+            return;
+        }
+
+        isSelected = (eventTypeCB.getValue() != null );
+        if(!isSelected) { //the user didn't choose the type of event.
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "You must choose the event type in order to submit the form.");
+            submit.setFocusTraversable(false);
+            return;
+        }
+
+        submit.setFocusTraversable(false);
+        checkDetailsCorrect();
+    }
+
+    @FXML
+    public void checkDetailsCorrect() throws IOException {
+
+        submit.setFocusTraversable(false);
+
+        String playerName = playerNameTF.getText();
+        String time = timeTF.getText();
+        int gameTime = Integer.parseInt(time);
+        String type = eventTypeCB.getValue();
+        String team = whichTeamCB.getValue();
+
+        //checks validation of the time entered:
+        if (gameTime < 0 || gameTime > 120) { // out of the game time
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "The event time must be between 0-120 minutes. Please try again.");
+            return;
+        }
+
+        //everything's good
+        boolean addedSuccessfully = clientController.addGameEvent(type, time, playerName, team);
+
+        if (addedSuccessfully) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Confirmation Dialog");
+            alert.setHeaderText("Event added !");
+            alert.setContentText("The event you entered was added successfully to the game's events list.");
+            alert.showAndWait();
+           // goToLanding(); ////////////////////////// ??????????????????????????????? ///////////////////////////////////                ?????????????????????????????????????
+            goToProfile();
+        }
+
+        else { //no active game at the moment
+            showAlert(Alert.AlertType.ERROR, "Form Error!", "There is no active game at the moment that you can edit. Please try again later.");
+            return;
+        }
+    }
+
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.show();
+    }
 
 }

@@ -63,12 +63,17 @@ public class UserManagement {
         return MainSystem.getInstance().logOut();
     }
 
+    public String displaySpecialPassword(){
+        String pass = MainSystem.getInstance().getSpecialPassword();
+        return pass;
+    }
+
     public String getUserName(){
         return currentUser.getUserName();
     }
 
-    public void setUserName(String userName){
-        currentUser.setUserName(userName);
+    public void setUserFullName(String userFullName){
+        currentUser.setUserFullName(userFullName);
     }
 
     public String getUserFullName() {
@@ -86,7 +91,7 @@ public class UserManagement {
         currentUser.setUserEmail(userEmail);
     }
 
-    public String[] watchDetails(){
+    public ArrayList<String> watchDetails(){
         return currentUser.watchDetails();
     }
 
@@ -244,6 +249,15 @@ public class UserManagement {
         return  ((Player) currentUser).getSalary();
     }
 
+    /** ---------------- REFEREE MANAGEMENT FUNCTIONALITY ---------------- **/
+
+    public String getRefereeQualifications(){
+        return  ((Referee) currentUser).getQualification();
+    }
+
+    public void setRefereeQualifications(String qualifications ){
+        ((Referee) currentUser).setQualification(qualifications);
+    }
 
 
 }

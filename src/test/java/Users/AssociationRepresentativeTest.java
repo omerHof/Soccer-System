@@ -591,20 +591,20 @@ public class AssociationRepresentativeTest {
         game.setStatus(Game.gameStatus.active);
         representativee1.setMyGame(game);
 
-        representativee1.addGameEvent(Event.eventType.goal, 37, "yehi", "home");
+        representativee1.addGameEvent(Event.eventType.goal, "37", "yehi", "home");
 
-        assertTrue(representativee1.addGameEvent(Event.eventType.injury, 51, "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.injury, "51", "hod", "away"));
 
-        assertTrue(representativee1.addGameEvent(Event.eventType.yellowTicket, 53, "hod", "away"));
-        assertTrue(representativee1.addGameEvent(Event.eventType.offside, 54, "hod", "home"));
-        assertTrue(representativee1.addGameEvent(Event.eventType.foul, 58, "hod", "away"));
-        assertTrue(representativee1.addGameEvent(Event.eventType.substitution, 59, "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.yellowTicket, "53", "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.offside, "54", "hod", "home"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.foul, "58", "hod", "away"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.substitution, "59", "hod", "away"));
 
-        assertTrue(representativee1.addGameEvent(Event.eventType.goal, 66, "yehi", "home"));
-        assertTrue(representativee1.addGameEvent(Event.eventType.goal, 87, "yehi", "home")); /////////שלושער ליחי/////
-        assertTrue(representativee1.addGameEvent(Event.eventType.redTicket, 91, "shukrun", "away")); // בחור אלים
+        assertTrue(representativee1.addGameEvent(Event.eventType.goal, "66", "yehi", "home"));
+        assertTrue(representativee1.addGameEvent(Event.eventType.goal, "87", "yehi", "home")); /////////שלושער ליחי/////
+        assertTrue(representativee1.addGameEvent(Event.eventType.redTicket, "91", "shukrun", "away")); // בחור אלים
 
-        assertFalse(representativee5.addGameEvent(Event.eventType.goal, 87, "messi", "away")); //doesn't have an active game.
+        assertFalse(representativee5.addGameEvent(Event.eventType.goal, "87", "messi", "away")); //doesn't have an active game.
     }
 
     @Test

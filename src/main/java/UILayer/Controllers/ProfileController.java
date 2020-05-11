@@ -12,6 +12,7 @@ import javafx.scene.control.ChoiceBox;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -109,7 +110,6 @@ public class ProfileController extends Controller {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //find the user type
-        userType = "Player";
         switch (userType) {
             case "Player":
                 playerDetails.setVisible(true);
@@ -131,12 +131,19 @@ public class ProfileController extends Controller {
         }
 
         //display his correct details
-        userNameDetail.appendText("omer123");
-        password.appendText("wooo123");
-        fullName.appendText("omer hofman");
-        email.appendText("omer@gmail.com");
+        List<String> userDetails = clientController.getUserDetails();
+        userNameDetail.appendText(userDetails.get(2));
+        password.appendText(userDetails.get(1));
+        fullName.appendText(userDetails.get(0));
+        email.appendText(userDetails.get(3));
+        if(userType.equals("Player")){
+            playerDetails.setText(clientController.getPlayerPosition());
+        }else if(userType.equals("Coach")){
+            roleDetails.setText(clientController.getCoachRole());
+        }else if(userType.equals("Referee")) {
+            refereeDetails.setText(clientController.getRefereeQualifications());
 
-
+        }
 
 
         //create edit button for each detail beside password and username
@@ -204,6 +211,7 @@ public class ProfileController extends Controller {
         if(checkOnlyLetters()){
             fullName.setText(userFullName);
             showFullNameEditor( actionEvent);
+            clientController.setUserFullName(userFullName);
             fullNameEditor.setText("");
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -226,6 +234,7 @@ public class ProfileController extends Controller {
         userEmail =  emailEditor.getText();
         if(checkEmail()){
             email.setText(userEmail);
+            clientController.setUserEmail(userEmail);
             showEmailEditor( actionEvent);
             emailEditor.setText("");
         }else{
@@ -243,12 +252,14 @@ public class ProfileController extends Controller {
     public void submitCoachRole(ActionEvent actionEvent) {
         coachRole =  roleChoiseBox.getValue().toString();
         roleDetails.setText(coachRole);
+        clientController.setCoachRole(coachRole);
         showRoleEditor(actionEvent);
     }
 
     public void submitPlayerPosition(ActionEvent actionEvent) {
         playerPosition = positionChoiseBox.getValue().toString();
         playerDetails.setText(playerPosition);
+        clientController.setPlayerPosition(playerPosition);
         showPositionEditor(actionEvent);
     }
 
@@ -299,6 +310,7 @@ public class ProfileController extends Controller {
     public void submitRefereeQualification(ActionEvent actionEvent) {
         refereeQualification = qualificationChoiseBox.getValue().toString();
         refereeDetails.setText(refereeQualification);
+        clientController.setRefereeQualification(refereeQualification);
         showQualificationEditor(actionEvent);
     }
 }

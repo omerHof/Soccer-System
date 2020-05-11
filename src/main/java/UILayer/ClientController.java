@@ -229,12 +229,14 @@ public class ClientController {
 
         /** ------------ LEAGUE ------------ **/
 
-        public void addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+        public String addSeasonToLeague(String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives) {
+
                 AddSeasonParam param = new AddSeasonParam(leagueName, year, scorePolicy, gamePolicy, teams, referees, representatives);
                 HttpEntity<AddSeasonParam> request = new HttpEntity<>(param);
+                request.getBody();
                 ResponseEntity<String> response2 = template
                         .exchange("http://localhost:8090/addSeasonToLeague", HttpMethod.POST, request, String.class);
-                String foo = response2.getBody();
+                return response2.getBody();
         }
 
         /** ------------ SEASON ------------ **/
@@ -264,6 +266,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String checkFinishedGames(String userName, String userType) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/checkFinishedGames?param="+userName+ ","+userType,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
 
 
 }
@@ -287,4 +295,31 @@ class AddSeasonParam {
                 this.representatives = representatives;
         }
 
+        public String getLeagueName() {
+                return leagueName;
+        }
+
+        public int getYear() {
+                return year;
+        }
+
+        public String getScorePolicy() {
+                return scorePolicy;
+        }
+
+        public String getGamePolicy() {
+                return gamePolicy;
+        }
+
+        public List<String> getTeams() {
+                return teams;
+        }
+
+        public List<String> getReferees() {
+                return referees;
+        }
+
+        public List<String> getRepresentatives() {
+                return representatives;
+        }
 }

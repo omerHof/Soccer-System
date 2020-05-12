@@ -351,7 +351,7 @@ public class SignUpController extends Controller {
             qualification = refereeQualificationCB.getValue().toString();
 
             // checks whether the user exists in the system already.
-            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, qualification, "", "", generatorType); //true if success //only necessary parameters.
+            userCreatedMessage = clientController.signUp(username,password, "", userType, fullname, email, null, qualification, "", "", generatorType);
         }
 
         else if (userType.equals("Player")){
@@ -374,8 +374,7 @@ public class SignUpController extends Controller {
                 submit.setFocusTraversable(false);
                 return;
             }
-
-            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType); //true if success
+            userCreatedMessage = clientController.signUp(username,password, "", userType, fullname, email, birthDate, "", courtRole, "", generatorType);
         }
 
         else if (userType.equals("Coach")){
@@ -388,8 +387,7 @@ public class SignUpController extends Controller {
                 return;
             }
             teamRole = coachTeamRoleCB.getValue().toString();
-
-            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, "", "", teamRole, generatorType); //true if success
+            userCreatedMessage = clientController.signUp(username,password, "", userType, fullname, email, null, "", "", teamRole, generatorType);
         }
 
         else if ((userType.equals("AssociationRepresentative")) || (userType.equals("Administrator"))){
@@ -401,12 +399,11 @@ public class SignUpController extends Controller {
                 submit.setFocusTraversable(false);
                 return;
             }
-
-            userCreatedMessage = userManagement.createNewUser(username, password, managementPassword, userType, fullname, email, null, "", "", "", generatorType); //true if success
+            userCreatedMessage = clientController.signUp(username,password, managementPassword, userType, fullname, email, null, "", "", "", generatorType);
         }
 
         else { // fan / manager / teamowner
-            userCreatedMessage = userManagement.createNewUser(username, password, "", userType, fullname, email, null, "", "", "", generatorType); // only the basic information.
+            userCreatedMessage = clientController.signUp(username,password, "", userType, fullname, email, null, "", "", "", generatorType);
         }
 
 
@@ -439,7 +436,8 @@ public class SignUpController extends Controller {
             fullnameTF.clear();
             emailTF.clear();
 
-            goToLanding();
+            clientController.sendNotification("welcome to Soccer Association System!",username);
+            homePage();
         }
     }
 

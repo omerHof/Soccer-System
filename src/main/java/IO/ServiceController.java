@@ -50,6 +50,13 @@ public class ServiceController {
         String type = userManagement.displaySpecialPassword();
         return type;
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/signUp")
+    public String logIn(@RequestBody SignUpParam param) {
+        return userManagement.createNewUser(param.getUserName(),param.getPassword(),param.getManagementPassword(),param.getUserType(),
+                param.getFullname(),param.getEmail(),param.getBirthDay(),param.getQualification(),param.getCourtRole(),param.getTeamRole(),
+                param.getGeneratorType());
+    }
     /** ------------ USERS ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/getUserDetails")
@@ -77,6 +84,22 @@ public class ServiceController {
     public String getUserType(@RequestParam String param){
         String type = userManagement.getUserType(param);
         return type;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getNotifications")
+    public ArrayList<String> getNotifications(){
+        return userManagement.getReceivedNotifications();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/sendNotification")
+    public void sendNotification(@RequestParam String param){
+        String userDetails[] = param.split(",");
+        userManagement.sendNotification(userDetails[0],userDetails[1]);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/readNotification")
+    public void readNotification(@RequestParam String param){
+        userManagement.readNotification(param);
     }
 
     /** ------------ COACHES ------------ **/
@@ -275,6 +298,12 @@ public class ServiceController {
         String userDetails[] = param.split(",");
         return userManagement.checkFinishedGames(userDetails[0],userDetails[1]);
     }
+    @RequestMapping(method = RequestMethod.POST, value = "/setReport")
+    public boolean setReport(@RequestBody String param)
+    {
+        String userDetails[] = param.split(",");
+        return userManagement.setReport(userDetails[0],userDetails[1]);
+    }
 }
 
 class AddSeasonParam {
@@ -322,5 +351,77 @@ class AddSeasonParam {
 
     public List<String> getRepresentatives() {
         return representatives;
+    }
+}
+
+class SignUpParam{
+    String userName;
+    String password;
+    String managementPassword;
+    String userType;
+    String fullname;
+    String email;
+    LocalDate birthDay;
+    String qualification;
+    String courtRole;
+    String teamRole;
+    String generatorType;
+
+    public SignUpParam(String userName, String password, String managementPassword, String userType, String fullname, String email, LocalDate birthDay, String qualification, String courtRole, String teamRole, String generatorType) {
+        this.userName = userName;
+        this.password = password;
+        this.managementPassword = managementPassword;
+        this.userType = userType;
+        this.fullname = fullname;
+        this.email = email;
+        this.birthDay = birthDay;
+        this.qualification = qualification;
+        this.courtRole = courtRole;
+        this.teamRole = teamRole;
+        this.generatorType = generatorType;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getManagementPassword() {
+        return managementPassword;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public LocalDate getBirthDay() {
+        return birthDay;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public String getCourtRole() {
+        return courtRole;
+    }
+
+    public String getTeamRole() {
+        return teamRole;
+    }
+
+    public String getGeneratorType() {
+        return generatorType;
     }
 }

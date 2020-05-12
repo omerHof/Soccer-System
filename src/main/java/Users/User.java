@@ -117,7 +117,15 @@ public abstract class User {
         this.userFullName = userFullName;
     }
 
-    public ArrayList<Notification> getReceivedNotifications() {
+    public ArrayList<String> getReceivedNotificationsAsString() {
+        ArrayList<String> notif = new ArrayList<>();
+        for(Notification not:receivedNotifications){
+            notif.add(not.getContext());
+        }
+        return notif;
+    }
+
+    public ArrayList<Notification> getReceivedNotifications(){
         return receivedNotifications;
     }
 

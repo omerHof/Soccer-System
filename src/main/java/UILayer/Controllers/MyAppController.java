@@ -28,6 +28,8 @@ public class MyAppController extends Controller {
     private Button openCoachPage;
     @FXML
     private Button getManagementPassword;
+    @FXML
+    private Button editReport;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -72,6 +74,7 @@ public class MyAppController extends Controller {
 
                 break;
             case "MainReferee":
+                editReport.setVisible(true);
 
 
                 break;

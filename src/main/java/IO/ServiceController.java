@@ -251,6 +251,12 @@ public class ServiceController {
         String userDetails[] = param.split(",");
         return userManagement.checkFinishedGames(userDetails[0],userDetails[1]);
     }
+    @RequestMapping(method = RequestMethod.POST, value = "/setReport")
+    public boolean setReport(@RequestBody String param)
+    {
+        String userDetails[] = param.split(",");
+        return userManagement.setReport(userDetails[0],userDetails[1]);
+    }
 }
 
 class AddSeasonParam {

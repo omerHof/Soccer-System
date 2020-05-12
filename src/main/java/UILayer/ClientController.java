@@ -304,7 +304,13 @@ public class ClientController {
                 return response.getBody();
         }
 
-
+        public boolean setReport(String userName, String report) {
+                HttpEntity<String> request = new HttpEntity<>(userName+","+report);//todo change to String
+                request.getBody();
+                ResponseEntity<Boolean> response2 = template
+                        .exchange("http://localhost:8090/setReport", HttpMethod.POST, request, Boolean.class);
+                return response2.getBody();
+        }
 
 }
 

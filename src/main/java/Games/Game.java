@@ -54,6 +54,7 @@ public class Game extends Observable {
         this.eventBook = new ArrayList<>();
         this.score = "0-0";
         this.stadium = homeTeam.getStadium();
+        this.finalReport="FINAL REPORT:\n";
         setAlarms();
     }
 
@@ -98,7 +99,7 @@ public class Game extends Observable {
      * set alarms when the game start
      */
     private void endGame() {
-        LocalDateTime GameEndTime = timeOfGame.plus(5, ChronoUnit.SECONDS);//todo change to 90 minutes
+        LocalDateTime GameEndTime = timeOfGame.plus(5, ChronoUnit.MINUTES);//todo change to 90 minutes
         EndGame endGame = new EndGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, GameEndTime);
@@ -109,7 +110,7 @@ public class Game extends Observable {
      * set alarms when the game close
      */
     private void closeGame() {
-        LocalDateTime closeGameTime = timeOfGame.plus(5, ChronoUnit.SECONDS);//todo change to 6.5 hours
+        LocalDateTime closeGameTime = timeOfGame.plus(2, ChronoUnit.MINUTES);//todo change to 6.5 hours
         CloseGame closeGame = new CloseGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);
@@ -157,7 +158,12 @@ public class Game extends Observable {
     }
 
     public void setFinalReport(String finalReport) {
+        //this.finalReport = "FINAL REPORT:\n"+finalReport;
         this.finalReport = finalReport;
+    }
+    public void setFinalReportEndGame(String finalReport) {
+        this.finalReport = "FINAL REPORT:\n"+finalReport;
+        //this.finalReport = finalReport;
     }
 
     public void setHomeTeam(Team homeTeam) {
@@ -313,7 +319,7 @@ class EndGame extends TimerTask {
             awayTeam.getPage().setChange();
             awayTeam.getPage().notifyObservers("End game between: " + homeTeam.getName() + " and " + awayTeam.getName() + " in a score: " + this.game.getScore());
         }
-        game.setFinalReport(eventListToReport(game.getEventBook()));
+        game.setFinalReportEndGame(eventListToReport(game.getEventBook()));
         MainSystem.LOG.info("The game between: " + game.getHomeTeam().getName() + " and " + game.getAwayTeam().getName() + " ended. the score: " + game.getScore());
     }
 

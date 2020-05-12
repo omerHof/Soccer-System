@@ -283,6 +283,18 @@ public class UserManagement {
 
     }
 
+    public boolean setReport(String userName, String report){
+        try {
+            MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
+            user.editGameEvents(report);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
+
+    }
+
 
     public void readNotification(String message) {
         Notification notification = new Notification(currentUser,message,currentUser);

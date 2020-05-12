@@ -236,6 +236,7 @@ public ArrayList<PersonalPage> getFollowedPages() {
         MainSystem.LOG.info(getUserFullName()+" follow the team : "+teamName);
         return true;
     }
+
     public void stopFollowTeam(String teamName){ ///to fix bug
         Team team;
         if (followedTeams.containsKey(teamName)) {
@@ -244,9 +245,8 @@ public ArrayList<PersonalPage> getFollowedPages() {
             teamPage.deleteObserver(this);
             MainSystem.LOG.info(getUserFullName()+" stop follow the team : "+teamName);
         }
-
-
     }
+
     public void stopFollowAllTeams(){
         Iterator it = followedTeams.entrySet().iterator();
         Team team;

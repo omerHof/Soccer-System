@@ -79,6 +79,7 @@ public class UserManagement {
     public String getUserFullName() {
         return currentUser.getUserFullName();
     }
+
     public ArrayList<Notification> getReceivedNotifications() {
         return currentUser.getReceivedNotifications();
     }

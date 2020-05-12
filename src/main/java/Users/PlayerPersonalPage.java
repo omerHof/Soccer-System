@@ -16,7 +16,7 @@ public class PlayerPersonalPage extends PersonalPage {
     private String position;
 
     public PlayerPersonalPage(String name, int age, String position,double height,int weight,int shirtNumber, String team){
-        this.name=name;
+        super.name=name;
         this.age=age;
         this.position=position;
         this.height = height;

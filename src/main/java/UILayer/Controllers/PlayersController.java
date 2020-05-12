@@ -21,8 +21,6 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class PlayersController extends Controller {
-    UserManagement userManagement = new UserManagement();
-
 
     @FXML
     TableView<SimpleStringProperty> players_table = new TableView<>();
@@ -48,26 +46,25 @@ public class PlayersController extends Controller {
             closeProgram();
         });
         showPlayers();
-
-
-
     }
 
     private void showPlayers() {
         DataBase db = new DataBase();
-        //HashMap<String, String> players_name = userManagement.getAllPlayers();
         HashMap<String, String> players_name = clientController.getAllPlayers();
         ArrayList<SimpleStringProperty> properties_players_name = new ArrayList<>();
         for(String user_name: players_name.keySet()){
             String full_name = players_name.get(user_name);
             properties_players_name.add(new SimpleStringProperty(null,full_name, user_name));
         }
-
+        /* Column 1: player's name*/
         ObservableList<SimpleStringProperty> players_name_data = FXCollections.observableArrayList(properties_players_name);
         TableColumn nameCol = new TableColumn("Player");
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        /* Column 2: show-page button */
         TableColumn buttonCol = new TableColumn("Pages");
         buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
+
 
         Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory
                 = //
@@ -85,7 +82,7 @@ public class PlayersController extends Controller {
                                 } else {
                                     btn.setOnAction(event -> {
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
-                                       showPlayerPage(simple.getValue(), simple.getName());
+                                        showPlayerPage(simple.getValue(), simple.getName());
                                     });
                                     setGraphic(btn);
                                     setText(null);
@@ -98,11 +95,55 @@ public class PlayersController extends Controller {
 
         buttonCol.setCellFactory(cellFactory);
 
-        players_table.setItems(players_name_data);
-        players_table.getColumns().addAll(nameCol, buttonCol);
+        /* Column 3: follow button */
+        if(userType!= null && userType.equals("Fan")) {
 
+
+            TableColumn buttonCol2 = new TableColumn("");
+            buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
+
+            Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory2
+                    = //
+                    new Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>>() {
+                        @Override
+                        public TableCell call(TableColumn<SimpleStringProperty, String> param) {
+                            TableCell<SimpleStringProperty, String> cell = new TableCell<SimpleStringProperty, String>() {
+                                Button btn = new Button("Follow");
+
+                                @Override
+                                public void updateItem(String item, boolean empty) {
+                                    super.updateItem(item, empty);
+                                    if (empty) {
+                                        setGraphic(null);
+                                        setText(null);
+                                    } else {
+                                        btn.setOnAction(event -> {
+                                            SimpleStringProperty simple = getTableView().getItems().get(getIndex());
+                                            followPage(simple.getValue(), simple.getName());
+                                        });
+                                        setGraphic(btn);
+                                        setText(null);
+                                    }
+                                }
+                            };
+                            return cell;
+                        }
+                    };
+            buttonCol2.setCellFactory(cellFactory2);
+            /* Put all columns in table */
+            players_table.setItems(players_name_data);
+            players_table.getColumns().addAll(nameCol, buttonCol, buttonCol2);
+            return; // work?
+        }
+        else{
+            /* Put all columns in table */
+            players_table.setItems(players_name_data);
+            players_table.getColumns().addAll(nameCol, buttonCol);
+        }
 
     }
+
+
 
     private void showPlayerPage(String user_name, String full_name) {
 
@@ -127,14 +168,22 @@ public class PlayersController extends Controller {
         for(String team: history){
             personal_page.getChildren().add(new Text(team + ", "));
         }
-
     }
 
+    private void followPage(String user_name_player, String full_name) {
+        // 1. get pageName
+        String details = clientController.getPlayerPageDetails(user_name_player);
+        if(details==null ){
+            showAlert(Alert.AlertType.ERROR, "Form Error!", full_name + " has no page to follow.");
+            return;
+        }
+        String[] split_details = details.split(",");
+        String pageName = split_details[0];
+        // 2. follow
+        clientController.followPage(pageName);
+        showAlert(Alert.AlertType.INFORMATION, "Success!", userName + ", now you are following " +full_name + "'s page" );
 
-
-
-
-
+    }
 }
 
 

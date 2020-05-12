@@ -62,10 +62,12 @@ public class TeamsController extends Controller {
         for(String team_name: teams_name){
             properties_teams_name.add(new SimpleStringProperty(null,team_name, team_name));
         }
-
+        /* Column 1: Team's name */
         ObservableList<SimpleStringProperty> teams_name_data = FXCollections.observableArrayList(properties_teams_name);
         TableColumn nameCol = new TableColumn("Teams");
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        /* Column 2: Team's page button */
         TableColumn buttonCol = new TableColumn("Pages");
         buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
 
@@ -98,10 +100,46 @@ public class TeamsController extends Controller {
 
         buttonCol.setCellFactory(cellFactory);
 
+        /* Column 3: follow button */
+        if(userType!= null && userType.equals("Fan")) {
+            TableColumn buttonCol2 = new TableColumn("");
+            buttonCol2.setCellValueFactory(new PropertyValueFactory<>(""));
+
+            Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory2
+                    = //
+                    new Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>>() {
+                        @Override
+                        public TableCell call(TableColumn<SimpleStringProperty, String> param) {
+                            TableCell<SimpleStringProperty, String> cell = new TableCell<SimpleStringProperty, String>() {
+                                Button btn = new Button("Follow");
+
+                                @Override
+                                public void updateItem(String item, boolean empty) {
+                                    super.updateItem(item, empty);
+                                    if (empty) {
+                                        setGraphic(null);
+                                        setText(null);
+                                    } else {
+                                        btn.setOnAction(event -> {
+                                            SimpleStringProperty simple = getTableView().getItems().get(getIndex());
+                                            followPage(simple.getName());
+                                        });
+                                        setGraphic(btn);
+                                        setText(null);
+                                    }
+                                }
+                            };
+                            return cell;
+                        }
+                    };
+
+            buttonCol2.setCellFactory(cellFactory2);
+            teams_table.setItems(teams_name_data);
+            teams_table.getColumns().addAll(nameCol, buttonCol, buttonCol2);
+            return;
+        }
         teams_table.setItems(teams_name_data);
         teams_table.getColumns().addAll(nameCol, buttonCol);
-
-
     }
 
     private void showTeamPage(String team_name) {
@@ -142,8 +180,17 @@ public class TeamsController extends Controller {
         for(String manager: managers){
             team_page2.getChildren().add(new Text(manager + ", "));
         }
+    }
 
+    private void followPage(String team_name) {
+        String details = clientController.getTeamPageDetails(team_name);
+        if(details==null) {
+            showAlert(Alert.AlertType.ERROR, "Form Error!", team_name + " has no page to follow.");
+            return;
+        }
 
+        clientController.followTeam(team_name);
+        showAlert(Alert.AlertType.INFORMATION, "Success!", userName + ", now you are following " +team_name + "'s page" );
     }
 
     public void submitOpenTeam() throws IOException {
@@ -276,8 +323,5 @@ public class TeamsController extends Controller {
                 if(error==true){
                     alertError.show();
                 }
-
     }
-
-
 }

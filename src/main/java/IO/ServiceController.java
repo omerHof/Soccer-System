@@ -153,6 +153,18 @@ public class ServiceController {
         return userManagement.getPageHistory(param);
     }
 
+    /** ------------ FAN ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/followPage")
+    public void followPage(@RequestParam String param){
+
+        userManagement.followPage(param);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/followTeam")
+    public void followTeam(@RequestParam String param){
+
+        userManagement.followTeam(param);
+    }
 
     /** ------------ REFEREE ------------ **/
 

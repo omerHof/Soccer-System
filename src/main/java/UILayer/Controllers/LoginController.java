@@ -85,13 +85,13 @@ public class LoginController extends Controller {
         }
     }
 
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
+  /*  private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setHeaderText(null);
         alert.setTitle(title);
         alert.setContentText(message);
         alert.show();
-    }
+    }*/
 }
 
 

@@ -165,10 +165,7 @@ public class ClientController {
         }
 
 
-        public Pair<String, ArrayList<String>> getPlayerPageDetails(String user_name) {
-                ResponseEntity<Pair> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
-                        HttpMethod.GET, requestEntity, Pair.class, "42");
-                //todo: not working!
+
         public String getPlayerPageDetails(String user_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -180,6 +177,18 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, ArrayList.class, "42");
 
                 return response.getBody();
+        }
+
+        /** ------------ FAN ------------ **/
+
+        public void followPage(String user_name_player) {
+               template.exchange("http://localhost:8090/followPage?param="+user_name_player,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+        }
+
+        public void followTeam(String team_name) {
+                template.exchange("http://localhost:8090/followTeam?param="+team_name,
+                        HttpMethod.GET, requestEntity, String.class, "42");
         }
 
         /** ------------ REFEREE ------------ **/
@@ -222,16 +231,6 @@ public class ClientController {
 
                 return response.getBody();
         }
-        /*
-
-        public List<String> getFullTeamsNames() {
-                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/getFullTeamsNames",
-                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
-
-                return response.getBody();
-        }
-        */
-
 
         public String getTeamPageDetails(String team_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getTeamPageDetails?param=" +team_name,
@@ -256,6 +255,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, ArrayList.class, "42");
                 return response.getBody();
         }
+
+
 
 
         /** ------------ LEAGUE ------------ **/
@@ -302,9 +303,6 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
-
-
-
 
 
 

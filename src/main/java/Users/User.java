@@ -75,7 +75,6 @@ public abstract class User {
     }
 
     public ArrayList<String> watchDetails(){
-        //MainSystem.LOG.info(getUserFullName()+" watch his details");
         ArrayList<String> userDetails = new ArrayList<>();
         userDetails.add(userFullName);
         userDetails.add(password);
@@ -141,6 +140,4 @@ public abstract class User {
     public void setNotReadNotifications(boolean notReadNotifications) {
         this.notReadNotifications = notReadNotifications;
     }
-
-
 }

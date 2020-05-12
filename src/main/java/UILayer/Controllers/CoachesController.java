@@ -50,12 +50,15 @@ public class CoachesController extends Controller {
             String full_name = coaches_name.get(user_name);
             properties_coaches_name.add(new SimpleStringProperty(null,full_name, user_name));
         }
-
+        /* Column 1: coach's name*/
         ObservableList<SimpleStringProperty> coaches_name_data = FXCollections.observableArrayList(properties_coaches_name);
         TableColumn nameCol = new TableColumn("Coach");
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        /* Column 2: show-page button */
         TableColumn buttonCol = new TableColumn("Pages");
         buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
+
 
         Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory
                 = //
@@ -86,10 +89,51 @@ public class CoachesController extends Controller {
 
         buttonCol.setCellFactory(cellFactory);
 
-        coaches_table.setItems(coaches_name_data);
-        coaches_table.getColumns().addAll(nameCol, buttonCol);
+        /* Column 3: follow button */
+        if(userType!= null && userType.equals("Fan")) {
 
 
+            TableColumn buttonCol2 = new TableColumn("");
+            buttonCol.setCellValueFactory(new PropertyValueFactory<>(""));
+
+            Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>> cellFactory2
+                    = //
+                    new Callback<TableColumn<SimpleStringProperty, String>, TableCell<SimpleStringProperty, String>>() {
+                        @Override
+                        public TableCell call(TableColumn<SimpleStringProperty, String> param) {
+                            TableCell<SimpleStringProperty, String> cell = new TableCell<SimpleStringProperty, String>() {
+                                Button btn = new Button("Follow");
+
+                                @Override
+                                public void updateItem(String item, boolean empty) {
+                                    super.updateItem(item, empty);
+                                    if (empty) {
+                                        setGraphic(null);
+                                        setText(null);
+                                    } else {
+                                        btn.setOnAction(event -> {
+                                            SimpleStringProperty simple = getTableView().getItems().get(getIndex());
+                                            followPage(simple.getValue(), simple.getName());
+                                        });
+                                        setGraphic(btn);
+                                        setText(null);
+                                    }
+                                }
+                            };
+                            return cell;
+                        }
+                    };
+            buttonCol2.setCellFactory(cellFactory2);
+            /* Put all columns in table */
+            coaches_table.setItems(coaches_name_data);
+            coaches_table.getColumns().addAll(nameCol, buttonCol, buttonCol2);
+            return;
+        }
+        else{
+            /* Put all columns in table */
+            coaches_table.setItems(coaches_name_data);
+            coaches_table.getColumns().addAll(nameCol, buttonCol);
+        }
     }
 
     private void showCoachPage(String user_name, String full_name) {
@@ -116,5 +160,17 @@ public class CoachesController extends Controller {
 
     }
 
-
+    private void followPage(String user_name_coach, String full_name) {
+        // 1. get pageName
+        String details = clientController.getCoachPageDetails(user_name_coach);
+        if(details==null ){
+            showAlert(Alert.AlertType.ERROR, "Form Error!", full_name + " has no page to follow.");
+            return;
+        }
+        String[] split_details = details.split(",");
+        String pageName = split_details[0];
+        // 2. follow
+        clientController.followPage(pageName);
+        showAlert(Alert.AlertType.INFORMATION, "Success!", userName + ", now you are following " +full_name + "'s page" );
+    }
 }

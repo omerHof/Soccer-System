@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.TeamOwnerController">
+    <children>
+
+        <fx:include fx:id="navBar" source="Landing.fxml" />
+       <ChoiceBox   fx:id = "choseAssentType" layoutX="420.0" layoutY="158.0" prefWidth="150.0" value="Player">
+           <items >
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="Player" />
+                   <String fx:value="Coach" />
+                   <String fx:value="Manager" />
+                   <String fx:value="Stadium" />
+               </FXCollections>
+           </items>
+       </ChoiceBox>
+
+        <TextField fx:id="choseAssentName" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
+
+        <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+            <children>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="Chose Assent's Type">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+
+        <Pane layoutX="195.0" layoutY="213.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+            <children>
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="Chose Assent's Name">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+
+                </Label>
+            </children>
+        </Pane>
+
+        <JFXButton fx:id="add" layoutX="195.0" layoutY="284.0" onAction="#addAssentToTeam" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="submit">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </JFXButton>
+
+        <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE NEW TEAM" textAlignment="CENTER" wrappingWidth="339.79999999999984">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+
+
+    </children>
+</AnchorPane>

@@ -208,6 +208,18 @@ public class Controller implements Initializable {
         s.show();
     }
 
+    public void addAssent() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addAssent.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        TeamOwnerController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
     public void goToOpenPlayerPage() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addPlayerPage.fxml"));
         Parent root = fxmlLoader.load();

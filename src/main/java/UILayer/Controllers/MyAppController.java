@@ -13,7 +13,8 @@ import java.util.ResourceBundle;
 
 public class MyAppController extends Controller {
 
-
+    @FXML
+    public Button addAssent;
     @FXML
     private Button createNewTeamButton;
     @FXML
@@ -66,6 +67,7 @@ public class MyAppController extends Controller {
             case "TeamOwner":
                 createNewTeamButton.setVisible(true);
                 openTeamPage.setVisible(true);
+                addAssent.setVisible(true);
                 break;
             case "Manager":
                 openTeamPage.setVisible(true);
@@ -88,11 +90,13 @@ public class MyAppController extends Controller {
 
     }
 
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
+
+
+ /*   private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setHeaderText(null);
         alert.setTitle(title);
         alert.setContentText(message);
         alert.show();
-    }
+    }*/
 }

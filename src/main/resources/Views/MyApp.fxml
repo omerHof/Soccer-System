@@ -24,6 +24,7 @@
 
         <Button fx:id="mpProfileButton" layoutX="514.0" layoutY="351.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="47.0" prefWidth="143.0" text="my profile" />
       <Button fx:id="editReport" layoutX="336.0" layoutY="351.0" mnemonicParsing="false" onAction="#goToEditReport" prefHeight="47.0" prefWidth="143.0" text="edit report" visible="false" />
+      <Button fx:id="addAssent" layoutX="524.0" layoutY="202.0" mnemonicParsing="false" onAction="#addAssent" prefHeight="47.0" prefWidth="124.0" text="add assent" visible="false" />
     </children>
 
 </AnchorPane>

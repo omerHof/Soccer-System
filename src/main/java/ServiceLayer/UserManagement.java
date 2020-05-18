@@ -221,7 +221,11 @@ public class UserManagement {
 
     public String getPlayerTeam() {
         currentUser = MainSystem.getInstance().getCurrentUser();
-        return ((Player) currentUser).getCurrentTeam().getName();
+        Team team = ((Player) currentUser).getCurrentTeam();
+        if(team!=null){
+            return team.getName();
+        }
+        return currentUser.getUserFullName() + " is a free player";
     }
 
     public String getPlayerPageAsString(){

@@ -11,6 +11,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -98,7 +100,7 @@ public class LandingController extends Controller {
     }
 
     @FXML
-    public void hideUserButton(){
+    public void hideUserButton() throws IOException {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to log out from the system?", ButtonType.YES, ButtonType.NO);
         //alert.setHeaderText("Leaving so soon?");
@@ -114,6 +116,7 @@ public class LandingController extends Controller {
             notificationsList.setVisible(false);
             super.userName = null;
             clientController.logOut();
+            homePage();
         }
     }
 

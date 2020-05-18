@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -15,111 +16,111 @@
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <ChoiceBox fx:id="choiceBox1" layoutX="420.0" layoutY="163.0" prefWidth="150.0" value="" />
-        <ChoiceBox fx:id="choiceBox3" layoutX="419.0" layoutY="344.0" prefWidth="150.0" value="" />
-      <ChoiceBox fx:id="choiceBox2" layoutX="420.0" layoutY="223.0" prefWidth="150.0" value="" />
-      <ComboBox fx:id="comboLeague" layoutX="660.0" layoutY="162.0" prefWidth="150.0" promptText="selected leagues" />
-      <ComboBox fx:id="comboReferee" layoutX="660.0" layoutY="218.0" prefWidth="150.0" promptText="selected referees" />
-      <ComboBox fx:id="comboTeams" layoutX="658.0" layoutY="343.0" prefWidth="150.0" promptText="selected teams" />
-      <Text layoutX="424.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INIT NEW SEASON" textAlignment="CENTER" wrappingWidth="339.79999999999984">
+        <ChoiceBox fx:id="choiceBox1" layoutX="406.0" layoutY="152.0" prefHeight="31.0" prefWidth="150.0" value="" />
+        <ChoiceBox fx:id="choiceBox3" layoutX="405.0" layoutY="285.0" prefHeight="30.0" prefWidth="150.0" value="" />
+      <ChoiceBox fx:id="choiceBox2" layoutX="406.0" layoutY="193.0" prefHeight="31.0" prefWidth="150.0" value="" />
+      <ComboBox fx:id="comboLeague" layoutX="729.0" layoutY="150.0" prefHeight="31.0" prefWidth="160.0" promptText="selected leagues" />
+      <ComboBox fx:id="comboReferee" layoutX="729.0" layoutY="193.0" prefHeight="30.0" prefWidth="160.0" promptText="selected referees" />
+      <ComboBox fx:id="comboTeams" layoutX="729.0" layoutY="285.0" prefHeight="30.0" prefWidth="160.0" promptText="selected teams" />
+      <Text layoutX="424.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INIT NEW SEASON" textAlignment="CENTER" wrappingWidth="339.79999999999984">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="choiceBox4" layoutX="419.0" layoutY="408.0" prefWidth="150.0" value="" />
-      <ChoiceBox fx:id="choiceBox5" layoutX="625.0" layoutY="521.0" prefWidth="150.0" value="" />
-      <ChoiceBox fx:id="choiceBox6" layoutX="624.0" layoutY="580.0" prefWidth="150.0" value="" />
-      <ChoiceBox fx:id="choiceBox7" layoutX="623.0" layoutY="638.0" prefWidth="150.0" value="" />
-      <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <ChoiceBox fx:id="choiceBox4" layoutX="405.0" layoutY="330.0" prefHeight="30.0" prefWidth="150.0" value="" />
+      <ChoiceBox fx:id="choiceBox5" layoutX="406.0" layoutY="390.0" prefHeight="31.0" prefWidth="150.0" value="" />
+      <ChoiceBox fx:id="choiceBox6" layoutX="407.0" layoutY="429.0" prefHeight="30.0" prefWidth="150.0" value="" />
+      <ChoiceBox fx:id="choiceBox7" layoutX="406.0" layoutY="468.0" prefHeight="30.0" prefWidth="150.0" value="" />
+      <Pane layoutX="215.0" layoutY="151.0" prefHeight="30.0" prefWidth="172.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" promptText="please choose league" unFocusColor="BLACK">
+            <Label fx:id="leageLbl" alignment="CENTER" layoutX="8.0" layoutY="5.0" text="please choose league">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="214.0" layoutY="194.0" prefHeight="30.0" prefWidth="172.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutY="6.0" prefHeight="21.0" prefWidth="172.0" text="please choose referees">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="195.0" layoutY="213.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Pane layoutX="224.0" layoutY="284.0" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" promptText="please choose referees" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="7.0" layoutY="7.0" text="please choose teams">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="193.0" layoutY="338.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Pane layoutX="73.0" layoutY="327.0" prefHeight="31.0" prefWidth="310.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="7.0" layoutY="6.0" promptText="please choose teams" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="4.0" layoutY="-3.0" prefHeight="30.0" prefWidth="304.0" text="please choose association representatives">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="63.0" layoutY="403.0" prefHeight="46.0" prefWidth="320.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Pane layoutX="194.0" layoutY="391.0" prefHeight="30.0" prefWidth="191.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="30.0" prefWidth="304.0" promptText="please choose association representatives" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="8.0" layoutY="6.0" text="please choose year">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="402.0" layoutY="512.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Pane layoutX="170.0" layoutY="430.0" prefHeight="30.0" prefWidth="215.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" promptText="please choose year" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="8.0" prefHeight="30.0" prefWidth="208.0" text="please choose game policy">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="378.0" layoutY="574.0" prefHeight="46.0" prefWidth="215.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Pane layoutX="170.0" layoutY="470.0" prefHeight="31.0" prefWidth="215.0" style="-fx-background-color:white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="185.0" promptText="please choose game policy" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="8.0" prefHeight="30.0" prefWidth="200.0" text="please choose score policy">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="378.0" layoutY="637.0" prefHeight="46.0" prefWidth="215.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
-         <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="185.0" promptText="please choose score policy" unFocusColor="BLACK">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXTextField>
-         </children>
-      </Pane>
-      <JFXButton layoutX="820.0" layoutY="570.0" minWidth="37.0" onAction="#gamePolicyInfo" prefHeight="49.0" prefWidth="49.0" style="-fx-background-radius: 3em; -fx-background-color: #9cff64;" text="?">
+      <JFXButton layoutX="590.0" layoutY="412.0" minWidth="37.0" onAction="#gamePolicyInfo" prefHeight="48.0" prefWidth="49.0" style="-fx-background-radius: 3em; -fx-background-color: #9cff64;" text="?">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="818.0" layoutY="637.0" minWidth="37.0" onAction="#scorePolicyInfo" prefHeight="49.0" prefWidth="49.0" style="-fx-background-radius: 3em; -fx-background-color: #9cff64;" text="?">
+      <JFXButton layoutX="590.0" layoutY="451.0" minWidth="37.0" onAction="#scorePolicyInfo" prefHeight="49.0" prefWidth="49.0" style="-fx-background-radius: 3em; -fx-background-color: #9cff64;" text="?">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <ComboBox fx:id="comboAsso" layoutX="658.0" layoutY="407.0" prefWidth="150.0" promptText="selected asso" />
-      <JFXButton fx:id="addLeague" layoutX="586.0" layoutY="161.0" minWidth="37.0" onAction="#addLeague" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
+      <ComboBox fx:id="comboAsso" layoutX="729.0" layoutY="329.0" prefHeight="30.0" prefWidth="160.0" promptText="selected asso" />
+      <JFXButton fx:id="addLeague" layoutX="572.0" layoutY="153.0" minWidth="37.0" onAction="#addLeague" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="addTeam" layoutX="587.0" layoutY="340.0" minWidth="37.0" onAction="#addTeam" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
+      <JFXButton fx:id="addTeam" layoutX="573.0" layoutY="286.0" minWidth="37.0" onAction="#addTeam" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="addAsso" layoutX="587.0" layoutY="401.0" minWidth="37.0" onAction="#addAsso" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
+      <JFXButton fx:id="addAsso" layoutX="573.0" layoutY="333.0" minWidth="37.0" onAction="#addAsso" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="addReferee" layoutX="586.0" layoutY="219.0" minWidth="37.0" onAction="#addReferee" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
+      <JFXButton fx:id="addReferee" layoutX="572.0" layoutY="196.0" minWidth="37.0" onAction="#addReferee" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -129,49 +130,49 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <Separator layoutX="93.0" layoutY="482.0" prefHeight="11.0" prefWidth="765.0" />
-      <Pane layoutX="171.0" layoutY="275.0" prefHeight="46.0" prefWidth="215.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
+      <Separator layoutX="27.0" layoutY="369.0" prefHeight="11.0" prefWidth="1076.0" />
+      <Pane layoutX="170.0" layoutY="238.0" prefHeight="31.0" prefWidth="215.0" style="-fx-background-color: white; -fx-border-color: black;">
          <children>
-            <JFXTextField alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="198.0" promptText="please choose Main referees" unFocusColor="BLACK">
+            <Label alignment="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="21.0" prefWidth="208.0" text="please choose Main referees">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
-            </JFXTextField>
+            </Label>
          </children>
       </Pane>
-      <ComboBox fx:id="comboMainReferee" layoutX="662.0" layoutY="281.0" prefWidth="150.0" promptText="selected main referee" />
-      <JFXButton fx:id="addMainReferee" layoutX="589.0" layoutY="279.0" minWidth="37.0" onAction="#addMainReferee" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
+      <ComboBox fx:id="comboMainReferee" layoutX="730.0" layoutY="239.0" prefHeight="30.0" prefWidth="160.0" promptText="selected main referee" />
+      <JFXButton fx:id="addMainReferee" layoutX="574.0" layoutY="239.0" minWidth="37.0" onAction="#addMainReferee" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #393eff;" text="add">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <ChoiceBox fx:id="choiceBox8" layoutX="420.0" layoutY="282.0" prefWidth="150.0" value="" />
-      <JFXButton fx:id="removeLeague" layoutX="837.0" layoutY="161.0" minWidth="37.0" onAction="#removeLeague" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
+      <ChoiceBox fx:id="choiceBox8" layoutX="405.0" layoutY="238.0" prefHeight="30.0" prefWidth="150.0" value="" />
+      <JFXButton fx:id="removeLeague" layoutX="906.0" layoutY="150.0" minWidth="37.0" onAction="#removeLeague" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="removeReferee" layoutX="838.0" layoutY="220.0" minWidth="37.0" onAction="#removeReferee" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
+      <JFXButton fx:id="removeReferee" layoutX="907.0" layoutY="193.0" minWidth="37.0" onAction="#removeReferee" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="removeMainReferee" layoutX="837.0" layoutY="280.0" minWidth="37.0" onAction="#removeMainReferee" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
+      <JFXButton fx:id="removeMainReferee" layoutX="905.0" layoutY="240.0" minWidth="37.0" onAction="#removeMainReferee" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="removeTeams" layoutX="834.0" layoutY="339.0" minWidth="37.0" onAction="#removeTeams" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
+      <JFXButton fx:id="removeTeams" layoutX="903.0" layoutY="286.0" minWidth="37.0" onAction="#removeTeams" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="removeAsso" layoutX="835.0" layoutY="402.0" minWidth="37.0" onAction="#removeAsso" prefHeight="37.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
+      <JFXButton fx:id="removeAsso" layoutX="904.0" layoutY="329.0" minWidth="37.0" onAction="#removeAsso" prefHeight="30.0" prefWidth="63.0" style="-fx-background-radius: 3em; -fx-background-color: #e02a1f;" text="remove">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Pane fx:id="refereePane" layoutX="973.0" layoutY="209.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
+      <Pane fx:id="refereePane" layoutX="973.0" layoutY="210.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
          <children>
             <JFXTextField fx:id="refereeMessage" alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="495.0" unFocusColor="BLACK">
                <font>
@@ -180,7 +181,7 @@
             </JFXTextField>
          </children>
       </Pane>
-      <Pane fx:id="mainRefereePane" layoutX="972.0" layoutY="268.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
+      <Pane fx:id="mainRefereePane" layoutX="972.0" layoutY="263.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
          <children>
             <JFXTextField fx:id="mainRefereeMessage" alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="495.0" unFocusColor="BLACK">
                <font>
@@ -189,7 +190,7 @@
             </JFXTextField>
          </children>
       </Pane>
-      <Pane fx:id="teamPane" layoutX="973.0" layoutY="329.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
+      <Pane fx:id="teamPane" layoutX="973.0" layoutY="320.0" prefHeight="46.0" prefWidth="510.0" style="-fx-background-color: #9cff64;-fx-border-color: black;" visible="false">
          <children>
             <JFXTextField fx:id="teamMessage" alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="30.0" prefWidth="495.0" unFocusColor="BLACK">
                <font>

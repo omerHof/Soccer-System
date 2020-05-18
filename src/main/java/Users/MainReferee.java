@@ -2,6 +2,8 @@ package Users;
 
 import Games.Game;
 
+import java.util.ArrayList;
+
 public class MainReferee extends Referee {
 
     public MainReferee(String userName, String password, String fullName, String userEmail, String qualification) {
@@ -26,6 +28,25 @@ public class MainReferee extends Referee {
             return gameToEdit.getFinalReport();
 
         return "";
+    }
+
+
+    /**
+     * this function display all mainReferee's games with details.
+     * @return - list of Strings - each one represents a different game.
+     */
+    public ArrayList<Game> watchGamesList (){
+
+        ArrayList<Game> allGames = new ArrayList<>();
+
+        if (super.myGames != null) {
+            for (Game g : super.myGames) {
+                if( g != null && g.getStatus().equals(Game.gameStatus.preGame))
+                    allGames.add(g);
+            }
+            return allGames;
+        }
+        return null;
     }
 
 

@@ -1,5 +1,6 @@
 package IO;
 
+import Games.Game;
 import ServiceLayer.LeagueSeasonManagement;
 import ServiceLayer.SystemManagement;
 import ServiceLayer.TeamManagement;
@@ -201,6 +202,12 @@ public class ServiceController {
     public String getRefereeQualifications(){
         return userManagement.getRefereeQualifications();
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/watchGamesList")
+    public ArrayList<String> watchGamesList(){
+        return userManagement.watchGamesList();
+    }
+
 
     /** ------------ TEAMS ------------ **/
 

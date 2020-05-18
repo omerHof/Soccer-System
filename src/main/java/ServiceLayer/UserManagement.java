@@ -1,5 +1,6 @@
 package ServiceLayer;
 
+import Games.Game;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
@@ -298,6 +299,22 @@ public class UserManagement {
         MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
         return user.displayGameEvents();
 
+    }
+
+    public ArrayList<String> watchGamesList(){
+        currentUser = MainSystem.getInstance().getCurrentUser();
+        ArrayList<Game> games = new ArrayList<>();
+
+        if (currentUser instanceof MainReferee)
+            games = ((MainReferee) currentUser).watchGamesList();
+
+        else if (currentUser instanceof Referee)
+            games = ((Referee) currentUser).watchGamesList();
+
+        else if (currentUser instanceof AssociationRepresentative)
+            games = ((AssociationRepresentative) currentUser).watchGamesList();
+
+        return DB.getInstance().getStringGames(games);
     }
 
     public boolean setReport(String userName, String report){

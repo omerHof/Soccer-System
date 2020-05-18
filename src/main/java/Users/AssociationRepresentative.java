@@ -352,6 +352,21 @@ public class AssociationRepresentative extends User implements Observer {
     }
 
 
+
+    public ArrayList<Game> watchGamesList (){
+
+        ArrayList<Game> allGames = new ArrayList<>();
+
+        if (myGames != null) {
+            for (Game g : myGames) {
+                if( g != null && g.getStatus().equals(Game.gameStatus.preGame))
+                    allGames.add(g);
+            }
+            return allGames;
+        }
+        return null;
+    }
+
     @Override
     public void update(Observable o, Object arg) {
         User user = DB.getInstance().getUserType("AssociationRepresentative");

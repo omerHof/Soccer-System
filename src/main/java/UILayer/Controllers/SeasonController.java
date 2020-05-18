@@ -578,7 +578,7 @@ public class SeasonController extends Controller {
     }
 
 
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
+    protected void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(null);

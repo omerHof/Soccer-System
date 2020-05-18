@@ -290,6 +290,20 @@ public class Controller implements Initializable {
         s.show();
     }
 
+    public void watchGamesList() throws IOException {
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/watchGamesList.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        watchGamesController sc = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -1,13 +1,17 @@
 package SystemLogic;
 
+import Games.Game;
 import UserGenerator.IUserGenerator;
 import UserGenerator.ManagementUserGenerator;
 import Users.Administrator;
+import Users.Referee;
 import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -229,6 +233,11 @@ public class MainSystem {
         this.currentUser = currentUser;
     }
 
+
+   /* public ArrayList<String> watchGamesList(){
+        ArrayList<Game> games = ((Referee) currentUser).watchGamesList();
+        return db.getStringGames(games);
+    }*/
 }
 
 class TimerPasswordBuilder extends TimerTask {
@@ -249,6 +258,7 @@ class TimerPasswordBuilder extends TimerTask {
         password =  builder.toString();
         MainSystem.LOG.info("Special password changed at ");
     }
+
 
 
 

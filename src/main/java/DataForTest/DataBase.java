@@ -1,5 +1,6 @@
 package DataForTest;
 
+import Games.Game;
 import LeagueSeasonsManagment.*;
 import SystemLogic.DB;
 import Teams.Statistics;
@@ -10,6 +11,7 @@ import Users.MainReferee;
 import Users.Referee;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import LeagueSeasonsManagment.*;
@@ -216,7 +218,7 @@ public class DataBase {
 
         /**Users**/
         referees = new ArrayList<>();
-        refereee1 = new Referee("referee1", "a", "referee1", "a", "a");
+        refereee1 = new Referee("r", "r", "referee1", "a", "a");
         referees.add(refereee1);
         refereee2 = new Referee("referee2", "a", "referee2", "a", "a");
         referees.add(refereee2);
@@ -246,7 +248,7 @@ public class DataBase {
         referees.add(refereee14);
         refereee15 = new Referee("referee15", "a", "referee15", "a", "a");
         referees.add(refereee15);
-        mainReferee1 = new MainReferee("mainReferee1", "a", "mainReferee1", "a", "a");
+        mainReferee1 = new MainReferee("mr", "mr", "mainReferee1", "mr", "mr");
         mainReferee2 = new MainReferee("mainReferee2", "a", "mainReferee2", "a", "a");
         mainReferee3 = new MainReferee("mainReferee3", "a", "mainReferee3", "a", "a");
         mainReferee4 = new MainReferee("mainReferee4", "a", "mainReferee4", "a", "a");
@@ -259,7 +261,7 @@ public class DataBase {
         referees.add(mainReferee5);
 
         representatives = new ArrayList<>();
-        representativee1 = new AssociationRepresentative("representative1", "a", "representative1", "a");
+        representativee1 = new AssociationRepresentative("a", "a", "representative1", "a");
         representativee2 = new AssociationRepresentative("representative2", "a", "representative2", "a");
         representativee3 = new AssociationRepresentative("representative3", "a", "representative3", "a");
         representativee4 = new AssociationRepresentative("representative4", "a", "representative4", "a");
@@ -595,7 +597,7 @@ public class DataBase {
         db.addLeague(league);
 
         AssociationRepresentative assoTest = new AssociationRepresentative("tester", "tt", "lala", "lili");
-        assoTest.addLeague("Alufot", 2);
+        assoTest.addLeague("Alufot", 6);
 
         //assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
         assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", gameInlayPolicy.getName(), stringTeams, stringReferees, stringRepresentatives);
@@ -606,15 +608,37 @@ public class DataBase {
         Player p = new Player("p","p","blabla","test@test",LocalDate.now(),"striker");
         Coach cr = new Coach("c","c","blabla","test@test", "main coach");
         Referee r = new Referee("r","r","blabla","test@test","var referee");
-        MainReferee mr = new MainReferee("mr","mr","blabla","test@test","main referee");
+        //MainReferee mr = new MainReferee("mr","mr","blabla","test@test","main referee");
         TeamOwner to = new TeamOwner("to","to","blabla","test@test");
         Manager m = new Manager("m","m","blabla","test@test");
-        AssociationRepresentative ar = new AssociationRepresentative("a", "a", "blabla", "test@test");
+        AssociationRepresentative ar = new AssociationRepresentative("aaa", "aaa", "blabla", "test@test");
         Administrator ad = new Administrator("ad","ad","blabla","test@test");
+
+
+        LocalDateTime date22 = LocalDateTime.of(2020,7,19, 15, 30);
+        Game game2 = new Game(a, b, date22);
+
+        LocalDateTime date33 = LocalDateTime.of(2022,2,25, 22, 00);
+        Game game3 = new Game(a, b, date33);
+
+        LocalDateTime date44 = LocalDateTime.of(2028,8,3, 21, 30);
+        Game game4 = new Game(a, b, date44);
+
+        LocalDateTime date55 = LocalDateTime.of(2074,6,7, 20, 00);
+        Game game5 = new Game(a, b, date55);
+
+        r.addGame(game2);
+        r.addGame(game3);
+        r.addGame(game4);
+        r.addGame(game5);
+
+
+
+
         db.setUser(p);
         db.setUser(cr);
-        db.setUser(r);
-        db.setUser(mr);
+       // db.setUser(r);
+       // db.setUser(mr);
         db.setUser(to);
         db.setUser(m);
         db.setUser(ad);

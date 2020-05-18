@@ -1,14 +1,20 @@
 package UILayer.Controllers;
 
+import Games.Game;
 import ServiceLayer.UserManagement;
 import UILayer.Main;
 import com.jfoenix.controls.JFXButton;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class MyAppController extends Controller {
@@ -31,6 +37,17 @@ public class MyAppController extends Controller {
     private Button getManagementPassword;
     @FXML
     private Button editReport;
+
+
+    @FXML
+    TableView<String[]> tab1 = new TableView();
+    @FXML
+    private Button showMyGames;
+
+    @FXML
+    Label leagueText1 = new Label();
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -57,28 +74,32 @@ public class MyAppController extends Controller {
                 break;
             case "Coach":
                 openCoachPage.setVisible(true);
-
                 break;
+
             case "AssociationRepresentative":
                 initNewSeasonButton.setVisible(true);
                 addGameEvent.setVisible(true);
                 getManagementPassword.setVisible(true);
+                showMyGames.setVisible(true);
                 break;
+
             case "TeamOwner":
                 createNewTeamButton.setVisible(true);
                 openTeamPage.setVisible(true);
                 addAssent.setVisible(true);
                 break;
+
             case "Manager":
                 openTeamPage.setVisible(true);
                 break;
-            case "Referee":
 
+            case "Referee":
+                showMyGames.setVisible(true);
                 break;
+
             case "MainReferee":
                 editReport.setVisible(true);
-
-
+                showMyGames.setVisible(true);
                 break;
         }
     }

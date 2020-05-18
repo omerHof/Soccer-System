@@ -7,38 +7,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SeasonController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SeasonController">
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <Label fx:id="pleaseChoseType" layoutX="43.0" layoutY="144.0" prefHeight="30.0" prefWidth="346.0" text="Please enter the event details:">
+        <Label id="labelTitle" fx:id="pleaseChoseType" layoutX="39.0" layoutY="130.0" prefHeight="36.0" prefWidth="368.0" stylesheets="@allPages.css" text="Please enter the event details :" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font></Label>
 
 
-        <JFXButton fx:id="backBTN" layoutX="15.0" layoutY="381.0" onAction="#openMyApps" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Back" textFill="#2c9e5b">
+        <JFXButton id="button" fx:id="backBTN" layoutX="645.0" layoutY="347.0" onAction="#openMyApps" prefHeight="17.0" prefWidth="120.0" stylesheets="@allPages.css" text="Back" textFill="#2c9e5b">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </JFXButton>
 
-        <JFXButton fx:id="submit" layoutX="669.0" layoutY="356.0" onAction="#checkDetailsFilled" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Submit" textFill="#2c9e5b">
+        <JFXButton id="button" fx:id="submit" layoutX="797.0" layoutY="347.0" onAction="#checkDetailsFilled" prefHeight="37.0" prefWidth="129.0" stylesheets="@allPages.css" text="Submit" textFill="#2c9e5b">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </JFXButton>
 
-        <Label id="timeLabel" fx:id="timeLabel" layoutX="29.0" layoutY="227.0" prefHeight="27.0" prefWidth="138.0" text="Time (minutes)" />
-        <TextField id="timeTF" fx:id="timeTF" layoutX="173.0" layoutY="221.0" prefHeight="12.0" prefWidth="86.0" />
+        <Label id="timeLabel" fx:id="timeLabel" layoutX="39.0" layoutY="210.0" prefHeight="27.0" prefWidth="120.0" stylesheets="@allPages.css" text="Time (minutes)" />
+        <TextField id="timeTF" fx:id="timeTF" layoutX="173.0" layoutY="211.0" prefHeight="12.0" prefWidth="86.0" />
 
-        <Label fx:id="whichTeamLabel" layoutX="416.0" layoutY="295.0" prefHeight="27.0" prefWidth="101.0" text="which team" />
-        <ChoiceBox id="whichTeamCB" fx:id="whichTeamCB" layoutX="561.0" layoutY="289.0" prefHeight="0.0" prefWidth="172.0" />
+        <Label fx:id="whichTeamLabel" layoutX="421.0" layoutY="263.0" prefHeight="27.0" prefWidth="101.0" stylesheets="@allPages.css" text="Which team" />
+        <ChoiceBox id="whichTeamCB" fx:id="whichTeamCB" layoutX="553.0" layoutY="264.0" prefHeight="0.0" prefWidth="172.0" />
 
-        <Label fx:id="eventTypeLabel" layoutX="48.0" layoutY="295.0" prefHeight="27.0" prefWidth="101.0" text="Event type" />
-        <ChoiceBox id="eventTypeCB" fx:id="eventTypeCB" layoutX="172.0" layoutY="289.0" prefHeight="0.0" prefWidth="172.0" />
+        <Label fx:id="eventTypeLabel" layoutX="42.0" layoutY="263.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Event type" />
+        <ChoiceBox id="eventTypeCB" fx:id="eventTypeCB" layoutX="172.0" layoutY="264.0" prefHeight="0.0" prefWidth="172.0" />
 
-        <Label id="playerNameLabel" fx:id="playerNameLabel" layoutX="416.0" layoutY="241.0" prefHeight="27.0" prefWidth="129.0" text="Player's name" />
-        <TextField id="playerNameTF" fx:id="playerNameTF" layoutX="561.0" layoutY="235.0" prefHeight="27.0" prefWidth="129.0" />
+        <Label fx:id="playerNameLabel" layoutX="420.0" layoutY="210.0" prefHeight="27.0" prefWidth="120.0" stylesheets="@allPages.css" text="Player's name" />
+        <TextField id="playerNameTF" fx:id="playerNameTF" layoutX="554.0" layoutY="210.0" prefHeight="27.0" prefWidth="129.0" />
 
         <!--<ChoiceBox id="playerNameCB" fx:id="playerNameCB" layoutX="589.0" layoutY="221.0" prefHeight="0.0" prefWidth="172.0" />-->
 

@@ -12,12 +12,12 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.SignUpController">
     <children>
     <fx:include fx:id="navBar" source="Landing.fxml" />
-        <Label fx:id="pleaseChoseType" layoutX="25.0" layoutY="109.0" prefHeight="30.0" prefWidth="237.0" text="Please chose user type:">
+        <Label fx:id="pleaseChoseType" layoutX="25.0" layoutY="109.0" prefHeight="32.0" prefWidth="253.0" text="Please chose user type :" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="20.0" />
+                <Font name="System Bold" size="22.0" />
             </font></Label>
 
-    <JFXButton fx:id="refereeBTN" layoutX="25.0" layoutY="145.0" onAction="#typeReferee" prefHeight="37.0" prefWidth="86.0" styleClass="d" stylesheets="@Landing.css" text="Referee" textFill="#2c9e5b">
+    <JFXButton fx:id="refereeBTN" layoutX="25.0" layoutY="145.0" onAction="#typeReferee" prefHeight="37.0" prefWidth="86.0" styleClass="d" stylesheets="@allPages.css" text="Referee" textFill="#2c9e5b">
         <font>
             <Font name="System Bold" size="16.0" />
         </font>
@@ -66,13 +66,13 @@
         </JFXButton>
 
 
-        <JFXButton fx:id="backBTN" layoutX="28.0" layoutY="448.0" onAction="#goToLanding" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Back" textFill="#2c9e5b">
+        <JFXButton id="button" fx:id="backBTN" layoutX="715.0" layoutY="434.0" onAction="#goToLanding" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@allPages.css" text="Back" textFill="#2c9e5b">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </JFXButton>
 
-        <JFXButton fx:id="submit" layoutX="687.0" layoutY="334.0" onAction="#checkDetailsFilled" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@Landing.css" text="Submit" textFill="#2c9e5b">
+        <JFXButton id="button" fx:id="submit" layoutX="883.0" layoutY="434.0" onAction="#checkDetailsFilled" prefHeight="37.0" prefWidth="129.0" styleClass="d" stylesheets="@allPages.css" text="Submit" textFill="#2c9e5b">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
@@ -80,39 +80,39 @@
 
 
 
-        <Label fx:id="pleaseDetails" layoutX="25.0" layoutY="235.0" prefHeight="30.0" prefWidth="237.0" text="Please fill in your details:">
+        <Label fx:id="pleaseDetails" layoutX="25.0" layoutY="213.0" prefHeight="35.0" prefWidth="304.0" text="Please fill in your details :" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="20.0" />
+                <Font name="System Bold" size="22.0" />
             </font></Label>
 
 
-        <Label fx:id="emailLabel" layoutX="399.0" layoutY="286.0" prefHeight="27.0" prefWidth="52.0" text="Email" />
-        <TextField fx:id="emailTF" layoutX="451.0" layoutY="286.0" prefHeight="0.0" prefWidth="152.0" />
+        <Label fx:id="emailLabel" layoutX="471.0" layoutY="292.0" prefHeight="27.0" prefWidth="46.0" stylesheets="@allPages.css" text="Email" />
+        <TextField fx:id="emailTF" layoutX="529.0" layoutY="293.0" prefHeight="0.0" prefWidth="152.0" />
 
-        <Label fx:id="usernameLabel" layoutX="25.0" layoutY="341.0" prefHeight="27.0" prefWidth="86.0" text="Username" />
+        <Label fx:id="usernameLabel" layoutX="25.0" layoutY="341.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Username" />
         <TextField fx:id="usernameTF" layoutX="117.0" layoutY="341.0" prefHeight="0.0" prefWidth="170.0" />
 
         <TextField fx:id="fullnameTF" layoutX="117.0" layoutY="292.0" prefHeight="0.0" prefWidth="224.0" />
-        <Label fx:id="fullnameLabel" layoutX="25.0" layoutY="292.0" prefHeight="27.0" prefWidth="86.0" text="Full Name" />
+        <Label fx:id="fullnameLabel" layoutX="25.0" layoutY="292.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Full Name" />
 
-        <Label fx:id="passwordLabel" layoutX="356.0" layoutY="341.0" prefHeight="27.0" prefWidth="86.0" text="Password" />
-        <PasswordField fx:id="passwordTF" layoutX="442.0" layoutY="341.0" prefHeight="0.0" prefWidth="170.0" />
+        <Label fx:id="passwordLabel" layoutX="443.0" layoutY="340.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Password" />
+        <PasswordField fx:id="passwordTF" layoutX="530.0" layoutY="341.0" prefHeight="25.0" prefWidth="152.0" />
 
 
 
-        <Label fx:id="birthdateLabel" layoutX="366.0" layoutY="421.0" prefHeight="27.0" prefWidth="86.0" text="Birthdate" />
+        <Label fx:id="birthdateLabel" layoutX="366.0" layoutY="421.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Birthdate" />
         <DatePicker fx:id="birthdateDP" layoutX="432.0" layoutY="422.0" prefHeight="0.0" prefWidth="146.0" />
 
-        <Label fx:id="courtRoleLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="86.0" text="Court Role" />
+        <Label fx:id="courtRoleLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Court Role" />
         <ChoiceBox fx:id="playerCourtRoleCB" layoutX="106.0" layoutY="421.0" prefHeight="0.0" prefWidth="172.0" />
 
-        <Label fx:id="teamRoleLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="104.0" text="Team Role" />
+        <Label fx:id="teamRoleLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="104.0" stylesheets="@allPages.css" text="Team Role" />
         <ChoiceBox fx:id="coachTeamRoleCB" layoutX="106.0" layoutY="421.0" prefHeight="0.0" prefWidth="172.0" />
 
-        <Label fx:id="qualificationLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="104.0" text="Qualification" />
+        <Label fx:id="qualificationLabel" layoutX="29.0" layoutY="421.0" prefHeight="27.0" prefWidth="104.0" stylesheets="@allPages.css" text="Qualification" />
         <ChoiceBox fx:id="refereeQualificationCB" layoutX="106.0" layoutY="421.0" prefHeight="0.0" prefWidth="172.0" />
 
-        <Label fx:id="managePassLabel" layoutX="28.0" layoutY="421.0" prefHeight="27.0" prefWidth="192.0" text="Management Password" />
+        <Label fx:id="managePassLabel" layoutX="28.0" layoutY="421.0" prefHeight="27.0" prefWidth="192.0" stylesheets="@allPages.css" text="Management Password" />
         <PasswordField fx:id="managePassTF" layoutX="182.0" layoutY="421.0" prefHeight="0.0" prefWidth="152.0" />
     </children>
 </AnchorPane>

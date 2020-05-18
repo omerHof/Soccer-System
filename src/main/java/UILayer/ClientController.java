@@ -1,5 +1,6 @@
 package UILayer;
 
+import Games.Game;
 import Teams.Stadium;
 import Users.Coach;
 import Users.Manager;
@@ -231,6 +232,12 @@ public class ClientController {
         public String getRefereeQualifications() {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getRefereeQualifications",
                         HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public  ArrayList<String> watchGamesList() {
+                HttpEntity<ArrayList> response = template.exchange("http://localhost:8090/watchGamesList",
+                        HttpMethod.GET, requestEntity, ArrayList.class, "42");
                 return response.getBody();
         }
 

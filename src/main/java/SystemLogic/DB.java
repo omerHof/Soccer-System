@@ -549,7 +549,7 @@ public class DB {
         return null;
     }
 
-    private ArrayList<String> getStringGames(ArrayList<Game> allGames) {
+    public ArrayList<String> getStringGames(ArrayList<Game> allGames) {
         ArrayList<String> result = new ArrayList<>();
         for (Game game : allGames) {
             result.add(game.getHomeTeam().getName() + "%" + game.getAwayTeam().getName() + "%" +

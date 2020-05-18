@@ -5,10 +5,7 @@ import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 
 /**
@@ -64,16 +61,16 @@ public class Referee extends User implements Observer {
     ////////////////////////////// USE CASE 10.2 ////////////////////////////////////
     /**
      * this function display all referee's games with details.
-     * @return - list of Strings - each one represents a diferent game.
+     * @return - list of Strings - each one represents a different game.
      */
-    public List<String> watchGamesList (){
+    public ArrayList<Game> watchGamesList (){
 
-        LinkedList<String> allGames = new LinkedList<>();
+        ArrayList<Game> allGames = new ArrayList<>();
 
         if (myGames != null) {
             for (Game g : myGames) {
-                if( g != null)
-                    allGames.add(g.getGameDate() + " , " + g.getHomeTeam().getName() + "-" + g.getAwayTeam().getName());
+                if( g != null && g.getStatus().equals(Game.gameStatus.preGame))
+                    allGames.add(g);
             }
             return allGames;
         }

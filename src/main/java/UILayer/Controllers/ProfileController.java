@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -36,13 +37,13 @@ public class ProfileController extends Controller {
     ObservableList<String> refereeQualificationsOptions = FXCollections.observableArrayList();
 
     @FXML
-    JFXTextField coachLabel;
+    TextField coachLabel;
 
     @FXML
-    JFXTextField playerLabel;
+    TextField playerLabel;
 
     @FXML
-    JFXTextField refereeLabel;
+    TextField refereeLabel;
 
     @FXML
     JFXButton coachEditLabel;
@@ -54,16 +55,16 @@ public class ProfileController extends Controller {
     JFXButton refereeEdit;
 
     @FXML
-    JFXTextField userNameDetail;
+    TextField userNameDetail;
 
     @FXML
-    JFXTextField password;
+    TextField password;
 
     @FXML
-    JFXTextField fullName;
+    TextField fullName;
 
     @FXML
-    JFXTextField email;
+    TextField email;
 
     @FXML
     JFXTextArea fullNameEditor;
@@ -87,12 +88,12 @@ public class ProfileController extends Controller {
     ChoiceBox qualificationChoiseBox;
 
     @FXML
-    JFXTextField roleDetails;
+    TextField roleDetails;
 
     @FXML
-    JFXTextField playerDetails;
+    TextField playerDetails;
     @FXML
-    JFXTextField refereeDetails;
+    TextField refereeDetails;
 
 
     @FXML

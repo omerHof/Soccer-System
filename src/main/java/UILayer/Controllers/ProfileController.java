@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -37,15 +38,6 @@ public class ProfileController extends Controller {
     ObservableList<String> refereeQualificationsOptions = FXCollections.observableArrayList();
 
     @FXML
-    TextField coachLabel;
-
-    @FXML
-    TextField playerLabel;
-
-    @FXML
-    TextField refereeLabel;
-
-    @FXML
     JFXButton coachEditLabel;
 
     @FXML
@@ -67,10 +59,10 @@ public class ProfileController extends Controller {
     TextField email;
 
     @FXML
-    JFXTextArea fullNameEditor;
+    TextField fullNameEditor;
 
     @FXML
-    JFXTextArea emailEditor;
+    TextField emailEditor;
 
     @FXML
     JFXButton submitFullName;
@@ -95,6 +87,12 @@ public class ProfileController extends Controller {
     @FXML
     TextField refereeDetails;
 
+    @FXML
+    Label refereeQualificationLbl;
+    @FXML
+    Label playerPositionLbl1;
+    @FXML
+    Label coachLbl;
 
     @FXML
     JFXButton submitCoachRole;
@@ -114,19 +112,22 @@ public class ProfileController extends Controller {
         switch (userType) {
             case "Player":
                 playerDetails.setVisible(true);
-                playerLabel.setVisible(true);
                 playerEdit.setVisible(true);
+                playerPositionLbl1.setVisible(true);
                 break;
+
             case "Coach":
-                coachLabel.setVisible(true);
+                coachLbl.setVisible(true);
                 roleDetails.setVisible(true);
                 coachEditLabel.setVisible(true);
                 break;
+
             case "Referee":
-                refereeLabel.setVisible(true);
+                refereeQualificationLbl.setVisible(true);
                 refereeDetails.setVisible(true);
                 refereeEdit.setVisible(true);
                 break;
+
             default:
                 break;
         }

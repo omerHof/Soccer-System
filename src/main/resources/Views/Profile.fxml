@@ -1,93 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
+<AnchorPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
 
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
 
-        <Label fx:id="userNameLbl" layoutX="122.0" layoutY="150.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Username" />
-        <Label fx:id="passwordLbl" layoutX="122.0" layoutY="203.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Password" />
-        <Label fx:id="fullNameLbl" layoutX="122.0" layoutY="253.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Full name" />
-        <Label fx:id="emailLbl" layoutX="122.0" layoutY="302.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Email" />
+        <Label fx:id="userNameLbl" layoutX="30.0" layoutY="150.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Username:" />
+        <Label fx:id="passwordLbl" layoutX="30.0" layoutY="203.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Password:" />
+        <Label fx:id="fullNameLbl" layoutX="30.0" layoutY="253.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Full name:" />
+        <Label fx:id="emailLbl" layoutX="30.0" layoutY="302.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Email:" />
 
-        <TextField fx:id="userNameDetail" layoutX="215.0" layoutY="150.0" prefHeight="27.0" prefWidth="139.0" />
+        <TextField fx:id="userNameDetail" layoutX="123.0" layoutY="150.0" prefHeight="27.0" prefWidth="139.0" />
 
-      <TextField fx:id="password" layoutX="215.0" layoutY="203.0" prefHeight="27.0" prefWidth="139.0" />
+      <TextField fx:id="password" layoutX="123.0" layoutY="203.0" prefHeight="27.0" prefWidth="139.0" />
 
-      <JFXButton layoutX="384.0" layoutY="301.0" onAction="#showEmailEditor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: RED;" text="Edit">
+      <JFXButton layoutX="273.0" layoutY="301.0" onAction="#showEmailEditor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a6a6a6;" text="Edit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="fullName" layoutX="215.0" layoutY="253.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: white;" />
+      <TextField fx:id="fullName" layoutX="123.0" layoutY="253.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: white;" />
 
-      <TextField fx:id="email" layoutX="215.0" layoutY="302.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: white;" />
+      <TextField fx:id="email" layoutX="123.0" layoutY="302.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: white;" />
 
-      <JFXButton layoutX="385.0" layoutY="252.0" onAction="#showFullNameEditor" style="-fx-background-color: RED;" text="Edit">
+      <JFXButton layoutX="274.0" layoutY="252.0" onAction="#showFullNameEditor" prefHeight="8.0" prefWidth="46.0" style="-fx-background-color: #a6a6a6;" text="Edit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></JFXButton>
 
-      <JFXTextArea fx:id="fullNameEditor" layoutX="570.0" layoutY="433.0" prefHeight="66.0" prefWidth="153.0" style="-fx-background-color: #28966E;" visible="false">
-         <font>
-            <Font size="24.0" />
-         </font></JFXTextArea>
+      <TextField fx:id="fullNameEditor" layoutX="359.0" layoutY="254.0" prefHeight="27.0" prefWidth="153.0" visible="false" />
 
-      <JFXTextArea fx:id="emailEditor" layoutX="574.0" layoutY="541.0" prefHeight="59.0" prefWidth="155.0" style="-fx-background-color: #28966E;" visible="false">
-         <font>
-            <Font size="24.0" />
-         </font></JFXTextArea>
+      <TextField fx:id="emailEditor" layoutX="357.0" layoutY="302.0" prefHeight="27.0" prefWidth="155.0" visible="false" />
 
 
-      <JFXButton fx:id="submitFullName" layoutX="777.0" layoutY="442.0" onAction="#submitFullName" style="-fx-background-color: RED;" text="Submit" visible="false">
+      <JFXButton fx:id="submitFullName" layoutX="525.0" layoutY="252.0" onAction="#submitFullName" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="submitEmail" layoutX="777.0" layoutY="556.0" onAction="#submitEmail" style="-fx-background-color: RED;" text="Submit" visible="false">
+      <JFXButton fx:id="submitEmail" layoutX="525.0" layoutY="300.0" onAction="#submitEmail" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="coachLabel" layoutX="954.0" layoutY="189.0" prefHeight="70.0" prefWidth="125.0" style="-fx-background-color: #28966E;" text="Coach role:" visible="false" />
 
-      <TextField fx:id="roleDetails" layoutX="1200.0" layoutY="187.0" prefHeight="70.0" prefWidth="139.0" style="-fx-background-color: #28966E;" visible="false" />
+      <TextField fx:id="roleDetails" layoutX="754.0" layoutY="207.0" prefHeight="27.0" prefWidth="139.0" visible="false" />
 
-      <TextField fx:id="playerLabel" layoutX="949.0" layoutY="302.0" prefHeight="70.0" prefWidth="224.0" style="-fx-background-color: #28966E;" text="Player position:" visible="false" />
-
-      <JFXButton fx:id="playerEdit" layoutX="1359.0" layoutY="308.0" onAction="#showPositionEditor" style="-fx-background-color: RED;" text="Edit" visible="false" />
-
-      <JFXButton fx:id="coachEditLabel" layoutX="1360.0" layoutY="192.0" onAction="#showRoleEditor" style="-fx-background-color: RED;" text="Edit" visible="false" />
-
-      <ChoiceBox fx:id="roleChoiseBox" layoutX="1487.0" layoutY="199.0" prefHeight="53.0" prefWidth="150.0" visible="false" />
-      <JFXTextField fx:id="playerDetails" layoutX="1200.0" layoutY="297.0" prefHeight="70.0" prefWidth="138.0" style="-fx-background-color: #28966E;" visible="false">
+      <JFXButton fx:id="playerEdit" layoutX="909.0" layoutY="250.0" onAction="#showPositionEditor" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: #a6a6a6;" text="Edit" visible="false">
          <font>
-            <Font size="32.0" />
-         </font>
-      </JFXTextField>
-      <ChoiceBox fx:id="positionChoiseBox" layoutX="1489.0" layoutY="307.0" prefHeight="53.0" prefWidth="150.0" visible="false" />
-      <JFXButton fx:id="submitCoachRole" layoutX="1732.0" layoutY="195.0" onAction="#submitCoachRole" style="-fx-background-color: RED;" text="Submit" visible="false" />
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
 
-      <JFXButton fx:id="submitPlayerPosition" layoutX="1735.0" layoutY="306.0" onAction="#submitPlayerPosition" style="-fx-background-color: RED;" text="Submit" visible="false" />
+      <JFXButton fx:id="coachEditLabel" layoutX="905.0" layoutY="208.0" onAction="#showRoleEditor" style="-fx-background-color: #a6a6a6;" text="Edit" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
 
-      <JFXTextField fx:id="refereeLabel" layoutX="949.0" layoutY="438.0" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #28966E;" text="Referee qualification:" visible="false" />
+      <ChoiceBox fx:id="roleChoiseBox" layoutX="1009.0" layoutY="208.0" prefHeight="30.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="playerDetails" layoutX="786.0" layoutY="254.0" prefHeight="25.0" prefWidth="114.0" visible="false" />
 
-      <TextField fx:id="refereeDetails" layoutX="1201.0" layoutY="435.0" prefHeight="70.0" prefWidth="138.0" style="-fx-background-color: #28966E;" visible="false" />
+      <ChoiceBox fx:id="positionChoiseBox" layoutX="1029.0" layoutY="253.0" prefHeight="30.0" prefWidth="130.0" visible="false" />
+      <JFXButton fx:id="submitCoachRole" layoutX="1174.0" layoutY="209.0" onAction="#submitCoachRole" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
 
-      <JFXButton fx:id="refereeEdit" layoutX="1362.0" layoutY="442.0" onAction="#showQualificationEditor" style="-fx-background-color: RED;" text="Edit" visible="false" />
+      <JFXButton fx:id="submitPlayerPosition" layoutX="1175.0" layoutY="250.0" onAction="#submitPlayerPosition" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
 
-      <ChoiceBox fx:id="qualificationChoiseBox" layoutX="1490.0" layoutY="442.0" prefHeight="53.0" prefWidth="150.0" visible="false" />
-      <JFXButton fx:id="submitRefereeQualification" layoutX="1735.0" layoutY="443.0" onAction="#submitRefereeQualification" style="-fx-background-color: RED;" text="Submit" visible="false" />
+      <TextField fx:id="refereeDetails" layoutX="829.0" layoutY="302.0" prefHeight="27.0" prefWidth="123.0" visible="false" />
+
+      <JFXButton fx:id="refereeEdit" layoutX="961.0" layoutY="300.0" onAction="#showQualificationEditor" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: #a6a6a6;" text="Edit" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+
+      <ChoiceBox fx:id="qualificationChoiseBox" layoutX="1061.0" layoutY="303.0" prefHeight="30.0" prefWidth="138.0" visible="false" />
+      <JFXButton fx:id="submitRefereeQualification" layoutX="1212.0" layoutY="301.0" onAction="#submitRefereeQualification" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+
+      <Label fx:id="coachLbl" layoutX="658.0" layoutY="206.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" visible="false" text="Coach role:" />
+      <Label fx:id="playerPositionLbl1" layoutX="658.0" layoutY="253.0" prefHeight="27.0" prefWidth="150.0" stylesheets="@allPages.css" visible="false" text="Player position:" />
+      <Label fx:id="refereeQualificationLbl" layoutX="658.0" layoutY="302.0" prefHeight="27.0" prefWidth="183.0" stylesheets="@allPages.css" visible="false" text="Referee qualification:" />
 
     </children>
 </AnchorPane>

@@ -221,8 +221,14 @@ public class ClientController {
         }
 
         /** ------------ TEAM OWNER ------------ **/
-        public String AddAssent(String assentType, String assentName) {
-                HttpEntity<String> response = template.exchange("http://localhost:8090/AddAssent?param="+assentType + ","+assentName,
+        public String addAssent(String assentType, String assentName) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/addAssent?param="+assentType + ","+assentName,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
+        public String removeAssent(String assentType, String assentName) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/removeAssent?param="+assentType + ","+assentName,
                         HttpMethod.GET, requestEntity, String.class, "42");
                 return response.getBody();
         }
@@ -355,6 +361,7 @@ public class ClientController {
                         .exchange("http://localhost:8090/setReport", HttpMethod.POST, request, Boolean.class);
                 return response2.getBody();
         }
+
 
 }
 

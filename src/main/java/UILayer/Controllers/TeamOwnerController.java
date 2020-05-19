@@ -14,18 +14,27 @@ public class TeamOwnerController extends Controller {
     public BorderPane navBar;
 
     @FXML
-    public ChoiceBox choseAssentType;
+    public ChoiceBox choseAssentTypeForAdd;
 
     @FXML
-    public TextField choseAssentName;
+    public ChoiceBox choseAssentTypeForRemove;
+
+    @FXML
+    public TextField choseAssentNameForAdd;
+
+    @FXML
+    public TextField choseAssentNameForRemove;
 
     @FXML
     public JFXButton add;
 
+    @FXML
+    public JFXButton remove;
+
     public void addAssentToTeam(ActionEvent actionEvent) {
-        String assentType = choseAssentType.getValue().toString();
-        String assentName = choseAssentName.getText();
-        String result = clientController.AddAssent(assentType, assentName);
+        String assentType = choseAssentTypeForAdd.getValue().toString();
+        String assentName = choseAssentNameForAdd.getText();
+        String result = clientController.addAssent(assentType, assentName);
         if (result.equals("null")){
             showAlert(Alert.AlertType.ERROR, "ERROR!", "There is no assent called '" + assentName + "' in the system!");
         }
@@ -41,5 +50,24 @@ public class TeamOwnerController extends Controller {
         if (result.equals("added successfully")){
             showAlert(Alert.AlertType.INFORMATION, "SUCCESS!", assentName + " was added to the team successfully");
         }
+    }
+
+    public void removeAssentFromTeam(ActionEvent actionEvent) {
+        String assentType = choseAssentTypeForAdd.getValue().toString();
+        String assentName = choseAssentNameForAdd.getText();
+        String result = clientController.removeAssent(assentType, assentName);
+        if (result.equals("null")){
+            showAlert(Alert.AlertType.ERROR, "ERROR!", "There is no assent called '" + assentName + "' in the system!");
+        }
+        if (result.equals("team is closed")){
+            showAlert(Alert.AlertType.ERROR, "ERROR!", "Your team is closed! You can't make any changes!");
+        }
+        if (result.equals("not in the team")){
+            showAlert(Alert.AlertType.ERROR, "ERROR!", "There is no assent called '" + assentName + "' in your team!!");
+        }
+        if (result.equals("removed successfully")){
+            showAlert(Alert.AlertType.INFORMATION, "SUCCESS!", assentName + " was removed from the team successfully");
+        }
+
     }
 }

@@ -15,17 +15,16 @@
     <children>
 
         <fx:include fx:id="navBar" source="Landing.fxml" />
-       <ChoiceBox fx:id="choseAssentTypeForAdd" layoutX="405.0" layoutY="181.0" prefWidth="150.0" value="Player">
-           <items>
-               <FXCollections fx:factory="observableArrayList">
-                   <String fx:value="Player" />
-                   <String fx:value="Coach" />
-                   <String fx:value="Stadium" />
-               </FXCollections>
-           </items>
-       </ChoiceBox>
+        <ChoiceBox fx:id="choseAssentTypeForRemove" layoutX="405.0" layoutY="181.0" prefWidth="150.0" value="Player">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Player" />
+                    <String fx:value="Coach" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
 
-        <TextField fx:id="choseAssentNameForAdd" layoutX="405.0" layoutY="233.0" prefWidth="150.0" />
+        <TextField fx:id="choseAssentNameForRemove" layoutX="405.0" layoutY="233.0" prefWidth="150.0" />
 
         <Pane layoutX="195.0" layoutY="171.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">
             <children>
@@ -37,7 +36,7 @@
             </children>
         </Pane>
 
-        <JFXButton fx:id="add" layoutX="195.0" layoutY="282.0" onAction="#addAssentToTeam" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="Add Assent">
+        <JFXButton fx:id="remove" layoutX="195.0" layoutY="282.0" onAction="#removeAssentFromTeam" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: #393eff; -fx-border-color: black;" text="Remove Assent">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
@@ -54,7 +53,7 @@
             </children>
         </Pane>
 
-        <Text layoutX="256.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD NEW ASSENT TO THE TEAM" textAlignment="CENTER" wrappingWidth="568.4667022705077">
+        <Text layoutX="179.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMOVE ASSENT FROM THE TEAM" textAlignment="CENTER" wrappingWidth="652.0222442626952">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>

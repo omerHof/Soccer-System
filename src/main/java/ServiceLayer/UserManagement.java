@@ -282,9 +282,9 @@ public class UserManagement {
         return  ((Player) currentUser).getSalary();
     }
 
-    /** ---------------- REFEREE MANAGEMENT FUNCTIONALITY ---------------- **/
+    /** ---------------- TEAM OWNER MANAGEMENT FUNCTIONALITY ---------------- **/
 
-    public String AddAssent(String assentType, String assentName) {
+    public String addAssent(String assentType, String assentName) {
         DB db = DB.getInstance();
         if(assentType.equals("Player")){
             Player player = (Player) db.getUserByFullName(assentName);
@@ -300,6 +300,20 @@ public class UserManagement {
             stadium.setName(assentName);
             return ((TeamOwner) currentUser).addAssent(stadium, 0);
         }
+        return null;
+    }
+
+    public String removeAssent(String assentType, String assentName) {
+        DB db = DB.getInstance();
+        if(assentType.equals("Player")){
+            Player player = (Player) db.getUserByFullName(assentName);
+            return ((TeamOwner) currentUser).removeAssent(player);
+        }
+        if(assentType.equals("Coach")){
+            Coach coach = (Coach) db.getUserByFullName(assentName);
+            return ((TeamOwner) currentUser).removeAssent(coach);
+        }
+
         return null;
     }
 
@@ -360,6 +374,7 @@ public class UserManagement {
         Notification notification = new Notification(currentUser,message,currentUser);
         notification.read();
     }
+
 
 
 }

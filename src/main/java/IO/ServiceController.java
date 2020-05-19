@@ -192,10 +192,16 @@ public class ServiceController {
     }
 
     /** ------------ TEAM OWNER ------------ **/
-    @RequestMapping(method = RequestMethod.GET, value = "/AddAssent")
-    public String AddAssent(@RequestParam String param){
+    @RequestMapping(method = RequestMethod.GET, value = "/addAssent")
+    public String addAssent(@RequestParam String param){
         String details[] = param.split(",");
-        return userManagement.AddAssent(details[0], details[1]);
+        return userManagement.addAssent(details[0], details[1]);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/removeAssent")
+    public String removeAssent(@RequestParam String param){
+        String details[] = param.split(",");
+        return userManagement.removeAssent(details[0], details[1]);
     }
 
     /** ------------ REFEREE ------------ **/

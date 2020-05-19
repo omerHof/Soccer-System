@@ -26,6 +26,7 @@
       <Button id="button" fx:id="editReport" layoutX="539.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToEditReport" prefHeight="55.0" prefWidth="163.0" stylesheets="@allPages.css" text="edit report" visible="false" />
       <Button id="button" fx:id="addAssent" layoutX="500.0" layoutY="358.0" mnemonicParsing="false" onAction="#addAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="add assent" visible="false" />
       <Button id="button" fx:id="showMyGames" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" onAction="#watchGamesList" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="show my games" visible="false" />
+      <Button id="button" fx:id="removeAssent" layoutX="500.0" layoutY="423.0" mnemonicParsing="false" onAction="#removeAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="remove assent" visible="false" />
     </children>
 
 </AnchorPane>

@@ -53,8 +53,8 @@ public class TeamOwnerController extends Controller {
     }
 
     public void removeAssentFromTeam(ActionEvent actionEvent) {
-        String assentType = choseAssentTypeForAdd.getValue().toString();
-        String assentName = choseAssentNameForAdd.getText();
+        String assentType = choseAssentTypeForRemove.getValue().toString();
+        String assentName = choseAssentNameForRemove.getText();
         String result = clientController.removeAssent(assentType, assentName);
         if (result.equals("null")){
             showAlert(Alert.AlertType.ERROR, "ERROR!", "There is no assent called '" + assentName + "' in the system!");

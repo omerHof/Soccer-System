@@ -22,6 +22,8 @@ public class MyAppController extends Controller {
     @FXML
     public Button addAssent;
     @FXML
+    public Button removeAssent;
+    @FXML
     private Button createNewTeamButton;
     @FXML
     private Button initNewSeasonButton;
@@ -87,6 +89,8 @@ public class MyAppController extends Controller {
                 createNewTeamButton.setVisible(true);
                 openTeamPage.setVisible(true);
                 addAssent.setVisible(true);
+                removeAssent.setVisible(true);
+                openTeamPage.setVisible(true);
                 break;
 
             case "Manager":
@@ -110,6 +114,8 @@ public class MyAppController extends Controller {
         showAlert(Alert.AlertType.INFORMATION, "Form Information", "The current management password is: " + pass);
 
     }
+
+
 
 
 

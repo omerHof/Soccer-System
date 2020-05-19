@@ -3,6 +3,7 @@ package UILayer.Controllers;
 import DataForTest.DataBase;
 import UILayer.ClientController;
 import UILayer.Main;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -210,6 +211,18 @@ public class Controller implements Initializable {
 
     public void addAssent() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/addAssent.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        TeamOwnerController pp = fxmlLoader.getController();
+
+        Main.setStage(s);
+        s.show();
+    }
+
+    public void removeAssent(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/removeAssent.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
         Scene scene = new Scene(root);

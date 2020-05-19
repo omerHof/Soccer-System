@@ -4,6 +4,7 @@ import Games.Game;
 import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
+import Teams.Stadium;
 import Teams.Team;
 import UserGenerator.IUserGenerator;
 import UserGenerator.ManagementUserGenerator;
@@ -283,6 +284,27 @@ public class UserManagement {
 
     /** ---------------- REFEREE MANAGEMENT FUNCTIONALITY ---------------- **/
 
+    public String AddAssent(String assentType, String assentName) {
+        DB db = DB.getInstance();
+        if(assentType.equals("Player")){
+            Player player = (Player) db.getUser(assentName);
+            ((TeamOwner) currentUser).addAssent(player, 0);
+        }
+        if(assentType.equals("Coach")){
+            Coach coach = (Coach) db.getUser(assentName);
+            ((TeamOwner) currentUser).addAssent(coach, 0);
+        }
+
+        if(assentType.equals("Stadium")){
+            Stadium stadium = new Stadium( 10000,50000, 50 );
+            stadium.setName(assentName);
+            ((TeamOwner) currentUser).addAssent(stadium, 0);
+        }
+        return null;
+    }
+
+    /** ---------------- REFEREE MANAGEMENT FUNCTIONALITY ---------------- **/
+
     public String getRefereeQualifications(){
         return  ((Referee) currentUser).getQualification();
     }
@@ -338,4 +360,6 @@ public class UserManagement {
         Notification notification = new Notification(currentUser,message,currentUser);
         notification.read();
     }
+
+
 }

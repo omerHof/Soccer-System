@@ -222,6 +222,13 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+        /** ------------ TEAM OWNER ------------ **/
+        public String AddAssent(String assentType, String assentName) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/AddAssent?param="+assentType + ","+assentName,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
         /** ------------ REFEREE ------------ **/
 
         public void setRefereeQualification(String refereeQualification) {

@@ -172,6 +172,7 @@ public class ServiceController {
 
         return userManagement.getPlayerPageDetails(param);
     }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getPageHistory")
     public ArrayList<String> getPageHistory(@RequestParam String param){
         return userManagement.getPageHistory(param);
@@ -188,6 +189,13 @@ public class ServiceController {
     public void followTeam(@RequestParam String param){
 
         userManagement.followTeam(param);
+    }
+
+    /** ------------ TEAM OWNER ------------ **/
+    @RequestMapping(method = RequestMethod.GET, value = "/AddAssent")
+    public String AddAssent(@RequestParam String param){
+        String details[] = param.split(",");
+        return userManagement.AddAssent(details[0], details[1]);
     }
 
     /** ------------ REFEREE ------------ **/

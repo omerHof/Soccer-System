@@ -8,12 +8,12 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.control.Label?>
-<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.TeamsController">
+<AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.OpenTeamController">
     <children>
 
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <TextField fx:id="choosenTeamName" layoutX="420.0" layoutY="163.0" prefWidth="150.0" />
-        <TextField fx:id="choosenTeamBudget" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
+        <TextField fx:id="chosenTeamName" layoutX="420.0" layoutY="163.0" prefWidth="150.0" />
+        <TextField fx:id="chosenTeamBudget" layoutX="420.0" layoutY="223.0" prefWidth="150.0" />
 
         <Pane layoutX="195.0" layoutY="148.0" prefHeight="46.0" prefWidth="191.0" style="-fx-background-color: #9cff64;-fx-border-color: black;">         <children>
             <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" text="choose name">

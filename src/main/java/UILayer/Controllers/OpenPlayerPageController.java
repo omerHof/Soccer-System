@@ -79,7 +79,7 @@ public class OpenPlayerPageController extends Controller {
             clientController.createPlayerPersonalPage(height,weight,shirtNumber,"");
 
         }else{
-            clientController.createPlayerPersonalPage(height,weight,shirtNumber,"playerTeamLabel.getText()");
+            clientController.createPlayerPersonalPage(height,weight,shirtNumber,playerTeamLabel.getText());
         }
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Hey " + userName+ "! Your page was created successfully");
@@ -89,7 +89,7 @@ public class OpenPlayerPageController extends Controller {
 
     }
 
-    public boolean playerInfoValidation(String text){
+/*    public boolean playerInfoValidation(String text){
         if(text==null){
             return false;
         }
@@ -98,5 +98,5 @@ public class OpenPlayerPageController extends Controller {
             return false;
         }
         return true;
-    }
+    }*/
 }

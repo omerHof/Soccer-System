@@ -145,8 +145,6 @@ public class PlayersController extends Controller {
 
 
     private void showPlayerPage(String user_name, String full_name) {
-
-        //Pair<String, ArrayList<String>> detailsAsPair = clientController.getPlayerPageDetails(user_name);
         String details = clientController.getPlayerPageDetails(user_name);
         ArrayList<String> history = clientController.getPageHistory(user_name);
 
@@ -164,9 +162,11 @@ public class PlayersController extends Controller {
         }
 
         personal_page.getChildren().add(new Text("Team History: "));
-        for(String team: history){
-            personal_page.getChildren().add(new Text(team + ", "));
+        int i;
+        for(i=0; i<history.size()-1; i++){
+            personal_page.getChildren().add(new Text(history.get(i) + ", "));
         }
+        personal_page.getChildren().add(new Text(history.get(i)));
     }
 
     private void followPage(String user_name_player, String full_name) {

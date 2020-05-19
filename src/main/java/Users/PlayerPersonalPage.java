@@ -26,17 +26,20 @@ public class PlayerPersonalPage extends PersonalPage {
 
         DB db = DB.getInstance();
         this.currentTeam = db.getTeam(team);
-//        this.teamHistory.add(team.getName());
     }
 
     public String getAllDetails(){
-        return super.name + "," +
+        String result =
+         super.name + "," +
         "Age: " + super.age + "," +
-        "Current Team: " +super.currentTeam.getName() +  "," +
         "Height:" + height + "," +
         "weight: " + weight + "," +
         "Position: " + position + "," +
         "Shirt Number: " + shirtNumber;
+        if (super.currentTeam!=null){
+            result = result + "," + "Current Team: " + super.currentTeam.getName();
+        }
+        return result;
     }
 
     public double getHeight() {

@@ -97,7 +97,7 @@ public class TeamManagement {
     }
 
     public ArrayList<String> getAllTeams() {
-        return DB.getInstance().getFullTeamsNames();
+        return DB.getInstance().getTeamsNames();
     }
 
     public String getTeamPageDetails(String team_name) {

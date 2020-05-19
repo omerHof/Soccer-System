@@ -127,7 +127,6 @@ public class TeamsController extends Controller {
 
        // Pair<String, Set<String>[]> detailsAsPair = clientController.getTeamPageDetails(team_name);
         String details = clientController.getTeamPageDetails(team_name);
-        String[] split_details = details.split(",");
         ArrayList<String> players = clientController.getTeamPlayers(team_name);
         ArrayList<String> coaches = clientController.getTeamCoaches(team_name);
         ArrayList<String> managers = clientController.getTeamManagers(team_name);
@@ -137,9 +136,10 @@ public class TeamsController extends Controller {
             team_page.getChildren().add(new Text(team_name + " has no page"));
             return;
         }
-
         team_page.getChildren().clear();
         team_page.getChildren().add(new Text(team_name + "'s Page:" + "\n"));
+
+        String[] split_details = details.split(",");
         for(String detail: split_details){
             team_page.getChildren().add(new Text(detail + "\n"));
         }

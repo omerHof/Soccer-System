@@ -195,8 +195,6 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
-
-
         public String getPlayerPageDetails(String user_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
                         HttpMethod.GET, requestEntity, String.class, "42");

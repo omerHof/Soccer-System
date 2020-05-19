@@ -213,7 +213,7 @@ public class ClientController {
         /** ------------ FAN ------------ **/
 
         public void followPage(String user_name_player) {
-               template.exchange("http://localhost:8090/followPage?param="+user_name_player,
+               template.exchange("http://localhost:8090/followPage?param="+ user_name_player,
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 

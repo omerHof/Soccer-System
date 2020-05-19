@@ -15,7 +15,6 @@ public class TeamOwner extends User implements Assent {
     private boolean afford = true;
     private HashMap<String, TeamOwner> team_owners_appointments = new HashMap<>();
     private HashMap<String, Manager> managers_appointments = new HashMap<>();
-    //private HashMap<String, Boolean> authorizations = new HashMap<>();
 
     /**
      * Constructor
@@ -53,7 +52,7 @@ public class TeamOwner extends User implements Assent {
                 me.put(super.getUserName(), this);
                 team = new Team(team_name, me);
                 team.setBudget(initialBudget);
-                DB.getInstance().addTeam(team);
+                DB.getInstance().setTeam(team);
             }
             else{
                 team.setStatus(Team.teamStatus.active);

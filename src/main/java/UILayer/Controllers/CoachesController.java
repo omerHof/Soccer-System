@@ -43,7 +43,6 @@ public class CoachesController extends Controller {
     }
 
     private void showPlayers() {
-        DataBase db = new DataBase();
         HashMap<String, String> coaches_name = clientController.getAllCoaches();
         ArrayList<SimpleStringProperty> properties_coaches_name = new ArrayList<>();
         for(String user_name: coaches_name.keySet()){

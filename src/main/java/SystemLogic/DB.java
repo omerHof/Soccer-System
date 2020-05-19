@@ -467,16 +467,16 @@ public class DB {
     }
 
     public ArrayList<String> getFullTeamsNames() {
-        ArrayList<String> reesult = new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
         Iterator it = teams.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
             Team team = (Team) pair.getValue();
             if (team.getCoaches().size() > 0 && team.getPlayers().size() > 0) {
-                reesult.add((String) pair.getKey());
+                result.add((String) pair.getKey());
             }
         }
-        return reesult;
+        return result;
     }
 
 

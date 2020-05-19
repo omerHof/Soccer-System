@@ -287,18 +287,18 @@ public class UserManagement {
     public String AddAssent(String assentType, String assentName) {
         DB db = DB.getInstance();
         if(assentType.equals("Player")){
-            Player player = (Player) db.getUser(assentName);
-            ((TeamOwner) currentUser).addAssent(player, 0);
+            Player player = (Player) db.getUserByFullName(assentName);
+            return ((TeamOwner) currentUser).addAssent(player, 0);
         }
         if(assentType.equals("Coach")){
-            Coach coach = (Coach) db.getUser(assentName);
-            ((TeamOwner) currentUser).addAssent(coach, 0);
+            Coach coach = (Coach) db.getUserByFullName(assentName);
+            return ((TeamOwner) currentUser).addAssent(coach, 0);
         }
 
         if(assentType.equals("Stadium")){
             Stadium stadium = new Stadium( 10000,50000, 50 );
             stadium.setName(assentName);
-            ((TeamOwner) currentUser).addAssent(stadium, 0);
+            return ((TeamOwner) currentUser).addAssent(stadium, 0);
         }
         return null;
     }

@@ -56,7 +56,6 @@ public class TeamsController extends Controller {
     }
 
     private void showTeams() {
-        DataBase db = new DataBase();
         ArrayList<String> teams_name = clientController.getAllTeams();
         ArrayList<SimpleStringProperty> properties_teams_name = new ArrayList<>();
         for(String team_name: teams_name){

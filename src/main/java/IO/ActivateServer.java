@@ -9,7 +9,6 @@ public class ActivateServer {
     public static void main(String[] args) {
         ServiceController serviceController= new ServiceController();
         SpringApplication.run(ActivateServer.class, args);
-
     }
 
 }

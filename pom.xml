@@ -8,11 +8,14 @@
         <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.example</groupId>
     <artifactId>Soccer-Association-Project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Soccer-Association-Project</name>
     <description>Project for soccer system</description>
+
+
 
     <properties>
         <java.version>1.8</java.version>
@@ -90,7 +93,6 @@
             <version>11.0.1</version>
         </dependency>
 
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -104,6 +106,26 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
+<!--        testFX-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-core</artifactId>
+            <version>4.0.15-alpha</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-junit</artifactId>
+            <version>4.0.15-alpha</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 

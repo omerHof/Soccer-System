@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
+<AnchorPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.ProfileController">
 
 
     <children>
@@ -85,15 +85,15 @@
             <Font name="System Bold" size="14.0" />
          </font></JFXButton>
 
-      <ChoiceBox fx:id="qualificationChoiseBox" layoutX="1061.0" layoutY="303.0" prefHeight="30.0" prefWidth="138.0" visible="false" />
-      <JFXButton fx:id="submitRefereeQualification" layoutX="1212.0" layoutY="301.0" onAction="#submitRefereeQualification" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
+      <ChoiceBox fx:id="qualificationChoiseBox" layoutX="1053.0" layoutY="300.0" prefHeight="30.0" prefWidth="138.0" visible="false" />
+      <JFXButton fx:id="submitRefereeQualification" layoutX="1202.0" layoutY="300.0" onAction="#submitRefereeQualification" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #a5e071;" text="Submit" visible="false">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></JFXButton>
 
-      <Label fx:id="coachLbl" layoutX="658.0" layoutY="206.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" visible="false" text="Coach role:" />
-      <Label fx:id="playerPositionLbl1" layoutX="658.0" layoutY="253.0" prefHeight="27.0" prefWidth="150.0" stylesheets="@allPages.css" visible="false" text="Player position:" />
-      <Label fx:id="refereeQualificationLbl" layoutX="658.0" layoutY="302.0" prefHeight="27.0" prefWidth="183.0" stylesheets="@allPages.css" visible="false" text="Referee qualification:" />
+      <Label fx:id="coachLbl" layoutX="658.0" layoutY="206.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Coach role:" visible="false" />
+      <Label fx:id="playerPositionLbl1" layoutX="658.0" layoutY="253.0" prefHeight="27.0" prefWidth="150.0" stylesheets="@allPages.css" text="Player position:" visible="false" />
+      <Label fx:id="refereeQualificationLbl" layoutX="658.0" layoutY="302.0" prefHeight="27.0" prefWidth="183.0" stylesheets="@allPages.css" text="Referee qualification:" visible="false" />
 
     </children>
 </AnchorPane>

@@ -13,20 +13,20 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <Button id="button" fx:id="createNewTeamButton" layoutX="503.0" layoutY="200.0" mnemonicParsing="false" onAction="#openNewTeam" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="create new team" visible="false" />
-      <Button id="button" fx:id="initNewSeasonButton" layoutX="496.0" layoutY="198.0" mnemonicParsing="false" onAction="#openAddSeason" prefHeight="55.0" prefWidth="195.0" stylesheets="@allPages.css" text="init new season" visible="false" />
-        <Button id="button" fx:id="addGameEvent" layoutX="498.0" layoutY="277.0" mnemonicParsing="false" onAction="#addGameEvent" prefHeight="55.0" prefWidth="203.0" stylesheets="@allPages.css" text="add a game event" visible="false" />
-        <Button id="button" fx:id="openTeamPage" layoutX="496.0" layoutY="278.0" mnemonicParsing="false" onAction="#openTeamPage" prefHeight="55.0" prefWidth="204.0" stylesheets="@allPages.css" text="open team page" visible="false" />
-        <Button id="button" fx:id="openPlayerPage" layoutX="509.0" layoutY="203.0" mnemonicParsing="false" onAction="#goToOpenPlayerPage" prefHeight="55.0" prefWidth="195.0" stylesheets="@allPages.css" text="open player page" visible="false" />
+      <Button id="button" fx:id="createNewTeamButton" layoutX="269.0" layoutY="258.0" mnemonicParsing="false" onAction="#openNewTeam" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="create new team" visible="false" />
+      <Button id="button" fx:id="initNewSeasonButton" layoutX="298.0" layoutY="258.0" mnemonicParsing="false" onAction="#openAddSeason" prefHeight="55.0" prefWidth="195.0" stylesheets="@allPages.css" text="init new season" visible="false" />
+        <Button id="button" fx:id="addGameEvent" layoutX="509.0" layoutY="258.0" mnemonicParsing="false" onAction="#addGameEvent" prefHeight="55.0" prefWidth="203.0" stylesheets="@allPages.css" text="add a game event" visible="false" />
+        <Button id="button" fx:id="openTeamPage" layoutX="367.0" layoutY="187.0" mnemonicParsing="false" onAction="#openTeamPage" prefHeight="55.0" prefWidth="204.0" stylesheets="@allPages.css" text="open team page" visible="false" />
+        <Button id="button" fx:id="openPlayerPage" layoutX="380.0" layoutY="187.0" mnemonicParsing="false" onAction="#goToOpenPlayerPage" prefHeight="55.0" prefWidth="195.0" stylesheets="@allPages.css" text="open player page" visible="false" />
         <Button id="button" fx:id="openCoachPage" layoutX="497.0" layoutY="200.0" mnemonicParsing="false" onAction="#openCoachPage" prefHeight="55.0" prefWidth="205.0" stylesheets="@allPages.css" text="open coach page" visible="false" />
-        <Button id="button" fx:id="getManagementPassword" layoutX="501.0" layoutY="431.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="55.0" prefWidth="260.0" stylesheets="@allPages.css" text="get management password" visible="false" />
+        <Button id="button" fx:id="getManagementPassword" layoutX="727.0" layoutY="258.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="55.0" prefWidth="260.0" stylesheets="@allPages.css" text="get management password" visible="false" />
 
 
-        <Button id="button" fx:id="mpProfileButton" layoutX="752.0" layoutY="203.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="47.0" prefWidth="143.0" stylesheets="@allPages.css" text="my profile" />
+        <Button id="button" fx:id="mpProfileButton" layoutX="589.0" layoutY="187.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="47.0" prefWidth="143.0" stylesheets="@allPages.css" text="my profile" />
       <Button id="button" fx:id="editReport" layoutX="539.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToEditReport" prefHeight="55.0" prefWidth="163.0" stylesheets="@allPages.css" text="edit report" visible="false" />
-      <Button id="button" fx:id="addAssent" layoutX="500.0" layoutY="358.0" mnemonicParsing="false" onAction="#addAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="add assent" visible="false" />
-      <Button id="button" fx:id="showMyGames" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" onAction="#watchGamesList" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="show my games" visible="false" />
-      <Button id="button" fx:id="removeAssent" layoutX="500.0" layoutY="423.0" mnemonicParsing="false" onAction="#removeAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="remove assent" visible="false" />
+      <Button id="button" fx:id="addAssent" layoutX="473.0" layoutY="258.0" mnemonicParsing="false" onAction="#addAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="add assent" visible="false" />
+      <Button id="button" fx:id="showMyGames" layoutX="383.0" layoutY="187.0" mnemonicParsing="false" onAction="#watchGamesList" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="show my games" visible="false" />
+      <Button id="button" fx:id="removeAssent" layoutX="690.0" layoutY="258.0" mnemonicParsing="false" onAction="#removeAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="remove assent" visible="false" />
     </children>
 
 </AnchorPane>

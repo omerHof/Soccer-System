@@ -9,22 +9,22 @@
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-      <TableView fx:id="tab1" layoutX="14.0" layoutY="184.0" prefHeight="126.0" prefWidth="900.0" style="-fx-background-color: transparent; visible: false;">
+      <TableView fx:id="tab1" layoutX="89.0" layoutY="179.0" prefHeight="160.0" prefWidth="744.0" style="-fx-background-color: transparent; visible: false;" stylesheets="@tableViews.css">
 
       </TableView>
-      <Label fx:id="leagueText1" layoutX="14.0" layoutY="136.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
+      <Label fx:id="leagueText1" layoutX="45.0" layoutY="136.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
          <font>
             <Font name="System Bold" size="18.0" />
 
          </font>
       </Label>
-      <TableView fx:id="tab2" layoutX="14.0" layoutY="370.0" prefHeight="134.0" prefWidth="900.0" style="-fx-background-color: transparent; visible: false;" />
-      <Label fx:id="leagueText2" layoutX="14.0" layoutY="319.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
+      <TableView fx:id="tab2" layoutX="89.0" layoutY="370.0" prefHeight="134.0" prefWidth="744.0" style="-fx-background-color: transparent; visible: false;" stylesheets="@tableViews.css" />
+      <Label fx:id="leagueText2" layoutX="45.0" layoutY="319.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="189.0" layoutY="107.0" prefHeight="54.0" prefWidth="550.0" style="-fx-text-fill: #000000 " text="WELCOME TO SOCCER SYSTEM" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="189.0" layoutY="102.0" prefHeight="54.0" prefWidth="550.0" style="-fx-text-fill: #000000 " text="WELCOME TO SOCCER SYSTEM" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>

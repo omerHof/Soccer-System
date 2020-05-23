@@ -1,0 +1,34 @@
+
+.table-view {
+}
+
+
+
+.table-column {
+    -fx-alignment: CENTER;
+    /*-fx-pref-width: 100;*/
+    -fx-cell-size: 32;
+
+
+}
+
+.column-header .label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cell-size: 34;
+
+
+}
+
+.table-cell{
+    -fx-font-size:14px;
+
+}
+
+.cell {
+    -fx-cell-size: 34;
+    /*-fx-pref-width: 100;*/
+
+}
+
+

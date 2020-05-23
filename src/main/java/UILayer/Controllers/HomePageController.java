@@ -82,27 +82,41 @@ public class HomePageController extends Controller {
 
         TableColumn<String[], String> columnOne = new TableColumn();
         columnOne.setText("League");
+        columnOne.setPrefWidth(90);
 
         TableColumn<String[], String> columnTwo = new TableColumn();
         columnTwo.setText("Home Team");
+        columnTwo.setPrefWidth(105);
 
         TableColumn<String[], String> columnThree = new TableColumn();
         columnThree.setText("Away Team");
+        columnThree.setPrefWidth(105);
+
 
         TableColumn<String[], String> columnFour = new TableColumn();
         columnFour.setText("Date");
+        columnFour.setPrefWidth(120);
+
 
         TableColumn<String[], String> columnFive = new TableColumn();
         columnFive.setText("Hour");
+        columnFive.setPrefWidth(60);
+
 
         TableColumn<String[], String> columnSix = new TableColumn();
         columnSix.setText("Minute");
+        columnSix.setPrefWidth(65);
+
 
         TableColumn<String[], String> columnSeven = new TableColumn();
         columnSeven.setText("Stadium");
+        columnSeven.setPrefWidth(90);
+
 
         TableColumn<String[], String> columneight = new TableColumn();
         columneight.setText("Status");
+        columneight.setPrefWidth(85);
+
 
         tab.getColumns().
 

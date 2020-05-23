@@ -11,7 +11,7 @@
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
         <JFXButton layoutX="379.0" layoutY="115.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text="THIS IS Teams" />
-        <TableView fx:id="teams_table" layoutX="45.0" layoutY="176.0" prefHeight="269.0" prefWidth="315.0" />
+        <TableView fx:id="teams_table" layoutX="45.0" layoutY="176.0" prefHeight="269.0" prefWidth="315.0" stylesheets="@tableViews.css" />
         <TextFlow fx:id="team_page" layoutX="410.0" layoutY="176.0" prefHeight="269.0" prefWidth="319.0" />
       <TextFlow fx:id="team_page2" layoutX="804.0" layoutY="176.0" prefHeight="269.0" prefWidth="319.0" />
     </children>

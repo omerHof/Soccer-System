@@ -9,7 +9,7 @@
 
 <children>
     <fx:include fx:id="navBar" source="Landing.fxml" />
-    <TableView fx:id="tab1" layoutX="144.0" layoutY="162.0" prefHeight="165.0" prefWidth="623.0" style="-fx-background-color: transparent; visible: false;">
+    <TableView fx:id="tab1" layoutX="144.0" layoutY="166.0" prefHeight="165.0" prefWidth="649.0" style="-fx-background-color: transparent; visible: false;" stylesheets="@tableViews.css">
 
     </TableView>
     <Label fx:id="leagueText1" layoutX="14.0" layoutY="136.0" prefHeight="50.0" prefWidth="287.0" style="-fx-text-fill: #000000 ">
@@ -19,7 +19,7 @@
         </font>
     </Label>
 
-    <Label alignment="CENTER" layoutX="189.0" layoutY="107.0" prefHeight="54.0" prefWidth="550.0" style="-fx-text-fill: #000000 " text="Your upcoming games:" textAlignment="CENTER">
+    <Label alignment="CENTER" layoutX="189.0" layoutY="103.0" prefHeight="54.0" prefWidth="550.0" style="-fx-text-fill: #000000 " text="Your upcoming games:" textAlignment="CENTER">
         <font>
             <Font name="System Bold" size="36.0" />
         </font>

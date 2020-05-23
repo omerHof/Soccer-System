@@ -1,6 +1,6 @@
 .d:hover{
     -fx-border-color: #bbe0e0;
-    -fx-border-wodth: 0px 0px 3px 0px;
+    -fx-border-width: 0px 0px 3px 0px;
 }
 
 .img{
@@ -21,4 +21,16 @@
 #borderPane{
     -fx-background-image: url("SoccerWallpaper.jpg");
     -fx-background-repeat: stretch;
+}
+
+
+.type:hover {
+    background-color: white;
+    -fx-opacity: 1;
+}
+
+.type:pressed {
+    -fx-underline: yes;
+    background-color: white;
+    -fx-opacity: 1;
 }

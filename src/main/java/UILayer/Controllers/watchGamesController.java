@@ -60,24 +60,32 @@ public class watchGamesController extends Controller {
 
         TableColumn<String[], String> columnOne = new TableColumn();
         columnOne.setText("Home Team");
+        columnOne.setPrefWidth(105);
 
         TableColumn<String[], String> columnTwo = new TableColumn();
         columnTwo.setText("Away Team");
+        columnTwo.setPrefWidth(105);
 
         TableColumn<String[], String> columnThree = new TableColumn();
         columnThree.setText("Date");
+        columnThree.setPrefWidth(120);
 
         TableColumn<String[], String> columnFour = new TableColumn();
         columnFour.setText("Hour");
+        columnFour.setPrefWidth(60);
 
         TableColumn<String[], String> columnFive = new TableColumn();
         columnFive.setText("Minute");
+        columnFive.setPrefWidth(65);
 
         TableColumn<String[], String> columnSix = new TableColumn();
         columnSix.setText("Stadium");
+        columnSix.setPrefWidth(90);
 
         TableColumn<String[], String> columnSeven = new TableColumn();
         columnSeven.setText("Status");
+        columnSeven.setPrefWidth(85);
+
 
 /*        TableColumn<String[], String> columneight = new TableColumn();
         columneight.setText("Status");*/

@@ -63,19 +63,19 @@ public class SeasonController extends Controller {
     @FXML
     private Pane refereePane;
     @FXML
-    private JFXTextField refereeMessage;
+    private Label refereeMessage;
     @FXML
     private Pane mainRefereePane;
     @FXML
-    private JFXTextField mainRefereeMessage;
+    private Label mainRefereeMessage;
     @FXML
     private Pane teamPane;
     @FXML
-    private JFXTextField teamMessage;
+    private Label teamMessage;
     @FXML
     private Pane assoPane;
     @FXML
-    private JFXTextField assoMessage;
+    private Label assoMessage;
 
 
     @FXML

@@ -43,7 +43,7 @@ public class Notification {
      */
     public String read(){
         status = notificationStatus.read;
-        receiver.getReceivedNotifications().remove(this);
+        receiver.removeFromReceivedNotification(this);
         receiver.getReadNotifications().add(this);
         if (receiver.getReceivedNotifications().size()==0){
             receiver.setNotReadNotifications(false);

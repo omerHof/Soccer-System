@@ -148,4 +148,14 @@ public abstract class User {
     public void setNotReadNotifications(boolean notReadNotifications) {
         this.notReadNotifications = notReadNotifications;
     }
+
+    public void removeFromReceivedNotification(Notification not){
+        Notification toDelete = null;
+        for(Notification notification: receivedNotifications){
+            if(notification.getContext().equals(not.getContext())){
+                toDelete = notification;
+            }
+        }
+        receivedNotifications.remove(toDelete);
+    }
 }

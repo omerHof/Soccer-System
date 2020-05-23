@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class LogController extends Controller {
 
@@ -21,59 +22,40 @@ public class LogController extends Controller {
 
     @FXML
 
-    String textLog="";
+    String textLog = "";
     //boolean setReport=false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Stage s = Main.getStage();
-        s.setOnCloseRequest(e->{
+        s.setOnCloseRequest(e -> {
             e.consume();
             closeProgram();
         });
-        /*
+
         try {
-            checkGame();
+            showLog();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-         */
+
+
     }
 
     private void showLog() throws IOException {
-        //check if this main referee has a game that finished but not closed
-        //if yes: show the report and button visibility- true
-       // textLog=clientController.checkFinishedGames(userName,userType);
-        /*
 
-            textArea.setText(report);
-            button.setVisible(true);
-            homePage();
-
-         */
-
-
-    }
-
-    public void setChange(ActionEvent actionEvent) throws IOException {
-        // get text from text field and put into te game report
-        //clientController.changeReport(textArea.getAccessibleText());
-        /*
-        setReport=clientController.setReport(userName,textArea.getText());
-        if(setReport){
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "The report changed", ButtonType.CLOSE);
-            alert.setHeaderText("CONFIRMATION");
-            alert.showAndWait();
+        String textToEdit = clientController.watchLogFiles();
+        Scanner scanner = new Scanner(textToEdit);
+        String textLog = "";
+        int index;
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            // process the line
+            index = line.indexOf("-");
+            textLog = textLog + line.substring(index + 2) + "\n";
         }
-        else{
-            Alert alert = new Alert(Alert.AlertType.ERROR, "set report failure", ButtonType.CLOSE);
-            alert.setHeaderText("ERROR");
-            alert.showAndWait();
-        }
-        homePage();
-
-         */
+        scanner.close();
 
     }
 }
+

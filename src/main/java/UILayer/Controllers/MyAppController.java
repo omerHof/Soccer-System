@@ -39,6 +39,10 @@ public class MyAppController extends Controller {
     private Button getManagementPassword;
     @FXML
     private Button editReport;
+    @FXML
+    private Button showLog;
+    @FXML
+    private Button showErrorLog;
 
 
     @FXML
@@ -67,6 +71,11 @@ public class MyAppController extends Controller {
     public void setButton() {
 
         switch (userType) {
+
+            case "Administrator":
+                showLog.setVisible(true);
+                break;
+
             case "Fan":
 
                 break;
@@ -105,7 +114,10 @@ public class MyAppController extends Controller {
                 editReport.setVisible(true);
                 showMyGames.setVisible(true);
                 break;
+
+
         }
+
     }
 
 

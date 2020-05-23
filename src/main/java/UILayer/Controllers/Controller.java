@@ -169,6 +169,16 @@ public class Controller implements Initializable {
         Main.setStage(s);
         s.show();
     }
+    public void goToShowLog() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/LogController.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        ReportController cc = fxmlLoader.getController();
+        Main.setStage(s);
+        s.show();
+    }
 
 
     public void openMyApps() throws IOException {

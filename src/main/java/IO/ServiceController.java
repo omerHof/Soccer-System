@@ -222,6 +222,13 @@ public class ServiceController {
         return userManagement.watchGamesList();
     }
 
+    /** ------------ ADMINISTRATOR ------------ **/
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getLogFiles")
+    public String getLogFiles()
+    {
+        return userManagement.watchLog();
+    }
 
     /** ------------ TEAMS ------------ **/
 

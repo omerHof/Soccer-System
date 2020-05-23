@@ -375,6 +375,13 @@ public class UserManagement {
         notification.read();
     }
 
+    /** ---------------- Administrator FUNCTIONALITY ---------------- **/
+
+    public String watchLog(){
+
+        return ((Administrator) currentUser).watchLog();
+    }
+
 
 
 }

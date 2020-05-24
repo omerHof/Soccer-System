@@ -21,9 +21,7 @@ public class LogController extends Controller {
     TextArea textArea = new TextArea();
 
     @FXML
-
     String textLog = "";
-    //boolean setReport=false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -39,23 +37,21 @@ public class LogController extends Controller {
             e.printStackTrace();
         }
 
-
     }
 
     private void showLog() throws IOException {
-
+        textArea.setText("");
         String textToEdit = clientController.watchLogFiles();
-        Scanner scanner = new Scanner(textToEdit);
-        String textLog = "";
-        int index;
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            // process the line
-            index = line.indexOf("-");
-            textLog = textLog + line.substring(index + 2) + "\n";
+        String[] lines = textToEdit.split("\n");
+        for(int i=1;i<lines.length;i++){
+            int index = lines[i].indexOf("-");
+            textLog = textLog + lines[i].substring(index + 2) + "\n";
+
         }
-        scanner.close();
+        textArea.setText(textLog);
 
     }
+
+
 }
 

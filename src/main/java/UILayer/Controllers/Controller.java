@@ -170,7 +170,7 @@ public class Controller implements Initializable {
         s.show();
     }
     public void goToShowLog() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/LogController.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/openLogFile.fxml"));
         Parent root = fxmlLoader.load();
         Stage s = Main.getStage();
         Scene scene = new Scene(root);

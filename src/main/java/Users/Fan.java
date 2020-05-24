@@ -49,7 +49,7 @@ public class Fan extends User implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         DB db = DB.getInstance();
-        MainSystem.LOG.info("The user get update");
+        MainSystem.LOG.info("The user "+userName+ " get update");
         if (o instanceof PersonalPage) {
             Team team = (Team) arg;
             String name = (String) ((PersonalPage) o).getName();

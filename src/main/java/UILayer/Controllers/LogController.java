@@ -41,7 +41,10 @@ public class LogController extends Controller {
 
     private void showLog() throws IOException {
         textArea.setText("");
-        String textToEdit = clientController.watchLogFiles();
+        textLog = clientController.watchLogFiles();
+        textArea.setText(textLog);
+
+        /*
         String[] lines = textToEdit.split("\n");
         for(int i=1;i<lines.length;i++){
             int index = lines[i].indexOf("-");
@@ -49,6 +52,8 @@ public class LogController extends Controller {
 
         }
         textArea.setText(textLog);
+
+         */
 
     }
 

@@ -1,6 +1,6 @@
 package SystemLogic;
 
-public class AccountSystemProxy implements IExternalSystem {
+public class AccountSystemProxy implements IExternalSystem, IAccountSystem {
     AccountSystem accountSystem= new AccountSystem();
 
     @Override
@@ -16,5 +16,10 @@ public class AccountSystemProxy implements IExternalSystem {
     @Override
     public void getInformation() {
 
+    }
+
+    @Override
+    public boolean addPayment(String teamName, String date, double amount) {
+        return false;
     }
 }

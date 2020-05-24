@@ -3,7 +3,7 @@ package Users;
 import Games.Event;
 import Games.Game;
 import LeagueSeasonsManagment.*;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
@@ -18,8 +18,9 @@ import java.util.*;
 public class AssociationRepresentative extends User implements Observer {
 
     private static int numOfApprovals = 0 ;
-    private DB db = DB.getInstance();
+    private DBLocal dbLocal = DBLocal.getInstance();
     private List<Game> myGames;
+    private ArrayList<Integer> gamesId;
 
     /**
      * constructor - all tha person's details:
@@ -35,6 +36,14 @@ public class AssociationRepresentative extends User implements Observer {
         this.userFullName = fullName;
         this.userEmail = userEmail;
         myGames = new LinkedList<>();
+    }
+
+    public ArrayList<Integer> getGamesId() {
+        return gamesId;
+    }
+
+    public void setGamesId(ArrayList<Integer> gamesId) {
+        this.gamesId = gamesId;
     }
 
     public List<Game> getMyGames() {
@@ -62,7 +71,7 @@ public class AssociationRepresentative extends User implements Observer {
     public boolean addLeague (String leagueName, int numOfTeams){
 
         League newLeague = new League(leagueName, numOfTeams);
-        if (db.addLeague(newLeague)){ //this league does not exist yet. OK.
+        if (dbLocal.addLeague(newLeague)){ //this league does not exist yet. OK.
             MainSystem.LOG.info("new league: " + leagueName + " were added.");
             return true;
         }
@@ -77,9 +86,9 @@ public class AssociationRepresentative extends User implements Observer {
      * @param year - of the new season
      * @param scorePolicy - of the new season
      * @param gamePolicy - of the new season
-     * @param teams - list of Strings of the teams' names - to find in DB and add to this season's games.
-     * @param referees - list of Strings of the referees' names - to find in DB and add to this season's games.
-     * @param representatives - list of Strings of the representatives' names - to find in DB and add to this season's games.
+     * @param teams - list of Strings of the teams' names - to find in DBLocal and add to this season's games.
+     * @param referees - list of Strings of the referees' names - to find in DBLocal and add to this season's games.
+     * @param representatives - list of Strings of the representatives' names - to find in DBLocal and add to this season's games.
      * @return string with the function's outcome. - success, or any type of problem occurred.
      */
     public String addSeasonToLeague (String leagueName, int year, String scorePolicy, String gamePolicy, List<String> teams, List<String> referees, List<String> representatives){
@@ -91,7 +100,7 @@ public class AssociationRepresentative extends User implements Observer {
         ArrayList<Referee> allReferees;
         ArrayList<AssociationRepresentative> allReps;
 
-        //sets all users and teams themselves from DB (out of strings)
+        //sets all users and teams themselves from DBLocal (out of strings)
         allTeams = setLeagueTeams(teams);
         allReferees = setLeagueReferees(referees);
         allReps = setLeagueRepresentatives(representatives);
@@ -109,9 +118,10 @@ public class AssociationRepresentative extends User implements Observer {
 
         if(scorePolicy!=null && gamePolicy!= null) {
             newSeason = new Season(year, allTeams, allReferees, allReps, scorePolicy, gamePolicy); //constructor
+            newSeason.assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
 
             if (newSeason != null) {
-                db.addSeason(leagueName, newSeason); //adds the season to DB.
+                dbLocal.addSeason(leagueName, newSeason); //adds the season to DBLocal.
                 MainSystem.LOG.info("new season: " + year + " was added to league: " + leagueName + ".");
                 return "new season: " + year + " was added to league: " + leagueName + ".";
             }
@@ -134,7 +144,7 @@ public class AssociationRepresentative extends User implements Observer {
         if (representativesNames != null) {
 
             for (String representative : representativesNames) {
-                User currRepresentative = db.getUserByFullName(representative);
+                User currRepresentative = dbLocal.getUserByFullName(representative);
 
                 if(currRepresentative instanceof AssociationRepresentative)
                     allReps.add((AssociationRepresentative)currRepresentative);
@@ -158,7 +168,7 @@ public class AssociationRepresentative extends User implements Observer {
         if (teamsNames!= null) {
 
             for (String team : teamsNames) {
-                Team currTeam = db.getTeam(team);
+                Team currTeam = dbLocal.getTeam(team);
 
                 if(currTeam.getStatus().equals(Team.teamStatus.active) && !currTeam.getCoaches().isEmpty() && !currTeam.getPlayers().isEmpty()) //checks that the team is legal.
                     teams.add(currTeam);
@@ -179,17 +189,17 @@ public class AssociationRepresentative extends User implements Observer {
      */
     public boolean addReferee (String fullName){
 
-        if(db.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DB.
+        if(dbLocal.getUserByFullName(fullName)!= null) { //checks whether this referee already exists in the DBLocal.
 
-            Fan oldFan = (Fan)db.getUserByFullName(fullName); //gets fan itself
+            Fan oldFan = (Fan) dbLocal.getUserByFullName(fullName); //gets fan itself
             PremiumUserGenerator premiumUserG = new PremiumUserGenerator();
 
             // creates a referee, based on the fan's attributes.
             Referee newReferee = (Referee) premiumUserG.generate(oldFan.userName, oldFan.password, "onlyChangeStatus", "Referee", fullName,
                     oldFan.userEmail, null, "linesmen", "", "");
 
-            db.removeUser(oldFan.userName); //removes fan from DB
-            db.addUser(newReferee); //adds referee to DB.
+            dbLocal.removeUser(oldFan.userName); //removes fan from DBLocal
+            dbLocal.addUser(newReferee); //adds referee to DBLocal.
 
             Notification notification = new Notification(this, "Congrats! You were added as a referee to the system.", newReferee);
             notification.send(); //send a notification to this added referee.
@@ -213,16 +223,16 @@ public class AssociationRepresentative extends User implements Observer {
      */
     public boolean removeReferee (String fullName){
 
-        if( db.getUserByFullName(fullName) != null ) { //checks whether this referee already exists in the DB.
+        if( dbLocal.getUserByFullName(fullName) != null ) { //checks whether this referee already exists in the DBLocal.
 
-            Referee oldReferee = (Referee)db.getUserByFullName(fullName); //gets referee itself
+            Referee oldReferee = (Referee) dbLocal.getUserByFullName(fullName); //gets referee itself
             SimpleUserGenerator simpleUserG = new SimpleUserGenerator();
 
             Fan newFan = (Fan) simpleUserG.generate(oldReferee.userName, oldReferee.password, "", "", oldReferee.userFullName,
                     oldReferee.userEmail,  null, "", "", ""); //creates a new one.
 
-            db.removeUser(oldReferee.userName); //removes referee
-            db.addUser(newFan); //adds as a fan.
+            dbLocal.removeUser(oldReferee.userName); //removes referee
+            dbLocal.addUser(newFan); //adds as a fan.
 
             Notification notification = new Notification(this, "Unfortunately You are no longer a referee in the system, your status is now a fan.", newFan);
             notification.send(); //send a notification to this added referee.
@@ -232,7 +242,7 @@ public class AssociationRepresentative extends User implements Observer {
         }
 
         else {
-            //System.out.println("Can not remove a referee that does not exist in the DB.");
+            //System.out.println("Can not remove a referee that does not exist in the DBLocal.");
             return false;
         }
     }
@@ -248,7 +258,7 @@ public class AssociationRepresentative extends User implements Observer {
 
         if (refereesNames != null) {
             for (String referee : refereesNames) {
-                User currReferee = db.getUserByFullName(referee);
+                User currReferee = dbLocal.getUserByFullName(referee);
                 if(currReferee instanceof Referee)
                     allReferees.add((Referee)currReferee);
             }
@@ -315,21 +325,21 @@ public class AssociationRepresentative extends User implements Observer {
 
 
     /**
-     * this function finds another representative in DB and passes this rep' games from
+     * this function finds another representative in DBLocal and passes this rep' games from
      * @return true if successes, false if not.
      */
     public boolean passMyGames (){
 
         int year = myGames.get(0).getTimeOfGame().getYear(); //my season's year. // just a random game.
-        String myLeague = db.whatLeagueImAt(this, year);
+        String myLeague = dbLocal.whatLeagueImAt(this, year);
 
         int i=0 ;
         boolean outOfAsso = false;
-        List<User> allAssociations = db.getUserTypeList("AssociationRepresentative");
+        List<User> allAssociations = dbLocal.getUserTypeList("AssociationRepresentative");
         AssociationRepresentative substituteAsso = (AssociationRepresentative)allAssociations.get(i); //first Asso'
 
         int substituteYear = substituteAsso.getMyGames().get(0).getGameDate().getYear();
-        String substituteLeague = db.whatLeagueImAt(substituteAsso, substituteYear);
+        String substituteLeague = dbLocal.whatLeagueImAt(substituteAsso, substituteYear);
 
         while (!outOfAsso && myLeague.equals(substituteLeague) && substituteAsso.getMyGames().get(0).getTimeOfGame().equals(this.myGames.get(0).getTimeOfGame())){ //keep getting random asso' till the leagues are not overlapping.
             i++;
@@ -338,7 +348,7 @@ public class AssociationRepresentative extends User implements Observer {
             }
             substituteAsso = (AssociationRepresentative)allAssociations.get(i); //next one in list.
             substituteYear = substituteAsso.myGames.get(0).getGameDate().getYear();
-            substituteLeague = db.whatLeagueImAt(substituteAsso, substituteYear); //gets his league's name.
+            substituteLeague = dbLocal.whatLeagueImAt(substituteAsso, substituteYear); //gets his league's name.
         }
 
         if(!outOfAsso) {
@@ -369,7 +379,7 @@ public class AssociationRepresentative extends User implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        User user = DB.getInstance().getUserType("AssociationRepresentative");
+        User user = DBLocal.getInstance().getUserType("AssociationRepresentative");
         String message = (String) arg;
         Notification notification = new Notification(user,message,this);
         notification.send();

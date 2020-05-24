@@ -195,6 +195,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
         }
 
+
+
         public String getPlayerPageDetails(String user_name) {
                 HttpEntity<String> response = template.exchange("http://localhost:8090/getPlayerPageDetails?param=" +user_name,
                         HttpMethod.GET, requestEntity, String.class, "42");
@@ -370,7 +372,11 @@ public class ClientController {
                 return response2.getBody();
         }
 
+        public void closeProgram() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/closeProgram",
+                        HttpMethod.GET, requestEntity, String.class, "42");
 
+        }
 }
 
 class AddSeasonParam {

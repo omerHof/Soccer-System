@@ -1,8 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
-import Teams.Team;
-import javafx.util.Pair;
+import SystemLogic.DBLocal;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -24,14 +22,16 @@ public class PlayerPersonalPage extends PersonalPage {
         this.shirtNumber=shirtNumber;
         teamHistory= new ArrayList<>();
 
-        DB db = DB.getInstance();
-        this.currentTeam = db.getTeam(team);
+        DBLocal dbLocal = DBLocal.getInstance();
+        this.currentTeam = dbLocal.getTeam(team);
+//        this.teamHistory.add(team.getName());
     }
 
     public String getAllDetails(){
         String result =
          super.name + "," +
         "Age: " + super.age + "," +
+        "Current Team: " +super.currentTeam.getName() +  "," +
         "Height:" + height + "," +
         "weight: " + weight + "," +
         "Position: " + position + "," +

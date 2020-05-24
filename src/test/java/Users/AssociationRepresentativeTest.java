@@ -3,7 +3,7 @@ package Users;
 import Games.Event;
 import Games.Game;
 import LeagueSeasonsManagment.*;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Teams.Statistics;
 import Teams.Team;
@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 public class AssociationRepresentativeTest {
 
-    private DB db;
+    private DBLocal dbLocal;
     private AssociationRepresentative assoTest;
     private MainSystem mainSystem;
 
@@ -173,11 +173,11 @@ public class AssociationRepresentativeTest {
     @Before
     public void setUp() throws Exception {
 
-        db = DB.getInstance();
+        dbLocal = DBLocal.getInstance();
         mainSystem = MainSystem.getInstance();
         assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
 
-        db = DB.getInstance();
+        dbLocal = DBLocal.getInstance();
 
         /**Policies-score**/
         scorePolicy = new RegularScorePolicy();
@@ -404,74 +404,74 @@ public class AssociationRepresentativeTest {
         hhh = new Coach("klnnning", "1212", "nir klinger", "dsdasd", "head coach");
         iii = new Coach("klinssssg", "1212", "nir klinger", "dsdasd", "head coach");
 
-        /**DB**/
+        /**DBLocal**/
 
-        db.setLeague(league);
+        dbLocal.setLeague(league);
 
-        db.setUser(mainReferee1);
-        db.setUser(mainReferee2);
-        db.setUser(mainReferee3);
-        db.setUser(mainReferee4);
-        db.setUser(mainReferee5);
+        dbLocal.setUser(mainReferee1);
+        dbLocal.setUser(mainReferee2);
+        dbLocal.setUser(mainReferee3);
+        dbLocal.setUser(mainReferee4);
+        dbLocal.setUser(mainReferee5);
 
-        db.setUser(refereee1);
-        db.setUser(refereee2);
-        db.setUser(refereee3);
-        db.setUser(refereee4);
-        db.setUser(refereee5);
-        db.setUser(refereee6);
-        db.setUser(refereee7);
-        db.setUser(refereee8);
-        db.setUser(refereee9);
-        db.setUser(refereee10);
-        db.setUser(refereee11);
-        db.setUser(refereee12);
-        db.setUser(refereee13);
-        db.setUser(refereee14);
-        db.setUser(refereee15);
+        dbLocal.setUser(refereee1);
+        dbLocal.setUser(refereee2);
+        dbLocal.setUser(refereee3);
+        dbLocal.setUser(refereee4);
+        dbLocal.setUser(refereee5);
+        dbLocal.setUser(refereee6);
+        dbLocal.setUser(refereee7);
+        dbLocal.setUser(refereee8);
+        dbLocal.setUser(refereee9);
+        dbLocal.setUser(refereee10);
+        dbLocal.setUser(refereee11);
+        dbLocal.setUser(refereee12);
+        dbLocal.setUser(refereee13);
+        dbLocal.setUser(refereee14);
+        dbLocal.setUser(refereee15);
 
-        db.setUser(representativee1);
-        db.setUser(representativee2);
-        db.setUser(representativee3);
-        db.setUser(representativee4);
-        db.setUser(representativee5);
+        dbLocal.setUser(representativee1);
+        dbLocal.setUser(representativee2);
+        dbLocal.setUser(representativee3);
+        dbLocal.setUser(representativee4);
+        dbLocal.setUser(representativee5);
 
-        db.setUser(administrator);
-        db.setUser(klinger);
-        db.setUser(zahavi);
+        dbLocal.setUser(administrator);
+        dbLocal.setUser(klinger);
+        dbLocal.setUser(zahavi);
 
-        db.setUser(administrator);
+        dbLocal.setUser(administrator);
 
         //adds all coaches nd players.
-        db.addUser(vermut);
-        db.addUser(zahavi);
-        db.addUser(klinger);
-        db.addUser(aa);
-        db.addUser(aaa);
-        db.addUser(bb);
-        db.addUser(bbb);
-        db.addUser(cc);
-        db.addUser(ccc);
-        db.addUser(dd);
-        db.addUser(ddd);
-        db.addUser(ee);
-        db.addUser(eee);
-        db.addUser(ff);
-        db.addUser(fff);
-        db.addUser(gg);
-        db.addUser(ggg);
-        db.addUser(hh);
-        db.addUser(iii);
-        db.setTeam(a);
-        db.setTeam(b);
-        db.setTeam(c);
-        db.setTeam(d);
-        db.setTeam(e);
-        db.setTeam(f);
-        db.setTeam(g);
-        db.setTeam(h);
-        db.setTeam(i);
-        db.setTeam(j);
+        dbLocal.addUser(vermut);
+        dbLocal.addUser(zahavi);
+        dbLocal.addUser(klinger);
+        dbLocal.addUser(aa);
+        dbLocal.addUser(aaa);
+        dbLocal.addUser(bb);
+        dbLocal.addUser(bbb);
+        dbLocal.addUser(cc);
+        dbLocal.addUser(ccc);
+        dbLocal.addUser(dd);
+        dbLocal.addUser(ddd);
+        dbLocal.addUser(ee);
+        dbLocal.addUser(eee);
+        dbLocal.addUser(ff);
+        dbLocal.addUser(fff);
+        dbLocal.addUser(gg);
+        dbLocal.addUser(ggg);
+        dbLocal.addUser(hh);
+        dbLocal.addUser(iii);
+        dbLocal.setTeam(a);
+        dbLocal.setTeam(b);
+        dbLocal.setTeam(c);
+        dbLocal.setTeam(d);
+        dbLocal.setTeam(e);
+        dbLocal.setTeam(f);
+        dbLocal.setTeam(g);
+        dbLocal.setTeam(h);
+        dbLocal.setTeam(i);
+        dbLocal.setTeam(j);
 
 
         a.addCoach(klinger);
@@ -500,7 +500,7 @@ public class AssociationRepresentativeTest {
         c.createPage("team in england","england");
         d.createPage("team in england","england");
 
-        db.addLeague(league);
+        dbLocal.addLeague(league);
 
         AssociationRepresentative assoTest = new AssociationRepresentative("tester", "tt", "lala", "lili");
         assoTest.addLeague("Alufot", 2);
@@ -525,7 +525,7 @@ public class AssociationRepresentativeTest {
 
         //assoTest.addSeasonToLeague("Alufot", 2021, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
 
-        List<Season> allSeasons = db.getLeague("Alufot").getAllSeasons();
+        List<Season> allSeasons = dbLocal.getLeague("Alufot").getAllSeasons();
         Season newS = allSeasons.get(0); //gets the season object that was added.
 
         assertTrue(newS.getYear() == 2020);
@@ -550,18 +550,18 @@ public class AssociationRepresentativeTest {
 
         Fan fanTest = new Fan("f", "ff", "omer hof", "omer@hof");
         AssociationRepresentative assocTest = new AssociationRepresentative("a1", "aa", "tali", "tali@tali");
-        db.addUser(fanTest);
-        db.addUser(assocTest);
+        dbLocal.addUser(fanTest);
+        dbLocal.addUser(assocTest);
 
-        //assertNull(db.getUserType("Referee")); //not exists yet.
-        assertFalse(db.getUserByFullName("omer hof") instanceof Referee);
-        assertTrue(db.getUserByFullName("omer hof") instanceof Fan); //starts as a fan
+        //assertNull(dbLocal.getUserType("Referee")); //not exists yet.
+        assertFalse(dbLocal.getUserByFullName("omer hof") instanceof Referee);
+        assertTrue(dbLocal.getUserByFullName("omer hof") instanceof Fan); //starts as a fan
 
         assocTest.addReferee("omer hof");
-        assertEquals(db.getUserByFullName("omer hof").password, "ff");
-        assertTrue(db.getUserByFullName("omer hof") instanceof Referee); //now he is a referee
+        assertEquals(dbLocal.getUserByFullName("omer hof").password, "ff");
+        assertTrue(dbLocal.getUserByFullName("omer hof") instanceof Referee); //now he is a referee
 
-        assertFalse(assoTest.addReferee("notExistsUser")); //cant assign a fan that doesn't exist in the DB.
+        assertFalse(assoTest.addReferee("notExistsUser")); //cant assign a fan that doesn't exist in the DBLocal.
     }
 
     @Test
@@ -569,14 +569,14 @@ public class AssociationRepresentativeTest {
 
         Referee r1 = new Referee("r1", "rr", "ramzi ramzen", "ziv@ziv", "bla bla");
         AssociationRepresentative assocTest = new AssociationRepresentative("a1", "aa", "tali", "tali@tali");
-        db.addUser(r1);
-        db.addUser(assocTest);
+        dbLocal.addUser(r1);
+        dbLocal.addUser(assocTest);
 
-        assertNull(db.getUserType("Fan")); //not exists yet.
-        assertTrue(db.getUserByFullName("ramzi ramzen") instanceof Referee);
+        assertNull(dbLocal.getUserType("Fan")); //not exists yet.
+        assertTrue(dbLocal.getUserByFullName("ramzi ramzen") instanceof Referee);
 
         assertTrue(assocTest.removeReferee("ramzi ramzen"));
-        assertTrue(db.getUserByFullName("ramzi ramzen") instanceof Fan);
+        assertTrue(dbLocal.getUserByFullName("ramzi ramzen") instanceof Fan);
 
         assertFalse(assoTest.removeReferee("notExistsUser"));
     }
@@ -610,8 +610,8 @@ public class AssociationRepresentativeTest {
     @Test
     public void passMyGames() {
 
-        AssociationRepresentative passFrom = (AssociationRepresentative)db.getUserType("AssociationRepresentative");
-        String leagueToPassFrom = db.whatLeagueImAt(passFrom, 2020);
+        AssociationRepresentative passFrom = (AssociationRepresentative) dbLocal.getUserType("AssociationRepresentative");
+        String leagueToPassFrom = dbLocal.whatLeagueImAt(passFrom, 2020);
         System.out.println(leagueToPassFrom);
         //ArrayList<AssociationRepresentative> representatives = season.getAllRepresentatives();
 
@@ -624,7 +624,7 @@ public class AssociationRepresentativeTest {
         Game game = new Game(a, b, date2);
         goodSubtitute.setMyGame(game);*/
 
-        db.setUser(goodSubtitute);
+        dbLocal.setUser(goodSubtitute);
 
         representatives.add(goodSubtitute);
         //season.setAllRepresentatives(representatives); //now list has one more rep. to pass to !
@@ -649,31 +649,31 @@ public class AssociationRepresentativeTest {
 
         stringRepresentativesNEW.add("goodSubtitute"); //the new one, by username.
 
-        db.setUser(representativee10);
-        db.setUser(representativee11);
-        db.setUser(representativee12);
-        db.setUser(representativee13);
+        dbLocal.setUser(representativee10);
+        dbLocal.setUser(representativee11);
+        dbLocal.setUser(representativee12);
+        dbLocal.setUser(representativee13);
 
-        db.removeUser("representative1");
-        db.removeUser("representative2");
-        db.removeUser("representative3");
-        db.removeUser("representative4");
-        db.removeUser("representative5");
+        dbLocal.removeUser("representative1");
+        dbLocal.removeUser("representative2");
+        dbLocal.removeUser("representative3");
+        dbLocal.removeUser("representative4");
+        dbLocal.removeUser("representative5");
 
         League league1 = new League("Champions", 10);
-        db.setLeague(league1);
+        dbLocal.setLeague(league1);
 
         assoTest.addSeasonToLeague("Champions", 2020, scorePolicy.getName(), gameInlayPolicy.getName(), stringTeams, stringReferees, stringRepresentativesNEW); //adds
 
         //Season newSeason = new Season(2021, teams, referees, representatives, scorePolicy.getName(), gameInlayPolicy.getName()); //creates a new
 
-        assertEquals(db.getUserTypeList("AssociationRepresentative").size(), 5);
+        assertEquals(dbLocal.getUserTypeList("AssociationRepresentative").size(), 5);
 
         assertTrue(passFrom.passMyGames());
 
 
         //assoTest.addSeasonToLeague("Champions league", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
-        //Season test = db.getLeague("Alufot").getSeasonByYear(2020);
+        //Season test = dbLocal.getLeague("Alufot").getSeasonByYear(2020);
 
         //test.getYear();
         //assoTest.addSeasonToLeague("Alufot", 2020, "RegularScorePolicy", "OneRoundGamePolicy", stringTeams, stringReferees, stringRepresentatives);
@@ -681,6 +681,6 @@ public class AssociationRepresentativeTest {
         /*League league2 = new League("Champions league", 10);
         assoTest.addLeague("Champions league", 10);
         stringRepresentatives.add(representativeTest);
-        db.addLeague(league2);*/
+        dbLocal.addLeague(league2);*/
     }
 }

@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
@@ -8,8 +8,6 @@ import Teams.Team;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Player extends User implements Assent {
 
@@ -17,7 +15,7 @@ public class Player extends User implements Assent {
     private String courtRole;
     private PlayerPersonalPage page;
     private int salary;
-    private DB DB1;
+    private DBLocal DBLocal1;
     private double worth;
     private Team currentTeam;
 
@@ -31,14 +29,14 @@ public class Player extends User implements Assent {
         age = getCurrentAge(birthDate);
         page =null;
         salary = 0;
-        DB1=DB.getInstance();
+        DBLocal1 = DBLocal.getInstance();
         currentTeam = null;
     }
 
 
     public PlayerPersonalPage createPersonalPage(double height,int weight, int shirtNum, String team) {
         MainSystem.LOG.info("The player " +getUserFullName()+ " create personal page");
-        Team currTeam = DB1.getTeam(team);
+        Team currTeam = DBLocal1.getTeam(team);
         if(currTeam==null){
         page = new PlayerPersonalPage(this.userFullName, age, courtRole, height, weight, shirtNum, null);
         }
@@ -72,7 +70,7 @@ public class Player extends User implements Assent {
         if(page!=null){
             page.setPosition(courtRole);
         }
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
 
         //page.setPosition(courtRole);
 
@@ -87,25 +85,25 @@ public class Player extends User implements Assent {
     public void setNumberOfShirt(int number){
         if(page!=null) {
             page.setShirtNumber(number);
-            DB1.setUser(this);
+            DBLocal1.setUser(this);
         }
 
     }
     public void setHeight(int height){
         if(page!=null) {
             page.setHeight(height);
-            DB1.setUser(this);
+            DBLocal1.setUser(this);
         }
     }
 
     public void setWeight(int weight){
         if(page!=null) {
             page.setWeight(weight);
-            DB1.setUser(this);
+            DBLocal1.setUser(this);
         }
     }
     public boolean setCurrentTeam(String team){
-       Team t =  DB1.getTeam(team);
+       Team t =  DBLocal1.getTeam(team);
        if(t==null){
            currentTeam=t;
            return false;
@@ -115,7 +113,7 @@ public class Player extends User implements Assent {
             page.setCurrentTeam(t);
             page.setOneTeamToHistory(team);
         }
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
         MainSystem.LOG.info("The player " +getUserFullName()+ " has move to the team "+team);
         return true;
 
@@ -155,7 +153,7 @@ public class Player extends User implements Assent {
 
     public void setSalary(int salary) {
         this.salary = salary;
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
     }
 
     public PlayerPersonalPage getPage() {

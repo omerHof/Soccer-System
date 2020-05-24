@@ -1,5 +1,6 @@
 package SystemLogic;
 
+import DataBase.ActivateDB;
 import Games.Game;
 import LeagueSeasonsManagment.League;
 import LeagueSeasonsManagment.Season;
@@ -12,9 +13,9 @@ import java.util.*;
 /**
  * this class represent the dataBase
  */
-public class DB {
+public class DBLocal {
 
-    private static DB db;
+    private static DBLocal dbLocal;
     /**
      * implement data structures
      */
@@ -25,7 +26,7 @@ public class DB {
     /**
      * constructor
      */
-    private DB() {
+    private DBLocal() {
         users = new HashMap<>();
         leagues = new HashMap<>();
         teams = new HashMap<>();
@@ -34,17 +35,17 @@ public class DB {
     /**
      * singelton class
      *
-     * @return instance of DB
+     * @return instance of DBLocal
      */
-    public static DB getInstance() {
-        if (db == null) {
-            synchronized (DB.class) {
-                if (db == null) {
-                    db = new DB();
+    public static DBLocal getInstance() {
+        if (dbLocal == null) {
+            synchronized (DBLocal.class) {
+                if (dbLocal == null) {
+                    dbLocal = new DBLocal();
                 }
             }
         }
-        return db;
+        return dbLocal;
     }
 
     /***************USER***************/
@@ -97,7 +98,9 @@ public class DB {
      * @param user- the user object
      */
     public void setUser(User user) {
+
         if (user != null && user.getUserName() != null && !userExist(user.getUserName())) {
+            //user.setPassword(MainSystem.getInstance().encrypte(user.getPassword()));
             users.put(user.getUserName(), user);
         }
     }
@@ -557,5 +560,32 @@ public class DB {
                     +"%"+game.getGameDate().getMinute()+"%"+game.getHomeTeam().getStadium().getName()+"%"+game.getStatus());
         }
         return result;
+    }
+
+    public String getUserType(User user){
+        return user.getClass().getSimpleName();
+    }
+
+    public void writeToMongo(){
+        ActivateDB.getInstance().writeInfo(new ArrayList<>(users.values()),new ArrayList<>(teams.values()),new ArrayList<>(leagues.values()));
+    }
+
+    public void readFromMongo(){
+        ActivateDB.getInstance().readInfo();
+    }
+
+    public Game getGameById(int id){
+        for(League league:leagues.values()){
+            for(Season season:league.getAllSeasons()){
+                for(ArrayList<Game> games:season.getAllGames().values()){
+                    for(Game game:games){
+                        if(game.getId()==id){
+                            return game;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

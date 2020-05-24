@@ -54,6 +54,9 @@ public class League {
     public void setTeams(List<Team> allTeams){
         teams=allTeams;
     }
+    public void addSeason(Season season){
+        allSeasons.add(season);
+    }
 
     public Season getSeasonByYear (int year){
         if (year > 0){

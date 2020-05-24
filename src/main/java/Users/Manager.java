@@ -1,5 +1,7 @@
 package Users;
 
+import SystemLogic.DBLocal;
+import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 
@@ -48,5 +50,19 @@ public class Manager extends User implements Assent {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public boolean setCurrentTeam(String team){
+        Team t = DBLocal.getInstance().getTeam(team);
+        if(t==null){
+            this.team=t;
+            return false;
+        }
+        this.team=t;
+
+        DBLocal.getInstance().setUser(this);
+        MainSystem.LOG.info("The manager " +getUserFullName()+ " has move to the team "+team);
+        return true;
+
     }
 }

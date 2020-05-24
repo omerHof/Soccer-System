@@ -1,8 +1,8 @@
 package Teams;
 
 import Games.Game;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
-import SystemLogic.DB;
 import Users.*;
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class Team implements Comparable {
     private Statistics statistics;
     private double budget;
     private TeamPage page;
-    private DB db;
+    private DBLocal dbLocal;
 
 
 
@@ -36,7 +36,7 @@ public class Team implements Comparable {
         this.teamOwners = teamOwners;
         this.status = teamStatus.active;
         page = null;
-        db = DB.getInstance();
+        dbLocal = DBLocal.getInstance();
         players = new HashMap<>();
         coaches = new HashMap<>();
         managers = new HashMap<>();
@@ -49,7 +49,7 @@ public class Team implements Comparable {
         this.name = name;
         this.status = teamStatus.active;
         page = null;
-        db = DB.getInstance();
+        dbLocal = DBLocal.getInstance();
         players = new HashMap<>();
         coaches = new HashMap<>();
         managers = new HashMap<>();
@@ -139,7 +139,7 @@ public class Team implements Comparable {
     ////by string
 
     public boolean addPlayer(String player) {
-        User user = db.getUserByFullName(player);
+        User user = dbLocal.getUserByFullName(player);
         Player p = (Player)user;
         if(p==null){
            return false;
@@ -148,11 +148,11 @@ public class Team implements Comparable {
         Team team = p.getCurrentTeam();
         if(team!=null) {
             team.removePlayer(player);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         players.put(player, p);
         p.setCurrentTeam(name);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
         if(page!=null){
             page.addPlayer(p);
@@ -162,7 +162,7 @@ public class Team implements Comparable {
     }
 
     public boolean removePlayer(String player) {
-        User user = db.getUserByFullName(player);
+        User user = dbLocal.getUserByFullName(player);
         Player p = (Player)user;
         if(p==null){
             return false;
@@ -173,7 +173,7 @@ public class Team implements Comparable {
 
         players.remove(player);
         p.setCurrentTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removePlayer(p);
         }
@@ -182,7 +182,7 @@ public class Team implements Comparable {
     }
 
     public boolean addCoach(String coach) {
-        User user = db.getUserByFullName(coach);
+        User user = dbLocal.getUserByFullName(coach);
         Coach c = (Coach) user;
         if(c==null){
             return false;
@@ -191,11 +191,11 @@ public class Team implements Comparable {
         Team team = c.getCurrentTeam();
         if(team!=null) {
             team.removeCoach(coach);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         coaches.put(coach, c);
         c.setCurrentTeam(name);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
         if(page!=null){
             page.addCoach(c);
@@ -204,7 +204,7 @@ public class Team implements Comparable {
         return true;
     }
     public boolean removeCoach(String coach) {
-        User user = db.getUserByFullName(coach);
+        User user = dbLocal.getUserByFullName(coach);
         Coach c = (Coach)user;
         if(c==null){
             return false;
@@ -215,7 +215,7 @@ public class Team implements Comparable {
 
         coaches.remove(coach);
         c.setCurrentTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removeCoach(c);
         }
@@ -224,7 +224,7 @@ public class Team implements Comparable {
     }
 
     public boolean addManager(String manager) {
-        User user = db.getUserByFullName(manager);
+        User user = dbLocal.getUserByFullName(manager);
         Manager m = (Manager) user;
         if(m==null){
             return false;
@@ -233,11 +233,11 @@ public class Team implements Comparable {
         Team team = m.getTeam();
         if(team!=null) {
             team.removeManager(m);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         managers.put(manager, m);
         m.setTeam(team);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
         if(page!=null){
             page.addManager(m);
@@ -246,7 +246,7 @@ public class Team implements Comparable {
         return true;
     }
     public boolean removeManager(String manager) {
-        User user = db.getUserByFullName(manager);
+        User user = dbLocal.getUserByFullName(manager);
         Manager m = (Manager) user;
         if(m==null){
             return false;
@@ -257,7 +257,7 @@ public class Team implements Comparable {
 
         managers.remove(manager);
         m.setTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removeManager(m);
         }
@@ -267,7 +267,7 @@ public class Team implements Comparable {
 
 
     public boolean addTeamOwner(String teamOwner) {
-        User user = db.getUserByFullName(teamOwner);
+        User user = dbLocal.getUserByFullName(teamOwner);
         TeamOwner owner = (TeamOwner) user;
         if(owner==null){
             return false;
@@ -276,18 +276,18 @@ public class Team implements Comparable {
         Team team = owner.getTeam();
         if(team!=null) {
             team.removeTeamOwner(owner);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         teamOwners.put(teamOwner, owner);
         owner.setTeam(team);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
 
         MainSystem.LOG.info("the team owner " + teamOwner + " was added successfully to the team " + this.getName());
         return true;
     }
     public boolean removeTeamOwner(String teamOwner) {
-        User user = db.getUserByFullName(teamOwner);
+        User user = dbLocal.getUserByFullName(teamOwner);
         TeamOwner owner = (TeamOwner) user;
         if(owner==null){
             return false;
@@ -298,7 +298,7 @@ public class Team implements Comparable {
 
         teamOwners.remove(teamOwner);
         owner.setTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
         MainSystem.LOG.info("the team owner " + teamOwner + " was removed successfully from the team " + this.getName());
         return true;
@@ -310,7 +310,7 @@ public class Team implements Comparable {
 
     ////by object
     public boolean addPlayer(Player player) {
-        User user = db.getUserByFullName(player.getUserFullName());
+        User user = dbLocal.getUserByFullName(player.getUserFullName());
         if(user==null){
             return false;
         }
@@ -322,11 +322,11 @@ public class Team implements Comparable {
         Team team = player.getCurrentTeam();
         if(team!=null) {
             team.removePlayer(player);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         players.put(player.getUserFullName(), player);
         player.setCurrentTeam(name);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
 
         if(page!=null){
             page.addPlayer(player);
@@ -349,7 +349,7 @@ public class Team implements Comparable {
 
         players.remove(player.getUserFullName());
         player.setCurrentTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removePlayer(player);
         }
@@ -359,7 +359,7 @@ public class Team implements Comparable {
 
 
     public boolean addCoach(Coach coach) {
-        User user = db.getUserByFullName(coach.getUserFullName());
+        User user = dbLocal.getUserByFullName(coach.getUserFullName());
         if(user==null){
             return false;
         }
@@ -370,11 +370,11 @@ public class Team implements Comparable {
         Team team = coach.getCurrentTeam();
         if(team!=null) {
             team.removeCoach(coach);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         coaches.put(coach.getUserFullName(), coach);
         coach.setCurrentTeam(name);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.addCoach(coach);
         }
@@ -384,7 +384,7 @@ public class Team implements Comparable {
 
     public boolean removeCoach(Coach coach) {
         if(coach==null){
-            System.out.println("the user not found in the db");
+            System.out.println("the user not found in the dbLocal");
             return false;
         }
         if(!coaches.containsKey(coach.getUserFullName())){
@@ -392,7 +392,7 @@ public class Team implements Comparable {
         }
         coaches.remove(coach.getUserFullName());
         coach.setCurrentTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removeCoach(coach);
         }
@@ -401,7 +401,7 @@ public class Team implements Comparable {
     }
 
     public boolean addManager(Manager manager) {
-        User user = db.getUserByFullName(manager.getUserFullName());
+        User user = dbLocal.getUserByFullName(manager.getUserFullName());
         if(user==null){
             return false;
         }
@@ -412,7 +412,7 @@ public class Team implements Comparable {
         Team team = manager.getTeam();
         if(team!=null){
             team.removeManager(manager);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         managers.put(manager.getUserFullName(),manager);
         manager.setTeam(this);
@@ -432,7 +432,7 @@ public class Team implements Comparable {
         }
         managers.remove(manager.getUserFullName());
         manager.setTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         if(page!=null){
             page.removeManager(manager);
         }
@@ -441,7 +441,7 @@ public class Team implements Comparable {
     }
 
     public boolean addTeamOwner(TeamOwner teamOwner) {
-        User user = db.getUserByFullName(teamOwner.getUserFullName());
+        User user = dbLocal.getUserByFullName(teamOwner.getUserFullName());
         if(user==null){
             return false;
         }
@@ -451,7 +451,7 @@ public class Team implements Comparable {
         Team team = teamOwner.getTeam();
         if(team!=null){
             team.removeTeamOwner(teamOwner);
-            db.setTeam(team);
+            dbLocal.setTeam(team);
         }
         teamOwners.put(teamOwner.getUserFullName(), teamOwner);
         teamOwner.setTeam(this);
@@ -468,7 +468,7 @@ public class Team implements Comparable {
         }
         teamOwners.remove(teamOwner.getUserFullName());
         teamOwner.setTeam(null);
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         MainSystem.LOG.info("the team owner " + teamOwner.getUserName() + " was removed successfully to the team " + this.getName());
         return true;
     }
@@ -501,7 +501,7 @@ public class Team implements Comparable {
         if(page!=null){
             page.setStadium(stadium);
         }
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         MainSystem.LOG.info("the team "+name+ " has a new stadium");
 
     }
@@ -524,7 +524,7 @@ public class Team implements Comparable {
             page.setName(name);
 
         }
-        db.setTeam(this);
+        dbLocal.setTeam(this);
         MainSystem.LOG.info("the team change her name to: "+name);
 
     }

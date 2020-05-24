@@ -34,8 +34,8 @@ public class SeasonScoreBoard {
         this.teams = teams;
         this.policy = policy;
         this.table = initTable();
-        //this.firstGameDate = firstGameDate;//todo put this line
-        this.firstGameDate = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);//todo remove this line
+        this.firstGameDate = firstGameDate;//todo put this line
+        //this.firstGameDate = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);//todo remove this line
         this.numOfWeeks = numOfWeeks;
         updateTable(); //class- update the table after every week game
     }
@@ -110,7 +110,7 @@ public class SeasonScoreBoard {
     public void updateTable() {
         try {
             LocalDateTime timeToUpdate;
-            timeToUpdate = firstGameDate.plus(6, ChronoUnit.SECONDS);//todo change to 2 hours
+            timeToUpdate = firstGameDate.plus(5, ChronoUnit.MINUTES);//todo change to 2 hours
             LocalDateTime from = LocalDateTime.now();
             Duration duration = Duration.between(from, timeToUpdate);
             UpdateTable updateTable = new UpdateTable(duration.getSeconds(), this, new AtomicInteger(numOfWeeks));

@@ -1,7 +1,7 @@
 package Teams;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Users.Coach;
 import Users.Manager;
 import Users.Player;
@@ -22,7 +22,7 @@ public class TeamTest {
     Player vermut;
     Player zahavi;
     Coach klinger;
-    DB dbtest;
+    DBLocal dbtest;
 
 
 
@@ -37,7 +37,7 @@ public class TeamTest {
         vermut = new Player("ver","123","gili vermut","g",date1,"midelfer");
         zahavi = new Player("ez7","123","rean zahavi","eeee",date2,"striker");
         klinger = new Coach("kling","1212","nir klinger","dsdasd","head coach");
-        dbtest = DB.getInstance();
+        dbtest = DBLocal.getInstance();
         dbtest.addTeam(hapoel);
         dbtest.addTeam(maccabi);
         dbtest.addUser(vermut);

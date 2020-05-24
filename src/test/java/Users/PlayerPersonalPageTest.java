@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PlayerPersonalPageTest {
     Player p1;
-    DB db = DB.getInstance();
+    DBLocal dbLocal = DBLocal.getInstance();
     PlayerPersonalPage playerPage;
 
     @Before
@@ -19,14 +19,14 @@ public class PlayerPersonalPageTest {
         LocalDate date = LocalDate.of(1994,7,1);
         p1 = new Player("anat4kosh","1234","anat forkosh","anat@gmail.com",date,"GK");
         playerPage = p1.createPersonalPage(164,50,1,"maccabi netanya");
-        db.addUser(p1);
+        dbLocal.addUser(p1);
 
 
     }
 
     @After
     public void tearDown() throws Exception {
-        db.removeUser(p1.getUserName());
+        dbLocal.removeUser(p1.getUserName());
         p1=null;
     }
 

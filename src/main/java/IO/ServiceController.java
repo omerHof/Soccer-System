@@ -332,6 +332,13 @@ public class ServiceController {
         String userDetails[] = param.split(",");
         return userManagement.setReport(userDetails[0],userDetails[1]);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/closeProgram")
+    public void closeProgram()
+    {
+        userManagement.logOut();
+    }
+
 }
 
 class AddSeasonParam {

@@ -1,6 +1,6 @@
 package UserGenerator;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Users.Administrator;
 import Users.AssociationRepresentative;
@@ -12,14 +12,14 @@ import static org.junit.Assert.*;
 
 public class ManagmentUserGeneratorTest {
 
-    private DB dbTest = DB.getInstance();
+    private DBLocal dbLocalTest = DBLocal.getInstance();
     private AssociationRepresentative assoTest = new AssociationRepresentative("aa", "", "alal", "a@a");
     private MainSystem mainSystem = MainSystem.getInstance();
     private ManagementUserGenerator manG = new ManagementUserGenerator();
 
     @Before
     public void setUp() throws Exception {
-        dbTest.addUser(assoTest);
+        dbLocalTest.addUser(assoTest);
     }
 
     @After

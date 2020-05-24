@@ -1,6 +1,6 @@
 package UILayer.Controllers;
 
-import DataForTest.DataBase;
+import DataBase.DataBase;
 import UILayer.ClientController;
 import UILayer.Main;
 import javafx.event.ActionEvent;
@@ -24,7 +24,7 @@ public class Controller implements Initializable {
     protected static String userName;
     protected static String userType;
     protected static ArrayList<String> newNotifications;
-    DataBase db = new DataBase();
+    //DataBase db = new DataBase();
     protected static ClientController clientController = new ClientController();
 
 
@@ -39,6 +39,7 @@ public class Controller implements Initializable {
         alert.showAndWait();
 
         if (alert.getResult() == ButtonType.YES) {
+            clientController.closeProgram();
             s.close();
         }
     }

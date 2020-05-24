@@ -3,7 +3,7 @@ import Games.DayToGameTest;
 import Games.EndGameTest;
 import Games.StartGameTest;
 import LeagueSeasonsManagment.*;
-import SystemLogic.DBTest;
+import SystemLogic.DBLocalTest;
 import SystemLogic.MainSystemTest;
 import SystemLogic.NotificationTest;
 import SystemLogic.SearchTest;
@@ -44,7 +44,7 @@ public class TestRunner {
         Result app_result = JUnitCore.runClasses(MainTest.class);
 
         /** System Logic **/
-        Result DB_result = JUnitCore.runClasses(DBTest.class);
+        Result DB_result = JUnitCore.runClasses(DBLocalTest.class);
         Result mainSystem_result = JUnitCore.runClasses(MainSystemTest.class);
         Result notification_result = JUnitCore.runClasses(NotificationTest.class);
         Result search_result = JUnitCore.runClasses(SearchTest.class);

@@ -1,7 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 
 import java.time.LocalDateTime;
@@ -28,9 +28,9 @@ public class OneRoundGamePolicy implements IGameInlayPolicy {
         this.ListTeam = teams;
         this.listOfGames = new HashMap<>();
         this.tempListOfGames = new HashMap<>();
-        this.day = DB.getInstance().getLeagues()+1;
+        this.day = DBLocal.getInstance().getLeagues()+1;
         //this.timeOfGame = LocalDateTime.of(year, Month.JANUARY, day, 19, 0, 0);//todo add to code this line
-        timeOfGame = LocalDateTime.now().plus(15, ChronoUnit.SECONDS);
+        timeOfGame = LocalDateTime.now().plus(3, ChronoUnit.MINUTES);
     }
 
     @Override

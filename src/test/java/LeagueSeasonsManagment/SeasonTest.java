@@ -1,7 +1,7 @@
 package LeagueSeasonsManagment;
 
-import DataForTest.DataBase;
-import SystemLogic.DB;
+import DataBase.DataBase;
+import SystemLogic.DBLocal;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 
 public class SeasonTest {
 
-    DB db = DB.getInstance();
+    DBLocal dbLocal = DBLocal.getInstance();
     DataBase test = new DataBase();
     League league;
     Season season;
@@ -125,10 +125,10 @@ public class SeasonTest {
     @Before
     public void setUp() throws Exception {
 
-        league =  db.getLeague("Champions league");
+        league =  dbLocal.getLeague("Champions league");
         season = league.getAllSeasons().get(0);
 
-        //game = db.getLeague("Champions league").getSeasonByYear(2020).getAllGames().get(1).get(0);
+        //game = dbLocal.getLeague("Champions league").getSeasonByYear(2020).getAllGames().get(1).get(0);
 
         /*stringRepresentatives.add(representative1);
         stringRepresentatives.add(representative2);
@@ -165,7 +165,7 @@ public class SeasonTest {
         stringTeams.add(milan);
         stringTeams.add(inter);
 
-        league =  db.getLeague("Champions league");
+        league =  dbLocal.getLeague("Champions league");
         //season = league.getAllSeasons().get(0);
 
         teamsAssignTest.add(a);
@@ -245,7 +245,7 @@ public class SeasonTest {
 */
 
 /*
-        dbTest = DB.getInstance();
+        dbTest = DBLocal.getInstance();
         mainSystem = MainSystem.getInstance();
         assoTest = new AssociationRepresentative("talish94", "taata", "Tali", "tali@gmail");
 
@@ -268,7 +268,7 @@ public class SeasonTest {
         referee3 = new Referee("a","a","a","a","a");
         referees.add(referee3);
         mainReferee = new MainReferee("a","a","a","a","a");
-        DB.getInstance().setUser(mainReferee);
+        DBLocal.getInstance().setUser(mainReferee);
         representative = new AssociationRepresentative("a","a","a","a");
         representatives.add(representative);
 
@@ -283,10 +283,10 @@ public class SeasonTest {
         seasons.add(season);
         league.setAllSeasons(seasons);
 
-        db.setUser(user);
-        db.setLeague(league);
-        db.setTeam(a);
-        db.setTeam(b);
+        dbLocal.setUser(user);
+        dbLocal.setLeague(league);
+        dbLocal.setTeam(a);
+        dbLocal.setTeam(b);
 
         a.setBudget(100);*/
     }

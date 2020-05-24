@@ -1,6 +1,6 @@
 package SystemLogic;
 
-import DataForTest.DataBase;
+import DataBase.DataBase;
 import Users.AssociationRepresentative;
 import org.junit.After;
 import org.junit.Before;
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class SearchTest {
 
-    private DB db;
+    private DBLocal dbLocal;
     private AssociationRepresentative assoTest;
     private MainSystem mainSystem;
 

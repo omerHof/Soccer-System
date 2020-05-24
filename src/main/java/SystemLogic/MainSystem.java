@@ -9,6 +9,10 @@ import Users.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import java.security.SecureRandom;
+import java.security.spec.KeySpec;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +27,7 @@ public class MainSystem {
     private User currentUser = null;
     public static Logger LOG = LogManager.getLogger();
 
-    private DB db = DB.getInstance();
+    private DBLocal dbLocal = DBLocal.getInstance();
     private TimerPasswordBuilder timerPasswordBuilder;
 
 
@@ -59,7 +63,7 @@ public class MainSystem {
     public void initializeSystem(){
         connectToLog();
         connectExternalSystems();
-        User user = db.getUserType("Administrator");
+        User user = dbLocal.getUserType("Administrator");
         if (user==null){
             appointUserToSAdministrator();
         }
@@ -103,12 +107,12 @@ public class MainSystem {
         Administrator administrator = (Administrator) managementUserGenerator.generate("admin","admin01",special_password
                 ,"Administrator", "admin admin", "admin@gmail.com",
                 null,"","","");
-        db.addUser(administrator);
+        dbLocal.addUser(administrator);
         LOG.info("Administrator was appointed successfully");
     }
 
     public String getUserType(String userName){
-        User user = db.getUser(userName);
+        User user = dbLocal.getUser(userName);
         return user.getClass().getSimpleName();
 
     }
@@ -132,17 +136,17 @@ public class MainSystem {
     public String singUp(String userName, String password, String mangerPassword, String role, String fullName, String userEmail,
                          LocalDate birthDate, String qualification, String courtRole, String teamRole,
                          IUserGenerator iUserGenerator){
-        if (db.userExist(userName)){
+        if (dbLocal.userExist(userName)){
             return "exist";
         }
 
-        User newUser =  iUserGenerator.generate(userName, password, mangerPassword, role, fullName, userEmail,
+        User newUser =  iUserGenerator.generate(userName, encrypte(password), mangerPassword, role, fullName, userEmail,
                 birthDate, qualification, courtRole, teamRole);
         if(newUser==null){
             return "association representative";
         }
 
-        db.addUser(newUser);
+        dbLocal.addUser(newUser);
         LOG.info("A new user " + userName + " was signed up successfully");
         if(this.currentUser==null){
             this.currentUser = newUser;
@@ -151,6 +155,25 @@ public class MainSystem {
         }
 
         return "signed up only";
+    }
+
+    public String encrypte(String password) {
+        byte[] hash=null;
+        try {
+            SecureRandom random = new SecureRandom();
+            byte[] salt = new byte[16];
+            for(byte b:salt){
+                b=8;
+            }
+            //random.nextBytes(salt);
+            KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
+            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+            hash = factory.generateSecret(spec).getEncoded();
+        }catch (Exception e){
+
+        }
+        return new String(hash);
+
     }
 
     /**
@@ -164,16 +187,16 @@ public class MainSystem {
         if(this.currentUser!=null){
             return "occupied";
         }
-        if(!db.userExist(userName)){
+        if(!dbLocal.userExist(userName)){
             return "name";
         }
-        else if(db.getUser(userName)==null){
+        else if(dbLocal.getUser(userName)==null){
             return "null";
         }
-        else if(!db.getUser(userName).getPassword().equals(password)){
+        else if(!dbLocal.getUser(userName).getPassword().equals(encrypte(password))){
             return "password";
         }
-        this.currentUser = db.getUser(userName);
+        this.currentUser = dbLocal.getUser(userName);
         if (currentUser.isNonReadNotifications()){
             showNotification();
         }
@@ -193,9 +216,11 @@ public class MainSystem {
      * @return boolean answer - did the logging out work or not
      */
     public boolean logOut(){
-        String userName = currentUser.getUserName();
-        this.currentUser = null;
-        LOG.info(userName + " was logged out successfully");
+        if(currentUser!=null) {
+            String userName = currentUser.getUserName();
+            this.currentUser = null;
+            LOG.info(userName + " was logged out successfully");
+        }
         return true;
     }
 

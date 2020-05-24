@@ -58,22 +58,25 @@ public class HomePageController extends Controller {
         int numOfTable=1;
         for (String leagueString : leaguesNames) {
             //leagueText.setText("LEAGUE: " + leagueString);
-            ArrayList<String> games = clientController.closestGames(leagueString);
-            for (String game : games) {
-                data[i] = new String[]{leagueString, game.split("%")[0], game.split("%")[1], game.split("%")[2],
-                        game.split("%")[3], game.split("%")[4], game.split("%")[5], game.split("%")[6]};
-                i++;
-            }
-            if(numOfTable==1) {
-                createTable(data,tab1,leagueText1,leagueString);
-                tab1.setVisible(true);
-            }
-            else {
-                createTable(data, tab2,leagueText2,leagueString);
-                tab2.setVisible(true);
+            ArrayList<String> games = new ArrayList<>();
+            games=clientController.closestGames(leagueString);
+            if(games!=null) {
+                for (String game : games) {
+                    data[i] = new String[]{leagueString, game.split("%")[0], game.split("%")[1], game.split("%")[2],
+                            game.split("%")[3], game.split("%")[4], game.split("%")[5], game.split("%")[6]};
+                    i++;
+                }
 
+                if (numOfTable == 1) {
+                    createTable(data, tab1, leagueText1, leagueString);
+                    tab1.setVisible(true);
+                } else {
+                    createTable(data, tab2, leagueText2, leagueString);
+                    tab2.setVisible(true);
+
+                }
+                numOfTable++;
             }
-            numOfTable++;
         }
     }
 

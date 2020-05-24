@@ -1,8 +1,9 @@
 package ServiceLayer;
 
-import DataForTest.DataBase;
-import SystemLogic.DB;
+import DataBase.DataBase;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
+import DataBase.ActivateDB;
 
 import java.util.ArrayList;
 
@@ -11,12 +12,10 @@ public class SystemManagement {
     private LeagueSeasonManagement leagueSeasonManagement;
     private TeamManagement teamManagement;
     private UserManagement userManagement;
-    private DataBase dataBase;//todo only for test
     public SystemManagement() {
        this.leagueSeasonManagement = new LeagueSeasonManagement();
        this.teamManagement = new TeamManagement();
        this.userManagement = new UserManagement();
-       dataBase= new DataBase();//todo remove- only for test
        systemInitialize();
 
 
@@ -24,28 +23,31 @@ public class SystemManagement {
 
     private void systemInitialize() {
         MainSystem.getInstance().initializeSystem();
+        DBLocal db = DBLocal.getInstance();
+
+        ActivateDB.getInstance().readInfo();
 
     }
 
     public ArrayList<String> getLeagueNames(){
-        return DB.getInstance().getLeagueNames();
+        return DBLocal.getInstance().getLeagueNames();
     }
     public ArrayList<String> getFullTeamsNames(){
-        return DB.getInstance().getFullTeamsNames();
+        return DBLocal.getInstance().getFullTeamsNames();
     }
 
     public ArrayList<String> getAllUsersByType( String type){
-        return DB.getInstance().getAllUserByType(type);
+        return DBLocal.getInstance().getAllUserByType(type);
     }
 
     public int getLeagueTeamNumber(String league){
-        return DB.getInstance().getNumberOfTeamsInLeague(league);
+        return DBLocal.getInstance().getNumberOfTeamsInLeague(league);
     }
     public ArrayList<Integer> getAllSeasonYears(String league){
-        return DB.getInstance().getAllSeasonYearsFromLeague(league);
+        return DBLocal.getInstance().getAllSeasonYearsFromLeague(league);
     }
     public ArrayList<String> closestGames(String league){
-        return DB.getInstance().closestGames(league);
+        return DBLocal.getInstance().closestGames(league);
     }
 }
 

@@ -26,7 +26,7 @@ public class Search {
 
     private String toSearch;
     private Category category;
-    private DB db = DB.getInstance();
+    private DBLocal dbLocal = DBLocal.getInstance();
 
 
     /**
@@ -59,7 +59,7 @@ public class Search {
 
 
     /**
-     * this function searches for a specific kind of Objects in the DB
+     * this function searches for a specific kind of Objects in the DBLocal
      * @toSearch - the String we want to find
      * @category - the Category enum we want to look for
      * @return list of Objects found.
@@ -70,7 +70,7 @@ public class Search {
 
         if(category.equals(Category.leagues)) { //category search by League:
 
-            League objectToAdd = db.getLeague(toSearch); //league name
+            League objectToAdd = dbLocal.getLeague(toSearch); //league name
             if (objectToAdd != null)
                 allObjects.add(objectToAdd);
         }
@@ -78,15 +78,15 @@ public class Search {
         else if(category.equals(Category.players)) { //category search by player:
 
             Player objectToAdd = null;
-            Object user = db.getUserByFullName(toSearch);
+            Object user = dbLocal.getUserByFullName(toSearch);
             if(user instanceof Player)
                 objectToAdd = (Player)user;
             if (objectToAdd != null && !allObjects.contains(objectToAdd)) //without duplicates))
                 allObjects.add(objectToAdd);
 
-            ArrayList<User> obj = db.getUserTypeList(toSearch);
+            ArrayList<User> obj = dbLocal.getUserTypeList(toSearch);
 
-            user = db.getUser(toSearch); //username
+            user = dbLocal.getUser(toSearch); //username
             if(user instanceof Player)
                 objectToAdd = (Player)user;
             if (objectToAdd != null && !allObjects.contains(objectToAdd)) //without duplicates)))
@@ -102,13 +102,13 @@ public class Search {
 
         else if(category.equals(Category.referees)) { //category search by Referee:
 
-            Referee objectToAdd = (Referee)db.getUserType(toSearch);
+            Referee objectToAdd = (Referee) dbLocal.getUserType(toSearch);
             if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates))))
                 allObjects.add(objectToAdd);
 
-            ArrayList<User> obj = db.getUserTypeList(toSearch);
+            ArrayList<User> obj = dbLocal.getUserTypeList(toSearch);
 
-            User user = db.getUserByFullName(toSearch); //fullname
+            User user = dbLocal.getUserByFullName(toSearch); //fullname
             if(user instanceof Referee)
                 objectToAdd = (Referee)user;
             if (objectToAdd != null && !allObjects.contains(objectToAdd)) //without duplicates))))
@@ -121,7 +121,7 @@ public class Search {
                 }
             }
 
-            user = db.getUser(toSearch); //username
+            user = dbLocal.getUser(toSearch); //username
             if(user instanceof Referee)
                 objectToAdd = (Referee)user;
             if (objectToAdd != null && !allObjects.contains(objectToAdd)) //without duplicates))))
@@ -130,7 +130,7 @@ public class Search {
 
         else if(category.equals(Category.teams)) { //category search by Team:
 
-            Team objectToAdd = db.getTeam(toSearch);
+            Team objectToAdd = dbLocal.getTeam(toSearch);
             if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates))))
                 allObjects.add(objectToAdd);
         }
@@ -139,7 +139,7 @@ public class Search {
 
 
     /**
-     * this function searches for all kind of Objects in the DB
+     * this function searches for all kind of Objects in the DBLocal
      * @toSearch - the String we want to find
      * @return list of Objects found.
      */
@@ -148,29 +148,29 @@ public class Search {
         List<Object> allObjects = new LinkedList<>();
         Object objectToAdd;
 
-        //using any kind of search on DB in 3.. 2.... 1......
+        //using any kind of search on DBLocal in 3.. 2.... 1......
 
-        objectToAdd = db.getUser(toSearch);
+        objectToAdd = dbLocal.getUser(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates
             allObjects.add(objectToAdd);
 
-        objectToAdd = db.getUserByFullName(toSearch);
+        objectToAdd = dbLocal.getUserByFullName(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates
             allObjects.add(objectToAdd);
 
-        objectToAdd = db.getTeam(toSearch);
+        objectToAdd = dbLocal.getTeam(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates)
             allObjects.add(objectToAdd);
 
-        objectToAdd = db.getUserType(toSearch);
+        objectToAdd = dbLocal.getUserType(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates)
             allObjects.add(objectToAdd);
 
-        objectToAdd = db.getLeague(toSearch);
+        objectToAdd = dbLocal.getLeague(toSearch);
         if(objectToAdd!=null && !allObjects.contains(objectToAdd)) //without duplicates)
             allObjects.add(objectToAdd);
 
-        ArrayList<User> obj = db.getUserTypeList(toSearch);
+        ArrayList<User> obj = dbLocal.getUserTypeList(toSearch);
         if(obj!=null && obj.size()>0){
             for(User user : obj) { //adds all the users list
                 if(!allObjects.contains(user)) //without duplicates)

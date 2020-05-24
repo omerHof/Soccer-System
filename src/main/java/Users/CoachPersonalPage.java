@@ -1,13 +1,9 @@
 package Users;
 
-import SystemLogic.DB;
-import Teams.Team;
-import javafx.util.Pair;
+import SystemLogic.DBLocal;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
 
 public  class CoachPersonalPage extends PersonalPage {
 
@@ -19,8 +15,8 @@ public  class CoachPersonalPage extends PersonalPage {
         this.age=getCurrentAge(birthdate);
         this.teamRole=teamRole;
         teamHistory= new ArrayList<>();
-        DB db = DB.getInstance();
-        this.currentTeam = db.getTeam(team);
+        DBLocal dbLocal = DBLocal.getInstance();
+        this.currentTeam = dbLocal.getTeam(team);
 
 //        this.teamHistory.add(team.getName());
 

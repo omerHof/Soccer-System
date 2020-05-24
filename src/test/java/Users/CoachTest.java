@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -17,12 +17,12 @@ public class CoachTest {
     Team t1;
     Team t2;
     Team t3;
-    DB dbtest;
+    DBLocal dbtest;
     LocalDate localDate;
 
     @Before
     public void setUp() throws Exception {
-        dbtest= DB.getInstance();
+        dbtest= DBLocal.getInstance();
          c1 = new Coach("pep","12345","pep guardiola","pep@gmail.com","Head coach");
         c2 = new Coach("klopp","12345","jorgen klopp","klopp@gmail.com","Head coach");
         c3 = new Coach("kling","12345","nir klinger","nk@gmail.com","Head coach");

@@ -1,6 +1,6 @@
 package UserGenerator;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Users.*;
 
@@ -103,8 +103,8 @@ public class PremiumUserGenerator implements IUserGenerator {
      */
     public boolean askForApproval (String fullName, String role) {
 
-        DB db1 = DB.getInstance();
-        AssociationRepresentative ar = (AssociationRepresentative) db1.getUserType("AssociationRepresentative"); // a random one.
+        DBLocal dbLocal1 = DBLocal.getInstance();
+        AssociationRepresentative ar = (AssociationRepresentative) dbLocal1.getUserType("AssociationRepresentative"); // a random one.
         boolean isApproved = ar.approveRegistration(fullName, role);
 
         return isApproved;

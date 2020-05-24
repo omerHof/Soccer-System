@@ -1,7 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import Users.AssociationRepresentative;
 import Users.MainReferee;
@@ -25,7 +25,7 @@ public class Season {
     private IGameInlayPolicy iGameInlayPolicy;
     private IScorePolicy iScorePolicy;
     private SeasonScoreBoard seasonScoreBoard;
-    private DB db;
+    private DBLocal dbLocal;
 
 
     /**
@@ -41,7 +41,7 @@ public class Season {
     public Season(int year, ArrayList<Team> allTeams, ArrayList<Referee> allReferees,
                   ArrayList<AssociationRepresentative> allReps, String scorePolicy, String gamePolicy) {
 
-        db = DB.getInstance();
+        dbLocal = DBLocal.getInstance();
         this.year = year;
         this.allReferees = allReferees;
         this.allTeams = allTeams;
@@ -52,7 +52,6 @@ public class Season {
 
         this.allGames = iGameInlayPolicy.gameInlayPolicyAlgoImplementation(); //adds list of games to each mahzor.
 
-        assignUsersToGames(3); //assign 3 referees for each game, 1 main referee, and 1 association rep.
         this.seasonScoreBoard = new SeasonScoreBoard(allTeams, iScorePolicy, allGames.get(1).get(0).getTimeOfGame(), allGames.size());
     }
 

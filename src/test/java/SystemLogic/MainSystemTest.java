@@ -10,11 +10,11 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MainSystemTest {
     private static MainSystem mainSystem;
-    private static DB data_base;
+    private static DBLocal data_base;
 
     @BeforeClass
     public static void beforeClass() {
-        data_base = DB.getInstance();
+        data_base = DBLocal.getInstance();
         mainSystem = MainSystem.getInstance();
     }
 

@@ -1,7 +1,6 @@
 package Users;
 
-import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Stadium;
@@ -24,6 +23,7 @@ public class Fan extends User implements Observer {
     private String pageMessage;
     private String teamMessage;
 
+    private ArrayList<String> followedPagesString;
 
     public Fan(String userName, String password, String fullName, String email) {
 
@@ -33,10 +33,17 @@ public class Fan extends User implements Observer {
         this.userEmail = email;
         followedPages = new ArrayList<>();
         followedTeams = new HashMap<>();
-
+        followedPagesString = new ArrayList<>();
 
     }
 
+    public ArrayList<String> getFollowedPagesString() {
+        return followedPagesString;
+    }
+
+    public void setFollowedPagesString(ArrayList<String> followedPagesString) {
+        this.followedPagesString = followedPagesString;
+    }
 
     public String getPageMessage() {
         return pageMessage;
@@ -48,12 +55,14 @@ public class Fan extends User implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        DB db = DB.getInstance();
+        DBLocal db = DBLocal.getInstance();
         MainSystem.LOG.info("The user "+userName+ " get update");
+        DBLocal dbLocal = DBLocal.getInstance();
+        MainSystem.LOG.info("The user get update");
         if (o instanceof PersonalPage) {
             Team team = (Team) arg;
             String name = (String) ((PersonalPage) o).getName();
-            User sender = db.getUserByFullName(name);
+            User sender = dbLocal.getUserByFullName(name);
             pageMessage = team.getName();
             String message = "new update! " + name + " has moved to " + pageMessage;
             Notification notification = new Notification(sender,message,this);
@@ -61,7 +70,7 @@ public class Fan extends User implements Observer {
         }
         if (o instanceof TeamPage) {
             TeamPage team = (TeamPage) o;
-            Team t = db.getTeam(team.getName());
+            Team t = dbLocal.getTeam(team.getName());
             String teamName = team.getName();
             User managerSender;
             String message="";
@@ -175,11 +184,11 @@ public ArrayList<PersonalPage> getFollowedPages() {
     }
     public void followThisPage(String pageName){
 
-        DB DB1;
-        DB1= DB.getInstance();
+        DBLocal DBLocal1;
+        DBLocal1 = DBLocal.getInstance();
 
 
-        User user = DB1.getUserByFullName(pageName);
+        User user = DBLocal1.getUserByFullName(pageName);
         PersonalPage page;
         if(user instanceof Player){
            page= ((Player) user).getPage();
@@ -221,9 +230,9 @@ public ArrayList<PersonalPage> getFollowedPages() {
     }
 
     public boolean followTeam(String teamName){
-        DB DB1;
-        DB1= DB.getInstance();
-        Team team = DB1.getTeam(teamName);
+        DBLocal DBLocal1;
+        DBLocal1 = DBLocal.getInstance();
+        Team team = DBLocal1.getTeam(teamName);
         if(team==null){
             return false;
         }

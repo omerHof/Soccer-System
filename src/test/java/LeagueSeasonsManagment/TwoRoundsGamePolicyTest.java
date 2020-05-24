@@ -1,7 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -41,8 +41,8 @@ public class TwoRoundsGamePolicyTest {
         teams.add(h);
         teams.add(i);
         teams.add(j);
-        DB.getInstance();
-        //DB.setTeam(user);
+        DBLocal.getInstance();
+        //DBLocal.setTeam(user);
         policy= new TwoRoundsGamePolicy(teams,year);
     }
 

@@ -1,16 +1,14 @@
 package Users;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Team;
-import sun.rmi.runtime.Log;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.security.acl.Owner;
 import java.util.*;
 
 public class Administrator extends User {
@@ -24,8 +22,8 @@ public class Administrator extends User {
 
 
     public String closeTeamForPermanent(String name) {
-        DB db = DB.getInstance();
-        Team team = db.getTeam(name);
+        DBLocal dbLocal = DBLocal.getInstance();
+        Team team = dbLocal.getTeam(name);
         boolean hasMoreGames = false;
         if (team != null) {
             ArrayList<Game> gameList = team.getGameList();
@@ -78,17 +76,17 @@ public class Administrator extends User {
 
 
     public String deleteUserFromSystem(String name) {
-        DB db = DB.getInstance();
-        User user = db.getUserByFullName(name);
+        DBLocal dbLocal = DBLocal.getInstance();
+        User user = dbLocal.getUserByFullName(name);
         if (user != null) {
             if (user instanceof AssociationRepresentative) {
-                if (db.checkQuantityOfUsersByType("AssociationRepresentative") >= 2) {
+                if (dbLocal.checkQuantityOfUsersByType("AssociationRepresentative") >= 2) {
                     AssociationRepresentative associationRep = (AssociationRepresentative) user;
 
                     if (associationRep.findActiveGame() != null) {//not sure ask tali
                         associationRep.passMyGames();//// not sure, ask tali
                     }
-                    db.removeUser(user.getUserName());
+                    dbLocal.removeUser(user.getUserName());
                     MainSystem.LOG.info("the user of Association representative " +name+" is deleted by the administrator");
                     return "the user deleted succsesfully";
                 }
@@ -96,8 +94,8 @@ public class Administrator extends User {
                    return "no delete! the system has less then 2 Association representatives";
                 }
             } else if (user instanceof Administrator) {
-                if (db.checkQuantityOfUsersByType("Administrator") >= 2) {
-                    db.removeUser(user.getUserName());
+                if (dbLocal.checkQuantityOfUsersByType("Administrator") >= 2) {
+                    dbLocal.removeUser(user.getUserName());
                     MainSystem.LOG.info("the user of administarator " +name+" is deleted by the administrator");
                     return "the user deleted succsesfully";
                 }
@@ -111,7 +109,7 @@ public class Administrator extends User {
 
                 //2.	נדרש להסיר את המעקב שלו מכל המשחקים (לדעתי יקרה אוטומטי כאשר יוסר המעקב מקבוצה ?)
                 ///do the delete
-                db.removeUser(user.getUserName());
+                dbLocal.removeUser(user.getUserName());
                 MainSystem.LOG.info("the fan " +name+" is deleted by the administrator");
                 return "the user deleted succsesfully";
 
@@ -126,7 +124,7 @@ public class Administrator extends User {
                         owner.removeAppointmentManager(owner.getManagers_appointments().get(manager));
                     }
                     team.removeAssent(owner);
-                    db.removeUser(owner.getUserName());
+                    dbLocal.removeUser(owner.getUserName());
                     MainSystem.LOG.info("the team owner " +name+" is deleted by the administrator");
                     return "the user deleted succsesfully";
                 }
@@ -148,7 +146,7 @@ public class Administrator extends User {
                     }
                 }
                     if(isActive==false){
-                        db.removeUser(user.getUserName());
+                        dbLocal.removeUser(user.getUserName());
                         MainSystem.LOG.info("the referee " +name+" is deleted by the administrator");
                         return "the user deleted succsesfully";
 
@@ -172,7 +170,7 @@ public class Administrator extends User {
                     }
                     if (isActive == false) {
                         team.removePlayer(player);
-                        db.removeUser(user.getUserName());
+                        dbLocal.removeUser(user.getUserName());
                         MainSystem.LOG.info("the player " + name + " is deleted by the administrator");
                         return "the user deleted succsesfully";
                     }
@@ -197,7 +195,7 @@ public class Administrator extends User {
                         }
                         if (isActive == false) {
                             team.removeCoach(coach);
-                            db.removeUser(user.getUserName());
+                            dbLocal.removeUser(user.getUserName());
                             MainSystem.LOG.info("the coach " +name+" is deleted by the administrator");
                             return "the user deleted succsesfully";
                         }
@@ -206,7 +204,7 @@ public class Administrator extends User {
             }
 
             else if (user instanceof Manager){
-                db.removeUser(user.getUserName());
+                dbLocal.removeUser(user.getUserName());
                 MainSystem.LOG.info("the manager " +name+" is deleted by the administrator");
                 return "the user deleted succsesfully";
 

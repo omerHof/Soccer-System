@@ -1,7 +1,7 @@
 package LeagueSeasonsManagment;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -42,7 +42,7 @@ public class RandomTwoRoundsGamePolicyTest {
         teams.add(h);
         teams.add(i);
         teams.add(j);
-        DB.getInstance();
+        DBLocal.getInstance();
         year= 2020;
         policy = new RandomTwoRoundsGamePolicy(teams,year);
     }

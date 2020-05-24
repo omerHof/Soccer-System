@@ -1,5 +1,5 @@
 package Users;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Assent;
@@ -15,6 +15,7 @@ public class TeamOwner extends User implements Assent {
     private boolean afford = true;
     private HashMap<String, TeamOwner> team_owners_appointments = new HashMap<>();
     private HashMap<String, Manager> managers_appointments = new HashMap<>();
+    //private HashMap<String, Boolean> authorizations = new HashMap<>();
 
     /**
      * Constructor
@@ -35,8 +36,8 @@ public class TeamOwner extends User implements Assent {
      * The answer is assigned to the field permission.
      */
     public void askPermissionToOpenTeam (){
-        DB db = DB.getInstance();
-        AssociationRepresentative associationRepresentative = (AssociationRepresentative) db.getUserType("AssociationRepresentative");//todo: check tali
+        DBLocal dbLocal = DBLocal.getInstance();
+        AssociationRepresentative associationRepresentative = (AssociationRepresentative) dbLocal.getUserType("AssociationRepresentative");//todo: check tali
         this.permission = associationRepresentative.approveRegistration("who", "cares");
     }
 
@@ -52,7 +53,7 @@ public class TeamOwner extends User implements Assent {
                 me.put(super.getUserName(), this);
                 team = new Team(team_name, me);
                 team.setBudget(initialBudget);
-                DB.getInstance().setTeam(team);
+                DBLocal.getInstance().addTeam(team);
             }
             else{
                 team.setStatus(Team.teamStatus.active);
@@ -173,14 +174,14 @@ public class TeamOwner extends User implements Assent {
         }
 
         PremiumUserGenerator premiumUserGenerator = new PremiumUserGenerator();
-        DB db = DB.getInstance();
-        db.removeUser(user.getUserName());
+        DBLocal dbLocal = DBLocal.getInstance();
+        dbLocal.removeUser(user.getUserName());
         User new_user =  premiumUserGenerator.generate(user.getUserName(),user.getPassword(),""
                 ,role, user.getUserFullName(), user.getUserEmail(), null,"","","");
         if(role.equals("teamowner")){
             TeamOwner teamOwner = (TeamOwner)new_user;
             teamOwner.setWorth(300000);
-            db.addUser(teamOwner);
+            dbLocal.addUser(teamOwner);
             team.addAssent(teamOwner);
            teamOwner.setTeam(team);
             team_owners_appointments.put(new_user.getUserName(), (TeamOwner) new_user);
@@ -188,7 +189,7 @@ public class TeamOwner extends User implements Assent {
         if(role.equals("manager")){
             Manager manager = (Manager)new_user;
             manager.setWorth(200000);
-            db.addUser(manager);
+            dbLocal.addUser(manager);
             team.addAssent(manager);
            manager.setTeam(team);
             managers_appointments.put(new_user.getUserName(), (Manager) new_user);
@@ -225,11 +226,11 @@ public class TeamOwner extends User implements Assent {
         this.removeAssent(teamOwner);
         this.team_owners_appointments.remove(teamOwner.getUserName());
         SimpleUserGenerator simpleUserGenerator = new SimpleUserGenerator();
-        DB db = DB.getInstance();
-        db.removeUser(teamOwner.getUserName());
+        DBLocal dbLocal = DBLocal.getInstance();
+        dbLocal.removeUser(teamOwner.getUserName());
         Fan fan =  (Fan)simpleUserGenerator.generate(teamOwner.getUserName(),teamOwner.getPassword(),""
                 ,"", teamOwner.getUserFullName(), teamOwner.getUserEmail(), null,"","","");
-        db.addUser(fan);
+        dbLocal.addUser(fan);
         String message ="You have been removed of being team  owner of the team " + this.team.getName();
         Notification notification = new Notification(this, message, fan);
         notification.send();
@@ -255,11 +256,11 @@ public class TeamOwner extends User implements Assent {
         this.removeAssent(manager);
         this.managers_appointments.remove(manager.getUserName());
         SimpleUserGenerator simpleUserGenerator = new SimpleUserGenerator();
-        DB db = DB.getInstance();
-        db.removeUser(manager.getUserName());
+        DBLocal dbLocal = DBLocal.getInstance();
+        dbLocal.removeUser(manager.getUserName());
         Fan fan =  (Fan)simpleUserGenerator.generate(manager.getUserName(),manager.getPassword(),""
                 ,"", manager.getUserFullName(), manager.getUserEmail(), null,"","","");
-        db.addUser(fan);
+        dbLocal.addUser(fan);
         String message ="You have been removed of being manager of the team " + this.team.getName();
         Notification notification = new Notification(this, message, fan);
         notification.send();
@@ -364,5 +365,19 @@ public class TeamOwner extends User implements Assent {
 
     public void setManagers_appointments(HashMap<String, Manager> managers_appointments) {
         this.managers_appointments = managers_appointments;
+    }
+
+    public boolean setCurrentTeam(String team){
+        Team t = DBLocal.getInstance().getTeam(team);
+        if(t==null){
+            this.team=t;
+            return false;
+        }
+        this.team=t;
+
+        DBLocal.getInstance().setUser(this);
+        MainSystem.LOG.info("The team owner " +getUserFullName()+ " has move to the team "+team);
+        return true;
+
     }
 }

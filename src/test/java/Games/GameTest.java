@@ -1,7 +1,7 @@
 package Games;
 
-import DataForTest.DataBase;
-import SystemLogic.DB;
+import DataBase.DataBase;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -16,16 +16,16 @@ import static org.junit.Assert.assertNotEquals;
 
 public class GameTest {
 
-    DB db = DB.getInstance();
+    DBLocal dbLocal = DBLocal.getInstance();
     DataBase test = new DataBase();
     Game game;
 
     @Before
     public void setUp() throws Exception {
 
-        game = db.getLeague("Champions league").getSeasonByYear(2020).getAllGames().get(1).get(0);
-        //db.getTeam("barca").setBudget(100);
-        //double money = db.getLeague("Champions league").getSeasonByYear(2020).getSeasonScoreBoard().getTeamByName("barca").getBudget();
+        game = dbLocal.getLeague("Champions league").getSeasonByYear(2020).getAllGames().get(1).get(0);
+        //dbLocal.getTeam("barca").setBudget(100);
+        //double money = dbLocal.getLeague("Champions league").getSeasonByYear(2020).getSeasonScoreBoard().getTeamByName("barca").getBudget();
     }
 
     @After

@@ -4,7 +4,7 @@ import Teams.Team;
 
 public class AccountSystemProxy implements IExternalSystem, IAccountSystem {
     AccountSystem accountSystem= new AccountSystem();
-    DB db = DB.getInstance();
+    DBLocal db = DBLocal.getInstance();
     Payment payment;
 
     @Override

@@ -1,7 +1,7 @@
 package Users;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 
@@ -15,7 +15,9 @@ public class Referee extends User implements Observer {
 
     private String qualification;
     protected LinkedList<Game> myGames;
-    private DB db;
+    private DBLocal dbLocal;
+    protected ArrayList<Integer> gamesId;
+
 
 
     /**
@@ -34,10 +36,18 @@ public class Referee extends User implements Observer {
         this.userEmail = userEmail;
         this.qualification = qualification;
         myGames = new LinkedList<>();
-        this.db = DB.getInstance();
+        this.dbLocal = DBLocal.getInstance();
     }
 
     /**********getters and setters**********/
+
+    public ArrayList<Integer> getGamesId() {
+        return gamesId;
+    }
+
+    public void setGamesId(ArrayList<Integer> gamesId) {
+        this.gamesId = gamesId;
+    }
 
     public LinkedList<Game> getMyGames() {
         return myGames;
@@ -50,7 +60,7 @@ public class Referee extends User implements Observer {
     public void setQualification(String qualification) {
         this.qualification = qualification;
         MainSystem.LOG.info(this.userName + ": referee's details were updated.");
-        db.setUser(this);
+        dbLocal.setUser(this);
     }
 
     public void addGame (Game g){ //adds a game to the referee's list of games.
@@ -85,13 +95,13 @@ public class Referee extends User implements Observer {
     public void followThisGame(Game game){
         game.addObserver(this);
         myGames.add(game);
-        db.setUser(this);
+        dbLocal.setUser(this);
     }
 
 
     @Override
     public void update(Observable o, Object arg) {
-        User user = DB.getInstance().getUserType("AssociationRepresentative");
+        User user = DBLocal.getInstance().getUserType("AssociationRepresentative");
         String message = (String) arg;
         Notification notification = new Notification(user,message,this);
         //System.out.println("i got message");

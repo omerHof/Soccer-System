@@ -1,6 +1,6 @@
 package SystemLogic;
 
-import DataForTest.DataBase;
+import DataBase.DataBase;
 import Games.Game;
 import LeagueSeasonsManagment.League;
 import Teams.Team;
@@ -12,14 +12,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class DBTest {
-    DB db = DB.getInstance();
+public class DBLocalTest {
+    DBLocal dbLocal = DBLocal.getInstance();
     DataBase test = new DataBase();
     Game game;
 
     @Before
     public void setUp() throws Exception {
-        game = db.getLeague("Champions league").getSeasonByYear(2021).getAllGames().get(1).get(0);
+        game = dbLocal.getLeague("Champions league").getSeasonByYear(2021).getAllGames().get(1).get(0);
 
     }
 
@@ -31,9 +31,9 @@ public class DBTest {
     @Test
     public void getResultsInstance() {
         try {
-            DB.getInstance();
-            DB db1 = DB.getInstance();
-            assertEquals("need to be equals", db, db1);
+            DBLocal.getInstance();
+            DBLocal dbLocal1 = DBLocal.getInstance();
+            assertEquals("need to be equals", dbLocal, dbLocal1);
         } catch (Exception e) {
             System.out.println("test failed");
         }
@@ -42,8 +42,8 @@ public class DBTest {
     @Test
     public void getUser() {
         try {
-            assertEquals("test failed", "referee1", db.getUser("referee1").getUserName());
-            assertEquals("test failed",null,db.getUser("The Queen"));
+            assertEquals("test failed", "referee1", dbLocal.getUser("referee1").getUserName());
+            assertEquals("test failed",null, dbLocal.getUser("The Queen"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -52,8 +52,8 @@ public class DBTest {
     @Test
     public void getUserByFullName() {
         try {
-            assertEquals("test failed", "a", db.getUserByFullName("a").getUserFullName());
-            assertEquals("test failed",null,db.getUserByFullName("The Queen"));
+            assertEquals("test failed", "a", dbLocal.getUserByFullName("a").getUserFullName());
+            assertEquals("test failed",null, dbLocal.getUserByFullName("The Queen"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -63,8 +63,8 @@ public class DBTest {
     @Test
     public void userExist() {
         try {
-            assertTrue("test failed",db.userExist("The King"));
-            assertFalse("test failed",db.userExist("The Queen"));
+            assertTrue("test failed", dbLocal.userExist("The King"));
+            assertFalse("test failed", dbLocal.userExist("The Queen"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -76,10 +76,10 @@ public class DBTest {
             User goodUser = new Administrator("testUser", "1111", "good","e");
             User badUser = new Administrator("testUser", "1111", "bad","e");
 
-            db.setUser(goodUser);
-            db.setUser(badUser);
-            assertEquals("test failed",goodUser.getUserName(),db.getUserByFullName("good").getUserName());
-            assertEquals(null,db.getUserByFullName("bad"));
+            dbLocal.setUser(goodUser);
+            dbLocal.setUser(badUser);
+            assertEquals("test failed",goodUser.getUserName(), dbLocal.getUserByFullName("good").getUserName());
+            assertEquals(null, dbLocal.getUserByFullName("bad"));
 
         }catch (Exception e){
             System.out.println("test failed");
@@ -91,9 +91,9 @@ public class DBTest {
         try {
             User goodUser = new Administrator("testUser", "1111", "good", "e");
 
-            assertTrue("test failed",db.addUser(goodUser));
-            assertFalse("test failed",db.addUser(null));
-            assertFalse("test failed",db.addUser(goodUser));
+            assertTrue("test failed", dbLocal.addUser(goodUser));
+            assertFalse("test failed", dbLocal.addUser(null));
+            assertFalse("test failed", dbLocal.addUser(goodUser));
 
         }catch (Exception e){
             System.out.println("test failed");
@@ -103,8 +103,8 @@ public class DBTest {
     @Test
     public void removeUser() {
         try {
-            assertTrue("test failed",db.removeUser("The King"));
-            assertFalse("test failed",db.removeUser("The King"));
+            assertTrue("test failed", dbLocal.removeUser("The King"));
+            assertFalse("test failed", dbLocal.removeUser("The King"));
 
         }catch (Exception e){
             System.out.println("test failed");
@@ -114,8 +114,8 @@ public class DBTest {
     @Test
     public void getLeague() {
         try {
-            assertEquals("test failed", "Champions league", db.getLeague("Champions league").getName());
-            assertEquals("test failed",null,db.getLeague("a"));
+            assertEquals("test failed", "Champions league", dbLocal.getLeague("Champions league").getName());
+            assertEquals("test failed",null, dbLocal.getLeague("a"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -124,8 +124,8 @@ public class DBTest {
     @Test
     public void leagueExist() {
         try {
-            assertTrue("test failed", db.leagueExist("Champions league"));
-            assertFalse("test failed",db.leagueExist("a"));
+            assertTrue("test failed", dbLocal.leagueExist("Champions league"));
+            assertFalse("test failed", dbLocal.leagueExist("a"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -137,10 +137,10 @@ public class DBTest {
             League goodLeague = new League("A", 6);
             //League badLeague = new League("A", 6);
 
-            db.setLeague(goodLeague);
-            //db.setLeague(badLeague);
-            assertEquals("test failed", goodLeague.getName(), db.getLeague("A").getName());
-            //assertNotEquals("test failed", badLeague, db.getLeague("A"));
+            dbLocal.setLeague(goodLeague);
+            //dbLocal.setLeague(badLeague);
+            assertEquals("test failed", goodLeague.getName(), dbLocal.getLeague("A").getName());
+            //assertNotEquals("test failed", badLeague, dbLocal.getLeague("A"));
         } catch (Exception e) {
             System.out.println("test failed");
         }
@@ -151,9 +151,9 @@ public class DBTest {
         try {
             League goodLeague = new League("A", 6);
 
-            assertTrue("test failed", db.addLeague(goodLeague));
-            assertFalse("test failed", db.addLeague(null));
-            assertFalse("test failed", db.addLeague(goodLeague));
+            assertTrue("test failed", dbLocal.addLeague(goodLeague));
+            assertFalse("test failed", dbLocal.addLeague(null));
+            assertFalse("test failed", dbLocal.addLeague(goodLeague));
 
         } catch (Exception e) {
             System.out.println("test failed");
@@ -167,8 +167,8 @@ public class DBTest {
     @Test
     public void removeLeague() {
         try {
-            assertTrue("test failed", db.removeLeague("Champions league"));
-            assertFalse("test failed", db.removeLeague("Champions league"));
+            assertTrue("test failed", dbLocal.removeLeague("Champions league"));
+            assertFalse("test failed", dbLocal.removeLeague("Champions league"));
 
         }catch (Exception e){
             System.out.println("test failed");
@@ -178,8 +178,8 @@ public class DBTest {
     @Test
     public void getTeam() {
         try {
-            assertEquals("test failed", "barca", db.getTeam("barca").getName());
-            assertEquals("test failed",null,db.getTeam("a"));
+            assertEquals("test failed", "barca", dbLocal.getTeam("barca").getName());
+            assertEquals("test failed",null, dbLocal.getTeam("a"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -188,8 +188,8 @@ public class DBTest {
     @Test
     public void teamExist() {
         try {
-            assertTrue("test failed",db.teamExist("barca"));
-            assertFalse("test failed",db.teamExist("a"));
+            assertTrue("test failed", dbLocal.teamExist("barca"));
+            assertFalse("test failed", dbLocal.teamExist("a"));
         }catch (Exception e){
             System.out.println("test failed");
         }
@@ -201,10 +201,10 @@ public class DBTest {
             Team goodTeam = new Team("A");
             //Team badTeam = new Team("A");
 
-            db.setTeam(goodTeam);
-            //db.setTeam(badTeam);
-            assertEquals("test failed", goodTeam.getName(), db.getTeam("A").getName());
-            //assertNotEquals("test failed", badTeam.getName(), db.getTeam("A").getName());
+            dbLocal.setTeam(goodTeam);
+            //dbLocal.setTeam(badTeam);
+            assertEquals("test failed", goodTeam.getName(), dbLocal.getTeam("A").getName());
+            //assertNotEquals("test failed", badTeam.getName(), dbLocal.getTeam("A").getName());
         } catch (Exception e) {
             System.out.println("test failed");
         }
@@ -215,9 +215,9 @@ public class DBTest {
         try {
             Team goodTeam = new Team("A");
 
-            assertTrue("test failed", db.addTeam(goodTeam));
-            assertFalse("test failed", db.addTeam(null));
-            assertFalse("test failed", db.addTeam(goodTeam));
+            assertTrue("test failed", dbLocal.addTeam(goodTeam));
+            assertFalse("test failed", dbLocal.addTeam(null));
+            assertFalse("test failed", dbLocal.addTeam(goodTeam));
 
         } catch (Exception e) {
             System.out.println("test failed");
@@ -227,8 +227,8 @@ public class DBTest {
     @Test
     public void removeTeam() {
         try {
-            assertTrue("test failed",db.removeTeam("barca"));
-            assertFalse("test failed",db.removeTeam("barca"));
+            assertTrue("test failed", dbLocal.removeTeam("barca"));
+            assertFalse("test failed", dbLocal.removeTeam("barca"));
 
         }catch (Exception e){
             System.out.println("test failed");
@@ -238,7 +238,7 @@ public class DBTest {
     @Test
     public void getUserType() {
         try {
-            User result=db.getUserType("Administrator");
+            User result= dbLocal.getUserType("Administrator");
             assertNotEquals("test failed",null,result);
 
         }

@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -15,7 +15,7 @@ public class PlayerTest {
    Player p2;
     Team t1;
     Team t2;
-    DB dbtest;
+    DBLocal dbtest;
 
 
 
@@ -29,7 +29,7 @@ public class PlayerTest {
         p2 = new Player("neymarrrr","7757","neymar","nnn@gmail.com",localDate2,"striker");
         t1=new Team("juventus");
         t2=new Team("psg");
-        dbtest = DB.getInstance();
+        dbtest = DBLocal.getInstance();
         dbtest.addTeam(t1);
         dbtest.addTeam(t2);
         dbtest.addUser(p1);

@@ -1,7 +1,7 @@
 package Users;
 
-import DataForTest.DataBase;
-import SystemLogic.DB;
+import DataBase.DataBase;
+import SystemLogic.DBLocal;
 import Teams.Team;
 import org.junit.After;
 import org.junit.Before;
@@ -27,7 +27,7 @@ public class UserTest {
         teamOwner1 = new TeamOwner("teamOwner1", "1234", "teamOwnerName", "teamOwner.com");
         teamOwner1.setPermission(true);
         teamOwner1.openTeam("Arnon Sturm Graz", 200000);
-        team = DB.getInstance().getTeam("Arnon Sturm Graz");
+        team = DBLocal.getInstance().getTeam("Arnon Sturm Graz");
         Manager manager = new Manager("m", "1234", "m m", "m.com");
         teamOwner1.addAssent(manager, 10000);
         Fan fan = new Fan("f", "1234", "f f", "f.com");

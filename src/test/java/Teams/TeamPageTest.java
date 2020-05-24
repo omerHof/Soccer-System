@@ -1,6 +1,6 @@
 package Teams;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Users.Coach;
 import Users.Manager;
 import Users.Player;
@@ -24,7 +24,7 @@ public class TeamPageTest {
     TeamOwner owner;
     TeamPage hapoelPage;
     TeamPage maccabiPage;
-    DB dbtest = DB.getInstance();
+    DBLocal dbtest = DBLocal.getInstance();
 
     @Before
     public void setUp() throws Exception {
@@ -40,7 +40,7 @@ public class TeamPageTest {
         owner = new TeamOwner("anat4","122","anat forkosh","anat@gmail.com");
         manager = new Manager("sinay","122","mosh sinay","sinay@gmail.com");
 
-        dbtest = DB.getInstance();
+        dbtest = DBLocal.getInstance();
         dbtest.addTeam(hapoel);
         dbtest.addTeam(maccabi);
         dbtest.addUser(vermut);

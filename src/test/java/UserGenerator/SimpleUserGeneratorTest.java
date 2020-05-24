@@ -1,6 +1,6 @@
 package UserGenerator;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Users.AssociationRepresentative;
 import Users.Fan;
@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class SimpleUserGeneratorTest {
 
-    private DB dbTest = DB.getInstance();
+    private DBLocal dbLocalTest = DBLocal.getInstance();
     private AssociationRepresentative assoTest;
     private MainSystem mainSystem = MainSystem.getInstance();
     private SimpleUserGenerator sim = new SimpleUserGenerator();
@@ -31,11 +31,11 @@ public class SimpleUserGeneratorTest {
 
         //AssociationRepresentative a1 = new AssociationRepresentative("a1", "aa", "yiftah", "szoke@szoke");
 
-        assertNull(dbTest.getUserType("Fan")); //not exists yet.
+        assertNull(dbLocalTest.getUserType("Fan")); //not exists yet.
 
         Fan testFan = (Fan)sim.generate("talish", "927364929", "", "Fan", "tali schvartz", "tali@tali", null, "crossfit", "", "");
-        //assertTrue(dbTest.getUserByFullName("tali schvartz") instanceof Fan);
-        assertFalse(dbTest.getUserByFullName("tali schvartz") instanceof Referee);
+        //assertTrue(dbLocalTest.getUserByFullName("tali schvartz") instanceof Fan);
+        assertFalse(dbLocalTest.getUserByFullName("tali schvartz") instanceof Referee);
         assertNotNull(testFan);
 
     }

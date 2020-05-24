@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Team;
 
 import java.time.LocalDate;
@@ -48,10 +48,10 @@ public abstract class PersonalPage extends Observable {
 
     public void setTeamHistory(ArrayList<String>teamHistoryList) {
 
-        DB db = DB.getInstance();
+        DBLocal dbLocal = DBLocal.getInstance();
         for(String team: teamHistoryList){
-            if(db.getTeam(team)!=null){
-                Team t = db.getTeam(team);
+            if(dbLocal.getTeam(team)!=null){
+                Team t = dbLocal.getTeam(team);
                 teamHistory.add(t.getName());
             }
         }
@@ -59,9 +59,9 @@ public abstract class PersonalPage extends Observable {
 
 
     public void setOneTeamToHistory(String team){
-        DB db = DB.getInstance();
+        DBLocal dbLocal = DBLocal.getInstance();
 
-        Team t = db.getTeam(team);
+        Team t = dbLocal.getTeam(team);
         if(t!=null) {
             teamHistory.add(t.getName());
         }

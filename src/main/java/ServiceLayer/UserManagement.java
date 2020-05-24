@@ -1,7 +1,8 @@
 package ServiceLayer;
 
+import DataBase.ActivateDB;
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import SystemLogic.Notification;
 import Teams.Stadium;
@@ -62,6 +63,7 @@ public class UserManagement {
 
     public boolean logOut(){
         currentUser = null;
+        DBLocal.getInstance().writeToMongo();
         return MainSystem.getInstance().logOut();
     }
 
@@ -132,11 +134,11 @@ public class UserManagement {
     /** ---------------- COACH MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public HashMap<String, String> getAllCoaches() {
-        return DB.getInstance().getAllUserNameByType("Coach");
+        return DBLocal.getInstance().getAllUserNameByType("Coach");
     }
 
     public String getCoachPageDetails(String user_name) {
-        Coach coach = (Coach) DB.getInstance().getUser(user_name);
+        Coach coach = (Coach) DBLocal.getInstance().getUser(user_name);
         CoachPersonalPage coachPersonalPage = coach.getPage();
         if(coachPersonalPage==null){
             return null;
@@ -188,7 +190,7 @@ public class UserManagement {
     /** ---------------- PLAYER MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public ArrayList<String> getPageHistory(String user_name) {
-        User user =  DB.getInstance().getUser(user_name);
+        User user =  DBLocal.getInstance().getUser(user_name);
         PersonalPage personalPage;
         if(user instanceof  Player){
             personalPage = ((Player)user).getPage();
@@ -203,11 +205,11 @@ public class UserManagement {
     }
 
     public HashMap<String, String> getAllPlayers(){
-        return DB.getInstance().getAllUserNameByType("Player");
+        return DBLocal.getInstance().getAllUserNameByType("Player");
     }
 
     public String getPlayerPageDetails(String user_name){
-        Player player = (Player) DB.getInstance().getUser(user_name);
+        Player player = (Player) DBLocal.getInstance().getUser(user_name);
         PlayerPersonalPage playerPersonalPage = player.getPage();
         if(playerPersonalPage==null){
             return null;
@@ -285,7 +287,7 @@ public class UserManagement {
     /** ---------------- TEAM OWNER MANAGEMENT FUNCTIONALITY ---------------- **/
 
     public String addAssent(String assentType, String assentName) {
-        DB db = DB.getInstance();
+        DBLocal db = DBLocal.getInstance();
         if(assentType.equals("Player")){
             Player player = (Player) db.getUserByFullName(assentName);
             return ((TeamOwner) currentUser).addAssent(player, 0);
@@ -304,7 +306,7 @@ public class UserManagement {
     }
 
     public String removeAssent(String assentType, String assentName) {
-        DB db = DB.getInstance();
+        DBLocal db = DBLocal.getInstance();
         if(assentType.equals("Player")){
             Player player = (Player) db.getUserByFullName(assentName);
             return ((TeamOwner) currentUser).removeAssent(player);
@@ -336,7 +338,7 @@ public class UserManagement {
     }
 
     public String checkFinishedGames(String userName, String userType){
-        MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
+        MainReferee user=(MainReferee) DBLocal.getInstance().getUser(userName);
         return user.displayGameEvents();
 
     }
@@ -354,12 +356,12 @@ public class UserManagement {
         else if (currentUser instanceof AssociationRepresentative)
             games = ((AssociationRepresentative) currentUser).watchGamesList();
 
-        return DB.getInstance().getStringGames(games);
+        return DBLocal.getInstance().getStringGames(games);
     }
 
     public boolean setReport(String userName, String report){
         try {
-            MainReferee user=(MainReferee)DB.getInstance().getUser(userName);
+            MainReferee user=(MainReferee) DBLocal.getInstance().getUser(userName);
             user.editGameEvents(report);
             return true;
         }catch (Exception e){

@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Stadium;
 import Teams.Team;
 import org.junit.After;
@@ -17,7 +17,7 @@ public class TeamOwnerTest {
     static Team team;
     static Team team2;
     static Team team3;
-    static DB db = DB.getInstance();
+    static DBLocal dbLocal = DBLocal.getInstance();
 
 
     @Before
@@ -27,19 +27,19 @@ public class TeamOwnerTest {
         teamOwner3 = new TeamOwner("teamOwner3", "1234", "teamOwnerName", "teamOwner.com");
 //        teamOwner4 = new TeamOwner("teamOwner4", "1234", "teamOwnerName", "teamOwner.com");
         AssociationRepresentative associationRepresentative = new AssociationRepresentative("a", "1234", "a b", "a.com");
-        db.addUser(associationRepresentative);
-        db.setUser(teamOwner1);
-        db.setUser(teamOwner2);
-        db.setUser(teamOwner3);
+        dbLocal.addUser(associationRepresentative);
+        dbLocal.setUser(teamOwner1);
+        dbLocal.setUser(teamOwner2);
+        dbLocal.setUser(teamOwner3);
         teamOwner1.askPermissionToOpenTeam();
         teamOwner2.askPermissionToOpenTeam();
         teamOwner3.askPermissionToOpenTeam();
         teamOwner1.openTeam("Arnon Sturm Graz", 200000);
-        team = db.getTeam("Arnon Sturm Graz");
+        team = dbLocal.getTeam("Arnon Sturm Graz");
         teamOwner2.openTeam("Celtic veBenel", 300000);
-        team2 = db.getTeam("Celtic veBenel");
+        team2 = dbLocal.getTeam("Celtic veBenel");
         teamOwner3.openTeam("Pablo Rozenburg", 400000);
-        team3 = db.getTeam("Pablo Rozenburg");
+        team3 = dbLocal.getTeam("Pablo Rozenburg");
     }
 
     @After
@@ -107,8 +107,8 @@ public class TeamOwnerTest {
         teamOwner2.appoint(coach2, "manager", 14);
         assertTrue(teamOwner2.getTeam_owners_appointments().containsKey("owner"));
         assertTrue(teamOwner2.getManagers_appointments().containsKey("manager"));
-        User user1 = db.getUser("owner");
-        User user2 = db.getUser("manager");
+        User user1 = dbLocal.getUser("owner");
+        User user2 = dbLocal.getUser("manager");
         assertTrue(user1 instanceof TeamOwner);
         assertTrue(user2 instanceof Manager);
         assertEquals(((TeamOwner)user1).getTeam(), team2);
@@ -122,17 +122,17 @@ public class TeamOwnerTest {
         Coach coach = new Coach("zimri","1234", "coachName", "coach.com", "coach_that_coaches");
         Coach coach2 = new Coach("manager","1234", "coachName", "coach.com", "coach_that_coaches");
         Coach coach3 = new Coach("another_owner","1234", "coachName", "coach.com", "coach_that_coaches");
-        db.addUser(coach);
-        db.addUser(coach2);
-        db.addUser(coach3);
+        dbLocal.addUser(coach);
+        dbLocal.addUser(coach2);
+        dbLocal.addUser(coach3);
         teamOwner3.appoint(coach, "teamowner", 15);
-        TeamOwner zimri = (TeamOwner) db.getUser("zimri");
+        TeamOwner zimri = (TeamOwner) dbLocal.getUser("zimri");
         zimri.appoint(coach2, "manager",16);
         zimri.appoint(coach3, "teamowner",17);
         teamOwner3.removeAppointmentTeamOwner(zimri);
-        User fan1 = db.getUser("zimri");
-        User fan2 = db.getUser("manager");
-        User fan3 = db.getUser("another_owner");
+        User fan1 = dbLocal.getUser("zimri");
+        User fan2 = dbLocal.getUser("manager");
+        User fan3 = dbLocal.getUser("another_owner");
         assertTrue(fan1 instanceof Fan);
         assertTrue(fan2 instanceof Fan);
         assertTrue(fan3 instanceof Fan);

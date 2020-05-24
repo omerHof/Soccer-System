@@ -1,6 +1,6 @@
 package ServiceLayer;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
@@ -97,11 +97,11 @@ public class TeamManagement {
     }
 
     public ArrayList<String> getAllTeams() {
-        return DB.getInstance().getTeamsNames();
+        return DBLocal.getInstance().getFullTeamsNames();
     }
 
     public String getTeamPageDetails(String team_name) {
-        Team team = DB.getInstance().getTeam(team_name);
+        Team team = DBLocal.getInstance().getTeam(team_name);
         TeamPage teamPage = team.getPage();
         if(teamPage==null){
             return null;
@@ -110,7 +110,7 @@ public class TeamManagement {
     }
 
     public ArrayList<String> getTeamPlayers(String team_name) {
-        Team team = DB.getInstance().getTeam(team_name);
+        Team team = DBLocal.getInstance().getTeam(team_name);
         TeamPage teamPage = team.getPage();
         if(teamPage==null){
             return null;
@@ -125,7 +125,7 @@ public class TeamManagement {
     }
 
     public ArrayList<String> getTeamCoaches(String team_name) {
-        Team team = DB.getInstance().getTeam(team_name);
+        Team team = DBLocal.getInstance().getTeam(team_name);
         TeamPage teamPage = team.getPage();
         if(teamPage==null){
             return null;
@@ -139,7 +139,7 @@ public class TeamManagement {
     }
 
     public ArrayList<String> getTeamManagers(String team_name) {
-        Team team = DB.getInstance().getTeam(team_name);
+        Team team = DBLocal.getInstance().getTeam(team_name);
         TeamPage teamPage = team.getPage();
         if(teamPage==null){
             return null;
@@ -153,7 +153,7 @@ public class TeamManagement {
     }
 
     public boolean checkIfTeamNameExist(String teamName){
-        if(DB.getInstance().getTeam(teamName)==null){
+        if(DBLocal.getInstance().getTeam(teamName)==null){
             return true;
         }
         return false;

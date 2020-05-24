@@ -1,12 +1,9 @@
 package Games;
 
-import SystemLogic.DB;
 import SystemLogic.MainSystem;
 import Teams.Stadium;
 import Teams.Statistics;
 import Teams.Team;
-import Users.AssociationRepresentative;
-import Users.Fan;
 import Users.Referee;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
@@ -36,6 +33,9 @@ public class Game extends Observable {
     private LocalDateTime timeOfGame;
     private Timer timer;
     private Stadium stadium;
+    private static int idCounter=0;
+    private int id;
+
 
     /**
      * constructor
@@ -56,16 +56,34 @@ public class Game extends Observable {
         this.stadium = homeTeam.getStadium();
         this.finalReport="FINAL REPORT:\n";
         setAlarms();
+
+        idCounter++;
+        id=idCounter;
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
      * set the alarms before, after and on the game to all Stakeholders
      */
     public void setAlarms() {
-        dayToGame();
-        startGame();
-        endGame();
-        closeGame();
+        if(LocalDateTime.now().isBefore(timeOfGame.minus(2,ChronoUnit.MINUTES))) {//todo change as day before
+            dayToGame();
+            startGame();
+        }
+        if(LocalDateTime.now().isBefore(timeOfGame.minus(5,ChronoUnit.MINUTES))) {//todo change as end game
+            endGame();
+        }
+        if(LocalDateTime.now().isBefore(timeOfGame.minus(7,ChronoUnit.MINUTES))) {//todo change as close game
+            closeGame();
+        }
     }
 
     public void setChange(){
@@ -76,7 +94,7 @@ public class Game extends Observable {
      * set alarms day before the game
      */
     private void dayToGame() {
-        LocalDateTime dayBefore = timeOfGame.minus(5, ChronoUnit.SECONDS);//todo change seconds to days
+        LocalDateTime dayBefore = timeOfGame.minus(2, ChronoUnit.MINUTES);//todo change seconds to days
         DayToGame dayToGame = new DayToGame(homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, dayBefore);
@@ -110,7 +128,7 @@ public class Game extends Observable {
      * set alarms when the game close
      */
     private void closeGame() {
-        LocalDateTime closeGameTime = timeOfGame.plus(2, ChronoUnit.MINUTES);//todo change to 6.5 hours
+        LocalDateTime closeGameTime = timeOfGame.plus(7, ChronoUnit.MINUTES);//todo change to 6.5 hours
         CloseGame closeGame = new CloseGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);

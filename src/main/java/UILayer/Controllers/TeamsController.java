@@ -1,5 +1,7 @@
 package UILayer.Controllers;
 
+import DataBase.DataBase;
+import ServiceLayer.TeamManagement;
 import UILayer.Main;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -11,15 +13,23 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class TeamsController extends Controller {
 
+    TeamManagement teamManagement = new TeamManagement();
+    String teamName;
+    String budget;
+    boolean openTeam=false;
 
     @FXML
     TableView<SimpleStringProperty> teams_table = new TableView<>();
+
     @FXML
     TextFlow team_page = new TextFlow();
     @FXML

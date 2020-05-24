@@ -1,6 +1,6 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import Teams.Stadium;
 import Teams.Team;
 import Teams.TeamPage;
@@ -19,7 +19,7 @@ public class FanTest {
     Team t1;
     Player p1;
     Coach c1;
-    DB DBTest;
+    DBLocal DBLocalTest;
 
 
 
@@ -28,7 +28,7 @@ public class FanTest {
 
     /*
     unlock this when we want to check notifications about games!!!!! and lock the others
-    DB db = DB.getInstance();
+    DBLocal dbLocal = DBLocal.getInstance();
     DataBase test = new DataBase();
 
      */
@@ -41,11 +41,11 @@ public class FanTest {
         t1 = new Team("hapoel tel aviv");
         p1 = new Player("messi","12345","leo messi","leo123@gmail.com",localDate2,"striker");
         c1 = new Coach("klinger","123","nir klinger","nir123@gmail.com","head coach");
-        DBTest = DB.getInstance();
-        DBTest.addUser(f1);
-        DBTest.addUser(p1);
-        DBTest.addUser(c1);
-        DBTest.addTeam(t1);
+        DBLocalTest = DBLocal.getInstance();
+        DBLocalTest.addUser(f1);
+        DBLocalTest.addUser(p1);
+        DBLocalTest.addUser(c1);
+        DBLocalTest.addTeam(t1);
 
 
 
@@ -63,10 +63,10 @@ public class FanTest {
     @After
     public void tearDown() throws Exception {
 
-       DBTest.removeUser(f1.getUserName());
-        DBTest.removeUser(p1.getUserName());
-        DBTest.removeUser(c1.getUserName());
-        DBTest.removeTeam(t1.getName());
+       DBLocalTest.removeUser(f1.getUserName());
+        DBLocalTest.removeUser(p1.getUserName());
+        DBLocalTest.removeUser(c1.getUserName());
+        DBLocalTest.removeTeam(t1.getName());
         f1 =null;
         t1=null;
         p1=null;
@@ -82,9 +82,9 @@ public class FanTest {
     public void update() {
 
         Team barca = new Team("barcelona");
-        DBTest.addTeam(barca);
+        DBLocalTest.addTeam(barca);
         Team real = new Team("real madrid");
-        DBTest.addTeam(real);
+        DBLocalTest.addTeam(real);
 
         barca.createPage("team in spain","spain");
         real.createPage("team in spain","spain");
@@ -97,9 +97,9 @@ public class FanTest {
        TeamOwner hapoelOwner = new TeamOwner("aa","aa","nisanov","dsdsadas");
         TeamOwner barcaOwner = new TeamOwner("arrrra","aa","bartulemeo","dsdsadffas");
         TeamOwner realOwner = new TeamOwner("222222","aa","peres","dsdsadffas");
-        DBTest.addUser(hapoelOwner);
-        DBTest.addUser(barcaOwner);
-        DBTest.addUser(realOwner);
+        DBLocalTest.addUser(hapoelOwner);
+        DBLocalTest.addUser(barcaOwner);
+        DBLocalTest.addUser(realOwner);
         t1.addTeamOwner(hapoelOwner.getUserFullName());
         barca.addTeamOwner(barcaOwner.getUserFullName());
         real.addTeamOwner(realOwner.getUserFullName());
@@ -159,7 +159,7 @@ public class FanTest {
 
 
         Manager manager = new Manager("ssss","dsds","managerr","fsdfsdf@gmail.com");
-        DBTest.addUser(manager);
+        DBLocalTest.addUser(manager);
         t1.addManager(manager);
         assertEquals(f1.getReceivedNotifications().get(6).getContext(),"new update! the manager managerr has moved to hapoel tel aviv");
         f1.followTeam(barca.getName());
@@ -200,7 +200,7 @@ public class FanTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        User user = db.getUserByFullName("ido kest");
+        User user = dbLocal.getUserByFullName("ido kest");
         Fan fan = (Fan)user;
         Team t1 = fan.getFollowedTeams().get("man u");
         assertTrue(fan.getReceivedNotifications().size()>0);
@@ -311,7 +311,7 @@ public class FanTest {
         t1.createPage("play in red","israel");
         f1.followTeam(t1.getName());
         Team t2 = new Team("maccabi tel aviv");
-        DBTest.addTeam(t2);
+        DBLocalTest.addTeam(t2);
         t2.createPage("play in yellow","israel");
         f1.followTeam(t2.getName());
         assertEquals(2,f1.getFollowedTeams().size());
@@ -332,7 +332,7 @@ public class FanTest {
         t1.createPage("play in red","israel");
         f1.followTeam(t1.getName());
         Team t2 = new Team("maccabi tel aviv");
-        DBTest.addTeam(t2);
+        DBLocalTest.addTeam(t2);
         t2.createPage("play in yellow","israel");
         f1.followTeam(t2.getName());
         assertEquals(2,f1.getFollowedTeams().size());
@@ -350,7 +350,7 @@ public class FanTest {
         t1.createPage("play in red","israel");
         f1.followTeam(t1.getName());
         Team t2 = new Team("maccabi tel aviv");
-        DBTest.addTeam(t2);
+        DBLocalTest.addTeam(t2);
         t2.createPage("play in yellow","israel");
         f1.followTeam(t2.getName());
         assertEquals(2,f1.getFollowedTeams().size());

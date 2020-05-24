@@ -1,7 +1,7 @@
 package Users;
 
 import Games.Game;
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.Notification;
 import Teams.Team;
 import Teams.TeamPage;
@@ -27,7 +27,7 @@ public class AdministratorTest {
     AssociationRepresentative assocRep;
     Manager manager;
     Fan fan;
-    DB db;
+    DBLocal dbLocal;
 
 
     @Before
@@ -44,18 +44,18 @@ public class AdministratorTest {
         assocRep = new AssociationRepresentative("aa","aa","oren hason","aaaaaaa");
         manager = new Manager("bestManager","nnnn","someone","idiididi");
         fan = new Fan("ido747","1222","ido kestenbaum","ido747@gmsil.com");
-        db = DB.getInstance();
-        db.addTeam(team1);
-        db.addTeam(team2);
+        dbLocal = DBLocal.getInstance();
+        dbLocal.addTeam(team1);
+        dbLocal.addTeam(team2);
 
-        db.addUser(ad);
-        db.addUser(player);
-        db.addUser(coach);
-        db.addUser(owner);
-        db.addUser(referee);
-        db.addUser(assocRep);
-        db.addUser(manager);
-        db.addUser(fan);
+        dbLocal.addUser(ad);
+        dbLocal.addUser(player);
+        dbLocal.addUser(coach);
+        dbLocal.addUser(owner);
+        dbLocal.addUser(referee);
+        dbLocal.addUser(assocRep);
+        dbLocal.addUser(manager);
+        dbLocal.addUser(fan);
 
 
 
@@ -63,16 +63,16 @@ public class AdministratorTest {
 
     @After
     public void tearDown() throws Exception {
-        db.removeUser(ad.getUserFullName());
-        db.removeUser(player.getUserFullName());
-        db.removeUser(coach.getUserFullName());
-        db.removeUser(owner.getUserFullName());
-        db.removeUser(referee.getUserFullName());
-        db.removeUser(assocRep.getUserFullName());
-        db.removeUser(manager.getUserFullName());
-        db.removeUser(fan.getUserFullName());
-        db.removeTeam(team1.getName());
-        db.removeTeam(team2.getName());
+        dbLocal.removeUser(ad.getUserFullName());
+        dbLocal.removeUser(player.getUserFullName());
+        dbLocal.removeUser(coach.getUserFullName());
+        dbLocal.removeUser(owner.getUserFullName());
+        dbLocal.removeUser(referee.getUserFullName());
+        dbLocal.removeUser(assocRep.getUserFullName());
+        dbLocal.removeUser(manager.getUserFullName());
+        dbLocal.removeUser(fan.getUserFullName());
+        dbLocal.removeTeam(team1.getName());
+        dbLocal.removeTeam(team2.getName());
 
 
     }
@@ -91,7 +91,7 @@ public class AdministratorTest {
        // assertEquals(team3.getStatus(), Team.teamStatus.PermanentlyClosed);
 
         Team team3 = new Team("maccabi netanya");
-        db.addTeam(team3);
+        dbLocal.addTeam(team3);
         team3.addManager(manager);
         team3.addTeamOwner(owner);
         ad.closeTeamForPermanent(team3.getName());
@@ -111,18 +111,18 @@ public class AdministratorTest {
         AssociationRepresentative
          */
         AssociationRepresentative assocrep2 = new AssociationRepresentative("pp","pp","ppp","dsdasdas");
-        db.addUser(assocrep2);
+        dbLocal.addUser(assocrep2);
         ad.deleteUserFromSystem(assocRep.getUserFullName());
-        assertEquals(null,db.getUserByFullName("oren hason"));
+        assertEquals(null, dbLocal.getUserByFullName("oren hason"));
 
           /*
         administrator
          */
           ad.deleteUserFromSystem(ad.getUserFullName());
           Administrator admin = new Administrator("d","d","dddd","ddd");
-          db.addUser(admin);
+          dbLocal.addUser(admin);
           ad.deleteUserFromSystem(admin.getUserFullName());
-          assertEquals(1,db.checkQuantityOfUsersByType("Administrator"));
+          assertEquals(1, dbLocal.checkQuantityOfUsersByType("Administrator"));
 
 
 
@@ -172,7 +172,7 @@ team owner
          assertEquals(ad.deleteUserFromSystem(owner.getUserFullName()),"the team has less then 2 team owners");
          assertEquals(team1.getTeamOwners().size(),1);
          TeamOwner owner2 = new TeamOwner("avi","ddsdas","abramovich","dsdsa");
-        db.addUser(owner2);
+        dbLocal.addUser(owner2);
         team1.addTeamOwner(owner2);
         assertEquals(team1.getTeamOwners().size(),2);
         String message = ad.deleteUserFromSystem(owner.getUserFullName());
@@ -198,7 +198,7 @@ team owner
          message = ad.deleteUserFromSystem(referee.getUserFullName());
         assertEquals(message,"no delete, the referee has an open games");
         Referee ref2 = new Referee("dd","dd","dddd","dsdad","d");
-        db.addUser(ref2);
+        dbLocal.addUser(ref2);
         String message2 = ad.deleteUserFromSystem(ref2.getUserFullName());
         assertEquals(message2,"the user deleted succsesfully");
 

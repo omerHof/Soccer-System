@@ -1,20 +1,19 @@
 package Users;
 
-import SystemLogic.DB;
+import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
 import Teams.Assent;
 import Teams.Team;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Coach extends User implements Assent {
 
     private String teamRole;
     private int salary;
     private CoachPersonalPage page;
-    private DB  DB1;
+    private DBLocal DBLocal1;
     private double worth;
     private Team currentTeam;
 
@@ -27,14 +26,14 @@ public class Coach extends User implements Assent {
         salary=0;
         currentTeam=null;
         page = null;
-        DB1 = DB.getInstance();
+        DBLocal1 = DBLocal.getInstance();
 
     }
 
    public CoachPersonalPage createCoachPersonalPage(LocalDate birthDate, String team){
        MainSystem.LOG.info("The coach " +getUserFullName()+ " create personal page");
-       DB1=DB.getInstance();
-       Team currTeam = DB1.getTeam(team);
+       DBLocal1 = DBLocal.getInstance();
+       Team currTeam = DBLocal1.getTeam(team);
        if(currTeam==null){
            page = new CoachPersonalPage(userFullName,birthDate,teamRole,null);
        }
@@ -60,13 +59,13 @@ public class Coach extends User implements Assent {
         if(page!=null){
             page.setTeamRole(teamRole);
         }
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
 
     }
 
     public boolean setCurrentTeam(String team){
-        DB1=DB.getInstance();
-        Team t =  DB1.getTeam(team);
+        DBLocal1 = DBLocal.getInstance();
+        Team t =  DBLocal1.getTeam(team);
 
         if(t==null){
             currentTeam=t;
@@ -79,7 +78,7 @@ public class Coach extends User implements Assent {
             page.setCurrentTeam(t);
             page.setOneTeamToHistory(team);
         }
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
         MainSystem.LOG.info("The coach " +getUserFullName()+ " has move to the team "+team);
 
         return true;
@@ -101,7 +100,7 @@ public class Coach extends User implements Assent {
 
     public void setSalary(int salary) {
         this.salary = salary;
-        DB1.setUser(this);
+        DBLocal1.setUser(this);
     }
 
     public CoachPersonalPage getPage() {

@@ -78,6 +78,21 @@ public class Statistics implements Comparable {
         this.tie++;
         this.setScore(policy.getDraw());
     }
+    public void setWinsFromDB(int wins){
+        this.wins=wins;
+    }
+    public void setTiesFromDB(int ties){
+        this.tie=ties;
+    }
+    public void setLosesFromDB(int loses){
+        this.loses=loses;
+    }
+    public void setGoalsFromDB(int goals){
+        this.gs=goals;
+    }
+    public void setGcFromDB(int gc){
+        this.gc=gc;
+    }
 
     public int getGc() {
         return gc;
@@ -134,5 +149,9 @@ public class Statistics implements Comparable {
             }
         }
         return 0;
+    }
+
+    public IScorePolicy getPolicy() {
+        return policy;
     }
 }

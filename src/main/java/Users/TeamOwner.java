@@ -1,11 +1,11 @@
 package Users;
-import SystemLogic.DBLocal;
-import SystemLogic.MainSystem;
-import SystemLogic.Notification;
+import SystemLogic.*;
 import Teams.Assent;
 import Teams.Team;
 import UserGenerator.PremiumUserGenerator;
 import UserGenerator.SimpleUserGenerator;
+
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class TeamOwner extends User implements Assent {
@@ -311,7 +311,22 @@ public class TeamOwner extends User implements Assent {
                 Notification notification = new Notification(this, message, user);
                 notification.send();
             }
+            payTax(amount);
         }
+
+    }
+
+
+    public void payTax(double amount){
+        AccountSystemProxy accountSystemProxy = new AccountSystemProxy();
+        double tax = amount*getTaxRate(amount);
+        accountSystemProxy.addPayment(this.team.getName(), LocalDate.now().toString(),tax);
+        outcome(tax);
+    }
+
+    public double getTaxRate(double revenueAmount){
+        TaxSystem taxSystem = new TaxSystem();
+        return taxSystem.getTaxRate(revenueAmount);
     }
 
 

@@ -10,4 +10,28 @@ public class Payment {
         this.teamName = teamName;
         this.date = date;
     }
+
+    public String getDate() {
+        return date;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
 }

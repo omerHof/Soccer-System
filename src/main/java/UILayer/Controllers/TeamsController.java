@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -38,6 +39,11 @@ public class TeamsController extends Controller {
     @FXML
     TextFlow team_page2 = new TextFlow();
 
+    @FXML
+    Pane detailsPaneLeft;
+
+    @FXML
+    Pane detailsPaneRight;
 
 
     @Override
@@ -80,6 +86,9 @@ public class TeamsController extends Controller {
                                     setText(null);
                                 } else {
                                     btn.setOnAction(event -> {
+                                        detailsPaneLeft.setVisible(true);
+                                        detailsPaneRight.setVisible(true);
+
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
                                         showTeamPage(simple.getName());
                                     });
@@ -150,10 +159,9 @@ public class TeamsController extends Controller {
             return;
         }
 
-        Text teamName = new Text(team_name + "'s Page:" + "\n");
+        Text teamName = new Text(team_name + "'s Page:" + "\n\n");
         teamName.setUnderline(true);
-        teamName.setFill(Color.WHITE);
-        teamName.setFont(Font.font("System", FontWeight.BOLD, 20));
+        teamName.setFont(Font.font("System", FontWeight.BOLD, 18));
 
 
         team_page.getChildren().clear();
@@ -162,28 +170,24 @@ public class TeamsController extends Controller {
         String[] split_details = details.split(",");
         for(String detail: split_details){
             Text detailText = new Text(detail + "\n");
-            detailText.setFill(Color.WHITE);
-            detailText.setFont(Font.font("System", FontWeight.NORMAL, 18));
+            detailText.setFont(Font.font("System", FontWeight.NORMAL, 16));
             team_page.getChildren().add(detailText);
         }
 
         team_page2.getChildren().clear();
         Text playersText = new Text("Players: ");
-        playersText.setFill(Color.WHITE);
         playersText.setUnderline(true);
         playersText.setFont(Font.font("System", FontWeight.BOLD, 18));
 
         team_page2.getChildren().add(playersText);
         for(String player: players){
             Text detailTextPlayer = new Text(player + ", ");
-            detailTextPlayer.setFill(Color.WHITE);
             detailTextPlayer.setFont(Font.font("System", FontWeight.NORMAL, 16));
             team_page2.getChildren().add(detailTextPlayer);
         }
         team_page2.getChildren().add(new Text("\n"));
 
         Text coachesText = new Text("Coaches: ");
-        coachesText.setFill(Color.WHITE);
         coachesText.setFont(Font.font("System", FontWeight.BOLD, 18));
         coachesText.setUnderline(true);
 
@@ -191,7 +195,6 @@ public class TeamsController extends Controller {
         for(String coach: coaches){
             Text detailTextCoach = new Text(coach + ", ");
             detailTextCoach.setFont(Font.font("System", FontWeight.NORMAL, 16));
-            detailTextCoach.setFill(Color.WHITE);
             team_page2.getChildren().add(detailTextCoach);
         }
         team_page2.getChildren().add(new Text("\n"));
@@ -199,13 +202,11 @@ public class TeamsController extends Controller {
         Text managerText = new Text("Manager: ");
         managerText.setFont(Font.font("System", FontWeight.BOLD, 18));
         managerText.setUnderline(true);
-        managerText.setFill(Color.WHITE);
 
         team_page2.getChildren().add(managerText);
         for(String manager: managers){
             Text detailTextManager = new Text(manager + ", ");
             detailTextManager.setFont(Font.font("System", FontWeight.NORMAL, 16));
-            detailTextManager.setFill(Color.WHITE);
             team_page2.getChildren().add(detailTextManager);
         }
     }

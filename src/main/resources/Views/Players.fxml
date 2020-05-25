@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.PlayersController">
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-      <TableView fx:id="players_table" layoutX="87.0" layoutY="168.0" prefHeight="257.0" prefWidth="315.0" stylesheets="@tableViews.css" />
+      <TableView fx:id="players_table" layoutX="87.0" layoutY="168.0" prefHeight="257.0" prefWidth="392.0" stylesheets="@tableViews.css" />
       <Pane fx:id="detailsPane" layoutX="552.0" layoutY="168.0" opacity="0.6" prefHeight="257.0" prefWidth="362.0" style="-fx-background-color: white;" visible="false" />
       <Text layoutX="416.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Players" textAlignment="CENTER" wrappingWidth="183.79999999999984">
          <font>

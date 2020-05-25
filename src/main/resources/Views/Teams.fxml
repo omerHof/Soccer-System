@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
@@ -11,14 +12,16 @@
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <TableView fx:id="teams_table" layoutX="45.0" layoutY="191.0" prefHeight="190.0" prefWidth="235.0" stylesheets="@tableViews.css" />
-        <TextFlow fx:id="team_page" layoutX="353.0" layoutY="191.0" opacity="0.85" prefHeight="177.0" prefWidth="196.0" style="-fx-font-size: 20px; color: white;" visible="true" />
-      <TextFlow fx:id="team_page2" layoutX="604.0" layoutY="191.0" prefHeight="269.0" prefWidth="319.0" style="-fx-font-size: 18px; color: white" visible="true" />
+        <TableView fx:id="teams_table" layoutX="52.0" layoutY="191.0" prefHeight="184.0" prefWidth="312.0" stylesheets="@tableViews.css" />
       <Text layoutX="426.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teams" textAlignment="CENTER" wrappingWidth="183.79999999999984">
          <font>
             <Font name="System Bold" size="34.0" />
          </font>
       </Text>
+      <Pane fx:id="detailsPaneLeft" layoutX="436.0" layoutY="191.0" opacity="0.6" prefHeight="151.0" prefWidth="184.0" style="-fx-background-color: white;" visible="false" />
+      <Pane fx:id="detailsPaneRight" layoutX="700.0" layoutY="191.0" opacity="0.6" prefHeight="177.0" prefWidth="333.0" style="-fx-background-color: white;" visible="false" />
+      <TextFlow fx:id="team_page2" layoutX="711.0" layoutY="195.0" prefHeight="269.0" prefWidth="319.0" style="-fx-font-size: 18px; color: white" visible="true" />
+        <TextFlow fx:id="team_page" layoutX="447.0" layoutY="195.0" opacity="0.85" prefHeight="177.0" prefWidth="196.0" style="-fx-font-size: 20px; color: white;" visible="true" />
     </children>
 
 </AnchorPane>

@@ -8,6 +8,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -26,7 +29,8 @@ public class CoachesController extends Controller {
     @FXML
     TextFlow personal_page = new TextFlow();
 
-
+    @FXML
+    private Pane detailsPane;
 
 
     @Override
@@ -71,6 +75,7 @@ public class CoachesController extends Controller {
                                     setText(null);
                                 } else {
                                     btn.setOnAction(event -> {
+                                        detailsPane.setVisible(true);
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
                                         showCoachPage(simple.getValue(), simple.getName());
                                     });
@@ -145,7 +150,12 @@ public class CoachesController extends Controller {
 
         String[] split_details = details.split(",");
         personal_page.getChildren().clear();
-        personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));
+
+        Text coachText = new Text(full_name + "'s Personal Page:" + "\n\n");
+        coachText.setFont(Font.font("System", FontWeight.BOLD, 20));
+        coachText.setUnderline(true);
+
+        personal_page.getChildren().add(coachText);
         for(String detail: split_details){
             personal_page.getChildren().add(new Text(detail + "\n"));
         }

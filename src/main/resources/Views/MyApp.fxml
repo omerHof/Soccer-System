@@ -27,7 +27,7 @@
       <Button id="button" fx:id="addAssent" layoutX="473.0" layoutY="258.0" mnemonicParsing="false" onAction="#addAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="add assent" visible="false" />
       <Button id="button" fx:id="showMyGames" layoutX="383.0" layoutY="187.0" mnemonicParsing="false" onAction="#watchGamesList" prefHeight="55.0" prefWidth="188.0" stylesheets="@allPages.css" text="show my games" visible="false" />
       <Button id="button" fx:id="removeAssent" layoutX="690.0" layoutY="258.0" mnemonicParsing="false" onAction="#removeAssent" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="remove assent" visible="false" />
-        <Button id="button" fx:id="showLog" layoutX="473.0" layoutY="258.0" mnemonicParsing="false" onAction="#goToShowLog" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="show log" visible="false" />
+        <Button id="button" fx:id="showLog" layoutX="372.0" layoutY="187.0" mnemonicParsing="false" onAction="#goToShowLog" prefHeight="55.0" prefWidth="202.0" stylesheets="@allPages.css" text="show log" visible="false" />
 
     </children>
 

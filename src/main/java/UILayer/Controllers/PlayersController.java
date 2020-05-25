@@ -8,6 +8,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -35,6 +39,9 @@ public class PlayersController extends Controller {
     private TextField choosenWeight;
     @FXML
     private TextField choosenNumber;
+
+    @FXML
+    private Pane detailsPane;
 
 
     @Override
@@ -79,6 +86,7 @@ public class PlayersController extends Controller {
                                     setText(null);
                                 } else {
                                     btn.setOnAction(event -> {
+                                        detailsPane.setVisible(true);
                                         SimpleStringProperty simple = getTableView().getItems().get(getIndex());
                                         showPlayerPage(simple.getValue(), simple.getName());
                                     });
@@ -155,7 +163,11 @@ public class PlayersController extends Controller {
 
         String[] split_details = details.split(",");
         personal_page.getChildren().clear();
-        personal_page.getChildren().add(new Text(full_name + "'s Personal Page:" + "\n"));
+        Text playerText = new Text(full_name + "'s Personal Page:" + "\n");
+        playerText.setUnderline(true);
+        playerText.setFont(Font.font("System", FontWeight.BOLD, 20));
+
+        personal_page.getChildren().add(playerText);
         for(String detail: split_details){
             personal_page.getChildren().add(new Text(detail + "\n"));
         }

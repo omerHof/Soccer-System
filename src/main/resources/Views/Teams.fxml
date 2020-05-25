@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UILayer.Controllers.TeamsController">
@@ -10,10 +11,14 @@
 
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
-        <JFXButton layoutX="379.0" layoutY="115.0" ripplerFill="#dc6464" stylesheets="@Landing.css" text="THIS IS Teams" />
-        <TableView fx:id="teams_table" layoutX="45.0" layoutY="176.0" prefHeight="269.0" prefWidth="315.0" stylesheets="@tableViews.css" />
-        <TextFlow fx:id="team_page" layoutX="410.0" layoutY="176.0" prefHeight="269.0" prefWidth="319.0" />
-      <TextFlow fx:id="team_page2" layoutX="804.0" layoutY="176.0" prefHeight="269.0" prefWidth="319.0" />
+        <TableView fx:id="teams_table" layoutX="45.0" layoutY="191.0" prefHeight="190.0" prefWidth="235.0" stylesheets="@tableViews.css" />
+        <TextFlow fx:id="team_page" layoutX="353.0" layoutY="191.0" opacity="0.85" prefHeight="177.0" prefWidth="196.0" style="-fx-font-size: 20px; color: white;" visible="true" />
+      <TextFlow fx:id="team_page2" layoutX="604.0" layoutY="191.0" prefHeight="269.0" prefWidth="319.0" style="-fx-font-size: 18px; color: white" visible="true" />
+      <Text layoutX="426.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teams" textAlignment="CENTER" wrappingWidth="183.79999999999984">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Text>
     </children>
 
 </AnchorPane>

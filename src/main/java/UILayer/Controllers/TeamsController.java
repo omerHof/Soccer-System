@@ -9,6 +9,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -146,30 +149,64 @@ public class TeamsController extends Controller {
             team_page.getChildren().add(new Text(team_name + " has no page"));
             return;
         }
+
+        Text teamName = new Text(team_name + "'s Page:" + "\n");
+        teamName.setUnderline(true);
+        teamName.setFill(Color.WHITE);
+        teamName.setFont(Font.font("System", FontWeight.BOLD, 20));
+
+
         team_page.getChildren().clear();
-        team_page.getChildren().add(new Text(team_name + "'s Page:" + "\n"));
+        team_page.getChildren().add(teamName);
 
         String[] split_details = details.split(",");
         for(String detail: split_details){
-            team_page.getChildren().add(new Text(detail + "\n"));
+            Text detailText = new Text(detail + "\n");
+            detailText.setFill(Color.WHITE);
+            detailText.setFont(Font.font("System", FontWeight.NORMAL, 18));
+            team_page.getChildren().add(detailText);
         }
 
         team_page2.getChildren().clear();
-        team_page2.getChildren().add(new Text("Players: "));
+        Text playersText = new Text("Players: ");
+        playersText.setFill(Color.WHITE);
+        playersText.setUnderline(true);
+        playersText.setFont(Font.font("System", FontWeight.BOLD, 18));
+
+        team_page2.getChildren().add(playersText);
         for(String player: players){
-            team_page2.getChildren().add(new Text(player + ", "));
+            Text detailTextPlayer = new Text(player + ", ");
+            detailTextPlayer.setFill(Color.WHITE);
+            detailTextPlayer.setFont(Font.font("System", FontWeight.NORMAL, 16));
+            team_page2.getChildren().add(detailTextPlayer);
         }
         team_page2.getChildren().add(new Text("\n"));
 
-        team_page2.getChildren().add(new Text("Coaches: "));
+        Text coachesText = new Text("Coaches: ");
+        coachesText.setFill(Color.WHITE);
+        coachesText.setFont(Font.font("System", FontWeight.BOLD, 18));
+        coachesText.setUnderline(true);
+
+        team_page2.getChildren().add(coachesText);
         for(String coach: coaches){
-            team_page2.getChildren().add(new Text(coach + ", "));
+            Text detailTextCoach = new Text(coach + ", ");
+            detailTextCoach.setFont(Font.font("System", FontWeight.NORMAL, 16));
+            detailTextCoach.setFill(Color.WHITE);
+            team_page2.getChildren().add(detailTextCoach);
         }
         team_page2.getChildren().add(new Text("\n"));
 
-        team_page2.getChildren().add(new Text("Manager: "));
+        Text managerText = new Text("Manager: ");
+        managerText.setFont(Font.font("System", FontWeight.BOLD, 18));
+        managerText.setUnderline(true);
+        managerText.setFill(Color.WHITE);
+
+        team_page2.getChildren().add(managerText);
         for(String manager: managers){
-            team_page2.getChildren().add(new Text(manager + ", "));
+            Text detailTextManager = new Text(manager + ", ");
+            detailTextManager.setFont(Font.font("System", FontWeight.NORMAL, 16));
+            detailTextManager.setFill(Color.WHITE);
+            team_page2.getChildren().add(detailTextManager);
         }
     }
 

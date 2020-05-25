@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -43,6 +44,7 @@ public class LogController extends Controller {
         textArea.setText("");
         textLog = clientController.watchLogFiles();
         textArea.setText(textLog);
+        textArea.setFont(Font.font("System", 15));
 
         /*
         String[] lines = textToEdit.split("\n");

@@ -63,7 +63,12 @@ public class UserManagement {
 
     public boolean logOut(){
         currentUser = null;
-        DBLocal.getInstance().writeToMongo();
+        try {
+            DBLocal.getInstance().writeToMongo();
+        }catch (Exception e){
+            System.out.println("cannot find db");
+        }
+
         return MainSystem.getInstance().logOut();
     }
 

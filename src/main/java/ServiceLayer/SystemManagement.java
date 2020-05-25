@@ -24,8 +24,12 @@ public class SystemManagement {
     private void systemInitialize() {
         MainSystem.getInstance().initializeSystem();
         DBLocal db = DBLocal.getInstance();
+        try {
+            ActivateDB.getInstance().readInfo();
+        } catch (Exception e){
+            System.out.println("no db");
+        }
 
-        ActivateDB.getInstance().readInfo();
 
     }
 

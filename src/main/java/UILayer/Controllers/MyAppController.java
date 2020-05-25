@@ -74,6 +74,7 @@ public class MyAppController extends Controller {
 
             case "Administrator":
                 showLog.setVisible(true);
+                showErrorLog.setVisible(true);
                 break;
 
             case "Fan":

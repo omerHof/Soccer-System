@@ -86,18 +86,7 @@ public class Controller implements Initializable {
         s.show();
     }
 
-    @FXML
-    public void goToLeagues() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/Leagues.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage s = Main.getStage();
-        Scene scene = new Scene(root);
-        s.setScene(scene);
-        LeaguesController lc = fxmlLoader.getController();
 
-        Main.setStage(s);
-        s.show();
-    }
 
     @FXML
     protected void goToSignUp() throws IOException {
@@ -176,7 +165,17 @@ public class Controller implements Initializable {
         Stage s = Main.getStage();
         Scene scene = new Scene(root);
         s.setScene(scene);
-        ReportController cc = fxmlLoader.getController();
+        LogController cc = fxmlLoader.getController();
+        Main.setStage(s);
+        s.show();
+    }
+    public void goToShowErrorLog() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/openErrorLogFile.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage s = Main.getStage();
+        Scene scene = new Scene(root);
+        s.setScene(scene);
+        ErrorLogController cc = fxmlLoader.getController();
         Main.setStage(s);
         s.show();
     }

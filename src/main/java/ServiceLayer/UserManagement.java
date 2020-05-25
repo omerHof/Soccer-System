@@ -18,6 +18,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static SystemLogic.MainSystem.ERRORLOG;
+
 /**
  * This class represents a bridge for handling the user creation and functionality between the domain layer and the GUI layer
  */
@@ -66,7 +68,7 @@ public class UserManagement {
         try {
             DBLocal.getInstance().writeToMongo();
         }catch (Exception e){
-            System.out.println("cannot find db");
+            ERRORLOG.error("the db failed");
         }
 
         return MainSystem.getInstance().logOut();

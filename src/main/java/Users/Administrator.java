@@ -215,13 +215,32 @@ public class Administrator extends User {
     }
 
 
-    ////need to do
     public String watchLog(){
         String logString ="";
 
 
         try{
             FileInputStream fstream = new FileInputStream("Logs/System.log");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            String strLine;
+            /* read log line by line */
+            while ((strLine = br.readLine()) != null)   {
+                /* parse strLine to obtain what you want */
+                logString =logString +"\n"+ strLine;
+            }
+            fstream.close();
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+        return logString;
+    }
+
+    public String watchErrorLog(){
+        String logString ="";
+
+
+        try{
+            FileInputStream fstream = new FileInputStream("Logs/SystemError.log");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
             /* read log line by line */

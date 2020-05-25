@@ -26,6 +26,7 @@ public class MainSystem {
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
     public static Logger LOG = LogManager.getLogger();
+    public static Logger ERRORLOG = LogManager.getLogger("Logs/SystemError.log");
 
     private DBLocal dbLocal = DBLocal.getInstance();
     private TimerPasswordBuilder timerPasswordBuilder;
@@ -76,6 +77,7 @@ public class MainSystem {
     private void connectToLog(){
 //        LOG  = LogManager.getLogger();
         LOG.info("LOG FILE IS CONNECTED!");
+        ERRORLOG.info("\"ERRORLOG FILE IS CONNECTED!\"");
     }
 
     /**

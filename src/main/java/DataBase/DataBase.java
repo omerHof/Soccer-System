@@ -358,10 +358,10 @@ public class DataBase {
          */
         player45 = new Player("Zahavi", MainSystem.getInstance().encrypte("Zahavi1"), "Eran Zahavi", "Zahavi@gmail.com", LocalDate.of(1972,12, 3), "Striker");
         player46 = new Player("Keisee", MainSystem.getInstance().encrypte("Keisee1"), "Aduram Keisee", "Keisee@gmail.com", LocalDate.of(1972,12, 3), "Midfielder");
-        player47 = new Player("Maradona1", MainSystem.getInstance().encrypte("Maradona1"), "Diego Maradona", "Maradona@gmail.com", LocalDate.of(1972,12, 3), "Striker");
-        player48 = new Player("Batistuta1", MainSystem.getInstance().encrypte("Batistuta1"), "Gavriel Batistuta", "Batistuta@gmail.com", LocalDate.of(1972,12, 3), "Midfielder");
-        player49 = new Player("Hazan1", MainSystem.getInstance().encrypte("Hazan1"), "Alon Hazan", "Hazan@gmail.com", LocalDate.of(1972,12, 3), "Striker");
-        player50 = new Player("Beckham1", MainSystem.getInstance().encrypte("Beckham1"), "David Beckham", "Beckham@gmail.com", LocalDate.of(1972,12, 3), "Midfielder");
+        player47 = new Player("Maradona", MainSystem.getInstance().encrypte("Maradona1"), "Diego Maradona", "Maradona@gmail.com", LocalDate.of(1972,12, 3), "Striker");
+        player48 = new Player("Batistuta", MainSystem.getInstance().encrypte("Batistuta1"), "Gavriel Batistuta", "Batistuta@gmail.com", LocalDate.of(1972,12, 3), "Midfielder");
+        player49 = new Player("Hazan", MainSystem.getInstance().encrypte("Hazan1"), "Alon Hazan", "Hazan@gmail.com", LocalDate.of(1972,12, 3), "Striker");
+        player50 = new Player("Beckham", MainSystem.getInstance().encrypte("Beckham1"), "David Beckham", "Beckham@gmail.com", LocalDate.of(1972,12, 3), "Midfielder");
 
         /**
          * COACHES
@@ -568,7 +568,7 @@ public class DataBase {
         /**
          * add follow fans
          */
-        fan1.followTeam(team1.getName());
+        //fan1.followTeam(team1.getName());
         fan2.followTeam(team2.getName());
         fan3.followTeam(team3.getName());
         fan4.followThisPage(coach1.getUserFullName());

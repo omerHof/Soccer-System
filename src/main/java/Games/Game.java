@@ -74,16 +74,21 @@ public class Game extends Observable {
      * set the alarms before, after and on the game to all Stakeholders
      */
     public void setAlarms() {
-        if(LocalDateTime.now().isBefore(timeOfGame.minus(2,ChronoUnit.MINUTES))) {//todo change as day before
+        if(LocalDateTime.now().isBefore(timeOfGame.minus(1,ChronoUnit.MINUTES))) {//todo change as day before
             dayToGame();
             startGame();
+            endGame();
+            closeGame();
+
+
         }
-        if(LocalDateTime.now().isBefore(timeOfGame.minus(5,ChronoUnit.MINUTES))) {//todo change as end game
+        /*
+        if(LocalDateTime.now().isBefore(timeOfGame.minus(2,ChronoUnit.MINUTES))) {//todo change as end game
             endGame();
         }
         if(LocalDateTime.now().isBefore(timeOfGame.minus(7,ChronoUnit.MINUTES))) {//todo change as close game
             closeGame();
-        }
+        }*/
     }
 
     public void setChange(){
@@ -94,7 +99,7 @@ public class Game extends Observable {
      * set alarms day before the game
      */
     private void dayToGame() {
-        LocalDateTime dayBefore = timeOfGame.minus(2, ChronoUnit.MINUTES);//todo change seconds to days
+        LocalDateTime dayBefore = timeOfGame.minus(1, ChronoUnit.MINUTES);//todo change seconds to days
         DayToGame dayToGame = new DayToGame(homeTeam, awayTeam, this);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, dayBefore);
@@ -117,7 +122,7 @@ public class Game extends Observable {
      * set alarms when the game start
      */
     private void endGame() {
-        LocalDateTime GameEndTime = timeOfGame.plus(5, ChronoUnit.MINUTES);//todo change to 90 minutes
+        LocalDateTime GameEndTime = timeOfGame.plus(2, ChronoUnit.MINUTES);//todo change to 90 minutes
         EndGame endGame = new EndGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, GameEndTime);
@@ -128,7 +133,7 @@ public class Game extends Observable {
      * set alarms when the game close
      */
     private void closeGame() {
-        LocalDateTime closeGameTime = timeOfGame.plus(10, ChronoUnit.MINUTES);//todo change to 6.5 hours
+        LocalDateTime closeGameTime = timeOfGame.plus(7, ChronoUnit.MINUTES);//todo change to 6.5 hours
         CloseGame closeGame = new CloseGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);
@@ -378,7 +383,7 @@ class EndGame extends TimerTask {
     private String eventListToReport(ArrayList<Event> eventBook) {
         String report = "";
         for (Event event : eventBook) {
-            report += event.evenToString() + "\t";
+            report += event.evenToString() + "\n";
         }
         return report;
     }

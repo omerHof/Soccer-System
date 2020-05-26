@@ -81,7 +81,7 @@ public class PremiumUserGenerator implements IUserGenerator {
                 }
 
                 case ("referee"): { //Register a referee
-                    User newReferee = new Referee(userName, password, fullName, qualification,userEmail);
+                    User newReferee = new Referee(userName, password, fullName,userEmail,qualification);
                     if(!managementPassword.equals("onlyChangeStatus")) //association representative changed a fan's status. no need to write this in LOG.
                         MainSystem.LOG.info("A new referee: " + userName + " was created successfully !");
                     return newReferee;

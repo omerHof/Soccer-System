@@ -49,8 +49,6 @@ public class ProfileController extends Controller {
     @FXML
     TextField userNameDetail;
 
-    @FXML
-    TextField password;
 
     @FXML
     TextField fullName;
@@ -135,7 +133,7 @@ public class ProfileController extends Controller {
         //display his correct details
         List<String> userDetails = clientController.getUserDetails();
         userNameDetail.appendText(userDetails.get(2));
-        password.appendText(userDetails.get(1));
+
         fullName.appendText(userDetails.get(0));
         email.appendText(userDetails.get(3));
         if(userType.equals("Player")){
@@ -229,7 +227,7 @@ public class ProfileController extends Controller {
     private boolean checkOnlyLetters() {
         return ((!userFullName.equals(""))
                 && (userFullName != null)
-                && (userFullName.matches("^[a-zA-Z ]*$|| ")));
+                && (userFullName.matches("^[a-zA-Z ]*$|| ")) && userFullName.contains(" "));
     }
 
     public void submitEmail(ActionEvent actionEvent) {

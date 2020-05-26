@@ -56,7 +56,7 @@ public class Event {
     }
 
     public String evenToString(){
-        String event=eventTime+type.name()+playerName;
+        String event=eventTime+" "+type.name()+" "+playerName;
         return event;
     }
 }

@@ -29,7 +29,7 @@ public class TwoRoundsGamePolicy implements IGameInlayPolicy {
         this.listOfGames = new HashMap<>();
         this.day = DBLocal.getInstance().getLeagues()+1;
         //timeOfGame = LocalDateTime.of(year, Month.JANUARY,day,19,0,0);//todo add to code this line
-        timeOfGame = LocalDateTime.now().plus(3, ChronoUnit.MINUTES);
+        timeOfGame = LocalDateTime.now().plus(2, ChronoUnit.MINUTES);
     }
 
     /*****getters and setters*****/

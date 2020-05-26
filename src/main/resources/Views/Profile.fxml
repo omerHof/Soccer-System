@@ -13,14 +13,11 @@
     <children>
         <fx:include fx:id="navBar" source="Landing.fxml" />
 
-        <Label fx:id="userNameLbl" layoutX="30.0" layoutY="150.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Username:" />
-        <Label fx:id="passwordLbl" layoutX="30.0" layoutY="203.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Password:" />
+        <Label fx:id="userNameLbl" layoutX="30.0" layoutY="192.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Username:" />
         <Label fx:id="fullNameLbl" layoutX="30.0" layoutY="253.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Full name:" />
         <Label fx:id="emailLbl" layoutX="30.0" layoutY="302.0" prefHeight="27.0" prefWidth="86.0" stylesheets="@allPages.css" text="Email:" />
 
-        <TextField fx:id="userNameDetail" layoutX="123.0" layoutY="150.0" prefHeight="27.0" prefWidth="139.0" />
-
-      <TextField fx:id="password" layoutX="123.0" layoutY="203.0" prefHeight="27.0" prefWidth="139.0" />
+        <TextField fx:id="userNameDetail" layoutX="123.0" layoutY="192.0" prefHeight="27.0" prefWidth="139.0" />
 
       <JFXButton layoutX="273.0" layoutY="301.0" onAction="#showEmailEditor" prefHeight="30.0" prefWidth="48.0" style="-fx-background-color: #a6a6a6;" text="Edit">
          <font>

@@ -324,7 +324,7 @@ public class SignUpController extends Controller {
         }
 
         //creates the correct user generator, to send through the service layer.
-        if (userType.equals("Player") || userType.equals("Coach") || userType.equals("Manager") || userType.equals("Teamowner") || userType.equals("Referee"))
+        if (userType.equals("Player") || userType.equals("Coach") || userType.equals("Manager") || userType.equals("TeamOwner") || userType.equals("Referee"))
             generatorType = "PremiumUserGenerator";
 
         else if (userType.equals("AssociationRepresentative") || userType.equals("Administrator"))

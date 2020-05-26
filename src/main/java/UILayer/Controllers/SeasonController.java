@@ -91,6 +91,8 @@ public class SeasonController extends Controller {
     @FXML
     JFXButton backBTN;
 
+    int numOfTeams=4;
+
 
     ObservableList<String> options = FXCollections.observableArrayList();
     ObservableList<String> options2 = FXCollections.observableArrayList();
@@ -242,7 +244,7 @@ public class SeasonController extends Controller {
             }
             if(!choiceBox1.getValue().equals("")) {
                 //int numOfTeams=systemManagement.getLeagueTeamNumber(choiceBox1.getValue());
-                int numOfTeams=clientController.getLeagueTeamNumber(choiceBox1.getValue());
+                numOfTeams=clientController.getLeagueTeamNumber(choiceBox1.getValue());
                 refereePane.setVisible(true);
                 refereeMessage.setText("This league requires at least "+(numOfTeams/2*3)+" referees");
                 mainRefereePane.setVisible(true);
@@ -408,6 +410,12 @@ public class SeasonController extends Controller {
         }
         if(comboTeams.getItems().size()%2==1) {
             Alert alert = new Alert(Alert.AlertType.WARNING, "must choose even number of teams\n", ButtonType.CLOSE);
+            alert.setHeaderText("Incorrect fill");
+            alert.showAndWait();
+            return false;
+        }
+        if(comboTeams.getItems().size()!=numOfTeams) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "must choose "+numOfTeams+" teams\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();
             return false;

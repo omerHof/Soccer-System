@@ -128,7 +128,7 @@ public class Game extends Observable {
      * set alarms when the game close
      */
     private void closeGame() {
-        LocalDateTime closeGameTime = timeOfGame.plus(7, ChronoUnit.MINUTES);//todo change to 6.5 hours
+        LocalDateTime closeGameTime = timeOfGame.plus(10, ChronoUnit.MINUTES);//todo change to 6.5 hours
         CloseGame closeGame = new CloseGame(homeTeam, awayTeam, this, score);
         LocalDateTime from = LocalDateTime.now();
         Duration duration = Duration.between(from, closeGameTime);

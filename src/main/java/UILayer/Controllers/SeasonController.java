@@ -442,7 +442,7 @@ public class SeasonController extends Controller {
         String league=(String)comboLeague.getItems().get(0);
         //ArrayList<Integer> seasonCreatedYears=systemManagement.getAllSeasonYears(league);
         ArrayList<Integer> seasonCreatedYears= clientController.getAllSeasonYears(league);
-        if(seasonCreatedYears.contains(choiceBox5.getValue())) {
+        if(seasonCreatedYears.contains(Integer.parseInt(choiceBox5.getValue()))) {
             Alert alert = new Alert(Alert.AlertType.WARNING, "this season year is already created in this league\n", ButtonType.CLOSE);
             alert.setHeaderText("Incorrect fill");
             alert.showAndWait();

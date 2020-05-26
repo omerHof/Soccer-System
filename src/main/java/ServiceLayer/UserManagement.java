@@ -75,7 +75,7 @@ public class UserManagement {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter("Logs\\SystemError.log"));
                 LocalDateTime date = LocalDateTime.now();
-                String error = date +" ERROR - The db failed";
+                String error = date +" ERROR - DB connection is lost";
 
                 writer.write(error);
                 writer.close();

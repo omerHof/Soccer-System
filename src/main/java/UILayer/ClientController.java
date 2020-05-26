@@ -58,6 +58,7 @@ public class ClientController {
                 ResponseEntity<String> response2 = template
                         .exchange("http://132.72.65.53:8090/signUp", HttpMethod.POST, request, String.class);
                 return response2.getBody();
+
         }
 
         /** ------------ USERS ------------ **/

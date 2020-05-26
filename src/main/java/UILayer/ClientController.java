@@ -261,6 +261,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public  String watchErrorLogFiles() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/getErrorLogFiles",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
 
         /** ------------ TEAMS ------------ **/
 

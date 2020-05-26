@@ -391,6 +391,12 @@ public class UserManagement {
         return ((Administrator) currentUser).watchLog();
     }
 
+    public String watchErrorLog(){
+
+        return ((Administrator) currentUser).watchErrorLog();
+    }
+
+
 
 
 }

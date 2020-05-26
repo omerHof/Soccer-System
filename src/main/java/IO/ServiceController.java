@@ -230,6 +230,12 @@ public class ServiceController {
         return userManagement.watchLog();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/getErrorLogFiles")
+    public String getErrorLogFiles()
+    {
+        return userManagement.watchLog();
+    }
+
     /** ------------ TEAMS ------------ **/
 
     @RequestMapping(method = RequestMethod.GET, value = "/getAllTeams")

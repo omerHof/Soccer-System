@@ -42,7 +42,7 @@ public class ErrorLogController extends Controller {
 
     private void showErrorLog() throws IOException {
         textArea.setText("");
-        //textLog = clientController.watchErrorLogFiles();
+        textLog = clientController.watchErrorLogFiles();
         textArea.setText(textLog);
         textArea.setFont(Font.font("System", 15));
 

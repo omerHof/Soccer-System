@@ -213,7 +213,7 @@ public class Controller implements Initializable {
         Stage s = Main.getStage();
         Scene scene = new Scene(root);
         s.setScene(scene);
-        TeamsController pp = fxmlLoader.getController();
+        OpenTeamController pp = fxmlLoader.getController();
 
         Main.setStage(s);
         s.show();
@@ -261,7 +261,7 @@ public class Controller implements Initializable {
         Stage s = Main.getStage();
         Scene scene = new Scene(root);
         s.setScene(scene);
-        TeamsController pp = fxmlLoader.getController();
+        OpenTeamController pp = fxmlLoader.getController();
 
         Main.setStage(s);
         s.show();

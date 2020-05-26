@@ -14,7 +14,10 @@ import UserGenerator.SimpleUserGenerator;
 import Users.*;
 import javafx.util.Pair;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -65,11 +68,25 @@ public class UserManagement {
 
     public boolean logOut(){
         currentUser = null;
+
         try {
             DBLocal.getInstance().writeToMongo();
         }catch (Exception e){
-            ERRORLOG.error("the db failed");
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter("Logs\\SystemError.log"));
+                LocalDateTime date = LocalDateTime.now();
+                String error = date +" ERROR - The db failed";
+
+                writer.write(error);
+                writer.close();
+            }
+
+            catch (Exception ex){}
+           // ERRORLOG.error("the db failed");
+
+
         }
+
 
         return MainSystem.getInstance().logOut();
     }

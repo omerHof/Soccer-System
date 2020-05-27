@@ -220,7 +220,7 @@ public class Administrator extends User {
 
 
         try{
-            FileInputStream fstream = new FileInputStream("Logs/System.log");
+            FileInputStream fstream = new FileInputStream("logs/my.log");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
             /* read log line by line */

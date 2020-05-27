@@ -1,13 +1,13 @@
 package SystemLogic;
 
 import Games.Game;
+import IO.LoggingController;
 import UserGenerator.IUserGenerator;
 import UserGenerator.ManagementUserGenerator;
 import Users.Administrator;
 import Users.Referee;
 import Users.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -19,14 +19,15 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.LogManager;
 
 public class MainSystem {
     private static MainSystem single_instance = null;
     private AccountSystemProxy accountSystemProxy;
     private TaxSystemProxy taxSystemProxy;
     private User currentUser = null;
-    public static Logger LOG = LogManager.getLogger();
-    public static Logger ERRORLOG = LogManager.getLogger("Logs/SystemError.log");
+    public static Logger LOG = LoggingController.getLogger();
+
 
     private DBLocal dbLocal = DBLocal.getInstance();
     private TimerPasswordBuilder timerPasswordBuilder;
@@ -75,9 +76,8 @@ public class MainSystem {
      * This method initialize the logger
      */
     private void connectToLog(){
-//        LOG  = LogManager.getLogger();
         LOG.info("LOG FILE IS CONNECTED!");
-        ERRORLOG.info("\"ERRORLOG FILE IS CONNECTED!\"");
+
     }
 
     /**

@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static SystemLogic.MainSystem.ERRORLOG;
+
 
 /**
  * This class represents a bridge for handling the user creation and functionality between the domain layer and the GUI layer

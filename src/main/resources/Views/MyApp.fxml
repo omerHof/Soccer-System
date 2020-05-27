@@ -18,7 +18,7 @@
         <Button id="button" fx:id="addGameEvent" layoutX="509.0" layoutY="258.0" mnemonicParsing="false" onAction="#addGameEvent" prefHeight="55.0" prefWidth="203.0" stylesheets="@allPages.css" text="add a game event" visible="false" />
         <Button id="button" fx:id="openTeamPage" layoutX="367.0" layoutY="187.0" mnemonicParsing="false" onAction="#openTeamPage" prefHeight="55.0" prefWidth="204.0" stylesheets="@allPages.css" text="open team page" visible="false" />
         <Button id="button" fx:id="openPlayerPage" layoutX="380.0" layoutY="187.0" mnemonicParsing="false" onAction="#goToOpenPlayerPage" prefHeight="55.0" prefWidth="195.0" stylesheets="@allPages.css" text="open player page" visible="false" />
-        <Button id="button" fx:id="openCoachPage" layoutX="497.0" layoutY="200.0" mnemonicParsing="false" onAction="#openCoachPage" prefHeight="55.0" prefWidth="205.0" stylesheets="@allPages.css" text="open coach page" visible="false" />
+        <Button id="button" fx:id="openCoachPage" layoutX="309.0" layoutY="187.0" mnemonicParsing="false" onAction="#openCoachPage" prefHeight="55.0" prefWidth="205.0" stylesheets="@allPages.css" text="open coach page" visible="false" />
         <Button id="button" fx:id="getManagementPassword" layoutX="727.0" layoutY="258.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="55.0" prefWidth="260.0" stylesheets="@allPages.css" text="get management password" visible="false" />
 
 

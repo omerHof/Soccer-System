@@ -277,10 +277,13 @@ public class Team implements Comparable {
         if(team!=null) {
             team.removeTeamOwner(owner);
             dbLocal.setTeam(team);
+        }else {
+            teamOwners.put(teamOwner, owner);
+            owner.setTeam(this);
+            dbLocal.setTeam(this);
         }
-        teamOwners.put(teamOwner, owner);
-        owner.setTeam(team);
-        dbLocal.setTeam(this);
+
+
 
 
         MainSystem.LOG.info("the team owner " + teamOwner + " was added successfully to the team " + this.getName());

@@ -1,6 +1,7 @@
 package Teams;
 
 import Games.Game;
+import SystemLogic.DBLocal;
 import Users.Coach;
 import Users.Manager;
 import Users.Player;
@@ -135,6 +136,7 @@ public class TeamPage extends Observable {
     }
 
     public String getAllDetails() {
+        DBLocal db = DBLocal.getInstance();
        return name + "," + "Stadium: " + stadium.getName() + "," + "History: " + history +  "," + "Nation:" + nation;
     }
 }

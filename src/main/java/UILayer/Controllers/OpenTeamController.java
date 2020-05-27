@@ -44,6 +44,11 @@ public class OpenTeamController extends Controller{
             alertError.setContentText(errorMessage);
             error=true;
         }
+        if(clientController.checkIfHasATeam().equals("Owner already has a team")){
+            errorMessage = errorMessage +" Owner already has a team"+ "\n";
+            alertError.setContentText(errorMessage);
+            error=true;
+        }
 
 
         if(error){
@@ -141,13 +146,14 @@ public class OpenTeamController extends Controller{
             error=true;
         }
 
-        if(openTeam){
+        if(clientController.checkIfHasATeam().equals("Owner already has a team")){
             String message = clientController.opemTeamPage(chosenHistory.getText(),chosenNation.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText(message);
             alert.show();
+
         }
-        else{
+        else if(clientController.checkIfHasATeam().equals("null")){
             errorMessage = errorMessage +" The owner has no active team"+ "\n";
             alertError.setContentText(errorMessage);
             error=true;

@@ -32,6 +32,7 @@ public class MyAppController extends Controller {
     @FXML
     private Button openPlayerPage;
     @FXML
+
     private Button addGameEvent;
     @FXML
     private Button openCoachPage;

@@ -363,6 +363,11 @@ public class SeasonController extends Controller {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, initResult+"\n", ButtonType.CLOSE);
             alert.setHeaderText("INIT SEASON");
             alert.showAndWait();
+            try {
+                homePage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -576,7 +581,7 @@ public class SeasonController extends Controller {
             alert.setContentText("The event you entered was added successfully to the game's events list.");
             alert.showAndWait();
            // goToLanding(); ////////////////////////// ??????????????????????????????? ///////////////////////////////////                ?????????????????????????????????????
-            goToProfile();
+            homePage();
         }
 
         else { //no active game at the moment

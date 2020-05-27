@@ -3,6 +3,7 @@ package DataBase;
 import LeagueSeasonsManagment.*;
 import SystemLogic.DBLocal;
 import SystemLogic.MainSystem;
+import Teams.Stadium;
 import Teams.Statistics;
 import Teams.Team;
 import Users.Administrator;
@@ -34,12 +35,23 @@ public class DataBase {
      * Teams
      **/
     private ArrayList<Team> teams;
-    private Team team1 = new Team("barca");
-    private Team team2 = new Team("real");
-    private Team team3 = new Team("man u");
-    private Team team4 = new Team("liverpool");
+    private Team team1 = new Team("Barcelona");
+    private Team team2 = new Team("Real Madrid");
+    private Team team3 = new Team("Manchester United");
+    private Team team4 = new Team("Liverpool");
+
 
     /**
+     * Stadiums
+     **/
+    private Stadium stadium1 = new Stadium();
+    private Stadium stadium2 = new Stadium();
+    private Stadium stadium3 = new Stadium();
+    private Stadium stadium4 = new Stadium();
+
+
+    /**
+
      * Statistics
      **/
     private Statistics statistics1;
@@ -167,6 +179,8 @@ public class DataBase {
 
         dbLocal = DBLocal.getInstance();
 
+
+
         /**Score Policy**/
         scorePolicy = new RegularScorePolicy();
 
@@ -175,6 +189,17 @@ public class DataBase {
         team2.createPage("1932","Spain");
         team3.createPage("1913","UK");
         team4.createPage("1927","UK");
+
+        /**Teams stadiums**/
+        stadium1.setName("Camp Nou");
+        stadium2.setName("Santiago Bernabeu");
+        stadium3.setName("Old Trafford");
+        stadium4.setName("Anfield");
+        team1.setStadium(stadium1);
+        team2.setStadium(stadium2);
+        team3.setStadium(stadium3);
+        team4.setStadium(stadium4);
+
 
         /**Statistics**/
         statistics1 = new Statistics(scorePolicy);

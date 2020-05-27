@@ -31,7 +31,6 @@ public class PlayerPersonalPage extends PersonalPage {
         String result =
          super.name + "," +
         "Age: " + super.age + "," +
-        "Current Team: " +super.currentTeam.getName() +  "," +
         "Height:" + height + "," +
         "weight: " + weight + "," +
         "Position: " + position + "," +

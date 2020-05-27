@@ -31,7 +31,13 @@ public  class CoachPersonalPage extends PersonalPage {
     }
 
     public String getAllDetails() {
-        return super.name + "," + "Age: " + super.age + "," + "Current Team: " +super.currentTeam.getName() +  "," +
-                        "Team Role:" + teamRole;
+        String result =
+                super.name + ","
+                + "Age: " + super.age + ","
+                + "Team Role:" + teamRole;
+        if (super.currentTeam!=null){
+            result = result + "," + "Current Team: " + super.currentTeam.getName();
+        }
+        return result;
     }
 }

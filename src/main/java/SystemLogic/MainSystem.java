@@ -286,9 +286,6 @@ class TimerPasswordBuilder extends TimerTask {
         MainSystem.LOG.info("Special password changed at ");
     }
 
-
-
-
     public String getPassword(){
         return password;
     };

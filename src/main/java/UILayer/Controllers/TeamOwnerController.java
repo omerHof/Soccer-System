@@ -8,6 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
 
 
 public class TeamOwnerController extends Controller {
@@ -51,6 +52,11 @@ public class TeamOwnerController extends Controller {
         }
         if (result.equals("added successfully")){
             showAlert(Alert.AlertType.INFORMATION, "SUCCESS!", assentName + " was added to the team successfully");
+            try {
+                homePage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

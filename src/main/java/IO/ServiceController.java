@@ -282,7 +282,12 @@ public class ServiceController {
     }
 
 
-
+    @RequestMapping(method = RequestMethod.GET, value = "/opemTeamPage")
+    public String opemTeamPage(@RequestParam String param)
+    {
+        String userDetails[] = param.split(",");
+        return teamManagement.openTeamPage(userDetails[0],userDetails[1]);
+    }
 
 
 

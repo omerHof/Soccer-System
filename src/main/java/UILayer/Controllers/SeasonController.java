@@ -363,6 +363,11 @@ public class SeasonController extends Controller {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, initResult+"\n", ButtonType.CLOSE);
             alert.setHeaderText("INIT SEASON");
             alert.showAndWait();
+            try {
+                homePage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

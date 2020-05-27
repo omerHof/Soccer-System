@@ -158,4 +158,9 @@ public class TeamManagement {
         }
         return false;
     }
+
+    public String checkIfHasATeam() {
+        findTheUser();
+        return ((TeamOwner) currentUser).checkIfOwnerHasTeam();
+    }
 }

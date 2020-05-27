@@ -54,12 +54,20 @@ public class OpenTeamController extends Controller{
             //create team
             openTeam = true;
             teamName = chosenTeamName.getText();
+            String checkIfHasaTeam = clientController.checkIfHasATeam();
+            if(checkIfHasaTeam.equals("null")){
+                String message = clientController.CreateNewTeam(teamName,chosenTeamBudget.getText());
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setHeaderText("TEAM CREATION");
+                alert.setContentText(message);
+                alert.show();
+            }else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("TEAM DID NOT CREAT");
+                alert.setContentText(checkIfHasaTeam);
+                alert.show();
+            }
 
-            String message = clientController.CreateNewTeam(teamName,chosenTeamBudget.getText());
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("TEAM CREATION");
-            alert.setContentText(message);
-            alert.show();
             homePage();
         }
 

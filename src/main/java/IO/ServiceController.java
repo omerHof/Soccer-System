@@ -289,6 +289,11 @@ public class ServiceController {
         return teamManagement.openTeamPage(userDetails[0],userDetails[1]);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/checkIfHasATeam")
+    public String checkIfHasATeam(){
+        return teamManagement.checkIfHasATeam();
+    }
+
 
 
     /** ------------ LEAGUE ------------ **/

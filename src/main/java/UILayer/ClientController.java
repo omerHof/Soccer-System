@@ -326,6 +326,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String checkIfHasATeam() {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/checkIfHasATeam",
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
 
 
 
@@ -389,6 +395,8 @@ public class ClientController {
                         HttpMethod.GET, requestEntity, String.class, "42");
 
         }
+
+
 }
 
 class AddSeasonParam {

@@ -334,7 +334,7 @@ public class TeamOwner extends User implements Assent {
             return "null";
         }
         else{
-            return "owner has a team";
+            return "Owner already has a team";
         }
     }
 

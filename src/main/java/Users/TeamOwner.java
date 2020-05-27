@@ -328,6 +328,14 @@ public class TeamOwner extends User implements Assent {
         TaxSystem taxSystem = new TaxSystem();
         return taxSystem.getTaxRate(revenueAmount);
     }
+    public String checkIfOwnerHasTeam(){
+        if(this.team==null){
+            return "null";
+        }
+        else{
+            return "owner has a team";
+        }
+    }
 
 
 

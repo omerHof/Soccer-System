@@ -1,0 +1,801 @@
+2020-05-27 18:23:27.856  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.69 seconds (JVM running for 3.469)
+2020-05-27 18:23:38.509  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 16196 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:23:38.517  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
+2020-05-27 18:23:39.218  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 18:23:39.259  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:23:39.260  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 18:23:39.261  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 18:23:39.397  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 18:23:39.397  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 837 ms
+2020-05-27 18:23:39.429  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : LOG FILE IS CONNECTED!
+2020-05-27 18:23:39.430  INFO LAPTOP-3KCGVDF7 --- [        Timer-0] I.LoggingController                      : Special password changed at 
+2020-05-27 18:23:39.431  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Account System is Connected
+2020-05-27 18:23:39.433  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Tax System is Connected
+2020-05-27 18:23:39.436  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Administrator was appointed successfully
+2020-05-27 18:23:40.069  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:23:40.092  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:23:40.123  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 18:23:40.124  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:210}] to localhost:27017
+2020-05-27 18:23:40.124  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:209}] to localhost:27017
+2020-05-27 18:23:40.127  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2337700}
+2020-05-27 18:23:40.127  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2449900}
+2020-05-27 18:23:40.138  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:211}] to localhost:27017
+2020-05-27 18:23:40.163  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele create personal page
+2020-05-27 18:23:40.201  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard create personal page
+2020-05-27 18:23:40.202  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane create personal page
+2020-05-27 18:23:40.204  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic create personal page
+2020-05-27 18:23:40.205  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes create personal page
+2020-05-27 18:23:40.205  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire create personal page
+2020-05-27 18:23:40.206  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez create personal page
+2020-05-27 18:23:40.206  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien create personal page
+2020-05-27 18:23:40.207  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola create personal page
+2020-05-27 18:23:40.208  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino create personal page
+2020-05-27 18:23:40.210  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran create personal page
+2020-05-27 18:23:40.211  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner create personal page
+2020-05-27 18:23:40.213  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood create personal page
+2020-05-27 18:23:40.214  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao create personal page
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets create personal page
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos create personal page
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson create personal page
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the page of: Mohamed Salah
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 18:23:40.215  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : ido kest follow the page of: Quique Setien
+2020-05-27 18:23:40.218  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team man u has a new stadium
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal has move to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Arnau Puigmal was added successfully to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire has move to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harry Maguire was added successfully to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird has move to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ethan Laird was added successfully to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong has move to the team man u
+2020-05-27 18:23:40.220  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Tahith Chong was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eric Bailly was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Bruno Fernandes was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Garner was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Diogo Dalot was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player De Gea was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Andreas Pereira was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mason Greenwood was added successfully to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson has move to the team man u
+2020-05-27 18:23:40.221  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Alex Ferguson was added successfully to the team man u
+2020-05-27 18:23:40.222  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John Magnier was added successfully to the team man u
+2020-05-27 18:23:40.222  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team man u
+2020-05-27 18:23:40.222  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team barca has a new stadium
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ronald Araujo was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Jordi Alba was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luis Suarez was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marc-Andre Ter Stegen was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ivan Rakitic was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergi Roberto was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Samuel Umtiti was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Szoke get update
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Lionel Messi was added successfully to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique has move to the team barca
+2020-05-27 18:23:40.223  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gerard Pique was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele has move to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ousmane Dembele was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets has move to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Busquets was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Keset get update
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien has move to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Quique Setien was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner The People was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Josep Maria Bartomeu Floreta was added successfully to the team barca
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team real has a new stadium
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal has move to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dani Carvajal was added successfully to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric has move to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luka Modric was added successfully to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard has move to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eden Hazard was added successfully to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos has move to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Ramos was added successfully to the team real
+2020-05-27 18:23:40.224  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Toni Kroos was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Karim Benzema was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eder Militao was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marco Asensio was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gareth Bale was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Rodriguez was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alphonse Aréola was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari has move to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Santiago Solari was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner Florentino perez was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Zinedine Zidane was added successfully to the team real
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team liverpool has a new stadium
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker has move to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alison Becker was added successfully to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi has move to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Divock Origi was added successfully to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner has move to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Milner was added successfully to the team liverpool
+2020-05-27 18:23:40.225  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Roberto Firmino was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Takumi Minamino was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Naby Keita was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Katz get update
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mohamed Salah was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dejan Loveran was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harvey Elliott was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Joe Gomez was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sadio Mane was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz has move to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Peter Krawietz was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John William Henry was added successfully to the team liverpool
+2020-05-27 18:23:40.226  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Jurgen Klopp was added successfully to the team liverpool
+2020-05-27 18:23:40.229  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : tali Schvartz follow the team : man u
+2020-05-27 18:23:40.229  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : man u
+2020-05-27 18:23:40.229  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : real
+2020-05-27 18:23:40.229  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Omer Hofman follow the team : barca
+2020-05-27 18:23:40.314  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 18:23:40.423  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:23:40.427  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:212}] to localhost:27017
+2020-05-27 18:23:40.427  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=369300}
+2020-05-27 18:23:40.448  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:23:40.463  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 18:23:40.465  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.23 seconds (JVM running for 3.074)
+2020-05-27 18:24:12.424  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 26504 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:24:12.433  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
+2020-05-27 18:24:13.223  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 18:24:13.238  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:24:13.238  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 18:24:13.239  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 18:24:13.328  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 18:24:13.328  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 852 ms
+2020-05-27 18:24:13.362  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : LOG FILE IS CONNECTED!
+2020-05-27 18:24:13.362  INFO LAPTOP-3KCGVDF7 --- [        Timer-0] I.LoggingController                      : Special password changed at 
+2020-05-27 18:24:13.364  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Account System is Connected
+2020-05-27 18:24:13.365  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Tax System is Connected
+2020-05-27 18:24:13.367  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Administrator was appointed successfully
+2020-05-27 18:24:13.966  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:24:13.988  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:24:14.008  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 18:24:14.008  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:213}] to localhost:27017
+2020-05-27 18:24:14.008  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:214}] to localhost:27017
+2020-05-27 18:24:14.010  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1747900}
+2020-05-27 18:24:14.010  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1783700}
+2020-05-27 18:24:14.017  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:215}] to localhost:27017
+2020-05-27 18:24:14.039  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele create personal page
+2020-05-27 18:24:14.073  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto create personal page
+2020-05-27 18:24:14.073  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira create personal page
+2020-05-27 18:24:14.074  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard create personal page
+2020-05-27 18:24:14.075  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane create personal page
+2020-05-27 18:24:14.076  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic create personal page
+2020-05-27 18:24:14.076  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes create personal page
+2020-05-27 18:24:14.076  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire create personal page
+2020-05-27 18:24:14.077  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez create personal page
+2020-05-27 18:24:14.078  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien create personal page
+2020-05-27 18:24:14.079  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong create personal page
+2020-05-27 18:24:14.080  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal create personal page
+2020-05-27 18:24:14.080  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi create personal page
+2020-05-27 18:24:14.081  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez create personal page
+2020-05-27 18:24:14.082  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea create personal page
+2020-05-27 18:24:14.082  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino create personal page
+2020-05-27 18:24:14.082  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema create personal page
+2020-05-27 18:24:14.082  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino create personal page
+2020-05-27 18:24:14.082  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran create personal page
+2020-05-27 18:24:14.083  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale create personal page
+2020-05-27 18:24:14.084  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos create personal page
+2020-05-27 18:24:14.086  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson create personal page
+2020-05-27 18:24:14.087  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the page of: Mohamed Salah
+2020-05-27 18:24:14.087  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 18:24:14.087  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : ido kest follow the page of: Quique Setien
+2020-05-27 18:24:14.090  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team man u has a new stadium
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal has move to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Arnau Puigmal was added successfully to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire has move to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harry Maguire was added successfully to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird has move to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ethan Laird was added successfully to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong has move to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Tahith Chong was added successfully to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly has move to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eric Bailly was added successfully to the team man u
+2020-05-27 18:24:14.092  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Bruno Fernandes was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Garner was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Diogo Dalot was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player De Gea was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Andreas Pereira was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mason Greenwood was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson has move to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Alex Ferguson was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John Magnier was added successfully to the team man u
+2020-05-27 18:24:14.093  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team man u
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team barca has a new stadium
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo has move to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ronald Araujo was added successfully to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba has move to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Jordi Alba was added successfully to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez has move to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luis Suarez was added successfully to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen has move to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marc-Andre Ter Stegen was added successfully to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic has move to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ivan Rakitic was added successfully to the team barca
+2020-05-27 18:24:14.094  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergi Roberto was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Samuel Umtiti was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Szoke get update
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Lionel Messi was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gerard Pique was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ousmane Dembele was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Busquets was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Keset get update
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien has move to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Quique Setien was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner The People was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Josep Maria Bartomeu Floreta was added successfully to the team barca
+2020-05-27 18:24:14.095  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team real has a new stadium
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dani Carvajal was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luka Modric was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eden Hazard was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Ramos was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Toni Kroos was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Karim Benzema was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eder Militao was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marco Asensio was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gareth Bale was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez has move to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Rodriguez was added successfully to the team real
+2020-05-27 18:24:14.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola has move to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alphonse Aréola was added successfully to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari has move to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Santiago Solari was added successfully to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner Florentino perez was added successfully to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Zinedine Zidane was added successfully to the team real
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team liverpool has a new stadium
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alison Becker was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Divock Origi was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Milner was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Roberto Firmino was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Takumi Minamino was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Naby Keita was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Katz get update
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mohamed Salah was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dejan Loveran was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott has move to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harvey Elliott was added successfully to the team liverpool
+2020-05-27 18:24:14.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez has move to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Joe Gomez was added successfully to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane has move to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sadio Mane was added successfully to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz has move to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Peter Krawietz was added successfully to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John William Henry was added successfully to the team liverpool
+2020-05-27 18:24:14.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Jurgen Klopp was added successfully to the team liverpool
+2020-05-27 18:24:14.100  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : tali Schvartz follow the team : man u
+2020-05-27 18:24:14.100  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : man u
+2020-05-27 18:24:14.100  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : real
+2020-05-27 18:24:14.100  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Omer Hofman follow the team : barca
+2020-05-27 18:24:14.178  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 18:24:14.284  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:24:14.289  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:216}] to localhost:27017
+2020-05-27 18:24:14.290  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=435300}
+2020-05-27 18:24:14.318  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:24:14.335  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 18:24:14.338  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.22 seconds (JVM running for 3.02)
+2020-05-27 18:25:22.315  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 20656 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:25:22.328  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
+2020-05-27 18:25:23.051  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 18:25:23.063  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:25:23.064  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 18:25:23.064  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 18:25:23.278  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 18:25:23.278  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 894 ms
+2020-05-27 18:25:23.310  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : LOG FILE IS CONNECTED!
+2020-05-27 18:25:23.311  INFO LAPTOP-3KCGVDF7 --- [        Timer-0] I.LoggingController                      : Special password changed at 
+2020-05-27 18:25:23.313  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Account System is Connected
+2020-05-27 18:25:23.314  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Tax System is Connected
+2020-05-27 18:25:23.365  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Administrator was appointed successfully
+2020-05-27 18:25:23.968  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:25:23.989  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:25:24.008  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 18:25:24.008  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:218}] to localhost:27017
+2020-05-27 18:25:24.008  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:217}] to localhost:27017
+2020-05-27 18:25:24.010  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1924900}
+2020-05-27 18:25:24.010  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1949900}
+2020-05-27 18:25:24.018  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:219}] to localhost:27017
+2020-05-27 18:25:24.052  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi create personal page
+2020-05-27 18:25:24.096  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti create personal page
+2020-05-27 18:25:24.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly create personal page
+2020-05-27 18:25:24.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira create personal page
+2020-05-27 18:25:24.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard create personal page
+2020-05-27 18:25:24.097  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane create personal page
+2020-05-27 18:25:24.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic create personal page
+2020-05-27 18:25:24.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes create personal page
+2020-05-27 18:25:24.098  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire create personal page
+2020-05-27 18:25:24.099  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez create personal page
+2020-05-27 18:25:24.100  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien create personal page
+2020-05-27 18:25:24.101  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong create personal page
+2020-05-27 18:25:24.102  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal create personal page
+2020-05-27 18:25:24.102  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott create personal page
+2020-05-27 18:25:24.102  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner create personal page
+2020-05-27 18:25:24.102  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal create personal page
+2020-05-27 18:25:24.102  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino create personal page
+2020-05-27 18:25:24.103  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran create personal page
+2020-05-27 18:25:24.104  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari create personal page
+2020-05-27 18:25:24.106  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood create personal page
+2020-05-27 18:25:24.107  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao create personal page
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets create personal page
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos create personal page
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson create personal page
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the page of: Mohamed Salah
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 18:25:24.108  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : ido kest follow the page of: Quique Setien
+2020-05-27 18:25:24.111  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team man u has a new stadium
+2020-05-27 18:25:24.113  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal has move to the team man u
+2020-05-27 18:25:24.113  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Arnau Puigmal was added successfully to the team man u
+2020-05-27 18:25:24.113  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire has move to the team man u
+2020-05-27 18:25:24.113  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harry Maguire was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ethan Laird was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Tahith Chong was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eric Bailly was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Bruno Fernandes was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Garner was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Diogo Dalot was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player De Gea was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Andreas Pereira was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mason Greenwood was added successfully to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson has move to the team man u
+2020-05-27 18:25:24.114  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Alex Ferguson was added successfully to the team man u
+2020-05-27 18:25:24.115  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John Magnier was added successfully to the team man u
+2020-05-27 18:25:24.115  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team man u
+2020-05-27 18:25:24.115  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team barca has a new stadium
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ronald Araujo was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Jordi Alba was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luis Suarez was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marc-Andre Ter Stegen was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ivan Rakitic was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergi Roberto was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Samuel Umtiti was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Szoke get update
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Lionel Messi was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gerard Pique was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele has move to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ousmane Dembele was added successfully to the team barca
+2020-05-27 18:25:24.116  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets has move to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Busquets was added successfully to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Keset get update
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien has move to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Quique Setien was added successfully to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner The People was added successfully to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Josep Maria Bartomeu Floreta was added successfully to the team barca
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team real has a new stadium
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dani Carvajal was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luka Modric was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eden Hazard was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Ramos was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Toni Kroos was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Karim Benzema was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao has move to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eder Militao was added successfully to the team real
+2020-05-27 18:25:24.117  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio has move to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marco Asensio was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale has move to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gareth Bale was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez has move to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Rodriguez was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola has move to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alphonse Aréola was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari has move to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Santiago Solari was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner Florentino perez was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Zinedine Zidane was added successfully to the team real
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team liverpool has a new stadium
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alison Becker was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Divock Origi was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Milner was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Roberto Firmino was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Takumi Minamino was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita has move to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Naby Keita was added successfully to the team liverpool
+2020-05-27 18:25:24.118  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Katz get update
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mohamed Salah was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dejan Loveran was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harvey Elliott was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Joe Gomez was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sadio Mane was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz has move to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Peter Krawietz was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John William Henry was added successfully to the team liverpool
+2020-05-27 18:25:24.119  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Jurgen Klopp was added successfully to the team liverpool
+2020-05-27 18:25:24.121  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : tali Schvartz follow the team : man u
+2020-05-27 18:25:24.121  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : man u
+2020-05-27 18:25:24.122  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : real
+2020-05-27 18:25:24.122  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Omer Hofman follow the team : barca
+2020-05-27 18:25:24.198  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 18:25:24.295  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:25:24.298  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:220}] to localhost:27017
+2020-05-27 18:25:24.299  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=321500}
+2020-05-27 18:25:24.320  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:25:24.334  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 18:25:24.337  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.375 seconds (JVM running for 3.204)
+2020-05-27 18:25:27.841  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-27 18:25:27.842  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2020-05-27 18:25:27.853  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 11 ms
+2020-05-27 18:25:41.089  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-2] I.LoggingController                      : Katz was logged in successfully
+2020-05-27 18:25:55.440  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-5] I.LoggingController                      : Roi Katz follow the team : liverpool
+2020-05-27 18:26:00.546  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-9] I.LoggingController                      : Katz was logged out successfully
+2020-05-27 18:35:23.630  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 1804 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:35:23.638  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
+2020-05-27 18:35:24.435  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 18:35:24.450  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:35:24.451  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 18:35:24.452  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 18:35:24.540  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 18:35:24.541  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 798 ms
+2020-05-27 18:35:24.576  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : LOG FILE IS CONNECTED!
+2020-05-27 18:35:24.577  INFO LAPTOP-3KCGVDF7 --- [        Timer-0] I.LoggingController                      : Special password changed at 
+2020-05-27 18:35:24.579  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Account System is Connected
+2020-05-27 18:35:24.580  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Tax System is Connected
+2020-05-27 18:35:24.582  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Administrator was appointed successfully
+2020-05-27 18:35:25.166  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:35:25.201  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:35:25.213  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 18:35:25.214  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:222}] to localhost:27017
+2020-05-27 18:35:25.214  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:221}] to localhost:27017
+2020-05-27 18:35:25.216  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1419100}
+2020-05-27 18:35:25.216  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1440500}
+2020-05-27 18:35:25.223  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:223}] to localhost:27017
+2020-05-27 18:35:25.244  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele create personal page
+2020-05-27 18:35:25.278  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto create personal page
+2020-05-27 18:35:25.278  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot create personal page
+2020-05-27 18:35:25.278  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard create personal page
+2020-05-27 18:35:25.279  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane create personal page
+2020-05-27 18:35:25.281  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic create personal page
+2020-05-27 18:35:25.281  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes create personal page
+2020-05-27 18:35:25.281  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire create personal page
+2020-05-27 18:35:25.282  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez create personal page
+2020-05-27 18:35:25.283  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien create personal page
+2020-05-27 18:35:25.283  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong create personal page
+2020-05-27 18:35:25.285  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal create personal page
+2020-05-27 18:35:25.285  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott create personal page
+2020-05-27 18:35:25.285  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner create personal page
+2020-05-27 18:35:25.285  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal create personal page
+2020-05-27 18:35:25.285  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola create personal page
+2020-05-27 18:35:25.286  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio create personal page
+2020-05-27 18:35:25.286  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi create personal page
+2020-05-27 18:35:25.286  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez create personal page
+2020-05-27 18:35:25.286  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea create personal page
+2020-05-27 18:35:25.287  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino create personal page
+2020-05-27 18:35:25.287  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema create personal page
+2020-05-27 18:35:25.288  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino create personal page
+2020-05-27 18:35:25.288  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran create personal page
+2020-05-27 18:35:25.289  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique create personal page
+2020-05-27 18:35:25.290  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita create personal page
+2020-05-27 18:35:25.290  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker create personal page
+2020-05-27 18:35:25.290  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood create personal page
+2020-05-27 18:35:25.291  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao create personal page
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets create personal page
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos create personal page
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson create personal page
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the page of: Mohamed Salah
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 18:35:25.292  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : ido kest follow the page of: Quique Setien
+2020-05-27 18:35:25.296  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team man u has a new stadium
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Arnau Puigmal has move to the team man u
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Arnau Puigmal was added successfully to the team man u
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harry Maguire has move to the team man u
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harry Maguire was added successfully to the team man u
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ethan Laird has move to the team man u
+2020-05-27 18:35:25.297  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ethan Laird was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Tahith Chong has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Tahith Chong was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eric Bailly has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eric Bailly was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Bruno Fernandes has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Bruno Fernandes was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Garner has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Garner was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Diogo Dalot has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Diogo Dalot was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player De Gea has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player De Gea was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Andreas Pereira has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Andreas Pereira was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mason Greenwood has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mason Greenwood was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Alex Ferguson has move to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Alex Ferguson was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John Magnier was added successfully to the team man u
+2020-05-27 18:35:25.298  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team man u
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team barca has a new stadium
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ronald Araujo has move to the team barca
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ronald Araujo was added successfully to the team barca
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Jordi Alba has move to the team barca
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Jordi Alba was added successfully to the team barca
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luis Suarez has move to the team barca
+2020-05-27 18:35:25.299  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luis Suarez was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marc-Andre Ter Stegen has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marc-Andre Ter Stegen was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ivan Rakitic has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ivan Rakitic was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergi Roberto has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergi Roberto was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Samuel Umtiti has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Samuel Umtiti was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Szoke get update
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Lionel Messi has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Lionel Messi was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gerard Pique has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gerard Pique was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Ousmane Dembele has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Ousmane Dembele was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Busquets has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Busquets was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Keset get update
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Quique Setien has move to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Quique Setien was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner The People was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Josep Maria Bartomeu Floreta was added successfully to the team barca
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team real has a new stadium
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dani Carvajal has move to the team real
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dani Carvajal was added successfully to the team real
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Luka Modric has move to the team real
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Luka Modric was added successfully to the team real
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eden Hazard has move to the team real
+2020-05-27 18:35:25.300  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eden Hazard was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sergio Ramos has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sergio Ramos was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Toni Kroos has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Toni Kroos was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Karim Benzema has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Karim Benzema was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Eder Militao has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Eder Militao was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Marco Asensio has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Marco Asensio was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Gareth Bale has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Gareth Bale was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Rodriguez has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Rodriguez was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alphonse Aréola has move to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alphonse Aréola was added successfully to the team real
+2020-05-27 18:35:25.301  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Santiago Solari has move to the team real
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Santiago Solari was added successfully to the team real
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner Florentino perez was added successfully to the team real
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Zinedine Zidane was added successfully to the team real
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team liverpool has a new stadium
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Alison Becker has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Alison Becker was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Divock Origi has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Divock Origi was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player James Milner has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player James Milner was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Roberto Firmino has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Roberto Firmino was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Takumi Minamino has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Takumi Minamino was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Naby Keita has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Naby Keita was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user Katz get update
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The user get update
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Mohamed Salah has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Mohamed Salah was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Dejan Loveran has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Dejan Loveran was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Harvey Elliott has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Harvey Elliott was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Joe Gomez has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Joe Gomez was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The player Sadio Mane has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the player Sadio Mane was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : The coach Peter Krawietz has move to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the coach Peter Krawietz was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the team owner John William Henry was added successfully to the team liverpool
+2020-05-27 18:35:25.302  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : the manager Jurgen Klopp was added successfully to the team liverpool
+2020-05-27 18:35:25.304  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : tali Schvartz follow the team : man u
+2020-05-27 18:35:25.304  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : man u
+2020-05-27 18:35:25.304  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : real
+2020-05-27 18:35:25.304  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Roi Katz follow the team : liverpool
+2020-05-27 18:35:25.304  INFO LAPTOP-3KCGVDF7 --- [           main] I.LoggingController                      : Omer Hofman follow the team : barca
+2020-05-27 18:35:25.380  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 18:35:25.498  INFO LAPTOP-3KCGVDF7 --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 18:35:25.501  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:224}] to localhost:27017
+2020-05-27 18:35:25.502  INFO LAPTOP-3KCGVDF7 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=682600}
+2020-05-27 18:35:25.533  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 18:35:25.561  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 18:35:25.565  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.333 seconds (JVM running for 3.293)
+2020-05-27 18:35:30.144  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-27 18:35:30.144  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2020-05-27 18:35:30.149  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2020-05-27 18:35:46.093  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-3] I.LoggingController                      : Dana123 was logged in successfully
+2020-05-27 18:36:21.948  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] I.LoggingController                      : Dana123 was logged out successfully

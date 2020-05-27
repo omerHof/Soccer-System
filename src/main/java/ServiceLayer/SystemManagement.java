@@ -1,9 +1,8 @@
 package ServiceLayer;
 
-import DataBase.DataBase;
-import SystemLogic.DBLocal;
-import SystemLogic.MainSystem;
-import DataBase.ActivateDB;
+import DomainLayer.SystemLogic.DBLocal;
+import DomainLayer.SystemLogic.MainSystem;
+import DBLayer.ActivateDB;
 
 import java.util.ArrayList;
 

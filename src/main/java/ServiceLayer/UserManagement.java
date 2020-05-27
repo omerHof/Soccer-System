@@ -1,18 +1,16 @@
 package ServiceLayer;
 
-import DataBase.ActivateDB;
-import Games.Game;
-import SystemLogic.DBLocal;
-import SystemLogic.MainSystem;
-import SystemLogic.Notification;
-import Teams.Stadium;
-import Teams.Team;
-import UserGenerator.IUserGenerator;
-import UserGenerator.ManagementUserGenerator;
-import UserGenerator.PremiumUserGenerator;
-import UserGenerator.SimpleUserGenerator;
-import Users.*;
-import javafx.util.Pair;
+import DomainLayer.Games.Game;
+import DomainLayer.SystemLogic.DBLocal;
+import DomainLayer.SystemLogic.MainSystem;
+import DomainLayer.SystemLogic.Notification;
+import DomainLayer.Teams.Stadium;
+import DomainLayer.Teams.Team;
+import DomainLayer.UserGenerator.IUserGenerator;
+import DomainLayer.UserGenerator.ManagementUserGenerator;
+import DomainLayer.UserGenerator.PremiumUserGenerator;
+import DomainLayer.UserGenerator.SimpleUserGenerator;
+import DomainLayer.Users.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

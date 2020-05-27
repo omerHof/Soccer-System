@@ -1,6 +1,5 @@
 package UILayer.Controllers;
 
-import DataBase.DataBase;
 import UILayer.ClientController;
 import UILayer.Main;
 import javafx.event.ActionEvent;
@@ -24,7 +23,7 @@ public class Controller implements Initializable {
     protected static String userName;
     protected static String userType;
     protected static ArrayList<String> newNotifications;
-    //DataBase db = new DataBase();
+    //DBLayer db = new DBLayer();
     protected static ClientController clientController = new ClientController();
 
 

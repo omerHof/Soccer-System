@@ -1,21 +1,21 @@
-import Games.CloseGameTest;
-import Games.DayToGameTest;
-import Games.EndGameTest;
-import Games.StartGameTest;
-import LeagueSeasonsManagment.*;
-import SystemLogic.DBLocalTest;
-import SystemLogic.MainSystemTest;
-import SystemLogic.NotificationTest;
-import SystemLogic.SearchTest;
-import Teams.StadiumTest;
-import Teams.StatisticsTest;
-import Teams.TeamPageTest;
-import Teams.TeamTest;
+import DomainLayer.Games.CloseGameTest;
+import DomainLayer.Games.DayToGameTest;
+import DomainLayer.Games.EndGameTest;
+import DomainLayer.Games.StartGameTest;
+import DomainLayer.LeagueSeasonsManagment.*;
+import DomainLayer.SystemLogic.DBLocalTest;
+import DomainLayer.SystemLogic.MainSystemTest;
+import DomainLayer.SystemLogic.NotificationTest;
+import DomainLayer.SystemLogic.SearchTest;
+import DomainLayer.Teams.StadiumTest;
+import DomainLayer.Teams.StatisticsTest;
+import DomainLayer.Teams.TeamPageTest;
+import DomainLayer.Teams.TeamTest;
 import UILayer.MainTest;
-import UserGenerator.ManagmentUserGeneratorTest;
-import UserGenerator.PremiumUserGenertatorTest;
-import UserGenerator.SimpleUserGeneratorTest;
-import Users.*;
+import DomainLayer.UserGenerator.ManagmentUserGeneratorTest;
+import DomainLayer.UserGenerator.PremiumUserGenertatorTest;
+import DomainLayer.UserGenerator.SimpleUserGeneratorTest;
+import DomainLayer.Users.*;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -25,7 +25,7 @@ public class TestRunner {
 
         /** ----------------- INITIALIZE ----------------- **/
 
-        /** Games **/
+        /** DomainLayer.Games **/
         Result closeGame_result = JUnitCore.runClasses(CloseGameTest.class);
         Result dayToGame_result = JUnitCore.runClasses(DayToGameTest.class);
         Result endGame_result = JUnitCore.runClasses(EndGameTest.class);
@@ -49,18 +49,18 @@ public class TestRunner {
         Result notification_result = JUnitCore.runClasses(NotificationTest.class);
         Result search_result = JUnitCore.runClasses(SearchTest.class);
 
-        /** Teams **/
+        /** DomainLayer.Teams **/
         Result stadium_result = JUnitCore.runClasses(StadiumTest.class);
         Result statistics_result = JUnitCore.runClasses(StatisticsTest.class);
         Result teamPage_result = JUnitCore.runClasses(TeamPageTest.class);
         Result team_result = JUnitCore.runClasses(TeamTest.class);
 
-        /** UserGenerator **/
+        /** DomainLayer.UserGenerator **/
         Result managmentUserGenerator_result = JUnitCore.runClasses(ManagmentUserGeneratorTest.class);
         Result premiumUserGenertator_result = JUnitCore.runClasses(PremiumUserGenertatorTest.class);
         Result simpleUserGenerator_result = JUnitCore.runClasses(SimpleUserGeneratorTest.class);
 
-        /** Users **/
+        /** DomainLayer.Users **/
         Result administrator_result = JUnitCore.runClasses(AdministratorTest.class);
         Result AssociationRepresentative_result = JUnitCore.runClasses(AssociationRepresentativeTest.class);
         Result coachPersonalPage_result = JUnitCore.runClasses(CoachPersonalPageTest.class);
@@ -75,7 +75,7 @@ public class TestRunner {
 
         /** ----------------- TESTS ----------------- **/
 
-        /** Games **/
+        /** DomainLayer.Games **/
         test(closeGame_result);
         test(dayToGame_result);
         test(endGame_result);
@@ -93,24 +93,24 @@ public class TestRunner {
         /** MainApp **/
         test(app_result);
 
-        /** SystemLogic **/
+        /** DomainLayer.SystemLogic **/
         test(DB_result);
         test(mainSystem_result);
         test(notification_result);
         test(search_result);
 
-        /** Teams **/
+        /** DomainLayer.Teams **/
         test(stadium_result);
         test(statistics_result);
         test(teamPage_result);
         test(team_result);
 
-        /** UserGenerator **/
+        /** DomainLayer.UserGenerator **/
         test(managmentUserGenerator_result);
         test(premiumUserGenertator_result);
         test(simpleUserGenerator_result);
 
-        /** Users **/
+        /** DomainLayer.Users **/
         test(administrator_result);
         test(AssociationRepresentative_result);
         test(coachPersonalPage_result);

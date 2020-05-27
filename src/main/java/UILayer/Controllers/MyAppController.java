@@ -1,20 +1,12 @@
 package UILayer.Controllers;
 
-import Games.Game;
 import ServiceLayer.UserManagement;
 import UILayer.Main;
-import com.jfoenix.controls.JFXButton;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class MyAppController extends Controller {

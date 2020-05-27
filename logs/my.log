@@ -1,5 +1,5 @@
 2020-05-27 18:23:27.856  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.69 seconds (JVM running for 3.469)
-2020-05-27 18:23:38.509  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 16196 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:23:38.509  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 16196 (C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System)
 2020-05-27 18:23:38.517  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:23:39.218  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:23:39.259  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -196,7 +196,7 @@
 2020-05-27 18:23:40.448  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
 2020-05-27 18:23:40.463  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
 2020-05-27 18:23:40.465  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.23 seconds (JVM running for 3.074)
-2020-05-27 18:24:12.424  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 26504 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:24:12.424  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 26504 (C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System)
 2020-05-27 18:24:12.433  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:24:13.223  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:24:13.238  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -393,7 +393,7 @@
 2020-05-27 18:24:14.318  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
 2020-05-27 18:24:14.335  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
 2020-05-27 18:24:14.338  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Started ActivateServer in 2.22 seconds (JVM running for 3.02)
-2020-05-27 18:25:22.315  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 20656 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:25:22.315  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 20656 (C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System)
 2020-05-27 18:25:22.328  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:25:23.051  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:25:23.063  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -596,7 +596,7 @@
 2020-05-27 18:25:41.089  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-2] I.LoggingController                      : Katz was logged in successfully
 2020-05-27 18:25:55.440  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-5] I.LoggingController                      : Roi Katz follow the team : liverpool
 2020-05-27 18:26:00.546  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-9] I.LoggingController                      : Katz was logged out successfully
-2020-05-27 18:35:23.630  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 1804 (C:\Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\Users\ohoff\IdeaProjects\Soccer-System)
+2020-05-27 18:35:23.630  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : Starting ActivateServer on LAPTOP-3KCGVDF7 with PID 1804 (C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System\target\classes started by ohoff in C:\DomainLayer.Users\ohoff\IdeaProjects\Soccer-System)
 2020-05-27 18:35:23.638  INFO LAPTOP-3KCGVDF7 --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:35:24.435  INFO LAPTOP-3KCGVDF7 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:35:24.450  INFO LAPTOP-3KCGVDF7 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -799,7 +799,7 @@
 2020-05-27 18:35:30.149  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
 2020-05-27 18:35:46.093  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-3] I.LoggingController                      : Dana123 was logged in successfully
 2020-05-27 18:36:21.948  INFO LAPTOP-3KCGVDF7 --- [nio-8090-exec-1] I.LoggingController                      : Dana123 was logged out successfully
-2020-05-27 18:43:47.170  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 29800 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 18:43:47.170  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 29800 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 18:43:47.187  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:43:49.729  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:43:49.765  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -994,7 +994,7 @@
 2020-05-27 18:43:55.756  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-27 18:43:55.756  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2020-05-27 18:43:55.764  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
-2020-05-27 18:47:48.243  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 14392 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 18:47:48.243  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 14392 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 18:47:48.269  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:47:49.844  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:47:49.900  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -1189,7 +1189,7 @@
 2020-05-27 18:47:54.516  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-27 18:47:54.516  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2020-05-27 18:47:54.522  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
-2020-05-27 18:54:58.747  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 30000 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 18:54:58.747  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 30000 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 18:54:58.758  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:54:59.850  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:54:59.870  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -1374,7 +1374,7 @@
 2020-05-27 18:55:01.900  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
 2020-05-27 18:55:01.906  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : tali Schvartz follow the team : Manchester United
 2020-05-27 18:55:01.906  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : Roi Katz follow the team : Real Madrid
-2020-05-27 18:55:57.681  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 2664 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 18:55:57.681  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 2664 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 18:55:57.692  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:55:58.748  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:55:58.768  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -1559,7 +1559,7 @@
 2020-05-27 18:57:40.318  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
 2020-05-27 18:57:40.322  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : tali Schvartz follow the team : Manchester United
 2020-05-27 18:57:40.323  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : Roi Katz follow the team : Real Madrid
-2020-05-27 18:59:22.825  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 16732 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 18:59:22.825  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 16732 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 18:59:22.836  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 18:59:23.857  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 18:59:23.883  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -1742,7 +1742,7 @@
 2020-05-27 19:00:01.761  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : the coach Alex Ferguson was added successfully to the team Manchester United
 2020-05-27 19:00:01.761  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : the team owner John Magnier was added successfully to the team Manchester United
 2020-05-27 19:00:01.761  INFO DESKTOP-A1QKMVR --- [           main] I.LoggingController                      : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
-2020-05-27 19:00:14.162  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 20160 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 19:00:14.162  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : Starting ActivateServer on DESKTOP-A1QKMVR with PID 20160 (C:\DomainLayer.Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\DomainLayer.Users\yszok\Desktop\Soccer-System)
 2020-05-27 19:00:14.195  INFO DESKTOP-A1QKMVR --- [           main] I.ActivateServer                         : No active profile set, falling back to default profiles: default
 2020-05-27 19:00:15.138  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
 2020-05-27 19:00:15.156  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
@@ -1942,3 +1942,584 @@
 2020-05-27 19:01:22.609  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-4] I.LoggingController                      : the player David Beckham was added successfully to the team Liverpool
 2020-05-27 19:01:22.609  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-4] I.LoggingController                      : The team budget decreased from 0.0 to 0.0
 2020-05-27 19:01:55.884  INFO DESKTOP-A1QKMVR --- [nio-8090-exec-4] I.LoggingController                      : Henry2 was logged out successfully
+2020-05-27 19:39:07.345  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Starting ActivateServer on DESKTOP-A1QKMVR with PID 30368 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 19:39:07.360  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : No active profile set, falling back to default profiles: default
+2020-05-27 19:39:08.346  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 19:39:08.367  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:39:08.368  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 19:39:08.368  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 19:39:08.461  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 19:39:08.461  INFO DESKTOP-A1QKMVR --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1019 ms
+2020-05-27 19:39:08.512  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : LOG FILE IS CONNECTED!
+2020-05-27 19:39:08.512  INFO DESKTOP-A1QKMVR --- [        Timer-0] S.I.LoggingController                    : Special password changed at 
+2020-05-27 19:39:08.513  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Account System is Connected
+2020-05-27 19:39:08.514  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Tax System is Connected
+2020-05-27 19:39:08.516  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Administrator was appointed successfully
+2020-05-27 19:39:10.228  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:39:10.269  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:39:10.298  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 19:39:10.299  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:471}] to localhost:27017
+2020-05-27 19:39:10.299  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:470}] to localhost:27017
+2020-05-27 19:39:10.304  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2606000}
+2020-05-27 19:39:10.304  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2608300}
+2020-05-27 19:39:10.315  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:472}] to localhost:27017
+2020-05-27 19:39:10.349  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele create personal page
+2020-05-27 19:39:10.351  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto create personal page
+2020-05-27 19:39:10.351  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot create personal page
+2020-05-27 19:39:10.351  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez create personal page
+2020-05-27 19:39:10.351  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard create personal page
+2020-05-27 19:39:10.352  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane create personal page
+2020-05-27 19:39:10.353  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic create personal page
+2020-05-27 19:39:10.353  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes create personal page
+2020-05-27 19:39:10.354  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire create personal page
+2020-05-27 19:39:10.425  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez create personal page
+2020-05-27 19:39:10.426  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien create personal page
+2020-05-27 19:39:10.426  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong create personal page
+2020-05-27 19:39:10.427  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal create personal page
+2020-05-27 19:39:10.427  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott create personal page
+2020-05-27 19:39:10.427  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez create personal page
+2020-05-27 19:39:10.428  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea create personal page
+2020-05-27 19:39:10.429  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino create personal page
+2020-05-27 19:39:10.429  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema create personal page
+2020-05-27 19:39:10.429  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino create personal page
+2020-05-27 19:39:10.429  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran create personal page
+2020-05-27 19:39:10.430  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique create personal page
+2020-05-27 19:39:10.431  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita create personal page
+2020-05-27 19:39:10.431  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker create personal page
+2020-05-27 19:39:10.431  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz create personal page
+2020-05-27 19:39:10.431  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos create personal page
+2020-05-27 19:39:10.432  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari create personal page
+2020-05-27 19:39:10.433  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner create personal page
+2020-05-27 19:39:10.433  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric create personal page
+2020-05-27 19:39:10.433  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale create personal page
+2020-05-27 19:39:10.433  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 19:39:10.434  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo create personal page
+2020-05-27 19:39:10.434  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba create personal page
+2020-05-27 19:39:10.434  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird create personal page
+2020-05-27 19:39:10.434  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood create personal page
+2020-05-27 19:39:10.435  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao create personal page
+2020-05-27 19:39:10.435  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets create personal page
+2020-05-27 19:39:10.435  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos create personal page
+2020-05-27 19:39:10.435  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson create personal page
+2020-05-27 19:39:10.435  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 19:39:10.436  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : ido kest follow the page of: Quique Setien
+2020-05-27 19:39:10.440  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Liverpool has a new stadium
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker has move to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alison Becker was added successfully to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi has move to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Divock Origi was added successfully to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner has move to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Milner was added successfully to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino has move to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Roberto Firmino was added successfully to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino has move to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Takumi Minamino was added successfully to the team Liverpool
+2020-05-27 19:39:10.441  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Naby Keita was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mohamed Salah was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dejan Loveran was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harvey Elliott was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Joe Gomez was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sadio Mane was added successfully to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player David Beckham has move to the team Liverpool
+2020-05-27 19:39:10.442  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player David Beckham was added successfully to the team Liverpool
+2020-05-27 19:39:10.443  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz has move to the team Liverpool
+2020-05-27 19:39:10.443  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Peter Krawietz was added successfully to the team Liverpool
+2020-05-27 19:39:10.443  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John William Henry was added successfully to the team Liverpool
+2020-05-27 19:39:10.443  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Jurgen Klopp was added successfully to the team Liverpool
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Barcelona has a new stadium
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo has move to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ronald Araujo was added successfully to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba has move to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Jordi Alba was added successfully to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez has move to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luis Suarez was added successfully to the team Barcelona
+2020-05-27 19:39:10.444  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marc-Andre Ter Stegen was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ivan Rakitic was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergi Roberto was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Samuel Umtiti was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Szoke get update
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Lionel Messi was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gerard Pique was added successfully to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele has move to the team Barcelona
+2020-05-27 19:39:10.445  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ousmane Dembele was added successfully to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets has move to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Busquets was added successfully to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Keset get update
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien has move to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Quique Setien was added successfully to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner The People was added successfully to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Josep Maria Bartomeu Floreta was added successfully to the team Barcelona
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Real Madrid has a new stadium
+2020-05-27 19:39:10.446  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dani Carvajal was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luka Modric was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eden Hazard was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Ramos was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Toni Kroos was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Karim Benzema was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao has move to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eder Militao was added successfully to the team Real Madrid
+2020-05-27 19:39:10.447  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio has move to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marco Asensio was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale has move to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gareth Bale was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez has move to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Rodriguez was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola has move to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alphonse Aréola was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari has move to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Santiago Solari was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner Florentino perez was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Zinedine Zidane was added successfully to the team Real Madrid
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Manchester United has a new stadium
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal has move to the team Manchester United
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Arnau Puigmal was added successfully to the team Manchester United
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire has move to the team Manchester United
+2020-05-27 19:39:10.448  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harry Maguire was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ethan Laird was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Tahith Chong was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eric Bailly was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Bruno Fernandes was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Garner was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Diogo Dalot was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player De Gea was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Andreas Pereira was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mason Greenwood was added successfully to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson has move to the team Manchester United
+2020-05-27 19:39:10.449  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Alex Ferguson was added successfully to the team Manchester United
+2020-05-27 19:39:10.450  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John Magnier was added successfully to the team Manchester United
+2020-05-27 19:39:10.450  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
+2020-05-27 19:39:10.452  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : tali Schvartz follow the team : Manchester United
+2020-05-27 19:39:10.452  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Roi Katz follow the team : Real Madrid
+2020-05-27 19:39:10.572  INFO DESKTOP-A1QKMVR --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 19:39:10.699  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:39:10.705  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:473}] to localhost:27017
+2020-05-27 19:39:10.706  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=589700}
+2020-05-27 19:39:10.732  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:39:10.755  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 19:39:10.759  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Started ActivateServer in 4.768 seconds (JVM running for 6.993)
+2020-05-27 19:40:12.824  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Starting ActivateServer on DESKTOP-A1QKMVR with PID 27464 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 19:40:12.846  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : No active profile set, falling back to default profiles: default
+2020-05-27 19:40:13.687  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 19:40:13.702  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:40:13.703  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 19:40:13.703  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 19:40:13.782  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 19:40:13.783  INFO DESKTOP-A1QKMVR --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 826 ms
+2020-05-27 19:40:13.821  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : LOG FILE IS CONNECTED!
+2020-05-27 19:40:13.822  INFO DESKTOP-A1QKMVR --- [        Timer-0] S.I.LoggingController                    : Special password changed at 
+2020-05-27 19:40:13.823  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Account System is Connected
+2020-05-27 19:40:13.824  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Tax System is Connected
+2020-05-27 19:40:13.825  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Administrator was appointed successfully
+2020-05-27 19:40:15.485  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:40:15.518  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:40:15.547  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:475}] to localhost:27017
+2020-05-27 19:40:15.547  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:474}] to localhost:27017
+2020-05-27 19:40:15.552  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3751600}
+2020-05-27 19:40:15.553  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5048700}
+2020-05-27 19:40:15.564  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:476}] to localhost:27017
+2020-05-27 19:40:15.603  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele create personal page
+2020-05-27 19:40:15.606  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto create personal page
+2020-05-27 19:40:15.606  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot create personal page
+2020-05-27 19:40:15.607  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez create personal page
+2020-05-27 19:40:15.607  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah create personal page
+2020-05-27 19:40:15.607  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi create personal page
+2020-05-27 19:40:15.607  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti create personal page
+2020-05-27 19:40:15.607  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly create personal page
+2020-05-27 19:40:15.608  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira create personal page
+2020-05-27 19:40:15.608  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard create personal page
+2020-05-27 19:40:15.608  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane create personal page
+2020-05-27 19:40:15.609  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic create personal page
+2020-05-27 19:40:15.610  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes create personal page
+2020-05-27 19:40:15.610  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire create personal page
+2020-05-27 19:40:15.683  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez create personal page
+2020-05-27 19:40:15.684  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien create personal page
+2020-05-27 19:40:15.685  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong create personal page
+2020-05-27 19:40:15.687  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal create personal page
+2020-05-27 19:40:15.687  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott create personal page
+2020-05-27 19:40:15.687  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner create personal page
+2020-05-27 19:40:15.687  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal create personal page
+2020-05-27 19:40:15.688  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola create personal page
+2020-05-27 19:40:15.688  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio create personal page
+2020-05-27 19:40:15.688  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi create personal page
+2020-05-27 19:40:15.689  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez create personal page
+2020-05-27 19:40:15.689  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea create personal page
+2020-05-27 19:40:15.690  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino create personal page
+2020-05-27 19:40:15.690  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema create personal page
+2020-05-27 19:40:15.690  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino create personal page
+2020-05-27 19:40:15.691  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran create personal page
+2020-05-27 19:40:15.692  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique create personal page
+2020-05-27 19:40:15.693  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita create personal page
+2020-05-27 19:40:15.694  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker create personal page
+2020-05-27 19:40:15.694  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz create personal page
+2020-05-27 19:40:15.695  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos create personal page
+2020-05-27 19:40:15.695  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari create personal page
+2020-05-27 19:40:15.697  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner create personal page
+2020-05-27 19:40:15.698  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric create personal page
+2020-05-27 19:40:15.698  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale create personal page
+2020-05-27 19:40:15.698  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 19:40:15.699  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo create personal page
+2020-05-27 19:40:15.699  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba create personal page
+2020-05-27 19:40:15.699  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird create personal page
+2020-05-27 19:40:15.699  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood create personal page
+2020-05-27 19:40:15.700  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao create personal page
+2020-05-27 19:40:15.700  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets create personal page
+2020-05-27 19:40:15.701  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos create personal page
+2020-05-27 19:40:15.701  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson create personal page
+2020-05-27 19:40:15.701  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 19:40:15.702  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : ido kest follow the page of: Quique Setien
+2020-05-27 19:40:15.716  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Liverpool has a new stadium
+2020-05-27 19:40:15.718  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker has move to the team Liverpool
+2020-05-27 19:40:15.718  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alison Becker was added successfully to the team Liverpool
+2020-05-27 19:40:15.718  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi has move to the team Liverpool
+2020-05-27 19:40:15.718  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Divock Origi was added successfully to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner has move to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Milner was added successfully to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino has move to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Roberto Firmino was added successfully to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino has move to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Takumi Minamino was added successfully to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita has move to the team Liverpool
+2020-05-27 19:40:15.719  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Naby Keita was added successfully to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah has move to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mohamed Salah was added successfully to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran has move to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dejan Loveran was added successfully to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott has move to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harvey Elliott was added successfully to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez has move to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Joe Gomez was added successfully to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane has move to the team Liverpool
+2020-05-27 19:40:15.720  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sadio Mane was added successfully to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player David Beckham has move to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player David Beckham was added successfully to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz has move to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Peter Krawietz was added successfully to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John William Henry was added successfully to the team Liverpool
+2020-05-27 19:40:15.721  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Jurgen Klopp was added successfully to the team Liverpool
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Barcelona has a new stadium
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo has move to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ronald Araujo was added successfully to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba has move to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Jordi Alba was added successfully to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez has move to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luis Suarez was added successfully to the team Barcelona
+2020-05-27 19:40:15.723  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen has move to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marc-Andre Ter Stegen was added successfully to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic has move to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ivan Rakitic was added successfully to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto has move to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergi Roberto was added successfully to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti has move to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Samuel Umtiti was added successfully to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Szoke get update
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi has move to the team Barcelona
+2020-05-27 19:40:15.724  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Lionel Messi was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique has move to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gerard Pique was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele has move to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ousmane Dembele was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets has move to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Busquets was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Keset get update
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien has move to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Quique Setien was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner The People was added successfully to the team Barcelona
+2020-05-27 19:40:15.725  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Josep Maria Bartomeu Floreta was added successfully to the team Barcelona
+2020-05-27 19:40:15.726  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Real Madrid has a new stadium
+2020-05-27 19:40:15.726  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal has move to the team Real Madrid
+2020-05-27 19:40:15.726  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dani Carvajal was added successfully to the team Real Madrid
+2020-05-27 19:40:15.726  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric has move to the team Real Madrid
+2020-05-27 19:40:15.727  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luka Modric was added successfully to the team Real Madrid
+2020-05-27 19:40:15.727  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard has move to the team Real Madrid
+2020-05-27 19:40:15.729  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eden Hazard was added successfully to the team Real Madrid
+2020-05-27 19:40:15.735  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos has move to the team Real Madrid
+2020-05-27 19:40:15.735  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Ramos was added successfully to the team Real Madrid
+2020-05-27 19:40:15.738  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos has move to the team Real Madrid
+2020-05-27 19:40:15.739  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Toni Kroos was added successfully to the team Real Madrid
+2020-05-27 19:40:15.739  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema has move to the team Real Madrid
+2020-05-27 19:40:15.739  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Karim Benzema was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eder Militao was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marco Asensio was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gareth Bale was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Rodriguez was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alphonse Aréola was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari has move to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Santiago Solari was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner Florentino perez was added successfully to the team Real Madrid
+2020-05-27 19:40:15.740  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Zinedine Zidane was added successfully to the team Real Madrid
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Manchester United has a new stadium
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Arnau Puigmal was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harry Maguire was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ethan Laird was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Tahith Chong was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eric Bailly was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Bruno Fernandes was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Garner was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Diogo Dalot was added successfully to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea has move to the team Manchester United
+2020-05-27 19:40:15.741  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player De Gea was added successfully to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira has move to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Andreas Pereira was added successfully to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood has move to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mason Greenwood was added successfully to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson has move to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Alex Ferguson was added successfully to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John Magnier was added successfully to the team Manchester United
+2020-05-27 19:40:15.742  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
+2020-05-27 19:40:15.749  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : tali Schvartz follow the team : Manchester United
+2020-05-27 19:40:15.750  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Roi Katz follow the team : Real Madrid
+2020-05-27 19:40:15.890  INFO DESKTOP-A1QKMVR --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 19:40:16.051  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:40:16.056  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:477}] to localhost:27017
+2020-05-27 19:40:16.057  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=548400}
+2020-05-27 19:40:16.078  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:40:16.105  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 19:40:16.109  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Started ActivateServer in 3.98 seconds (JVM running for 5.93)
+2020-05-27 19:42:03.944  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Starting ActivateServer on DESKTOP-A1QKMVR with PID 11528 (C:\Users\yszok\Desktop\Soccer-System\target\classes started by yszok in C:\Users\yszok\Desktop\Soccer-System)
+2020-05-27 19:42:04.065  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : No active profile set, falling back to default profiles: default
+2020-05-27 19:42:04.924  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-05-27 19:42:04.939  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:42:04.940  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-27 19:42:04.941  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-27 19:42:05.022  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-27 19:42:05.022  INFO DESKTOP-A1QKMVR --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 858 ms
+2020-05-27 19:42:05.061  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : LOG FILE IS CONNECTED!
+2020-05-27 19:42:05.061  INFO DESKTOP-A1QKMVR --- [        Timer-0] S.I.LoggingController                    : Special password changed at 
+2020-05-27 19:42:05.063  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Account System is Connected
+2020-05-27 19:42:05.064  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Tax System is Connected
+2020-05-27 19:42:05.065  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Administrator was appointed successfully
+2020-05-27 19:42:06.662  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:42:06.690  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:42:06.709  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:479}] to localhost:27017
+2020-05-27 19:42:06.709  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:478}] to localhost:27017
+2020-05-27 19:42:06.710  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-05-27 19:42:06.714  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2796500}
+2020-05-27 19:42:06.714  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2831300}
+2020-05-27 19:42:06.723  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:480}] to localhost:27017
+2020-05-27 19:42:06.759  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele create personal page
+2020-05-27 19:42:06.761  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto create personal page
+2020-05-27 19:42:06.761  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot create personal page
+2020-05-27 19:42:06.761  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez create personal page
+2020-05-27 19:42:06.762  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah create personal page
+2020-05-27 19:42:06.762  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi create personal page
+2020-05-27 19:42:06.762  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti create personal page
+2020-05-27 19:42:06.762  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly create personal page
+2020-05-27 19:42:06.762  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira create personal page
+2020-05-27 19:42:06.763  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard create personal page
+2020-05-27 19:42:06.763  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane create personal page
+2020-05-27 19:42:06.835  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic create personal page
+2020-05-27 19:42:06.837  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes create personal page
+2020-05-27 19:42:06.837  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire create personal page
+2020-05-27 19:42:06.838  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez create personal page
+2020-05-27 19:42:06.839  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien create personal page
+2020-05-27 19:42:06.840  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong create personal page
+2020-05-27 19:42:06.841  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal create personal page
+2020-05-27 19:42:06.841  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott create personal page
+2020-05-27 19:42:06.842  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner create personal page
+2020-05-27 19:42:06.842  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal create personal page
+2020-05-27 19:42:06.842  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola create personal page
+2020-05-27 19:42:06.842  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio create personal page
+2020-05-27 19:42:06.842  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi create personal page
+2020-05-27 19:42:06.843  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez create personal page
+2020-05-27 19:42:06.843  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea create personal page
+2020-05-27 19:42:06.843  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino create personal page
+2020-05-27 19:42:06.843  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema create personal page
+2020-05-27 19:42:06.844  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino create personal page
+2020-05-27 19:42:06.844  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran create personal page
+2020-05-27 19:42:06.845  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique create personal page
+2020-05-27 19:42:06.845  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita create personal page
+2020-05-27 19:42:06.846  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker create personal page
+2020-05-27 19:42:06.846  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz create personal page
+2020-05-27 19:42:06.846  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos create personal page
+2020-05-27 19:42:06.846  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari create personal page
+2020-05-27 19:42:06.848  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner create personal page
+2020-05-27 19:42:06.848  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric create personal page
+2020-05-27 19:42:06.848  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale create personal page
+2020-05-27 19:42:06.848  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen create personal page
+2020-05-27 19:42:06.848  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo create personal page
+2020-05-27 19:42:06.849  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba create personal page
+2020-05-27 19:42:06.849  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird create personal page
+2020-05-27 19:42:06.849  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood create personal page
+2020-05-27 19:42:06.849  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao create personal page
+2020-05-27 19:42:06.849  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets create personal page
+2020-05-27 19:42:06.850  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos create personal page
+2020-05-27 19:42:06.850  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson create personal page
+2020-05-27 19:42:06.850  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Yiftah Szoke follow the page of: Lionel Messi
+2020-05-27 19:42:06.850  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : ido kest follow the page of: Quique Setien
+2020-05-27 19:42:06.853  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Liverpool has a new stadium
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alison Becker has move to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alison Becker was added successfully to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Divock Origi has move to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Divock Origi was added successfully to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Milner has move to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Milner was added successfully to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Roberto Firmino has move to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Roberto Firmino was added successfully to the team Liverpool
+2020-05-27 19:42:06.855  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Takumi Minamino has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Takumi Minamino was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Naby Keita has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Naby Keita was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mohamed Salah has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mohamed Salah was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dejan Loveran has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dejan Loveran was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harvey Elliott has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harvey Elliott was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Joe Gomez has move to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Joe Gomez was added successfully to the team Liverpool
+2020-05-27 19:42:06.856  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sadio Mane has move to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sadio Mane was added successfully to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player David Beckham has move to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player David Beckham was added successfully to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Peter Krawietz has move to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Peter Krawietz was added successfully to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John William Henry was added successfully to the team Liverpool
+2020-05-27 19:42:06.857  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Jurgen Klopp was added successfully to the team Liverpool
+2020-05-27 19:42:06.858  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Barcelona has a new stadium
+2020-05-27 19:42:06.858  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ronald Araujo has move to the team Barcelona
+2020-05-27 19:42:06.858  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ronald Araujo was added successfully to the team Barcelona
+2020-05-27 19:42:06.858  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Jordi Alba has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Jordi Alba was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luis Suarez has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luis Suarez was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marc-Andre Ter Stegen has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marc-Andre Ter Stegen was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ivan Rakitic has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ivan Rakitic was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergi Roberto has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergi Roberto was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Samuel Umtiti has move to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Samuel Umtiti was added successfully to the team Barcelona
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Szoke get update
+2020-05-27 19:42:06.859  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Lionel Messi has move to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Lionel Messi was added successfully to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gerard Pique has move to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gerard Pique was added successfully to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ousmane Dembele has move to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ousmane Dembele was added successfully to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Busquets has move to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Busquets was added successfully to the team Barcelona
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user Keset get update
+2020-05-27 19:42:06.860  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The user get update
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Quique Setien has move to the team Barcelona
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Quique Setien was added successfully to the team Barcelona
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner The People was added successfully to the team Barcelona
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Josep Maria Bartomeu Floreta was added successfully to the team Barcelona
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Real Madrid has a new stadium
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Dani Carvajal has move to the team Real Madrid
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Dani Carvajal was added successfully to the team Real Madrid
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Luka Modric has move to the team Real Madrid
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Luka Modric was added successfully to the team Real Madrid
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eden Hazard has move to the team Real Madrid
+2020-05-27 19:42:06.861  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eden Hazard was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Sergio Ramos has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Sergio Ramos was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Toni Kroos has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Toni Kroos was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Karim Benzema has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Karim Benzema was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eder Militao has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eder Militao was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Marco Asensio has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Marco Asensio was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Gareth Bale has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Gareth Bale was added successfully to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Rodriguez has move to the team Real Madrid
+2020-05-27 19:42:06.862  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Rodriguez was added successfully to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Alphonse Aréola has move to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Alphonse Aréola was added successfully to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Santiago Solari has move to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Santiago Solari was added successfully to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner Florentino perez was added successfully to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Zinedine Zidane was added successfully to the team Real Madrid
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team Manchester United has a new stadium
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Arnau Puigmal has move to the team Manchester United
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Arnau Puigmal was added successfully to the team Manchester United
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Harry Maguire has move to the team Manchester United
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Harry Maguire was added successfully to the team Manchester United
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Ethan Laird has move to the team Manchester United
+2020-05-27 19:42:06.863  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Ethan Laird was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Tahith Chong has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Tahith Chong was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Eric Bailly has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Eric Bailly was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Bruno Fernandes has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Bruno Fernandes was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player James Garner has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player James Garner was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Diogo Dalot has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Diogo Dalot was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player De Gea has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player De Gea was added successfully to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Andreas Pereira has move to the team Manchester United
+2020-05-27 19:42:06.864  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Andreas Pereira was added successfully to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The player Mason Greenwood has move to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the player Mason Greenwood was added successfully to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : The coach Alex Ferguson has move to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the coach Alex Ferguson was added successfully to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the team owner John Magnier was added successfully to the team Manchester United
+2020-05-27 19:42:06.865  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : the manager Ole Gunnar Solskjer was added successfully to the team Manchester United
+2020-05-27 19:42:06.868  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : tali Schvartz follow the team : Manchester United
+2020-05-27 19:42:06.869  INFO DESKTOP-A1QKMVR --- [           main] S.I.LoggingController                    : Roi Katz follow the team : Real Madrid
+2020-05-27 19:42:07.014  INFO DESKTOP-A1QKMVR --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-27 19:42:07.135  INFO DESKTOP-A1QKMVR --- [           main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-27 19:42:07.144  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:4, serverValue:481}] to localhost:27017
+2020-05-27 19:42:07.146  INFO DESKTOP-A1QKMVR --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1274000}
+2020-05-27 19:42:07.168  INFO DESKTOP-A1QKMVR --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-05-27 19:42:07.188  INFO DESKTOP-A1QKMVR --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-27 19:42:07.191  INFO DESKTOP-A1QKMVR --- [           main] S.I.ActivateServer                       : Started ActivateServer in 3.914 seconds (JVM running for 5.865)

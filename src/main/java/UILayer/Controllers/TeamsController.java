@@ -1,6 +1,5 @@
 package UILayer.Controllers;
 
-import DataBase.DataBase;
 import ServiceLayer.TeamManagement;
 import UILayer.Main;
 import javafx.beans.property.SimpleStringProperty;
@@ -10,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -18,11 +16,9 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 public class TeamsController extends Controller {
 

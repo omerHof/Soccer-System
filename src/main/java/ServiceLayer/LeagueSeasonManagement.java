@@ -1,12 +1,10 @@
 package ServiceLayer;
 
-import Games.Event;
-import SystemLogic.MainSystem;
-import Users.AssociationRepresentative;
-import Users.Manager;
-import Users.User;
+import DomainLayer.Games.Event;
+import DomainLayer.SystemLogic.MainSystem;
+import DomainLayer.Users.AssociationRepresentative;
+import DomainLayer.Users.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

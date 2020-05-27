@@ -1,10 +1,10 @@
 package UILayer;
 
-import Games.Game;
-import Teams.Stadium;
-import Users.Coach;
-import Users.Manager;
-import Users.Player;
+import DomainLayer.Games.Game;
+import DomainLayer.Teams.Stadium;
+import DomainLayer.Users.Coach;
+import DomainLayer.Users.Manager;
+import DomainLayer.Users.Player;
 import javafx.util.Pair;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;

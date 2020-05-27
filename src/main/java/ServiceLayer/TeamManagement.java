@@ -1,15 +1,13 @@
 package ServiceLayer;
 
-import SystemLogic.DBLocal;
-import SystemLogic.MainSystem;
-import Teams.Assent;
-import Teams.Team;
-import Teams.TeamPage;
-import Users.*;
-import javafx.util.Pair;
+import DomainLayer.SystemLogic.DBLocal;
+import DomainLayer.SystemLogic.MainSystem;
+import DomainLayer.Teams.Assent;
+import DomainLayer.Teams.Team;
+import DomainLayer.Teams.TeamPage;
+import DomainLayer.Users.*;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 /**
  * This class represents a bridge for handling the team creation and functionality between the domain layer and the GUI layer

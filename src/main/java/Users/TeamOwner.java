@@ -57,6 +57,7 @@ public class TeamOwner extends User implements Assent {
             }
             else{
                 team.setStatus(Team.teamStatus.active);
+
             }
             return true;
         }

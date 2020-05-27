@@ -320,6 +320,12 @@ public class ClientController {
                 return response.getBody();
         }
 
+        public String opemTeamPage(String history, String nation) {
+                HttpEntity<String> response = template.exchange("http://localhost:8090/opemTeamPage?param="+history+ ","+nation,
+                        HttpMethod.GET, requestEntity, String.class, "42");
+                return response.getBody();
+        }
+
 
 
 

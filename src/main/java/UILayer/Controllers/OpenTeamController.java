@@ -54,6 +54,7 @@ public class OpenTeamController extends Controller{
             //create team
             openTeam = true;
             teamName = chosenTeamName.getText();
+
             String message = clientController.CreateNewTeam(teamName,chosenTeamBudget.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setHeaderText("TEAM CREATION");
@@ -136,7 +137,7 @@ public class OpenTeamController extends Controller{
         }
 
         if(openTeam){
-            String message =  teamManagement.openTeamPage(chosenHistory.getText(),chosenNation.getText());
+            String message = clientController.opemTeamPage(chosenHistory.getText(),chosenNation.getText());
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText(message);
             alert.show();

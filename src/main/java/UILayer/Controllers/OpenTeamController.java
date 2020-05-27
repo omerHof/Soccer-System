@@ -45,7 +45,6 @@ public class OpenTeamController extends Controller{
             error=true;
         }
 
-        ///need to add check if the name of the team exist!!!
 
         if(error){
             alertError.show();
@@ -69,7 +68,6 @@ public class OpenTeamController extends Controller{
     }
 
     public boolean validationBudget(String budget){
-
         String regex = "[0-9]+";
         if(!budget.matches(regex)){
             return false;
@@ -116,7 +114,6 @@ public class OpenTeamController extends Controller{
 
     }
 
-
     public void createTeamPage(){
         boolean error =false;
         Alert alertError  = new Alert(Alert.AlertType.ERROR);
@@ -142,7 +139,6 @@ public class OpenTeamController extends Controller{
             alert.show();
         }
         else{
-
             errorMessage = errorMessage +" The owner has no active team"+ "\n";
             alertError.setContentText(errorMessage);
             error=true;

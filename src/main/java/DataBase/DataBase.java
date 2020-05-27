@@ -44,10 +44,10 @@ public class DataBase {
     /**
      * Stadiums
      **/
-    private Stadium stadium1 = new Stadium();
-    private Stadium stadium2 = new Stadium();
-    private Stadium stadium3 = new Stadium();
-    private Stadium stadium4 = new Stadium();
+    private Stadium stadium1 = new Stadium(100000.0,110000,80);
+    private Stadium stadium2 = new Stadium(70000.0,60000,90);
+    private Stadium stadium3 = new Stadium(50000.0,40000,300);
+    private Stadium stadium4 = new Stadium(50000.0,40000,300);
 
 
     /**
@@ -195,6 +195,7 @@ public class DataBase {
         stadium2.setName("Santiago Bernabeu");
         stadium3.setName("Old Trafford");
         stadium4.setName("Anfield");
+
         team1.setStadium(stadium1);
         team2.setStadium(stadium2);
         team3.setStadium(stadium3);
@@ -270,7 +271,7 @@ public class DataBase {
         manager4 = new Manager("Klopp1", MainSystem.getInstance().encrypte("Klopp1"), "Jurgen Klopp", "Klopp@gmail.com");
 
         /**Management**/
-        league = new League("Champions league", 4);
+        league = new League("Champions league", 2);
 
         /**Coach and Player - for teams**/
 
